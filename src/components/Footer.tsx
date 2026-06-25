@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-6 font-display">Quick Links</h3>
             <ul className="space-y-3 text-sm">
               <li>
@@ -72,33 +72,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Contact Info - Ahmedabad */}
-          <div className="flex flex-col gap-4 text-sm lg:col-span-3">
-            <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-2 font-display">Gujarat Regional Office</h3>
-            <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-              <span>524 - Binori B Square 3, Sindhu Bhavan Road, Ahmedabad, Gujarat - 380054</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-secondary shrink-0" />
-              <a href="tel:+917600052000" className="hover:text-secondary transition-colors">+91 76000 52000</a>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-secondary shrink-0" />
-              <a href="mailto:info@classicsolution.net" className="hover:text-secondary transition-colors">info@classicsolution.net</a>
-            </div>
-            <div className="flex items-start gap-3 mt-2">
-              <Clock className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-              <div>
-                <p className="font-semibold text-white">Mon - Sat: 9:00 AM - 7:00 PM</p>
-                <p className="text-white/60">Sunday: Closed</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Column 4: Contact Info - Rajkot */}
-          <div className="flex flex-col gap-4 text-sm lg:col-span-3">
-            <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-2 font-display">Saurashtra & Kutchh Office</h3>
+          {/* Column 3: Contact Info - Rajkot */}
+          <div className="flex flex-col gap-4 text-sm lg:col-span-4">
+            <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-2 font-display">Saurashtra &amp; Kutchh Office</h3>
             <div className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
               <span>Office - 9 Ground Floor, Anmol Complex, Raj Palace Chowk, Sadhu Vaswani Road, Rajkot, Gujarat - 360005</span>
@@ -111,30 +87,24 @@ export default function Footer() {
               <Mail className="h-5 w-5 text-secondary shrink-0" />
               <a href="mailto:classicsolution931@gmail.com" className="hover:text-secondary transition-colors">classicsolution931@gmail.com</a>
             </div>
+            <div className="flex items-start gap-3 mt-2">
+              <Clock className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-white">Mon - Sat: 9:00 AM - 7:00 PM</p>
+                <p className="text-white/60">Sunday: Closed</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Double Map Layout */}
-        <div className="border-t border-white/10 pt-8 mt-8 flex flex-col md:flex-row gap-6">
-          <div className="flex-1 min-h-[220px] rounded-2xl overflow-hidden border border-white/10 shadow-lg relative bg-white/5">
-            <p className="text-xs font-bold text-white/60 mb-2 uppercase px-4 pt-2">Ahmedabad Location Map</p>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.697920367375!2d72.50642731542385!3d23.03485747297059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84b802613d7d%3A0x67de181f9b32e185!2sBinori%20B%20Square%203!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
-              width="100%"
-              height="180px"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Ahmedabad Office Location Map"
-            />
-          </div>
-          <div className="flex-1 min-h-[220px] rounded-2xl overflow-hidden border border-white/10 shadow-lg relative bg-white/5">
-            <p className="text-xs font-bold text-white/60 mb-2 uppercase px-4 pt-2">Rajkot Location Map</p>
+        {/* Single Map Layout */}
+        <div className="border-t border-white/10 pt-8 mt-8">
+          <div className="w-full min-h-[240px] rounded-2xl overflow-hidden border border-white/10 shadow-lg relative bg-white/5">
+            <p className="text-xs font-bold text-white/60 mb-2 uppercase px-4 pt-2">Rajkot Office Location Map</p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8028795764043!2d70.77484431541018!3d22.28549994974913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca18aa2f89f3%3A0x1a87b3281237e8bb!2sSadhu%20Vaswani%20Rd%2C%20Rajkot%2C%20Gujarat%20360005!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
               width="100%"
-              height="180px"
+              height="200px"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

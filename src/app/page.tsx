@@ -109,7 +109,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/20 px-4 py-1.5 rounded-full text-secondary text-xs sm:text-sm font-semibold w-fit backdrop-blur-sm"
             >
               <ShieldCheck className="h-4 w-4" />
-              <span>1st Time in Gujarat, Saurashtra &amp; Kutchh</span>
+              <span>1st Time in Saurashtra &amp; Kutchh</span>
             </motion.div>
 
             <motion.h1
@@ -303,10 +303,10 @@ export default function Home() {
           <div className="flex flex-col gap-5 text-left">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">About Us</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-              Leading Scientific Property Diagnostics in Gujarat
+              Leading Scientific Property Diagnostics in Saurashtra &amp; Kutchh
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              Classic Solution introduces professional home and property inspection services to Gujarat (Ahmedabad regional office) and Saurashtra &amp; Kutchh (Rajkot office), in collaboration with leading American MNC company A Buyer's Choice Home Inspection and MACJ.
+              Classic Solution introduces professional home and property inspection services to Saurashtra &amp; Kutchh (Rajkot office), in collaboration with leading American MNC company A Buyer's Choice Home Inspection and MACJ.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
               Our operations are led by <strong>Dev Smitkumar Kaneria</strong>, a Certified Professional Inspector (CPI) credentialed by the International Association of Certified Home Inspectors (InterNACHI). We maintain strict objectivity and ensure our client's safety through calibrated diagnostic instruments.
@@ -599,7 +599,7 @@ export default function Home() {
 
             <div className="flex flex-col gap-4 mt-2">
               <a
-                href="tel:+917600052000"
+                href="tel:02812990030"
                 className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-brand-border/30 hover:border-secondary hover:shadow-md transition-all duration-300 w-fit"
               >
                 <div className="h-9 w-9 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 animate-pulse">
@@ -607,7 +607,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-[10px] text-brand-muted uppercase font-bold">Call our Hotline</p>
-                  <p className="text-sm sm:text-base font-extrabold font-display text-primary">+91 76000 52000</p>
+                  <p className="text-sm sm:text-base font-extrabold font-display text-primary">0281 2990030</p>
                 </div>
               </a>
 

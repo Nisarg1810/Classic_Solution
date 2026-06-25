@@ -85,11 +85,11 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="tel:+917600052000"
+                href="tel:02812990030"
                 className="flex items-center gap-2 text-sm font-semibold text-primary hover:text-secondary transition-colors"
               >
                 <PhoneCall className="h-4 w-4 text-secondary" />
-                <span>+91 76000 52000</span>
+                <span>0281 2990030</span>
               </a>
               <a
                 href="#contact"
@@ -136,11 +136,11 @@ export default function Navbar() {
             </nav>
             <div className="flex flex-col gap-4 mt-2">
               <a
-                href="tel:+917600052000"
+                href="tel:02812990030"
                 className="flex items-center justify-center gap-2 text-base font-semibold text-primary py-3 rounded-xl border border-primary/20 hover:bg-primary/5 transition-all"
               >
                 <PhoneCall className="h-4 w-4 text-secondary" />
-                <span>+91 76000 52000</span>
+                <span>0281 2990030</span>
               </a>
               <a
                 href="#contact"
