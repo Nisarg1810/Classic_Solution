@@ -202,7 +202,7 @@ export default function Home() {
                 transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut" }}
                 className="absolute bottom-6 -left-8 bg-white/95 text-primary p-3.5 rounded-2xl shadow-premium flex items-center gap-3 border border-brand-border/20 backdrop-blur-sm"
               >
-                <div className="h-8 w-8 rounded-lg bg-orange-50 text-orange-600 flex items-center justify-center font-bold text-sm">✓</div>
+                <div className="h-8 w-8 rounded-lg bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm">✓</div>
                 <div className="text-left">
                   <p className="text-[10px] font-bold text-brand-muted uppercase">Crew</p>
                   <p className="text-xs font-extrabold font-display">Expert Team</p>

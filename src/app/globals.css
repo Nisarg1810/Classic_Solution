@@ -4,8 +4,8 @@
   --color-primary: #0F2B46;
   --color-primary-light: #184065;
   --color-primary-dark: #081B2E;
-  --color-secondary: #F97316;
-  --color-secondary-light: #FB923C;
+  --color-secondary: #DC2626;
+  --color-secondary-light: #EF4444;
   --color-brand-bg: #FFFFFF;
   --color-brand-light: #F8F9FA;
   --color-brand-text: #1F2937;
@@ -37,7 +37,7 @@
   --background: #ffffff;
   --foreground: #1F2937;
   --primary: #0F2B46;
-  --secondary: #F97316;
+  --secondary: #DC2626;
 }
 
 body {
@@ -88,9 +88,9 @@ html.lenis, html.lenis body {
   border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-/* Custom Swiper pagination styles to match secondary orange */
+/* Custom Swiper pagination styles to match secondary red */
 .swiper-pagination-bullet-active {
-  background: #F97316 !important;
+  background: #DC2626 !important;
 }
 
 /* Custom transitions and scrollbar */
@@ -109,7 +109,7 @@ html.lenis, html.lenis body {
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #F97316;
+  background: #DC2626;
 }
 
 /* Stagger & Fade-in styles for GSAP */
