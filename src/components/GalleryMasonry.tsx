@@ -53,7 +53,7 @@ const galleryItems: GalleryItem[] = [
     id: 7,
     title: "Drywall Cavity Inspection Probe",
     category: "tools",
-    imageUrl: "/images/video_borescope_test.png",
+    imageUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ const galleryItems: GalleryItem[] = [
     id: 9,
     title: "Modern Residence Structural Audit",
     category: "property",
-    imageUrl: "/images/hero_background.png",
+    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
   },
 ];
 

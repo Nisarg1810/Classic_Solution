@@ -16,6 +16,8 @@ import GalleryMasonry from "@/components/GalleryMasonry";
 import Testimonials from "@/components/Testimonials";
 import Accordion from "@/components/Accordion";
 import ContactForm from "@/components/ContactForm";
+import RoomScope from "@/components/RoomScope";
+import ElectricalScope from "@/components/ElectricalScope";
 
 // Services Data
 const services = [
@@ -327,6 +329,48 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* NEW: MACJ India Journey Timeline & Cities Presence */}
+        <div className="mt-16 pt-12 border-t border-brand-border/45">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Credentials</span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">MACJ - A Buyer's Choice, India Journey</h3>
+            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
+              Collaborating with a leading American MNC (19 countries, 200+ franchises), here is our journey and footprint across India:
+            </p>
+          </div>
+
+          {/* Timeline Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            {[
+              { year: "2016", title: "Pioneered Services", desc: "Pioneered Professional Home/Property Inspection Services in India from Kolkata." },
+              { year: "2018", title: "Dampness Launch", desc: "Launched Value Added Service - Damp/Seepage Inspections addressing key pain points of Indian property owners." },
+              { year: "2020", title: "Scale & Association", desc: "Extended services to bungalows, offices, malls, hotels, factories, etc. Led the formation of the Home Inspection Association of India (HIA)." },
+              { year: "2022", title: "National Footprint", desc: "Completed over 6,000 property inspections, expanded across 15 major cities with a Pan-India presence." }
+            ].map((milestone, idx) => (
+              <div key={idx} className="bg-white border border-brand-border/30 p-5 rounded-2xl relative shadow-sm hover:shadow-md transition-all duration-300 pt-7">
+                <span className="absolute -top-3.5 left-4 bg-secondary text-white font-extrabold text-xs px-3 py-1 rounded-full shadow-sm">
+                  {milestone.year}
+                </span>
+                <h4 className="text-sm sm:text-base font-bold text-primary font-display mb-1.5">{milestone.title}</h4>
+                <p className="text-xs text-brand-muted leading-relaxed font-light">{milestone.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Cities Bar */}
+          <div className="bg-primary text-white p-6 rounded-2xl text-center shadow-md">
+            <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-3">PAN India Presence: Serving 15+ Cities</p>
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2.5 text-xs font-semibold text-white/95 px-2">
+              {["Kolkata", "Mumbai", "Pune", "Delhi NCR", "Guwahati", "Ahmedabad", "Rajkot", "Goa", "Surat-Vapi", "Hyderabad", "Jaipur", "Patna", "Siliguri", "Bengaluru", "Vijayawada"].map((city, idx) => (
+                <span key={idx} className="inline-flex items-center gap-1.5">
+                  <span>{city}</span>
+                  {idx < 14 && <span className="h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 4. SERVICES SECTION */}
@@ -391,6 +435,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4.5 ROOM INSPECTION DETAILS */}
+      <section id="room-scope" className="py-10 sm:py-16 bg-white border-b border-brand-border/10">
+        <RoomScope />
+      </section>
+
       {/* 5.1 RERA ADVANTAGE SECTION */}
       <section className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
@@ -452,43 +501,119 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-            <div className="bg-white border border-brand-border/30 p-6 rounded-2xl shadow-sm text-left flex flex-col gap-4">
-              <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold">01</div>
+            {/* 1. Real Estate Developers */}
+            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
-                <h3 className="text-base font-bold text-primary font-display mb-1">Real Estate Developers</h3>
-                <p className="text-xs text-brand-muted leading-relaxed font-light">
-                  Serves as a reliable third-party audit to ensure contractor quality control, minimize workmanship defects, and build brand credibility.
-                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">01</div>
+                  <span className="text-[10px] bg-secondary/10 text-secondary font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Construction Stage</span>
+                </div>
+                <h3 className="text-lg font-bold text-primary font-display mb-1.5">Real Estate Developers</h3>
+                <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-3">Focus: Quality Check &amp; RERA Regime</p>
+                <ul className="space-y-2 text-[11px] text-brand-muted font-light leading-relaxed mb-4">
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Diagnosis of concealed plumbing &amp; electrical lines in walls</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Right wall selection for dry/wet interior finishes to prevent moisture</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Accessibility approach validation for future plumbing maintenance</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Plumbing line &amp; level checks, tile joint grouting audits</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Firefighting equipment layouts &amp; electrical layout illumination</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div className="bg-white border border-brand-border/30 p-6 rounded-2xl shadow-sm text-left flex flex-col gap-4">
-              <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold">02</div>
+            {/* 2. Property Buyers */}
+            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
-                <h3 className="text-base font-bold text-primary font-display mb-1">Property Buyers</h3>
-                <p className="text-xs text-brand-muted leading-relaxed font-light">
-                  Enables peace of mind, verifies system functionality (plumbing, electricals, structure), and provides grounds to claim RERA defects.
-                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">02</div>
+                  <span className="text-[10px] bg-secondary/10 text-secondary font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Handover &amp; Moving In</span>
+                </div>
+                <h3 className="text-lg font-bold text-primary font-display mb-1.5">Property Buyers</h3>
+                <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-3">Focus: RERA 5-Year Guarantee Claims</p>
+                <ul className="space-y-2 text-[11px] text-brand-muted font-light leading-relaxed mb-4">
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Two-phased audit conducted during final stage &amp; handover</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Verification of all structural, electrical, and plumbing installations</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Document structural &amp; workmanship defects scientifically</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Secure leverage to request builders to rectify faults before possession</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div className="bg-white border border-brand-border/30 p-6 rounded-2xl shadow-sm text-left flex flex-col gap-4">
-              <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold">03</div>
+            {/* 3. Interior Designers */}
+            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
-                <h3 className="text-base font-bold text-primary font-display mb-1">Architects &amp; Designers</h3>
-                <p className="text-xs text-brand-muted leading-relaxed font-light">
-                  Locates concealed electrical/plumbing lines and maps dampness indices to secure structures before wallpaper or cabinetry installations.
-                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">03</div>
+                  <span className="text-[10px] bg-secondary/10 text-secondary font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Design &amp; Renovation</span>
+                </div>
+                <h3 className="text-lg font-bold text-primary font-display mb-1.5">Interior Designers</h3>
+                <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-3">Focus: Rework &amp; Delay Avoidance</p>
+                <ul className="space-y-2 text-[11px] text-brand-muted font-light leading-relaxed mb-4">
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Identify active dampness zones before wallpaper or wood installations</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Locate structural rebars &amp; conduits to prevent drilling accidents</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Detailed moisture maps ensure aesthetic woodwork is not ruined</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div className="bg-white border border-brand-border/30 p-6 rounded-2xl shadow-sm text-left flex flex-col gap-4">
-              <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold">04</div>
+            {/* 4. Real Estate Brokers &amp; Sellers */}
+            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
-                <h3 className="text-base font-bold text-primary font-display mb-1">Real Estate Brokers</h3>
-                <p className="text-xs text-brand-muted leading-relaxed font-light">
-                  Facilitates transparent transactions, delivers objective property health valuations, and builds lifetime buyer trust.
-                </p>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">04</div>
+                  <span className="text-[10px] bg-secondary/10 text-secondary font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Primary &amp; Resale</span>
+                </div>
+                <h3 className="text-lg font-bold text-primary font-display mb-1.5">Owner &amp; Sellers</h3>
+                <p className="text-xs font-bold text-secondary uppercase tracking-widest mb-3">Focus: Pre-Sale Valuation Check</p>
+                <ul className="space-y-2 text-[11px] text-brand-muted font-light leading-relaxed mb-4">
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Objective property diagnostics build trust and justify valuation</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Avoid transaction failures due to post-purchase leakage complaints</span>
+                  </li>
+                  <li className="flex gap-1.5 items-start">
+                    <span className="text-secondary font-bold">•</span>
+                    <span>Establish detailed electrical and dampness maps for older structures</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -505,6 +630,11 @@ export default function Home() {
       {/* 9. INSPECTION PROCESS */}
       <section id="process" className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <ProcessTimeline />
+      </section>
+
+      {/* 9.5 ELECTRICAL SAFETY SCOPE */}
+      <section id="electrical-scope" className="py-10 sm:py-16 bg-brand-light border-b border-brand-border/10">
+        <ElectricalScope />
       </section>
 
       {/* 10. TECHNOLOGY SECTION */}
