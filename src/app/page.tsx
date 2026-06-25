@@ -82,7 +82,7 @@ export default function Home() {
   return (
     <div className="relative w-full">
       {/* 1. HERO SECTION */}
-      <section id="hero" className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center bg-primary overflow-hidden py-16 sm:py-20 px-6 sm:px-8 lg:px-12">
+      <section id="hero" className="relative min-h-[80vh] lg:min-h-[85vh] flex items-center justify-center bg-primary overflow-hidden py-12 sm:py-16 px-6 sm:px-8 lg:px-12">
         {/* Animated Particles */}
         <Particles />
 
@@ -268,8 +268,8 @@ export default function Home() {
       </section>
 
       {/* 3. ABOUT US SECTION */}
-      <section id="about" className="py-16 sm:py-24 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+      <section id="about" className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column: Two-Image Grid showing action + Diagnostics */}
           <div className="relative flex items-center justify-center w-full">
             <div className="grid grid-cols-2 gap-4 w-full max-w-[480px]">
@@ -330,8 +330,8 @@ export default function Home() {
       </section>
 
       {/* 4. SERVICES SECTION */}
-      <section id="services" className="py-16 sm:py-24 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-12 sm:gap-16">
+      <section id="services" className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl flex flex-col items-center gap-8 sm:gap-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Specialties</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Professional Property Inspection Services</h2>
@@ -392,8 +392,8 @@ export default function Home() {
       </section>
 
       {/* 5.1 RERA ADVANTAGE SECTION */}
-      <section className="py-16 sm:py-24 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-16 items-center">
+      <section className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           {/* Left Column: RERA Badge & Explanations */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
             <div className="relative w-full max-w-[320px] aspect-square rounded-[24px] overflow-hidden border border-brand-border/30 shadow-premium p-8 bg-brand-light flex flex-col items-center justify-center gap-6">
@@ -441,8 +441,8 @@ export default function Home() {
       </section>
 
       {/* 5.2 REAL ESTATE VALUE CHAIN SECTION */}
-      <section className="py-16 sm:py-24 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-12 sm:gap-16">
+      <section className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+        <div className="mx-auto max-w-7xl flex flex-col items-center gap-8 sm:gap-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Value Chain</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Benefits Across the Property Chain</h2>
@@ -496,22 +496,22 @@ export default function Home() {
       </section>
 
       {/* 7. HOW DAMPNESS SPREADS */}
-      <section className="py-16 sm:py-24 bg-[#fdf4f4] px-6 sm:px-8 lg:px-12 border-t border-b border-[#f6e1e1]">
+      <section className="py-10 sm:py-16 bg-[#fdf4f4] px-6 sm:px-8 lg:px-12 border-t border-b border-[#f6e1e1]">
         <DampnessTimeline />
       </section>
 
 
 
       {/* 9. INSPECTION PROCESS */}
-      <section id="process" className="py-16 sm:py-24 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section id="process" className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <ProcessTimeline />
       </section>
 
       {/* 10. TECHNOLOGY SECTION */}
-      <section className="py-16 sm:py-24 bg-primary text-white px-6 sm:px-8 lg:px-12 relative overflow-hidden">
+      <section className="py-10 sm:py-16 bg-primary text-white px-6 sm:px-8 lg:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(15,43,70,0.8),#081B2E)] pointer-events-none" />
 
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-12 sm:gap-16 relative z-10">
+        <div className="mx-auto max-w-7xl flex flex-col items-center gap-8 sm:gap-10 relative z-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Advanced Gear</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-white mt-2">Scientific Tools & Technology</h2>
@@ -547,8 +547,8 @@ export default function Home() {
       </section>
 
       {/* 11. GALLERY */}
-      <section id="gallery" className="py-16 sm:py-24 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
-        <div className="text-center max-w-2xl mx-auto mb-10">
+      <section id="gallery" className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+        <div className="text-center max-w-2xl mx-auto mb-6">
           <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Case Studies</span>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Work Inspection Gallery</h2>
           <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
@@ -559,8 +559,8 @@ export default function Home() {
       </section>
 
       {/* 12. TESTIMONIALS */}
-      <section className="py-16 sm:py-24 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
-        <div className="text-center max-w-2xl mx-auto mb-10">
+      <section className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+        <div className="text-center max-w-2xl mx-auto mb-6">
           <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Client Reviews</span>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">What Our Customers Say</h2>
           <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
@@ -571,8 +571,8 @@ export default function Home() {
       </section>
 
       {/* 13. FAQ ACCORDION */}
-      <section id="faq" className="py-16 sm:py-24 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-10">
+      <section id="faq" className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+        <div className="mx-auto max-w-7xl flex flex-col items-center gap-6">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Got Questions?</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Frequently Asked Questions</h2>
@@ -585,7 +585,7 @@ export default function Home() {
       </section>
 
       {/* 14. CALL TO ACTION & CONTACT FORM */}
-      <section id="contact" className="py-16 sm:py-24 bg-brand-light px-6 sm:px-8 lg:px-12 relative overflow-hidden">
+      <section id="contact" className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12 relative overflow-hidden">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Side Info */}
           <div className="lg:col-span-6 flex flex-col gap-6 text-left">

@@ -118,3 +118,21 @@ html.lenis, html.lenis body {
   opacity: 0;
   transform: translateY(30px);
 }
+
+/* GPU compositing hints for smooth animations */
+[data-framer-motion] {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
+/* Optimize image rendering */
+img {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Smooth transitions on interactive elements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}

@@ -52,7 +52,7 @@ const processSteps: ProcessStep[] = [
 export default function ProcessTimeline() {
   return (
     <div className="w-full max-w-5xl mx-auto px-6 py-6">
-      <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="text-center max-w-3xl mx-auto mb-8">
         <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Methodology</span>
         <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary mt-2">Our Step-by-Step Inspection Process</h2>
         <p className="text-brand-muted mt-3 text-sm sm:text-base">
@@ -60,7 +60,7 @@ export default function ProcessTimeline() {
         </p>
       </div>
 
-      <div className="relative border-l-2 border-brand-border/40 md:border-l-0 md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-0.5 md:before:bg-brand-border/40 pl-6 md:pl-0 flex flex-col gap-12">
+      <div className="relative border-l-2 border-brand-border/40 md:border-l-0 md:before:absolute md:before:left-1/2 md:before:top-0 md:before:bottom-0 md:before:w-0.5 md:before:bg-brand-border/40 pl-6 md:pl-0 flex flex-col gap-6">
         {processSteps.map((step, idx) => {
           const IconComponent = step.icon;
           const isEven = idx % 2 === 0;
