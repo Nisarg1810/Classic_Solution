@@ -270,10 +270,10 @@ export default function Home() {
       </section>
 
       {/* 3. ABOUT US SECTION */}
-      <section id="about" className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12">
+      <section id="about" className="py-6 sm:py-14 bg-brand-light px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          {/* Left Column: Two-Image Grid showing action + Diagnostics */}
-          <div className="relative flex items-center justify-center w-full">
+          {/* Left Column: Two-Image Grid — hidden on mobile */}
+          <div className="relative items-center justify-center w-full hidden lg:flex">
             <div className="grid grid-cols-2 gap-4 w-full max-w-[480px]">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium">
                 <Image
@@ -330,8 +330,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* NEW: MACJ India Journey Timeline & Cities Presence */}
-        <div className="mt-16 pt-12 border-t border-brand-border/45">
+        {/* NEW: MACJ India Journey Timeline & Cities Presence — hidden on mobile */}
+        <div className="hidden sm:block mt-10 sm:mt-16 pt-8 sm:pt-12 border-t border-brand-border/45">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Credentials</span>
             <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">MACJ - A Buyer's Choice, India Journey</h3>
@@ -374,7 +374,7 @@ export default function Home() {
       </section>
 
       {/* 4. SERVICES SECTION */}
-      <section id="services" className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12">
+      <section id="services" className="py-6 sm:py-14 bg-brand-light px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl flex flex-col items-center gap-8 sm:gap-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Specialties</span>
@@ -384,7 +384,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
             {services.map((svc, idx) => {
               const IconComp = svc.icon;
               return (
@@ -435,13 +435,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4.5 ROOM INSPECTION DETAILS */}
-      <section id="room-scope" className="py-10 sm:py-16 bg-white border-b border-brand-border/10">
+      {/* 4.5 ROOM INSPECTION DETAILS — desktop only */}
+      <section id="room-scope" className="hidden md:block py-6 sm:py-14 bg-white border-b border-brand-border/10">
         <RoomScope />
       </section>
 
       {/* 5.1 RERA ADVANTAGE SECTION */}
-      <section className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section className="py-6 sm:py-14 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           {/* Left Column: RERA Badge & Explanations */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
@@ -490,7 +490,7 @@ export default function Home() {
       </section>
 
       {/* 5.2 REAL ESTATE VALUE CHAIN SECTION */}
-      <section className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section className="py-6 sm:py-14 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <div className="mx-auto max-w-7xl flex flex-col items-center gap-8 sm:gap-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Value Chain</span>
@@ -621,24 +621,24 @@ export default function Home() {
       </section>
 
       {/* 7. HOW DAMPNESS SPREADS */}
-      <section className="py-10 sm:py-16 bg-[#fdf4f4] px-6 sm:px-8 lg:px-12 border-t border-b border-[#f6e1e1]">
+      <section className="py-6 sm:py-14 bg-[#fdf4f4] px-6 sm:px-8 lg:px-12 border-t border-b border-[#f6e1e1]">
         <DampnessTimeline />
       </section>
 
 
 
       {/* 9. INSPECTION PROCESS */}
-      <section id="process" className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section id="process" className="py-6 sm:py-14 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <ProcessTimeline />
       </section>
 
-      {/* 9.5 ELECTRICAL SAFETY SCOPE */}
-      <section id="electrical-scope" className="py-10 sm:py-16 bg-brand-light border-b border-brand-border/10">
+      {/* 9.5 ELECTRICAL SAFETY SCOPE — desktop only */}
+      <section id="electrical-scope" className="hidden md:block py-6 sm:py-14 bg-brand-light border-b border-brand-border/10">
         <ElectricalScope />
       </section>
 
       {/* 10. TECHNOLOGY SECTION */}
-      <section className="py-10 sm:py-16 bg-primary text-white px-6 sm:px-8 lg:px-12 relative overflow-hidden">
+      <section className="py-6 sm:py-14 bg-primary text-white px-6 sm:px-8 lg:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(15,43,70,0.8),#081B2E)] pointer-events-none" />
 
         <div className="mx-auto max-w-7xl flex flex-col items-center gap-8 sm:gap-10 relative z-10">
@@ -677,7 +677,7 @@ export default function Home() {
       </section>
 
       {/* 11. GALLERY */}
-      <section id="gallery" className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section id="gallery" className="py-6 sm:py-14 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <div className="text-center max-w-2xl mx-auto mb-6">
           <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Case Studies</span>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Work Inspection Gallery</h2>
@@ -689,7 +689,7 @@ export default function Home() {
       </section>
 
       {/* 12. TESTIMONIALS */}
-      <section className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section className="py-6 sm:py-14 bg-brand-light px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <div className="text-center max-w-2xl mx-auto mb-6">
           <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Client Reviews</span>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">What Our Customers Say</h2>
@@ -701,7 +701,7 @@ export default function Home() {
       </section>
 
       {/* 13. FAQ ACCORDION */}
-      <section id="faq" className="py-10 sm:py-16 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section id="faq" className="py-6 sm:py-14 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
         <div className="mx-auto max-w-7xl flex flex-col items-center gap-6">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Got Questions?</span>
@@ -719,7 +719,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
 
           {/* Left Side Info — dark navy, white text */}
-          <div className="flex flex-col gap-6 text-left py-12 sm:py-16 pr-0 lg:pr-12">
+          <div className="flex flex-col gap-6 text-left py-8 sm:py-14 pr-0 lg:pr-12">
             {/* Red label */}
             <span className="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm">
               Reserve Your Slot
