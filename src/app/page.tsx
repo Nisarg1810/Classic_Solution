@@ -10,7 +10,6 @@ import {
 // Subcomponents
 import Particles from "@/components/Particles";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import DampnessTimeline from "@/components/DampnessTimeline";
 import ProcessTimeline from "@/components/ProcessTimeline";
 import GalleryMasonry from "@/components/GalleryMasonry";
 import Testimonials from "@/components/Testimonials";
@@ -618,11 +617,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* 7. HOW DAMPNESS SPREADS */}
-      <section className="py-6 sm:py-14 bg-[#fdf4f4] px-6 sm:px-8 lg:px-12 border-t border-b border-[#f6e1e1]">
-        <DampnessTimeline />
       </section>
 
 
