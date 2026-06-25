@@ -10,13 +10,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
           {/* Column 1: Company Info */}
           <div className="flex flex-col gap-4 lg:col-span-4">
-            <div className="relative h-14 w-52">
-              <Image
-                src="/logo.svg"
-                alt="Classic Solution Logo"
-                fill
-                className="object-contain object-left brightness-0 invert"
-              />
+            <div className="flex items-center gap-1.5 py-1">
+              <span className="font-display font-extrabold text-2xl text-white tracking-tight">
+                Classic <span className="text-[#ff5a66]">Solution</span>
+              </span>
             </div>
             <p className="text-sm text-white/75 mt-2 leading-relaxed">
               Classic Solution introducing services first time in Gujarat as a Regional Owner and Team Franchisee of American MNC company A Buyer's Choice Home Inspection, USA & MACJ. We help you identify hidden structural, electrical, and water problems before they turn into costly repairs.

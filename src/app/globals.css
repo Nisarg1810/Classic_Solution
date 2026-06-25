@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0F2B46;
-  --color-primary-light: #184065;
-  --color-primary-dark: #081B2E;
-  --color-secondary: #DC2626;
-  --color-secondary-light: #EF4444;
+  --color-primary: #082858;
+  --color-primary-light: #0d3873;
+  --color-primary-dark: #061a38;
+  --color-secondary: #e80818;
+  --color-secondary-light: #ff3b47;
   --color-brand-bg: #FFFFFF;
-  --color-brand-light: #F8F9FA;
-  --color-brand-text: #1F2937;
-  --color-brand-muted: #4B5563;
-  --color-brand-border: #E5E7EB;
+  --color-brand-light: #f6f9fd;
+  --color-brand-text: #33425c;
+  --color-brand-muted: #6076a0;
+  --color-brand-border: #e7edf6;
 
-  --font-sans: var(--font-inter), sans-serif;
-  --font-display: var(--font-outfit), sans-serif;
+  --font-sans: var(--font-ibm-plex-sans), sans-serif;
+  --font-display: var(--font-sora), sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
 
   --animate-float: float 6s ease-in-out infinite;
   --animate-float-slow: float 8s ease-in-out infinite;
@@ -35,9 +36,9 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #1F2937;
-  --primary: #0F2B46;
-  --secondary: #DC2626;
+  --foreground: #33425c;
+  --primary: #082858;
+  --secondary: #e80818;
 }
 
 body {
@@ -90,7 +91,7 @@ html.lenis, html.lenis body {
 
 /* Custom Swiper pagination styles to match secondary red */
 .swiper-pagination-bullet-active {
-  background: #DC2626 !important;
+  background: #e80818 !important;
 }
 
 /* Custom transitions and scrollbar */
@@ -105,11 +106,11 @@ html.lenis, html.lenis body {
   background: #F8F9FA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #0F2B46;
+  background: #082858;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #DC2626;
+  background: #e80818;
 }
 
 /* Stagger & Fade-in styles for GSAP */

@@ -79,10 +79,10 @@ export default function DampnessTimeline() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="w-full flex flex-col items-center bg-white border border-brand-border/40 p-6 rounded-3xl shadow-premium relative z-10 transition-premium group-hover:-translate-y-2 group-hover:border-secondary"
+                 className="w-full flex flex-col items-center bg-white border border-[#f1d6d6] p-6 rounded-3xl shadow-premium relative z-10 transition-premium group-hover:-translate-y-2 group-hover:border-secondary"
               >
                 {/* Step number badge */}
-                <span className="absolute top-4 right-4 bg-brand-light text-primary font-bold text-xs h-6 w-6 rounded-full flex items-center justify-center border border-brand-border/30">
+                <span className="absolute top-4 right-4 bg-[#fdf4f4] text-secondary font-bold text-xs h-6 w-6 rounded-full flex items-center justify-center border border-[#f1d6d6]">
                   {stepItem.step}
                 </span>
 
@@ -92,7 +92,7 @@ export default function DampnessTimeline() {
                 </div>
 
                 <h3 className="text-lg font-bold text-primary font-display mb-2">{stepItem.title}</h3>
-                <p className="text-xs text-brand-muted leading-relaxed">{stepItem.desc}</p>
+                <p className="text-xs text-[#7a6a6a] leading-relaxed">{stepItem.desc}</p>
               </motion.div>
 
               {/* Connecting Arrows for Desktop (Only render between cards) */}

@@ -496,7 +496,7 @@ export default function Home() {
       </section>
 
       {/* 7. HOW DAMPNESS SPREADS */}
-      <section className="py-16 sm:py-24 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
+      <section className="py-16 sm:py-24 bg-[#fdf4f4] px-6 sm:px-8 lg:px-12 border-t border-b border-[#f6e1e1]">
         <DampnessTimeline />
       </section>
 

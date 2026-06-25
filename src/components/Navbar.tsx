@@ -56,9 +56,9 @@ export default function Navbar() {
               onClick={(e) => handleClick(e, "#hero")}
               className="flex items-center gap-2 group"
             >
-              <div className="relative h-14 w-52">
+              <div className="relative h-12 w-48">
                 <Image
-                  src="/logo.svg"
+                  src="/logo.png"
                   alt="Classic Solution Logo"
                   fill
                   className="object-contain object-left"
@@ -94,7 +94,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={(e) => handleClick(e, "#contact")}
-                className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-primary-light transition-all hover:scale-105"
+                className="rounded-xl bg-secondary px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-secondary-light hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
               >
                 Book Inspection
               </a>
@@ -142,10 +142,10 @@ export default function Navbar() {
                 <PhoneCall className="h-4 w-4 text-secondary" />
                 <span>0281 2990030</span>
               </a>
-              <a
+               <a
                 href="#contact"
                 onClick={(e) => handleClick(e, "#contact")}
-                className="rounded-xl bg-primary py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-primary-light transition-all"
+                className="rounded-xl bg-secondary py-3 text-center text-base font-semibold text-white shadow-md hover:bg-secondary-light transition-all"
               >
                 Book Inspection
               </a>

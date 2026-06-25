@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
-import { Inter, Outfit } from "next/font/google";
+import { Sora, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatButtons from "@/components/FloatButtons";
 import SmoothScroll from "@/components/SmoothScroll";
 
-const outfit = Outfit({
+const sora = Sora({
   subsets: ["latin"],
-  variable: "--font-outfit",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-sora",
+  weight: ["500", "600", "700", "800"],
 });
 
-const inter = Inter({
+const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex-sans",
+  weight: ["400", "500", "600", "700"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  variable: "--font-ibm-plex-mono",
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -43,7 +49,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${inter.variable} scroll-smooth h-full antialiased`}
+      className={`${sora.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable} scroll-smooth h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-white text-brand-text">
         <SmoothScroll>
