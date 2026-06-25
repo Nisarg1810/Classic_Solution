@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F2B46;
+  --color-primary-light: #184065;
+  --color-primary-dark: #081B2E;
+  --color-secondary: #F97316;
+  --color-secondary-light: #FB923C;
+  --color-brand-bg: #FFFFFF;
+  --color-brand-light: #F8F9FA;
+  --color-brand-text: #1F2937;
+  --color-brand-muted: #4B5563;
+  --color-brand-border: #E5E7EB;
+
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out infinite 3s;
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  
+  --shadow-premium: 0 8px 20px -6px rgba(15, 43, 70, 0.08);
+  --shadow-premium-hover: 0 16px 28px -10px rgba(15, 43, 70, 0.12);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1F2937;
+  --primary: #0F2B46;
+  --secondary: #F97316;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Lenis smooth scrolling config */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Glassmorphism custom classes */
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glassmorphism-dark {
+  background: rgba(15, 43, 70, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Custom Swiper pagination styles to match secondary orange */
+.swiper-pagination-bullet-active {
+  background: #F97316 !important;
+}
+
+/* Custom transitions and scrollbar */
+.transition-premium {
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #0F2B46;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F97316;
+}
+
+/* Stagger & Fade-in styles for GSAP */
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
