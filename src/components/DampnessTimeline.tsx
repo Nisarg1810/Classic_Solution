@@ -173,10 +173,10 @@ export default function DampnessTimeline() {
 
       <hr className="border-[#f1d6d6] my-10" />
 
-      {/* Symptoms & Risks Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      {/* Symptoms & Risks Grid — top two cards side by side */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {/* Symptoms Section */}
-        <div className="lg:col-span-5 bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl">
+        <div className="bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl h-full">
           <h3 className="text-xl font-bold font-display text-primary mb-4 flex items-center gap-2">
             <AlertTriangle className="h-5 w-5 text-secondary" /> Common Symptoms
           </h3>
@@ -195,50 +195,51 @@ export default function DampnessTimeline() {
           </div>
         </div>
 
-        {/* Potential Issues & Health Hazards */}
-        <div className="lg:col-span-7 flex flex-col gap-6">
-          {/* Potential Issues card */}
-          <div className="bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl">
-            <h3 className="text-xl font-bold font-display text-primary mb-4 flex items-center gap-2">
-              <ShieldX className="h-5 w-5 text-secondary" /> Potential Damage Issues
-            </h3>
-            <div className="space-y-4">
-              {potentialIssues.map((issueGroup, groupIdx) => (
-                <div key={groupIdx}>
-                  <h4 className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">
-                    {issueGroup.area}
-                  </h4>
-                  <ul className="space-y-2">
-                    {issueGroup.items.map((item, idx) => (
-                      <li key={idx} className="text-xs text-[#7a6a6a] flex items-start gap-2 leading-relaxed">
-                        <span className="text-secondary font-extrabold text-[10px]">•</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
+        {/* Potential Issues card */}
+        <div className="bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl h-full">
+          <h3 className="text-xl font-bold font-display text-primary mb-4 flex items-center gap-2">
+            <ShieldX className="h-5 w-5 text-secondary" /> Potential Damage Issues
+          </h3>
+          <div className="space-y-4">
+            {potentialIssues.map((issueGroup, groupIdx) => (
+              <div key={groupIdx}>
+                <h4 className="text-xs font-bold text-secondary uppercase tracking-wider mb-2">
+                  {issueGroup.area}
+                </h4>
+                <ul className="space-y-2">
+                  {issueGroup.items.map((item, idx) => (
+                    <li key={idx} className="text-xs text-[#7a6a6a] flex items-start gap-2 leading-relaxed">
+                      <span className="text-secondary font-extrabold text-[10px]">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
+        </div>
+      </div>
 
-          {/* Health Hazards card */}
-          <div className="bg-gradient-to-r from-red-950 via-primary-dark to-primary text-white p-6 sm:p-8 rounded-3xl shadow-lg border border-white/5">
-            <h3 className="text-xl font-bold font-display text-white mb-3 flex items-center gap-2">
-              <Activity className="h-5 w-5 text-secondary" /> Health Hazards - Excess Moisture
+      {/* Health Hazards — full width below */}
+      <div className="mt-8 bg-gradient-to-r from-red-950 via-primary-dark to-primary text-white p-6 sm:p-10 rounded-3xl shadow-lg border border-white/5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 className="text-xl sm:text-2xl font-bold font-display text-white mb-3 flex items-center gap-2">
+              <Activity className="h-6 w-6 text-secondary" /> Health Hazards — Excess Moisture
             </h3>
-            <p className="text-xs text-white/70 leading-relaxed mb-4 font-light">
+            <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-light">
               Too much moisture negatively affects human health. When mold grows, airborne spores can travel through air ducts, posing severe respiratory hazards.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {healthHazards.map((haz, index) => (
-                <div key={index} className="flex items-start gap-2">
-                  <div className="h-4 w-4 rounded-full bg-secondary text-white flex items-center justify-center text-[8px] font-bold mt-0.5 shrink-0 shadow">
-                    ✓
-                  </div>
-                  <span className="text-xs text-white/90 leading-tight font-medium">{haz}</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {healthHazards.map((haz, index) => (
+              <div key={index} className="flex items-start gap-3 bg-white/10 border border-white/10 p-3.5 rounded-2xl">
+                <div className="h-5 w-5 rounded-full bg-secondary text-white flex items-center justify-center text-[9px] font-bold shrink-0 shadow mt-0.5">
+                  ✓
                 </div>
-              ))}
-            </div>
+                <span className="text-xs text-white/90 leading-snug font-medium">{haz}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
