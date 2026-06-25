@@ -67,12 +67,6 @@ const galleryItems: GalleryItem[] = [
     category: "property",
     imageUrl: "/images/hero_background.png",
   },
-  {
-    id: 10,
-    title: "Home Inspection Core Analysis",
-    category: "inspection",
-    imageUrl: "/images/thermal_camera_check.png",
-  },
 ];
 
 const categories = [
