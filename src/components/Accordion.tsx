@@ -11,28 +11,28 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: "Why should I inspect my home?",
-    answer: "A professional home inspection helps identify hidden issues like water leakage, dampness, structural cracks, and faulty wiring before they become major safety hazards or result in expensive repair bills. It ensures your property remains safe, durable, and holds its market value.",
+    question: "What is Thermal Imaging Inspection?",
+    answer: "Thermal imaging inspection uses infrared cameras to detect heat variations invisible to the naked eye. It identifies electrical hotspots, overloaded circuits, moisture intrusion, energy loss, and equipment faults — all without any invasive procedures. It is one of the most accurate and non-destructive diagnostic tools available for preventive maintenance.",
   },
   {
-    question: "When should I schedule an inspection?",
-    answer: "It is highly recommended to schedule an inspection in three key scenarios: 1) Before purchasing a new property (Pre-Purchase Assessment), 2) Prior to the monsoon season (Pre-Monsoon Health Check) to catch waterproofing gaps, and 3) Immediately if you notice wall moisture, paint peeling, or structural cracks.",
+    question: "How often should preventive maintenance inspections be done?",
+    answer: "For most commercial and industrial facilities, we recommend a thermal inspection at least once a year. High-risk environments such as manufacturing plants, hospitals, and data centres benefit from inspections every 6 months. After any major electrical upgrade or equipment installation, an immediate post-installation inspection is also advisable.",
   },
   {
-    question: "How long does a typical home inspection take?",
-    answer: "A standard home inspection takes between 3 to 5 hours, depending on the size and layout of the property. Our inspectors thoroughly check the walls, ceiling, plumbing nodes, electrical panels, and balconies using advanced tools without causing any disruption.",
+    question: "Who needs Thermal Inspection?",
+    answer: "Any facility that relies on electrical systems, mechanical equipment, or building infrastructure can benefit from thermal inspection. This includes hotels, hospitals, commercial buildings, residential societies, industrial plants, manufacturing units, warehouses, offices, solar power plants, shopping malls, and educational institutions.",
   },
   {
-    question: "Do you provide detailed reports?",
-    answer: "Yes, we deliver a comprehensive, digital Property Condition Report within 24 to 48 hours. The report includes high-resolution camera images, thermal imaging captures, moisture readings, and step-by-step recommended waterproofing and structural solutions.",
+    question: "What industries benefit most from Thermal Imaging?",
+    answer: "Industries with continuous operations and high electrical loads benefit the most — manufacturing plants, data centres, hospitals, hotels, and industrial facilities. However, any building or facility with switchboards, electrical panels, HVAC systems, or solar installations will gain significant value from a thermal inspection and preventive maintenance report.",
   },
   {
-    question: "Can wall dampness affect health?",
-    answer: "Yes, absolutely. High moisture levels in walls create the perfect breeding ground for toxic mold and fungus. Mold spores can trigger asthma attacks, skin allergies, respiratory infections, and other severe health issues for kids and elderly family members.",
+    question: "How long does a thermal inspection take?",
+    answer: "Inspection duration depends on the size and complexity of the facility. A standard commercial building inspection typically takes 2 to 4 hours. Large industrial plants or campuses may require a full day or multiple visits. Our team works efficiently to minimise disruption to your operations.",
   },
   {
-    question: "Do you inspect individual apartments?",
-    answer: "Yes, we inspect individual apartments, builder floors, large luxury villas, independent homes, and commercial properties. We calibrate our testing methods and checklists according to the structural setup of your unit.",
+    question: "What does the Digital Inspection Report include?",
+    answer: "Our professional PDF report includes: high-resolution thermal images, precise temperature readings and comparisons against safe thresholds, hotspot identification with severity ratings, moisture detection maps, energy loss analysis, a risk priority matrix, step-by-step maintenance recommendations, and a tailored preventive maintenance plan for your facility.",
   },
 ];
 
@@ -56,13 +56,12 @@ export default function Accordion() {
                 : "border-brand-border/60 bg-white hover:border-primary/50"
             }`}
           >
-            {/* Header / Question Button */}
             <button
               onClick={() => toggleItem(idx)}
               className="w-full flex items-center justify-between p-5 text-left font-semibold text-primary text-base sm:text-lg focus:outline-none"
             >
               <span className="pr-4">{faq.question}</span>
-              <span className="shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-primary/5 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+              <span className="shrink-0 flex items-center justify-center h-8 w-8 rounded-full bg-primary/5 text-primary transition-colors duration-300">
                 {isOpen ? (
                   <Minus className="h-4 w-4 text-secondary" />
                 ) : (
@@ -71,7 +70,6 @@ export default function Accordion() {
               </span>
             </button>
 
-            {/* Answer Content */}
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div

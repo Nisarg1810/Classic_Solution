@@ -9,9 +9,8 @@ const navLinks = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
-  { name: "Inspection Process", href: "#process" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "FAQ", href: "#faq" },
+  { name: "Industries", href: "#industries" },
+  { name: "Process", href: "#process" },
 ];
 
 export default function Navbar() {
@@ -20,11 +19,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -50,7 +45,6 @@ export default function Navbar() {
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between">
-            {/* Logo */}
             <a
               href="#hero"
               onClick={(e) => handleClick(e, "#hero")}
@@ -67,7 +61,6 @@ export default function Navbar() {
               </div>
             </a>
 
-            {/* Desktop Nav Links */}
             <nav className="hidden md:flex items-center gap-8">
               {navLinks.map((link) => (
                 <a
@@ -82,7 +75,6 @@ export default function Navbar() {
               ))}
             </nav>
 
-            {/* Desktop CTA */}
             <div className="hidden md:flex items-center gap-4">
               <a
                 href="tel:02812990030"
@@ -100,7 +92,6 @@ export default function Navbar() {
               </a>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="flex items-center justify-center p-2 rounded-lg text-primary md:hidden hover:bg-black/5 transition-colors"
@@ -112,7 +103,6 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Drawer Overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -142,7 +132,7 @@ export default function Navbar() {
                 <PhoneCall className="h-4 w-4 text-secondary" />
                 <span>0281 2990030</span>
               </a>
-               <a
+              <a
                 href="#contact"
                 onClick={(e) => handleClick(e, "#contact")}
                 className="rounded-xl bg-secondary py-3 text-center text-base font-semibold text-white shadow-md hover:bg-secondary-light transition-all"

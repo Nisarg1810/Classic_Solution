@@ -25,19 +25,21 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Classic Solution | Premium Home Inspection & protection Services",
-  description: "Classic Solution is a professional home inspection and home protection company. We help homeowners identify hidden structural and water problems using scientific diagnostic tools before they become expensive repairs.",
+  title: "Classic Solution | Thermal Imaging & Preventive Maintenance Services",
+  description: "Classic Solution is a technology-driven preventive maintenance company specialising in thermal imaging inspection, electrical hotspot detection, moisture detection, energy audits, and building inspections. Prevent costly failures before they happen.",
   keywords: [
-    "Home Inspection",
-    "House Inspection",
-    "Pre Monsoon Inspection",
-    "Damp Wall Inspection",
-    "Leakage Detection",
-    "Home Health Check",
-    "Moisture Testing",
-    "Property Inspection",
-    "Waterproofing Inspection",
-    "Home Safety Inspection"
+    "Thermal Imaging Inspection",
+    "Preventive Maintenance",
+    "Electrical Hotspot Detection",
+    "Infrared Inspection",
+    "Energy Audit",
+    "Moisture Detection",
+    "Industrial Inspection",
+    "Building Inspection",
+    "Solar Panel Inspection",
+    "Fire Hazard Prevention",
+    "Electrical Safety Inspection",
+    "Property Inspection Rajkot"
   ]
 };
 

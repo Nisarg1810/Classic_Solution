@@ -11,40 +11,49 @@ interface ProcessStep {
 const processSteps: ProcessStep[] = [
   {
     step: "01",
-    title: "Book Inspection",
-    desc: "Schedule online or by phone — we align to your availability.",
+    title: "Schedule Inspection",
+    desc: "Book online or by phone — we align the visit to your schedule and facility requirements.",
   },
   {
     step: "02",
-    title: "Expert Site Visit",
-    desc: "Certified inspectors arrive with high-tech diagnostic gear.",
+    title: "Site Visit",
+    desc: "Our certified engineers arrive on-site with professional thermal imaging and diagnostic equipment.",
   },
   {
     step: "03",
-    title: "Advanced Testing",
-    desc: "Thermal scanning, moisture detection, plumbing and structural checks.",
+    title: "Thermal Imaging Scan",
+    desc: "Comprehensive infrared scanning of electrical systems, equipment, building envelope, and critical areas.",
   },
   {
     step: "04",
-    title: "Digital Report",
-    desc: "A structured PDF highlighting dampness, faults and structural issues.",
+    title: "Data Analysis",
+    desc: "Captured thermal data is analyzed to identify hotspots, moisture zones, and energy loss patterns.",
   },
   {
     step: "05",
-    title: "Expert Consultation",
-    desc: "We walk you through findings and show exactly where problems lie.",
+    title: "Digital Report Generation",
+    desc: "A structured PDF report is created with thermal images, temperature readings, and annotated findings.",
   },
   {
     step: "06",
-    title: "Recommended Solutions",
-    desc: "Tailored waterproofing, plumbing and structural recommendations.",
+    title: "Risk Assessment",
+    desc: "All identified issues are rated by severity using a risk priority matrix — critical to low risk.",
+  },
+  {
+    step: "07",
+    title: "Practical Recommendations",
+    desc: "Clear, actionable corrective measures are provided for each identified issue with priority guidance.",
+  },
+  {
+    step: "08",
+    title: "Preventive Maintenance Plan",
+    desc: "A tailored long-term maintenance schedule is delivered to keep your facility safe and efficient.",
   },
 ];
 
 export default function ProcessTimeline() {
   return (
     <div className="w-full max-w-7xl mx-auto px-6 py-6">
-      {/* Left-aligned header — matches reference design */}
       <div className="mb-10 max-w-2xl">
         <div className="flex items-center gap-3 mb-3">
           <span className="block w-8 h-0.5 bg-secondary" />
@@ -53,15 +62,14 @@ export default function ProcessTimeline() {
           </span>
         </div>
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-primary leading-tight">
-          A transparent, step-by-step<br className="hidden sm:block" /> inspection
+          A transparent, step-by-step<br className="hidden sm:block" /> inspection process
         </h2>
         <p className="text-brand-muted mt-4 text-sm sm:text-base leading-relaxed">
-          From booking to final recommendations — a scientific, thorough diagnostic of your property.
+          From booking to preventive maintenance plan — a scientific, thorough diagnostic of your facility.
         </p>
       </div>
 
-      {/* 3-column step grid — swipeable on mobile, grid on desktop */}
-      <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-8 pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {processSteps.map((step, idx) => (
           <motion.div
             key={step.step}
@@ -71,15 +79,10 @@ export default function ProcessTimeline() {
             transition={{ duration: 0.4, delay: idx * 0.07 }}
             className="flex-shrink-0 w-[75vw] sm:w-auto snap-center flex items-start gap-4"
           >
-            {/* Large step number */}
             <span className="text-4xl sm:text-5xl font-black font-display text-primary leading-none select-none shrink-0 w-14">
               {step.step}
             </span>
-
-            {/* Vertical divider */}
             <div className="w-px self-stretch bg-brand-border/60 shrink-0" />
-
-            {/* Text content */}
             <div className="flex flex-col gap-1 pt-0.5">
               <h3 className="text-sm sm:text-base font-bold text-primary font-display leading-snug">
                 {step.title}

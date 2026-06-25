@@ -20,18 +20,16 @@ interface FormErrors {
 }
 
 const serviceOptions = [
-  "Complete Home Inspection",
-  "Pre-Monsoon Inspection",
-  "Damp Wall Inspection",
-  "Leakage Detection",
-  "Roof Inspection",
-  "Terrace Waterproofing Inspection",
-  "Bathroom Leakage Check",
-  "Kitchen Plumbing Inspection",
-  "Electrical Inspection",
-  "Structural Crack Inspection",
-  "Moisture Testing",
-  "Property Health Report",
+  "Thermal Imaging Inspection",
+  "Electrical Hotspot Detection",
+  "Moisture Detection",
+  "Energy Audit",
+  "Property Inspection",
+  "Industrial Inspection",
+  "Solar Thermal Inspection",
+  "Preventive Maintenance Consulting",
+  "Digital Inspection Report",
+  "Safety Recommendations",
 ];
 
 export default function ContactForm() {
@@ -48,9 +46,9 @@ export default function ContactForm() {
 
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
-    
+
     if (!fields.name.trim()) newErrors.name = "Full name is required.";
-    
+
     if (!fields.email.trim()) {
       newErrors.email = "Email address is required.";
     } else if (!/\S+@\S+\.\S+/.test(fields.email)) {
@@ -82,8 +80,7 @@ export default function ContactForm() {
     if (!validate()) return;
 
     setStatus("submitting");
-    
-    // Simulate API request delay
+
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500));
       setStatus("success");
@@ -108,13 +105,13 @@ export default function ContactForm() {
             </div>
             <h3 className="text-2xl font-bold font-display text-primary">Inspection Booked Successfully!</h3>
             <p className="text-brand-muted mt-3 max-w-sm text-sm sm:text-base">
-              Thank you for choosing Classic Solution. One of our inspection coordinators will call you shortly to confirm the scheduled site visit.
+              Thank you for choosing Classic Solution. One of our inspection coordinators will contact you shortly to confirm your scheduled visit.
             </p>
             <button
               onClick={() => setStatus("idle")}
               className="mt-8 px-6 py-2.5 bg-primary hover:bg-primary-light text-white text-sm font-semibold rounded-full shadow transition-all duration-300 hover:scale-105"
             >
-              Book Another Session
+              Book Another Inspection
             </button>
           </motion.div>
         ) : (
@@ -133,7 +130,6 @@ export default function ContactForm() {
               </p>
             </div>
 
-            {/* Error Message banner */}
             {status === "error" && (
               <div className="bg-red-50 text-red-700 text-xs sm:text-sm p-4 rounded-xl border border-red-200 flex items-center gap-2">
                 <AlertCircle className="h-5 w-5 shrink-0" />
@@ -141,7 +137,6 @@ export default function ContactForm() {
               </div>
             )}
 
-            {/* Row: Name and Phone */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="name" className="text-xs font-bold text-primary uppercase tracking-wider">Full Name</label>
@@ -176,7 +171,6 @@ export default function ContactForm() {
               </div>
             </div>
 
-            {/* Email full-width */}
             <div className="flex flex-col gap-1.5">
               <label htmlFor="email" className="text-xs font-bold text-primary uppercase tracking-wider">Email Address</label>
               <input
@@ -193,7 +187,6 @@ export default function ContactForm() {
               {errors.email && <span className="text-xs text-red-500 font-semibold">{errors.email}</span>}
             </div>
 
-            {/* Select Service */}
             <div className="flex flex-col gap-1.5">
               <label htmlFor="service" className="text-xs font-bold text-primary uppercase tracking-wider">Required Service</label>
               <select
@@ -213,7 +206,6 @@ export default function ContactForm() {
               {errors.service && <span className="text-xs text-red-500 font-semibold">{errors.service}</span>}
             </div>
 
-            {/* Message Textarea */}
             <div className="flex flex-col gap-1.5">
               <label htmlFor="message" className="text-xs font-bold text-primary uppercase tracking-wider">Message (Optional)</label>
               <textarea
@@ -222,12 +214,11 @@ export default function ContactForm() {
                 value={fields.message}
                 onChange={handleChange}
                 rows={3}
-                placeholder="Tell us about your property or concern"
+                placeholder="Tell us about your facility or specific concern"
                 className="w-full px-4 py-3 rounded-xl border text-sm sm:text-base border-brand-border/60 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all text-secondary placeholder:text-secondary/50"
               />
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={status === "submitting"}

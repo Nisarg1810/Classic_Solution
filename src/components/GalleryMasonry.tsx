@@ -8,62 +8,62 @@ import { X, ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 interface GalleryItem {
   id: number;
   title: string;
-  category: "inspection" | "damage" | "property" | "tools";
+  category: "thermal" | "electrical" | "moisture" | "industrial" | "property";
   imageUrl: string;
 }
 
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: "Gujarat Luxury Villa Audit",
-    category: "property",
-    imageUrl: "/images/hero_background.png",
+    title: "Thermal Imaging — Electrical Panel Scan",
+    category: "thermal",
+    imageUrl: "/images/thermal_camera_check.png",
   },
   {
     id: 2,
-    title: "Wall Scanner Rebar Inspection",
-    category: "tools",
-    imageUrl: "/images/metal_detector_drilling.png",
-  },
-  {
-    id: 3,
-    title: "Acoustic Water Leak Detection",
-    category: "inspection",
+    title: "Electrical Hotspot Detection — Switchboard",
+    category: "electrical",
     imageUrl: "/images/underground_leak_detector.png",
   },
   {
+    id: 3,
+    title: "Wall Scanner — Rebar & Conduit Mapping",
+    category: "property",
+    imageUrl: "/images/metal_detector_drilling.png",
+  },
+  {
     id: 4,
-    title: "Water Damaged Walls & Peeling Paint",
-    category: "damage",
+    title: "Moisture Intrusion — Wall Dampness Scan",
+    category: "moisture",
     imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 5,
-    title: "Borescope Plumbing Inspection",
-    category: "inspection",
+    title: "Industrial Equipment — Motor Thermal Scan",
+    category: "industrial",
     imageUrl: "/images/video_borescope_test.png",
   },
   {
     id: 6,
-    title: "On-site Structural Analysis",
+    title: "Commercial Building — Envelope Inspection",
     category: "property",
     imageUrl: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 7,
-    title: "Drywall Cavity Inspection Probe",
-    category: "tools",
+    title: "Industrial Plant — Transformer Inspection",
+    category: "industrial",
     imageUrl: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 8,
-    title: "Thermal Scan & Dampness Tracking",
-    category: "inspection",
-    imageUrl: "/images/thermal_camera_check.png",
+    title: "Thermal Scan — Moisture & Energy Loss",
+    category: "thermal",
+    imageUrl: "/images/hero_background.png",
   },
   {
     id: 9,
-    title: "Modern Residence Structural Audit",
+    title: "Property Health Audit — Full Assessment",
     category: "property",
     imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
   },
@@ -71,10 +71,11 @@ const galleryItems: GalleryItem[] = [
 
 const categories = [
   { value: "all", label: "All Photos" },
-  { value: "inspection", label: "Inspections" },
-  { value: "damage", label: "Water Damage" },
-  { value: "tools", label: "Advanced Tools" },
-  { value: "property", label: "Properties" },
+  { value: "thermal", label: "Thermal Scans" },
+  { value: "electrical", label: "Electrical" },
+  { value: "moisture", label: "Moisture" },
+  { value: "industrial", label: "Industrial" },
+  { value: "property", label: "Property" },
 ];
 
 export default function GalleryMasonry() {
@@ -98,7 +99,6 @@ export default function GalleryMasonry() {
 
   return (
     <div className="w-full flex flex-col items-center gap-8">
-      {/* Category Buttons */}
       <div className="flex flex-wrap justify-center gap-2 max-w-2xl px-6">
         {categories.map((cat) => (
           <button
@@ -115,7 +115,6 @@ export default function GalleryMasonry() {
         ))}
       </div>
 
-      {/* Grid Layout (Masonry-like styled CSS columns or grid) */}
       <motion.div
         layout
         className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 max-w-7xl"
@@ -141,7 +140,6 @@ export default function GalleryMasonry() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
               />
-              {/* Overlay on hover */}
               <div className="absolute inset-0 bg-primary/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                 <span className="text-secondary font-bold text-xs uppercase tracking-widest">{item.category}</span>
                 <h4 className="text-white text-base sm:text-lg font-bold font-display mt-1">{item.title}</h4>
@@ -154,19 +152,17 @@ export default function GalleryMasonry() {
         </AnimatePresence>
       </motion.div>
 
-      {/* Show More Button (Only visible on mobile and if items length is > 4) */}
       {filteredItems.length > 4 && (
         <div className="flex sm:hidden mt-2">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
             className="px-8 py-3 bg-primary hover:bg-secondary text-white font-bold rounded-full transition-all shadow-md active:scale-95 text-xs uppercase tracking-wider"
           >
-            {isExpanded ? "Show Less Photos" : "Show All Work"}
+            {isExpanded ? "Show Less" : "Show All"}
           </button>
         </div>
       )}
 
-      {/* Custom Lightbox Modal */}
       <AnimatePresence>
         {lightboxIndex !== null && (
           <motion.div
@@ -175,7 +171,6 @@ export default function GalleryMasonry() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 backdrop-blur-md"
           >
-            {/* Close Button */}
             <button
               onClick={() => setLightboxIndex(null)}
               className="absolute top-6 right-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-2.5 rounded-full transition-all"
@@ -184,7 +179,6 @@ export default function GalleryMasonry() {
               <X className="h-6 w-6" />
             </button>
 
-            {/* Left Button */}
             <button
               onClick={handlePrev}
               className="absolute left-4 sm:left-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"
@@ -193,7 +187,6 @@ export default function GalleryMasonry() {
               <ChevronLeft className="h-6 w-6" />
             </button>
 
-            {/* Lightbox Image Container */}
             <motion.div
               key={lightboxIndex}
               initial={{ scale: 0.9, opacity: 0 }}
@@ -211,13 +204,11 @@ export default function GalleryMasonry() {
               />
             </motion.div>
 
-            {/* Image Description Footer */}
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-white max-w-xl">
               <h3 className="text-lg font-bold font-display">{filteredItems[lightboxIndex].title}</h3>
               <p className="text-xs sm:text-sm text-white/60 mt-1 uppercase tracking-widest">{filteredItems[lightboxIndex].category}</p>
             </div>
 
-            {/* Right Button */}
             <button
               onClick={handleNext}
               className="absolute right-4 sm:right-6 text-white/80 hover:text-white bg-white/10 hover:bg-white/20 p-3 rounded-full transition-all"

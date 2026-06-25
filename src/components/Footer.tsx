@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
@@ -8,6 +7,7 @@ export default function Footer() {
     <footer className="bg-primary text-white/80 pt-10 pb-8 border-t border-white/10">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8 mb-8">
+
           {/* Column 1: Company Info */}
           <div className="flex flex-col gap-4 lg:col-span-4">
             <div className="flex items-center gap-1.5 py-1">
@@ -16,7 +16,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-white/75 mt-2 leading-relaxed">
-              Classic Solution introducing services first time in Gujarat as a Regional Owner and Team Franchisee of American MNC company A Buyer's Choice Home Inspection, USA & MACJ. We help you identify hidden structural, electrical, and water problems before they turn into costly repairs.
+              Classic Solution is a technology-driven preventive maintenance company specialising in thermal imaging inspection, electrical hotspot detection, moisture detection, energy audits, and property inspection. We help businesses prevent failures before they become costly.
             </p>
             <div className="flex items-center gap-4 mt-4">
               <a href="#" className="h-9 w-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-secondary hover:text-white transition-all duration-300" aria-label="Facebook">
@@ -48,30 +48,25 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-6 font-display">Quick Links</h3>
             <ul className="space-y-3 text-sm">
-              <li>
-                <a href="#hero" className="hover:text-secondary transition-colors">Home</a>
-              </li>
-              <li>
-                <a href="#about" className="hover:text-secondary transition-colors">About Us</a>
-              </li>
-              <li>
-                <a href="#services" className="hover:text-secondary transition-colors">Services</a>
-              </li>
-              <li>
-                <a href="#process" className="hover:text-secondary transition-colors">Inspection Process</a>
-              </li>
-              <li>
-                <a href="#gallery" className="hover:text-secondary transition-colors">Gallery</a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-secondary transition-colors">FAQ</a>
-              </li>
+              {[
+                { label: "Home", href: "#hero" },
+                { label: "About Us", href: "#about" },
+                { label: "Services", href: "#services" },
+                { label: "Industries", href: "#industries" },
+                { label: "Inspection Process", href: "#process" },
+                { label: "FAQ", href: "#faq" },
+                { label: "Contact Us", href: "#contact" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <a href={link.href} className="hover:text-secondary transition-colors">{link.label}</a>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 3: Contact Info - Rajkot */}
+          {/* Column 3: Contact Info */}
           <div className="flex flex-col gap-4 text-sm lg:col-span-4">
-            <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-2 font-display">Saurashtra &amp; Kutchh Office</h3>
+            <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-2 font-display">Contact Us</h3>
             <div className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
               <span>Office - 9 Ground Floor, Anmol Complex, Raj Palace Chowk, Sadhu Vaswani Road, Rajkot, Gujarat - 360005</span>
@@ -94,10 +89,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Single Map Layout */}
+        {/* Map */}
         <div className="border-t border-white/10 pt-8 mt-8">
           <div className="w-full min-h-[240px] rounded-2xl overflow-hidden border border-white/10 shadow-lg relative bg-white/5">
-            <p className="text-xs font-bold text-white/60 mb-2 uppercase px-4 pt-2">Rajkot Office Location Map</p>
+            <p className="text-xs font-bold text-white/60 mb-2 uppercase px-4 pt-2">Rajkot Office Location</p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8028795764043!2d70.77484431541018!3d22.28549994974913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca18aa2f89f3%3A0x1a87b3281237e8bb!2sSadhu%20Vaswani%20Rd%2C%20Rajkot%2C%20Gujarat%20360005!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
               width="100%"
@@ -113,7 +108,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10 mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/55">
-          <p>© {currentYear} Classic Solution. All rights reserved. Regional Owner &amp; Franchisee of MACJ - A Buyer's Choice.</p>
+          <p>© {currentYear} Classic Solution. All rights reserved. Thermal Imaging &amp; Preventive Maintenance Solutions.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-secondary">Privacy Policy</a>
             <a href="#" className="hover:text-secondary">Terms of Service</a>
