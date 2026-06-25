@@ -80,6 +80,7 @@ const categories = [
 export default function GalleryMasonry() {
   const [filter, setFilter] = useState("all");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const filteredItems = filter === "all"
     ? galleryItems
@@ -129,7 +130,9 @@ export default function GalleryMasonry() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.4 }}
               onClick={() => setLightboxIndex(idx)}
-              className="relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer shadow-premium hover:shadow-premium-hover border border-brand-border/20"
+              className={`relative overflow-hidden rounded-2xl aspect-[4/3] group cursor-pointer shadow-premium hover:shadow-premium-hover border border-brand-border/20 ${
+                idx >= 4 && !isExpanded ? "hidden sm:block" : "block"
+              }`}
             >
               <Image
                 src={item.imageUrl}
@@ -150,6 +153,18 @@ export default function GalleryMasonry() {
           ))}
         </AnimatePresence>
       </motion.div>
+
+      {/* Show More Button (Only visible on mobile and if items length is > 4) */}
+      {filteredItems.length > 4 && (
+        <div className="flex sm:hidden mt-2">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="px-8 py-3 bg-primary hover:bg-secondary text-white font-bold rounded-full transition-all shadow-md active:scale-95 text-xs uppercase tracking-wider"
+          >
+            {isExpanded ? "Show Less Photos" : "Show All Work"}
+          </button>
+        </div>
+      )}
 
       {/* Custom Lightbox Modal */}
       <AnimatePresence>

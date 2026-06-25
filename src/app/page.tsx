@@ -384,7 +384,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
+          <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 w-full pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {services.map((svc, idx) => {
               const IconComp = svc.icon;
               return (
@@ -394,7 +394,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  className="bg-white border border-brand-border/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-premium transition-premium flex flex-col group hover:-translate-y-1 hover:border-secondary"
+                  className="flex-shrink-0 w-[80vw] sm:w-auto snap-center bg-white border border-brand-border/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-premium transition-premium flex flex-col group hover:-translate-y-1 hover:border-secondary"
                 >
                   {/* Card Image */}
                   <div className="relative h-40 w-full overflow-hidden bg-brand-light">
@@ -402,7 +402,7 @@ export default function Home() {
                       src={svc.image}
                       alt={svc.title}
                       fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      sizes="(max-width: 640px) 80vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
@@ -500,9 +500,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+          <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {/* 1. Real Estate Developers */}
-            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
+            <div className="flex-shrink-0 w-[80vw] sm:w-auto snap-center bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">01</div>
@@ -536,7 +536,7 @@ export default function Home() {
             </div>
 
             {/* 2. Property Buyers */}
-            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
+            <div className="flex-shrink-0 w-[80vw] sm:w-auto snap-center bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">02</div>
@@ -566,7 +566,7 @@ export default function Home() {
             </div>
 
             {/* 3. Interior Designers */}
-            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
+            <div className="flex-shrink-0 w-[80vw] sm:w-auto snap-center bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">03</div>
@@ -591,8 +591,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 4. Real Estate Brokers &amp; Sellers */}
-            <div className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
+            {/* 4. Real Estate Brokers & Sellers */}
+            <div className="flex-shrink-0 w-[80vw] sm:w-auto snap-center bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm text-left flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold font-display">04</div>
@@ -650,7 +650,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full">
+          <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 w-full pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {inspectionTools.map((tool, idx) => {
               const ToolIcon = tool.icon;
               return (
@@ -660,7 +660,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.05 }}
-                  className="bg-white/5 border border-white/10 hover:border-secondary/40 p-5 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:bg-white/10 text-left group flex items-start gap-4"
+                  className="flex-shrink-0 w-[80vw] sm:w-auto snap-center bg-white/5 border border-white/10 hover:border-secondary/40 p-5 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:bg-white/10 text-left group flex items-start gap-4"
                 >
                   <div className="h-10 w-10 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
                     <ToolIcon className="h-5 w-5" />

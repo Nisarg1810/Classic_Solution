@@ -1,7 +1,8 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Droplet, Layers, AlertTriangle, Bug, ShieldX, Activity, ArrowRight, ArrowDown } from "lucide-react";
+import { Droplet, Layers, AlertTriangle, Bug, ShieldX, Activity, ArrowRight } from "lucide-react";
 
 interface TimelineStep {
   step: number;
@@ -57,6 +58,8 @@ const dampnessSteps: TimelineStep[] = [
 ];
 
 export default function DampnessTimeline() {
+  const [activeTab, setActiveTab] = useState<"symptoms" | "damage" | "health">("symptoms");
+
   const commonSymptoms = [
     "Visual water leaks and active runoffs",
     "Popping or peeling of wall paint",
@@ -115,12 +118,12 @@ export default function DampnessTimeline() {
         </p>
       </div>
 
-      {/* Timeline flow */}
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-6 relative mb-16">
+      {/* Timeline flow — swipeable row on mobile, 6 cols on desktop */}
+      <div className="flex md:grid overflow-x-auto md:overflow-visible snap-x snap-mandatory md:grid-cols-6 gap-6 relative mb-12 pb-4 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {dampnessSteps.map((stepItem, idx) => {
           const IconComponent = stepItem.icon;
           return (
-            <div key={stepItem.step} className="flex flex-col items-center text-center relative group">
+            <div key={stepItem.step} className="flex-shrink-0 w-[75vw] md:w-auto snap-center flex flex-col items-center text-center relative group">
               {/* Step Card */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -154,29 +157,38 @@ export default function DampnessTimeline() {
                   </motion.div>
                 </div>
               )}
-
-              {/* Connecting Arrows for Mobile (Only render between cards) */}
-              {idx < 5 && (
-                <div className="flex md:hidden my-3 text-secondary z-20">
-                  <motion.div
-                    animate={{ y: [0, 5, 0] }}
-                    transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-                  >
-                    <ArrowDown className="h-5 w-5" />
-                  </motion.div>
-                </div>
-              )}
             </div>
           );
         })}
       </div>
 
-      <hr className="border-[#f1d6d6] my-10" />
+      <hr className="border-[#f1d6d6] my-8" />
 
-      {/* Symptoms & Risks Grid — top two cards side by side */}
+      {/* Tabs selection on mobile/tablet, hidden on large desktop */}
+      <div className="flex lg:hidden justify-center bg-[#fdeeee] border border-[#f1d6d6] p-1.5 rounded-full max-w-md mx-auto mb-8">
+        {[
+          { id: "symptoms", label: "Symptoms" },
+          { id: "damage", label: "Damage" },
+          { id: "health", label: "Health Risks" }
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setActiveTab(tab.id as any)}
+            className={`flex-1 text-center py-2 rounded-full text-xs font-bold transition-all duration-300 ${
+              activeTab === tab.id
+                ? "bg-secondary text-white shadow-sm"
+                : "text-brand-muted hover:text-primary"
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {/* Symptoms & Risks Grid — conditional classes let us show selected tab on mobile, side-by-side on desktop */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
         {/* Symptoms Section */}
-        <div className="bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl h-full">
+        <div className={`bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl h-full ${activeTab === "symptoms" ? "block" : "hidden lg:block"}`}>
           <h3 className="text-xl font-bold font-display text-primary mb-4 flex items-center gap-2">
             <AlertTriangle className="h-5 w-5 text-secondary" /> Common Symptoms
           </h3>
@@ -196,7 +208,7 @@ export default function DampnessTimeline() {
         </div>
 
         {/* Potential Issues card */}
-        <div className="bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl h-full">
+        <div className={`bg-white border border-[#f1d6d6] p-6 sm:p-8 rounded-3xl h-full ${activeTab === "damage" ? "block" : "hidden lg:block"}`}>
           <h3 className="text-xl font-bold font-display text-primary mb-4 flex items-center gap-2">
             <ShieldX className="h-5 w-5 text-secondary" /> Potential Damage Issues
           </h3>
@@ -220,8 +232,8 @@ export default function DampnessTimeline() {
         </div>
       </div>
 
-      {/* Health Hazards — full width below */}
-      <div className="mt-8 bg-gradient-to-r from-red-950 via-primary-dark to-primary text-white p-6 sm:p-10 rounded-3xl shadow-lg border border-white/5">
+      {/* Health Hazards — full width below on desktop, active tab on mobile */}
+      <div className={`mt-8 bg-gradient-to-r from-red-950 via-primary-dark to-primary text-white p-6 sm:p-10 rounded-3xl shadow-lg border border-white/5 ${activeTab === "health" ? "block mt-0" : "hidden lg:block"}`}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-xl sm:text-2xl font-bold font-display text-white mb-3 flex items-center gap-2">

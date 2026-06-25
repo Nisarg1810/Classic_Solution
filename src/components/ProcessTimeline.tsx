@@ -60,8 +60,8 @@ export default function ProcessTimeline() {
         </p>
       </div>
 
-      {/* 3-column step grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
+      {/* 3-column step grid — swipeable on mobile, grid on desktop */}
+      <div className="flex sm:grid overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 pb-4 sm:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {processSteps.map((step, idx) => (
           <motion.div
             key={step.step}
@@ -69,7 +69,7 @@ export default function ProcessTimeline() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.4, delay: idx * 0.07 }}
-            className="flex items-start gap-4"
+            className="flex-shrink-0 w-[75vw] sm:w-auto snap-center flex items-start gap-4"
           >
             {/* Large step number */}
             <span className="text-4xl sm:text-5xl font-black font-display text-primary leading-none select-none shrink-0 w-14">
