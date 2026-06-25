@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
           {/* Column 1: Company Info */}
           <div className="flex flex-col gap-4 lg:col-span-4">
-            <div className="relative h-12 w-44">
+            <div className="relative h-14 w-52">
               <Image
                 src="/logo.svg"
                 alt="Classic Solution Logo"

@@ -56,7 +56,7 @@ export default function Navbar() {
               onClick={(e) => handleClick(e, "#hero")}
               className="flex items-center gap-2 group"
             >
-              <div className="relative h-12 w-44">
+              <div className="relative h-14 w-52">
                 <Image
                   src="/logo.svg"
                   alt="Classic Solution Logo"
