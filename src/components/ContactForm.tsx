@@ -127,9 +127,9 @@ export default function ContactForm() {
             noValidate
           >
             <div>
-              <h3 className="text-xl font-bold font-display text-primary">Schedule a Site Inspection</h3>
-              <p className="text-xs sm:text-sm text-brand-muted mt-1">
-                Enter your details below to receive a free phone consultation and lock in an appointment.
+              <h3 className="text-xl sm:text-2xl font-extrabold font-display text-primary">Schedule a site inspection</h3>
+              <p className="text-xs sm:text-sm text-secondary mt-1 font-medium">
+                Get a free phone consultation and lock in an appointment.
               </p>
             </div>
 
@@ -141,25 +141,24 @@ export default function ContactForm() {
               </div>
             )}
 
-            {/* Input Name */}
-            <div className="flex flex-col gap-1.5">
-              <label htmlFor="name" className="text-xs font-bold text-primary uppercase tracking-wider">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={fields.name}
-                onChange={handleChange}
-                placeholder="John Doe"
-                className={`w-full px-4 py-3 rounded-xl border text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all ${
-                  errors.name ? "border-red-500 focus:border-red-500" : "border-brand-border/60 focus:border-secondary"
-                }`}
-              />
-              {errors.name && <span className="text-xs text-red-500 font-semibold">{errors.name}</span>}
-            </div>
-
-            {/* Row: Phone and Email */}
+            {/* Row: Name and Phone */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="name" className="text-xs font-bold text-primary uppercase tracking-wider">Full Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={fields.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                  className={`w-full px-4 py-3 rounded-xl border text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all ${
+                    errors.name ? "border-red-500 focus:border-red-500" : "border-brand-border/60 focus:border-secondary"
+                  }`}
+                />
+                {errors.name && <span className="text-xs text-red-500 font-semibold">{errors.name}</span>}
+              </div>
+
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="phone" className="text-xs font-bold text-primary uppercase tracking-wider">Phone Number</label>
                 <input
@@ -168,29 +167,30 @@ export default function ContactForm() {
                   name="phone"
                   value={fields.phone}
                   onChange={handleChange}
-                  placeholder="+91 99999 99999"
+                  placeholder="Mobile number"
                   className={`w-full px-4 py-3 rounded-xl border text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all ${
                     errors.phone ? "border-red-500 focus:border-red-500" : "border-brand-border/60 focus:border-secondary"
                   }`}
                 />
                 {errors.phone && <span className="text-xs text-red-500 font-semibold">{errors.phone}</span>}
               </div>
+            </div>
 
-              <div className="flex flex-col gap-1.5">
-                <label htmlFor="email" className="text-xs font-bold text-primary uppercase tracking-wider">Email Address</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={fields.email}
-                  onChange={handleChange}
-                  placeholder="john@example.com"
-                  className={`w-full px-4 py-3 rounded-xl border text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all ${
-                    errors.email ? "border-red-500 focus:border-red-500" : "border-brand-border/60 focus:border-secondary"
-                  }`}
-                />
-                {errors.email && <span className="text-xs text-red-500 font-semibold">{errors.email}</span>}
-              </div>
+            {/* Email full-width */}
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="email" className="text-xs font-bold text-primary uppercase tracking-wider">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={fields.email}
+                onChange={handleChange}
+                placeholder="you@email.com"
+                className={`w-full px-4 py-3 rounded-xl border text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all ${
+                  errors.email ? "border-red-500 focus:border-red-500" : "border-brand-border/60 focus:border-secondary"
+                }`}
+              />
+              {errors.email && <span className="text-xs text-red-500 font-semibold">{errors.email}</span>}
             </div>
 
             {/* Select Service */}
@@ -222,8 +222,8 @@ export default function ContactForm() {
                 value={fields.message}
                 onChange={handleChange}
                 rows={3}
-                placeholder="Tell us about dampness spots, wall cracks, or specific plumbing leakages you have noticed..."
-                className="w-full px-4 py-3 rounded-xl border text-sm sm:text-base border-brand-border/60 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all"
+                placeholder="Tell us about your property or concern"
+                className="w-full px-4 py-3 rounded-xl border text-sm sm:text-base border-brand-border/60 focus:border-secondary focus:outline-none focus:ring-2 focus:ring-secondary/20 transition-all text-secondary placeholder:text-secondary/50"
               />
             </div>
 

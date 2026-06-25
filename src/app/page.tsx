@@ -585,47 +585,60 @@ export default function Home() {
       </section>
 
       {/* 14. CALL TO ACTION & CONTACT FORM */}
-      <section id="contact" className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12 relative overflow-hidden">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Side Info */}
-          <div className="lg:col-span-6 flex flex-col gap-6 text-left">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Reserve Your Slot</span>
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold font-display text-primary leading-tight">
-              Book Your Professional Home Inspection Today
+      <section id="contact" className="bg-primary px-6 sm:px-8 lg:px-12 relative overflow-hidden">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
+
+          {/* Left Side Info — dark navy, white text */}
+          <div className="flex flex-col gap-6 text-left py-12 sm:py-16 pr-0 lg:pr-12">
+            {/* Red label */}
+            <span className="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm">
+              Reserve Your Slot
+            </span>
+
+            {/* Heading */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display text-white leading-tight">
+              Book your home<br />inspection today
             </h2>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Don't wait for tiny damp spots or minor cracks to develop into high repair bills. Secure your family's safety and property value with scientific home health audits.
+
+            {/* Description */}
+            <p className="text-sm sm:text-base text-white/65 leading-relaxed font-light max-w-md">
+              Don't let tiny damp spots or hairline cracks grow into high repair bills. Secure your family's safety with a scientific home health audit.
             </p>
 
-            <div className="flex flex-col gap-4 mt-2">
-              <a
-                href="tel:02812990030"
-                className="flex items-center gap-3 bg-white p-3.5 rounded-xl border border-brand-border/30 hover:border-secondary hover:shadow-md transition-all duration-300 w-fit"
-              >
-                <div className="h-9 w-9 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 animate-pulse">
-                  <PhoneCall className="h-4 w-4 text-secondary" />
-                </div>
-                <div>
-                  <p className="text-[10px] text-brand-muted uppercase font-bold">Call our Hotline</p>
-                  <p className="text-sm sm:text-base font-extrabold font-display text-primary">0281 2990030</p>
-                </div>
-              </a>
-
-              <div className="flex items-center gap-3 text-brand-text">
-                <div className="h-5 w-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 font-bold text-[10px]">✓</div>
-                <span className="text-xs sm:text-sm font-medium">100% unbiased third party property evaluation reports.</span>
+            {/* Phone Box */}
+            <a
+              href="tel:02812990030"
+              className="flex items-center gap-4 bg-white/10 hover:bg-white/15 border border-white/20 p-4 rounded-2xl w-fit transition-all duration-300 group"
+            >
+              <div className="h-12 w-12 rounded-xl bg-secondary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                <PhoneCall className="h-5 w-5 text-white" />
               </div>
-              <div className="flex items-center gap-3 text-brand-text">
-                <div className="h-5 w-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 font-bold text-[10px]">✓</div>
-                <span className="text-xs sm:text-sm font-medium">Calibrated testing tools like thermal scanners and moisture trackers.</span>
+              <div>
+                <p className="text-[10px] text-white/60 uppercase font-bold tracking-wider">Call our hotline</p>
+                <p className="text-lg sm:text-xl font-extrabold font-display text-white tracking-tight">0281 2990030</p>
+              </div>
+            </a>
+
+            {/* Checkmarks */}
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <div className="h-5 w-5 rounded-full border border-secondary/60 text-secondary flex items-center justify-center shrink-0 font-bold text-[10px]">✓</div>
+                <span className="text-xs sm:text-sm font-medium text-white/75">100% unbiased third-party property evaluation reports</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="h-5 w-5 rounded-full border border-secondary/60 text-secondary flex items-center justify-center shrink-0 font-bold text-[10px]">✓</div>
+                <span className="text-xs sm:text-sm font-medium text-white/75">Calibrated thermal scanners and moisture trackers</span>
               </div>
             </div>
           </div>
 
-          {/* Right Side: Booking Form */}
-          <div className="lg:col-span-6 w-full">
-            <ContactForm />
+          {/* Right Side: White floating card */}
+          <div className="flex items-stretch w-full py-8 sm:py-10">
+            <div className="w-full bg-white rounded-3xl shadow-2xl overflow-hidden">
+              <ContactForm />
+            </div>
           </div>
+
         </div>
       </section>
     </div>
