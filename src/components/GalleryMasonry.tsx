@@ -45,9 +45,9 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    title: "InterNACHI Inspection Audit",
+    title: "On-site Structural Analysis",
     category: "property",
-    imageUrl: "/images/internachi_certification.png",
+    imageUrl: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop",
   },
   {
     id: 7,

@@ -270,7 +270,7 @@ export default function Home() {
       {/* 3. ABOUT US SECTION */}
       <section id="about" className="py-16 sm:py-24 bg-brand-light px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
-          {/* Left Column: Two-Image Grid showing action + InterNACHI Certificate */}
+          {/* Left Column: Two-Image Grid showing action + Diagnostics */}
           <div className="relative flex items-center justify-center w-full">
             <div className="grid grid-cols-2 gap-4 w-full max-w-[480px]">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium">
@@ -281,20 +281,20 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium bg-white p-2">
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium">
                 <Image
-                  src="/images/internachi_certification.png"
-                  alt="InterNACHI Certified Professional Inspector Certificate"
+                  src="/images/underground_leak_detector.png"
+                  alt="Acoustic water leak detection test"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
             </div>
             {/* Micro card */}
             <div className="absolute -bottom-6 -right-2 bg-primary text-white p-5 rounded-xl shadow-lg max-w-xs border border-white/10 hidden sm:block">
-              <p className="text-xl font-bold font-display text-secondary">InterNACHI CPI</p>
+              <p className="text-xl font-bold font-display text-secondary">Certified Audits</p>
               <p className="text-xs text-white/70 mt-1 leading-relaxed font-light">
-                Operations led by certified inspector Dev Smitkumar Kaneria (Member ID available).
+                Conducted by certified structural &amp; electrical engineers with advanced tools.
               </p>
             </div>
           </div>
@@ -309,12 +309,12 @@ export default function Home() {
               Classic Solution introduces professional home and property inspection services to Saurashtra &amp; Kutchh (Rajkot office), in collaboration with leading American MNC company A Buyer's Choice Home Inspection and MACJ.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Our operations are led by <strong>Dev Smitkumar Kaneria</strong>, a Certified Professional Inspector (CPI) credentialed by the International Association of Certified Home Inspectors (InterNACHI). We maintain strict objectivity and ensure our client's safety through calibrated diagnostic instruments.
+              Our inspections are led by well-trained, certified civil and electrical engineers dedicated to structural safety. We maintain strict objectivity and ensure our clients' peace of mind through calibrated diagnostic instruments and detailed engineering reviews.
             </p>
             <div className="flex flex-col gap-2.5 mt-2">
               <div className="flex items-center gap-3 text-brand-text text-sm font-medium">
                 <div className="h-5 w-5 rounded-full bg-secondary/10 text-secondary flex items-center justify-center text-[10px]">✓</div>
-                <span>InterNACHI Certified Professional Inspector (CPI) Dev Smitkumar Kaneria</span>
+                <span>Led by certified civil &amp; electrical engineering experts</span>
               </div>
               <div className="flex items-center gap-3 text-brand-text text-sm font-medium">
                 <div className="h-5 w-5 rounded-full bg-secondary/10 text-secondary flex items-center justify-center text-[10px]">✓</div>
