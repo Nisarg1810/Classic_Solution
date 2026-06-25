@@ -41,19 +41,6 @@ const services = [
   { title: "Safety Recommendations", icon: ShieldCheck, desc: "Detailed safety compliance guidance and corrective action plans based on inspection findings." },
 ];
 
-const industries = [
-  { title: "Hotels & Resorts", icon: Building2 },
-  { title: "Hospitals", icon: Heart },
-  { title: "Commercial Buildings", icon: Briefcase },
-  { title: "Residential Societies", icon: HomeIcon },
-  { title: "Industrial Plants", icon: Factory },
-  { title: "Manufacturing Units", icon: Settings },
-  { title: "Warehouses", icon: Package },
-  { title: "Offices", icon: Users },
-  { title: "Solar Power Plants", icon: Sun },
-  { title: "Shopping Malls", icon: ShoppingBag },
-  { title: "Educational Institutions", icon: BookOpen },
-];
 
 const inspectionTools = [
   { name: "Thermal Imaging Camera", desc: "Advanced infrared cameras detecting heat variations with precision to reveal electrical hotspots and energy leaks.", icon: Camera },
@@ -397,40 +384,6 @@ export default function Home() {
                     <span>Book Now</span>
                     <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </button>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. INDUSTRIES WE SERVE */}
-      <section id="industries" className="py-6 sm:py-14 bg-white px-6 sm:px-8 lg:px-12 border-b border-brand-border/10">
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-8 sm:gap-10">
-          <div className="text-center max-w-2xl">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Industries We Serve</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Built for Every Industry</h2>
-            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              Our thermal imaging and preventive maintenance solutions serve a wide range of industries across commercial, industrial, and institutional sectors.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
-            {industries.map((industry, idx) => {
-              const IndustryIcon = industry.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: idx * 0.04 }}
-                  className="flex flex-col items-center gap-3 p-4 bg-brand-light border border-brand-border/30 rounded-2xl hover:border-secondary hover:shadow-sm transition-premium group cursor-default"
-                >
-                  <div className="h-10 w-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                    <IndustryIcon className="h-5 w-5" />
-                  </div>
-                  <p className="text-xs sm:text-sm font-semibold text-primary text-center leading-tight font-display">{industry.title}</p>
                 </motion.div>
               );
             })}
