@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function Footer() {
@@ -45,26 +46,44 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-6 font-display">Quick Links</h3>
             <ul className="space-y-3 text-sm">
               {[
-                { label: "Home", href: "#hero" },
-                { label: "About Us", href: "#about" },
-                { label: "Services", href: "#services" },
-                { label: "Industries", href: "#industries" },
-                { label: "Inspection Process", href: "#process" },
-                { label: "FAQ", href: "#faq" },
-                { label: "Contact Us", href: "#contact" },
+                { label: "Home", href: "/" },
+                { label: "About Us", href: "/about" },
+                { label: "Services", href: "/services" },
+                { label: "Inspection Process", href: "/process" },
+                { label: "Gallery", href: "/gallery" },
+                { label: "Contact Us", href: "/contact" },
               ].map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="hover:text-secondary transition-colors">{link.label}</a>
+                  <Link href={link.href} className="hover:text-secondary transition-colors">{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 3: Contact Info */}
+          {/* Column 3: Our Services */}
+          <div className="lg:col-span-2">
+            <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-6 font-display">Our Services</h3>
+            <ul className="space-y-3 text-sm">
+              {[
+                { label: "Thermal Imaging", href: "/services#thermal" },
+                { label: "Electrical Inspection", href: "/services#electrical" },
+                { label: "Moisture Detection", href: "/services#moisture" },
+                { label: "Energy Audit", href: "/services#energy" },
+                { label: "Property Inspection", href: "/services#property" },
+                { label: "Industrial Inspection", href: "/services#industrial" },
+              ].map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="hover:text-secondary transition-colors">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 4: Contact Info */}
           <div className="flex flex-col gap-4 text-sm lg:col-span-4">
             <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-2 font-display">Contact Us</h3>
             <div className="flex items-start gap-3">
@@ -112,7 +131,7 @@ export default function Footer() {
           <div className="flex gap-6">
             <a href="#" className="hover:text-secondary">Privacy Policy</a>
             <a href="#" className="hover:text-secondary">Terms of Service</a>
-            <a href="#" className="hover:text-secondary">Sitemap</a>
+            <Link href="/contact" className="hover:text-secondary">Contact</Link>
           </div>
         </div>
       </div>
