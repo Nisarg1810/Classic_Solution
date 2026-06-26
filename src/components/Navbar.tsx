@@ -53,7 +53,7 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled || isOpen ? "py-2 bg-white/95 backdrop-blur-md shadow-premium border-b border-brand-border/30" : "py-4 bg-transparent"
         }`}
       >
@@ -181,7 +181,7 @@ export default function Navbar() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/50 backdrop-blur-[2px] z-20 md:hidden"
+              className="fixed inset-0 bg-black/50 backdrop-blur-[2px] z-40 md:hidden"
             />
             {/* Drawer Container */}
             <motion.div
@@ -189,7 +189,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed inset-x-0 top-[96px] z-30 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-96px)] overflow-y-auto"
+              className="fixed inset-x-0 top-[96px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-96px)] overflow-y-auto"
             >
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
