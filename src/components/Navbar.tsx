@@ -54,7 +54,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled ? "py-2 glassmorphism shadow-premium" : "py-4 bg-transparent"
+          scrolled || isOpen ? "py-2 bg-white/95 backdrop-blur-md shadow-premium border-b border-brand-border/30" : "py-4 bg-transparent"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
@@ -173,61 +173,73 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-x-0 top-[72px] z-30 md:hidden glassmorphism shadow-lg border-b border-white/20 p-6 flex flex-col gap-5 max-h-[calc(100vh-72px)] overflow-y-auto"
-          >
-            <nav className="flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <div key={link.name}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className={`block text-base font-semibold py-3 px-3 rounded-xl border-b border-black/5 transition-colors ${
-                      isActive(link.href)
-                        ? "text-secondary bg-secondary/5"
-                        : "text-brand-text hover:text-secondary hover:bg-brand-light"
-                    }`}
-                  >
-                    {link.name}
-                  </Link>
-                  {link.dropdown && (
-                    <div className="pl-4 flex flex-col gap-0.5 mt-1 mb-2">
-                      {link.dropdown.slice(1).map((item) => (
-                        <Link
-                          key={item.name}
-                          href={item.href}
-                          onClick={() => setIsOpen(false)}
-                          className="text-sm text-brand-muted hover:text-secondary py-2 px-3 rounded-lg transition-colors"
-                        >
-                          → {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-            <div className="flex flex-col gap-3 mt-2">
-              <a
-                href="tel:02812990030"
-                className="flex items-center justify-center gap-2 text-base font-semibold text-primary py-3 rounded-xl border border-primary/20 hover:bg-primary/5 transition-all"
-              >
-                <PhoneCall className="h-4 w-4 text-secondary" />
-                <span>0281 2990030</span>
-              </a>
-              <Link
-                href="/contact"
-                onClick={() => setIsOpen(false)}
-                className="rounded-xl bg-secondary py-3 text-center text-base font-semibold text-white shadow-md hover:bg-secondary-light transition-all"
-              >
-                Book Inspection
-              </Link>
-            </div>
-          </motion.div>
+          <>
+            {/* Backdrop Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/50 backdrop-blur-[2px] z-20 md:hidden"
+            />
+            {/* Drawer Container */}
+            <motion.div
+              initial={{ opacity: 0, y: -15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="fixed inset-x-0 top-[96px] z-30 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-96px)] overflow-y-auto"
+            >
+              <nav className="flex flex-col gap-1">
+                {navLinks.map((link) => (
+                  <div key={link.name}>
+                    <Link
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      className={`block text-base font-semibold py-3 px-3 rounded-xl border-b border-black/5 transition-colors ${
+                        isActive(link.href)
+                          ? "text-secondary bg-secondary/5"
+                          : "text-brand-text hover:text-secondary hover:bg-brand-light"
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                    {link.dropdown && (
+                      <div className="pl-4 flex flex-col gap-0.5 mt-1 mb-2">
+                        {link.dropdown.slice(1).map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className="text-sm text-brand-muted hover:text-secondary py-2 px-3 rounded-lg transition-colors"
+                          >
+                            → {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </nav>
+              <div className="flex flex-col gap-3 mt-2">
+                <a
+                  href="tel:02812990030"
+                  className="flex items-center justify-center gap-2 text-base font-semibold text-primary py-3 rounded-xl border border-primary/20 hover:bg-primary/5 transition-all"
+                >
+                  <PhoneCall className="h-4 w-4 text-secondary" />
+                  <span>0281 2990030</span>
+                </a>
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-xl bg-secondary py-3 text-center text-base font-semibold text-white shadow-md hover:bg-secondary-light transition-all"
+                >
+                  Book Inspection
+                </Link>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>
