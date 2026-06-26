@@ -22,6 +22,7 @@ const navLinks = [
     ],
   },
   { name: "Process", href: "/process" },
+  { name: "RERA Act", href: "/rera" },
   { name: "Gallery", href: "/gallery" },
   { name: "Contact", href: "/contact" },
 ];

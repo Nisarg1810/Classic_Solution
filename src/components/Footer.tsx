@@ -54,6 +54,7 @@ export default function Footer() {
                 { label: "About Us", href: "/about" },
                 { label: "Services", href: "/services" },
                 { label: "Inspection Process", href: "/process" },
+                { label: "RERA Guidelines", href: "/rera" },
                 { label: "Gallery", href: "/gallery" },
                 { label: "Contact Us", href: "/contact" },
               ].map((link) => (
