@@ -11,7 +11,7 @@ import {
   Gauge,
 } from "lucide-react";
 
-import Particles from "@/components/Particles";
+import HeroSlider from "@/components/HeroSlider";
 import Testimonials from "@/components/Testimonials";
 
 const services = [
@@ -41,140 +41,8 @@ export default function Home() {
   return (
     <div className="relative w-full">
 
-      {/* ── 1. HERO SECTION ── */}
-      <section id="hero" className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center bg-primary overflow-hidden py-12 sm:py-16 px-6 sm:px-8 lg:px-12">
-        <Particles />
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero_background.png"
-            alt="Classic Solution Thermal Imaging Inspection"
-            fill
-            priority
-            className="object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary-dark via-primary/95 to-transparent" />
-        </div>
-
-        <div className="relative z-20 mx-auto max-w-7xl w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 flex flex-col gap-6 text-white text-left">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/20 px-4 py-1.5 rounded-full text-secondary text-xs sm:text-sm font-semibold w-fit backdrop-blur-sm"
-            >
-              <Thermometer className="h-4 w-4" />
-              <span>Technology-Driven Preventive Maintenance</span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.1] tracking-tight"
-            >
-              Prevent Problems <br />
-              Before They Become <br />
-              <span className="text-secondary font-semibold">Costly</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-sm sm:text-base text-white/80 leading-relaxed max-w-xl font-light"
-            >
-              Advanced Thermal Imaging &amp; Preventive Maintenance Solutions for Safer, More Efficient Properties.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-wrap gap-4 mt-2"
-            >
-              <Link
-                href="/contact"
-                className="px-8 py-3.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 active:scale-95"
-              >
-                Book an Inspection
-              </Link>
-              <Link
-                href="/services"
-                className="px-8 py-3.5 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full border border-white/20 backdrop-blur-sm transition-all duration-300 active:scale-95"
-              >
-                Our Services
-              </Link>
-            </motion.div>
-          </div>
-
-          <div className="lg:col-span-5 flex flex-col items-center justify-center relative">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
-              className="relative w-full max-w-[340px] aspect-[4/5] rounded-[24px] overflow-hidden border border-white/10 shadow-premium"
-            >
-              <Image
-                src="/images/thermal_camera_check.png"
-                alt="Professional inspector using thermal imaging camera"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/30 to-transparent" />
-            </motion.div>
-
-            {/* Floating Badges — Desktop */}
-            <div className="hidden xl:block">
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-                className="absolute -top-4 -left-6 bg-white/95 text-primary p-3.5 rounded-2xl shadow-premium flex items-center gap-3 border border-brand-border/20 backdrop-blur-sm"
-              >
-                <div className="h-8 w-8 rounded-lg bg-green-50 text-green-600 flex items-center justify-center font-bold text-sm">✓</div>
-                <div className="text-left">
-                  <p className="text-[10px] font-bold text-brand-muted uppercase">Technology</p>
-                  <p className="text-xs font-extrabold font-display">Infrared Cameras</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, 6, 0] }}
-                transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }}
-                className="absolute top-1/4 -right-8 bg-white/95 text-primary p-3.5 rounded-2xl shadow-premium flex items-center gap-3 border border-brand-border/20 backdrop-blur-sm"
-              >
-                <div className="h-8 w-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm">✓</div>
-                <div className="text-left">
-                  <p className="text-[10px] font-bold text-brand-muted uppercase">Reports</p>
-                  <p className="text-xs font-extrabold font-display">24-48hr PDF Report</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [0, -5, 0] }}
-                transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut" }}
-                className="absolute bottom-6 -left-8 bg-white/95 text-primary p-3.5 rounded-2xl shadow-premium flex items-center gap-3 border border-brand-border/20 backdrop-blur-sm"
-              >
-                <div className="h-8 w-8 rounded-lg bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm">✓</div>
-                <div className="text-left">
-                  <p className="text-[10px] font-bold text-brand-muted uppercase">Expertise</p>
-                  <p className="text-xs font-extrabold font-display">Certified Engineers</p>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Mobile Badges */}
-            <div className="grid grid-cols-2 gap-3 mt-6 xl:hidden w-full max-w-[340px]">
-              {["Infrared Cameras", "24-48hr Reports", "Certified Team", "Risk Assessment"].map((label) => (
-                <div key={label} className="flex items-center gap-2 bg-white/5 border border-white/10 p-2.5 rounded-xl text-left">
-                  <span className="text-secondary font-bold text-sm">✓</span>
-                  <span className="text-xs font-semibold text-white/90">{label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ── 1. HERO SLIDER ── */}
+      <HeroSlider />
 
       {/* ── 2. STATS BAR ── */}
       <section className="relative z-30 bg-white py-8 border border-brand-border/20 shadow-premium mt-[-30px] mx-6 sm:mx-8 lg:mx-12 rounded-2xl max-w-7xl xl:mx-auto">

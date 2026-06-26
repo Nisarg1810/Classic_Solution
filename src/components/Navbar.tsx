@@ -53,14 +53,14 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
-          scrolled ? "py-3 glassmorphism shadow-premium" : "py-5 bg-transparent"
+          scrolled ? "py-3 glassmorphism shadow-premium" : "py-6 bg-transparent"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative h-12 w-48">
+              <div className="relative h-16 w-64">
                 <Image
                   src="/logo.png"
                   alt="Classic Solution Logo"
