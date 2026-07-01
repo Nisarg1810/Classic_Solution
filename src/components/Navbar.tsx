@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, PhoneCall, ChevronDown, Mail, Phone, ChevronRight } from "lucide-react";
+import { Menu, X, PhoneCall, ChevronDown, Mail, Phone, ChevronRight, Home } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -134,19 +134,28 @@ export default function Navbar() {
         {/* Main Navigation Row */}
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group py-1">
-              <div className="relative h-10 w-28 sm:h-12 sm:w-32">
-                <Image
-                  src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/logo.png"
-                  alt="MACJ - A Buyer's Choice Logo"
-                  fill
-                  className="object-contain"
-                  unoptimized
-                  priority
-                />
-              </div>
-            </Link>
+            {/* Logo & Home Icon Row */}
+            <div className="flex items-center gap-1.5 sm:gap-2.5">
+              <Link href="/" className="flex items-center gap-3 group py-1">
+                <div className="relative h-10 w-28 sm:h-12 sm:w-32">
+                  <Image
+                    src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/logo.png"
+                    alt="MACJ - A Buyer's Choice Logo"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                    priority
+                  />
+                </div>
+              </Link>
+              <Link
+                href="/"
+                className="hidden md:flex items-center justify-center p-2 text-brand-muted hover:text-secondary transition-colors"
+                aria-label="Home"
+              >
+                <Home className="h-5 w-5 fill-current text-gray-400 hover:text-secondary" />
+              </Link>
+            </div>
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-0.5">

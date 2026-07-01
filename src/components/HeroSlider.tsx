@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Phone, Mail } from "lucide-react";
 
 const slides = [
   {
@@ -95,7 +95,7 @@ export default function HeroSlider() {
   return (
     <section
       className="relative w-full overflow-hidden bg-brand-light"
-      style={{ height: "clamp(380px, 60vw, 680px)" }}
+      style={{ height: "clamp(300px, 32vw, 480px)" }}
     >
       {/* Background Images */}
       <AnimatePresence initial={false} custom={direction} mode="sync">
@@ -126,7 +126,7 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* Content Overlay */}
-      <div className="relative z-10 h-full mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex items-center">
+      <div className="relative z-10 h-full mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex items-center pb-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={`text-${current}`}
@@ -142,7 +142,7 @@ export default function HeroSlider() {
             {/* Title — fluid scale */}
             <h1
               className={`font-extrabold font-display leading-[1.1] tracking-tight mb-5 whitespace-pre-line ${slide.titleColor}`}
-              style={{ fontSize: "clamp(1.5rem, 3.5vw, 3.25rem)" }}
+              style={{ fontSize: "clamp(1.25rem, 2.8vw, 2.5rem)" }}
             >
               {slide.title}
             </h1>
@@ -152,7 +152,7 @@ export default function HeroSlider() {
               <div className={`flex gap-3 ${slide.mobileOnly ? "justify-center" : ""}`}>
                 <Link
                   href={slide.cta.href}
-                  className="px-6 sm:px-8 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider"
+                  className="px-6 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs uppercase tracking-wider"
                 >
                   {slide.cta.label}
                 </Link>
@@ -162,49 +162,70 @@ export default function HeroSlider() {
         </AnimatePresence>
       </div>
 
-      {/* Navigation Arrows + Dots */}
-      <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-8 lg:left-12 z-20 flex items-center gap-2">
+      {/* Navigation Arrows positioned above the bottom bar */}
+      <div className="absolute bottom-14 sm:bottom-16 left-6 sm:left-12 lg:left-16 z-20 flex items-center gap-1.5">
         <button
           onClick={prev}
           aria-label="Previous slide"
-          className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 hover:bg-white/40 border border-white/30 backdrop-blur-sm flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+          className="h-8 w-10 bg-white/70 hover:bg-white text-black flex items-center justify-center transition-all duration-200 shadow-sm"
         >
-          <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5" />
+          <ChevronLeft className="h-4 w-4" />
         </button>
         <button
           onClick={next}
           aria-label="Next slide"
-          className="h-8 w-8 sm:h-10 sm:w-10 rounded-full bg-white/20 hover:bg-white/40 border border-white/30 backdrop-blur-sm flex items-center justify-center text-white transition-all duration-200 hover:scale-105"
+          className="h-8 w-10 bg-white/70 hover:bg-white text-black flex items-center justify-center transition-all duration-200 shadow-sm"
         >
-          <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
+          <ChevronRight className="h-4 w-4" />
         </button>
-
-        {/* Dots */}
-        <div className="flex items-center gap-1.5 ml-2 sm:ml-3">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => goTo(i, i > current ? "next" : "prev")}
-              aria-label={`Go to slide ${i + 1}`}
-              className={`rounded-full transition-all duration-300 ${
-                i === current
-                  ? "w-5 sm:w-6 h-2 bg-secondary"
-                  : "w-2 h-2 bg-white/40 hover:bg-white/70"
-              }`}
-            />
-          ))}
-        </div>
       </div>
 
-      {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white/10 z-20">
-        <motion.div
-          key={`progress-${current}`}
-          className="h-full bg-secondary"
-          initial={{ width: "0%" }}
-          animate={{ width: "100%" }}
-          transition={{ duration: SLIDE_INTERVAL / 1000, ease: "linear" }}
-        />
+      {/* Bottom Info Bar Overlay (matching the screenshot exactly) */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/90 to-black/50 text-white py-1.5 border-t border-white/5 hidden md:block">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex items-center justify-between text-[10px] sm:text-xs">
+          <div className="flex items-center gap-6">
+            <a href="tel:+918584855470" className="hover:text-secondary flex items-center gap-2 transition-colors">
+              <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
+                <Phone className="h-3 w-3 fill-current" />
+              </span>
+              <div>
+                <p className="text-[9px] text-white/55 leading-none">Phone number:</p>
+                <p className="font-bold mt-0.5">+91 85848 55470</p>
+              </div>
+            </a>
+            <a href="tel:03340687162" className="hover:text-secondary flex items-center gap-2 transition-colors">
+              <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
+                <Phone className="h-3 w-3 fill-current" />
+              </span>
+              <div>
+                <p className="text-[9px] text-white/55 leading-none">Phone number:</p>
+                <p className="font-bold mt-0.5">033 4068 7162</p>
+              </div>
+            </a>
+            <a href="mailto:info@macj.in" className="hover:text-secondary flex items-center gap-2 transition-colors">
+              <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
+                <Mail className="h-3 w-3 fill-current" />
+              </span>
+              <div>
+                <p className="text-[9px] text-white/55 leading-none">E-mail address:</p>
+                <p className="font-bold mt-0.5">info@macj.in</p>
+              </div>
+            </a>
+          </div>
+          <div className="flex items-center gap-3 text-white/80">
+            <a href="#" className="hover:text-secondary transition-colors">Facebook</a>
+            <span>•</span>
+            <a href="#" className="hover:text-secondary transition-colors">X</a>
+            <span>•</span>
+            <a href="#" className="hover:text-secondary transition-colors">YouTube</a>
+            <span>•</span>
+            <a href="#" className="hover:text-secondary transition-colors">Instagram</a>
+            <span>•</span>
+            <a href="#" className="hover:text-secondary transition-colors">Pinterest</a>
+            <span>•</span>
+            <a href="#" className="hover:text-secondary transition-colors">LinkedIn</a>
+          </div>
+        </div>
       </div>
     </section>
   );
