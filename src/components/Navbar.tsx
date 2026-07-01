@@ -55,14 +55,6 @@ const navLinks = [
       { name: "Pidilite Alliance", href: "/news#pidilite" },
     ],
   },
-  {
-    name: "Franchise",
-    href: "#",
-    dropdown: [
-      { name: "Franchise Opportunity", href: "/franchise#opportunity" },
-      { name: "Careers", href: "/franchise#careers" },
-    ],
-  },
   { name: "Contact", href: "/contact" },
 ];
 
