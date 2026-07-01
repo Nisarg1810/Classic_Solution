@@ -159,7 +159,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {teamProfiles.map((person, idx) => (
               <div
                 key={idx}
@@ -196,7 +196,7 @@ export default function AboutPage() {
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Milestones Achieved</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 relative">
             {milestonesList.map((item, idx) => (
               <div
                 key={idx}

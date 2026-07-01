@@ -116,13 +116,14 @@ export default function GalleryMasonry() {
   };
 
   return (
-    <div className="w-full flex flex-col items-center gap-8">
-      <div className="flex flex-wrap justify-center gap-2 max-w-2xl px-6">
+    <div className="w-full flex flex-col items-center gap-6 sm:gap-8">
+      {/* Filter pills — scroll horizontally on mobile */}
+      <div className="flex flex-nowrap sm:flex-wrap justify-start sm:justify-center gap-2 max-w-full w-full overflow-x-auto px-4 sm:px-6 pb-1 sm:pb-0 scroll-smooth">
         {categories.map((cat) => (
           <button
             key={cat.value}
             onClick={() => setFilter(cat.value)}
-            className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+            className={`whitespace-nowrap px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 shrink-0 ${
               filter === cat.value
                 ? "bg-primary text-white shadow-md scale-105"
                 : "bg-brand-light text-brand-text hover:bg-brand-border/40 border border-brand-border/40"
@@ -135,7 +136,7 @@ export default function GalleryMasonry() {
 
       <motion.div
         layout
-        className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 max-w-7xl"
+        className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 px-4 sm:px-6 max-w-7xl"
       >
         <AnimatePresence mode="popLayout">
           {filteredItems.map((item, idx) => (

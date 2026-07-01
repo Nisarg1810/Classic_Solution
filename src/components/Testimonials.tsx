@@ -68,49 +68,50 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <div className="w-full max-w-6xl px-6 py-6 mx-auto">
+    <div className="w-full max-w-7xl px-4 sm:px-6 py-6 mx-auto">
       <Swiper
         modules={[Pagination, Autoplay]}
-        spaceBetween={30}
+        spaceBetween={20}
         slidesPerView={1}
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         breakpoints={{
-          768: {
-            slidesPerView: 2,
-          },
+          640: { slidesPerView: 1, spaceBetween: 16 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          1280: { slidesPerView: 3, spaceBetween: 24 },
         }}
         className="w-full pb-14"
       >
         {testimonials.map((test) => (
           <SwiperSlide key={test.id} className="h-auto">
-            <div className="flex flex-col justify-between h-full bg-brand-light border border-brand-border/40 p-8 rounded-3xl shadow-premium relative group transition-all duration-300 hover:shadow-premium-hover">
-              <div className="absolute right-6 top-6 text-primary/10">
-                <Quote className="h-16 w-16" />
+            <div className="flex flex-col justify-between h-full bg-brand-light border border-brand-border/40 p-5 sm:p-8 rounded-3xl shadow-premium relative group transition-all duration-300 hover:shadow-premium-hover">
+              <div className="absolute right-4 sm:right-6 top-4 sm:top-6 text-primary/10">
+                <Quote className="h-10 w-10 sm:h-16 sm:w-16" />
               </div>
 
-              <div className="flex gap-1 mb-6 text-[#FBBF24]">
+              <div className="flex gap-1 mb-4 sm:mb-6 text-[#FBBF24]">
                 {Array.from({ length: test.rating }).map((_, i) => (
-                  <Star key={i} className="h-5 w-5 fill-current" />
+                  <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 fill-current" />
                 ))}
               </div>
 
-              <p className="text-brand-text text-sm sm:text-base leading-relaxed italic mb-8 relative z-10">
+              <p className="text-brand-text text-xs sm:text-sm leading-relaxed italic mb-6 sm:mb-8 relative z-10">
                 &ldquo;{test.comment}&rdquo;
               </p>
 
-              <div className="flex items-center gap-4 border-t border-brand-border/30 pt-6 mt-auto">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden border-2 border-secondary shadow-sm">
+              <div className="flex items-center gap-3 sm:gap-4 border-t border-brand-border/30 pt-4 sm:pt-6 mt-auto">
+                <div className="relative h-10 w-10 sm:h-12 sm:w-12 shrink-0 rounded-full overflow-hidden border-2 border-secondary shadow-sm">
                   <Image
                     src={test.imageUrl}
                     alt={test.name}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                 </div>
                 <div>
-                  <h4 className="text-primary font-bold text-base font-display">{test.name}</h4>
-                  <p className="text-xs text-brand-muted">{test.role} • {test.location}</p>
+                  <h4 className="text-primary font-bold text-sm sm:text-base font-display">{test.name}</h4>
+                  <p className="text-[10px] sm:text-xs text-brand-muted leading-snug">{test.role} • {test.location}</p>
                 </div>
               </div>
             </div>

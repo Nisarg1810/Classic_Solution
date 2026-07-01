@@ -135,12 +135,12 @@ export default function Home() {
       <HeroSlider />
 
       {/* ── 2. STATS BAR ── */}
-      <section className="relative z-30 bg-white py-8 border border-brand-border/20 shadow-premium mt-[-30px] mx-6 sm:mx-8 lg:mx-12 rounded-2xl max-w-7xl xl:mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+      <section className="relative z-30 bg-white py-6 sm:py-8 border border-brand-border/20 shadow-premium mt-[-24px] sm:mt-[-30px] mx-3 sm:mx-8 lg:mx-12 rounded-2xl max-w-7xl xl:mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6">
           {stats.map((stat, idx) => (
-            <div key={idx} className="flex flex-col items-center gap-1 text-center border-r last:border-0 border-brand-border/30 px-2">
-              <p className="text-xl sm:text-2xl font-extrabold font-display text-secondary">{stat.value}</p>
-              <p className="text-[10px] sm:text-xs font-bold text-brand-muted uppercase tracking-wider">{stat.label}</p>
+            <div key={idx} className="flex flex-col items-center gap-1 text-center md:border-r last:border-0 border-brand-border/30 px-1 sm:px-2">
+              <p className="text-lg sm:text-xl md:text-2xl font-extrabold font-display text-secondary leading-tight">{stat.value}</p>
+              <p className="text-[9px] sm:text-[10px] md:text-xs font-bold text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">{stat.label}</p>
             </div>
           ))}
         </div>
