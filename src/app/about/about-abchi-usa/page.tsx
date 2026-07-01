@@ -26,7 +26,7 @@ export default function AboutAbchiUsa() {
               One of North America's Leading Inspection Franchises
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              Founded by real estate veteran **Bill Redfern**, A Buyer's Choice Home Inspections (ABCHI) started in North America as a way to standardize and professionalize pre-purchase home assessments. Redfern recognized that homebuyers, sellers, and realtors required a consistent, high-integrity service.
+              Founded by real estate veteran **Bill Redfern**, A Buyer's Choice Home Inspections (ABCHI) started in North America as a way to standardize and professionalize pre-purchase home assessments. Redfern recognized that homebuyers, sellers, and realtors required a consistent, high-integrity service. Beyond business, Redfern is a successful entrepreneur, competitive athlete, and a prominent charity leader known for sponsoring autism support groups and research.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
               Under his direction, the business model scaled rapidly. Within only two years of launching its franchise model, ABCHI became Canada's largest home inspection network. Today, the corporation is headquartered in Florida, USA, and has franchises across the United States, Chile, Europe, New Zealand, and India.

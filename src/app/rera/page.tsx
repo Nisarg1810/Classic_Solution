@@ -4,37 +4,26 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ShieldAlert,
-  FileCheck,
-  Building,
-  Scale,
-  Users,
-  Compass,
-  CheckCircle,
-  AlertTriangle,
-  ArrowRight,
-  ArrowDownToLine,
-  Home,
-  CheckSquare
+  ShieldAlert, FileCheck, Building, Scale, Users, Compass, CheckCircle,
+  AlertTriangle, ArrowRight, ArrowDownToLine, Home, CheckSquare, Briefcase
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
-// General RERA rules
 const generalRules = [
   {
     icon: ShieldAlert,
     title: "Defect Liability Period (Section 14(3))",
-    desc: "Developers are legally bound to rectify any structural defects, quality issues, or workmanship faults reported by the homebuyer within 5 years of possession. The builder must repair the defect free of cost within 30 days."
+    desc: "Developers are legally bound to rectify any structural defects, quality issues, or workmanship faults reported within 5 years of possession. The builder must repair the defect free of cost within 30 days."
   },
   {
     icon: Building,
     title: "Standardized Carpet Area",
-    desc: "Properties must be sold strictly on a net usable 'Carpet Area' basis (excluding external walls, shafts, balcony/verandah, and open terrace; but including internal partition walls) to eliminate deceptive pricing."
+    desc: "Properties must be sold strictly on RERA Carpet Area (net usable floor area excluding external walls, shafts, balcony/verandah, and open terrace; but including internal partition walls) to eliminate deceptive pricing."
   },
   {
     icon: Scale,
     title: "70% Escrow Project Funding",
-    desc: "Developers must deposit 70% of customer advances into a dedicated project bank account. Withdrawals are certified by architects, engineers, and CAs in proportion to the percentage of construction completion."
+    desc: "Developers must deposit 70% of customer advances into a separate dedicated project bank account. Withdrawals are certified by architects, CAs, and engineers in proportion to percentage completion. Accounts must be audited within 6 months of the financial year end by a practicing CA."
   },
   {
     icon: Compass,
@@ -44,16 +33,24 @@ const generalRules = [
   {
     icon: Users,
     title: "Interest Parity for Delays",
-    desc: "In case of project delays, developers must pay interest on delayed possession at the exact same penal rate (typically SBI highest MCLR + 2%) that homebuyers are charged for payment defaults."
+    desc: "Both homebuyers and promoters pay the exact same interest rate for delays (SBI highest Marginal Cost of Lending Rate plus 2%), ensuring parity in transactions."
   },
   {
     icon: FileCheck,
     title: "Mandatory Agent Registration",
-    desc: "Real estate brokers and agents must register with the state's RERA regulatory body to operate legally and represent developer properties."
+    desc: "Real estate brokers and agents must register with state RERA. They must maintain documents, verify builder records, and cannot advertise projects that are not registered."
   }
 ];
 
-// State specific details
+const objectives = [
+  "To establish the Real Estate Regulatory Authority (RERA) in each state.",
+  "Ensure accountability towards allottees (home buyers) and protect their interest.",
+  "Infuse transparency, ensure fair-play and reduce frauds & delays.",
+  "Impose clear responsibilities on both promoters and allottees.",
+  "Establish regulatory oversight mechanism to enforce contracts.",
+  "Establish fast-track dispute resolution mechanism and Appellate Tribunals."
+];
+
 const stateUpdates = {
   maharashtra: {
     title: "Maharashtra RERA (MahaRERA)",
@@ -102,23 +99,23 @@ export default function ReraPage() {
         badge="RERA & Property Inspection"
         title="RERA Guidelines &"
         titleHighlight="Defect Liability Rules"
-        subtitle="Understand your legal rights as a homebuyer under the Real Estate Regulation & Development Act, 2016, and learn how home inspections help enforce developer warranty commitments."
+        subtitle="Understand your legal rights under the Real Estate (Regulation & Development) Act, 2016, and learn how home inspections help enforce developer warranty commitments."
         breadcrumbs={[{ label: "RERA Guidelines" }]}
       />
 
-      {/* ── 1. INTRODUCTION ── */}
+      {/* ── 1. BACKGROUND & INTRODUCTION ── */}
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-7 flex flex-col gap-5 text-left">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7 flex flex-col gap-6 text-left">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">RERA Act, 2016</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
               Empowering Homebuyers with Legal Transparency & Quality Guarantees
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              The Real Estate (Regulation and Development) Act, 2016, is a landmark legislation passed by the Parliament of India to establish transparency, accountability, and efficiency in the real estate sector. 
+              The Real Estate (Regulation and Development) Act, 2016 (RERA) is an initiative by the Indian Government to enhance transparency in real estate transactions, creating a uniform regulatory environment. The Act came into force from 1st May, 2016, after being passed in Rajya Sabha (10th March, 2016) and Lok Sabha (15th March, 2016). All sections came into force on May 1, 2017.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              RERA protects the interests of consumers in the real estate sector and establishes an adjudicating mechanism for speedy dispute redressal. One of the most powerful provisions of the RERA Act is the introduction of a builder-backed warranty period, legally binding developers to maintain structural stability.
+              RERA protects the interests of consumers by establishing the Real Estate Regulatory Authority, enforcing fast-track dispute resolutions, and placing responsibilities on both promoters and homebuyers. One of its most powerful guidelines is the 5-year defect liability warranty.
             </p>
             
             {/* Quick Scope Cards */}
@@ -127,14 +124,14 @@ export default function ReraPage() {
                 <CheckCircle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-bold text-primary font-display">Applicability</h4>
-                  <p className="text-[11px] sm:text-xs text-brand-muted leading-relaxed mt-0.5">Applies to residential & commercial projects with land exceeding 500 sqm or having more than 8 apartments.</p>
+                  <p className="text-[11px] sm:text-xs text-brand-muted leading-relaxed mt-0.5">Applies to projects exceeding 500 square meters or having more than 8 apartments.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3 bg-white border border-brand-border/30 rounded-xl p-4 shadow-sm">
                 <CheckCircle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
                 <div>
                   <h4 className="text-sm font-bold text-primary font-display">Consumer Protection</h4>
-                  <p className="text-[11px] sm:text-xs text-brand-muted leading-relaxed mt-0.5">Strict compliance check stops developer fund diversion and standardized layouts prevent carpet area fraud.</p>
+                  <p className="text-[11px] sm:text-xs text-brand-muted leading-relaxed mt-0.5">Mandates SBI interest MCLR + 2% delays penalty and escrow deposits to prevent diversion.</p>
                 </div>
               </div>
             </div>
@@ -226,8 +223,26 @@ export default function ReraPage() {
         </div>
       </section>
 
-      {/* ── 3. CORE PROVISIONS GRID ── */}
+      {/* ── 3. OBJECTIVES OF RERA ── */}
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12 border-t border-brand-border/30">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Objectives</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">What RERA Aims to Achieve</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            {objectives.map((obj, i) => (
+              <div key={i} className="bg-white border border-brand-border/30 p-5 rounded-2xl shadow-sm flex items-start gap-3">
+                <CheckCircle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                <p className="text-xs sm:text-sm text-brand-text leading-relaxed font-light">{obj}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. RERA PROVISIONS GRID ── */}
+      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12 border-t border-brand-border/30">
         <div className="mx-auto max-w-7xl flex flex-col items-center gap-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">RERA Protections</span>
@@ -241,12 +256,8 @@ export default function ReraPage() {
             {generalRules.map((rule, idx) => {
               const IconComponent = rule.icon;
               return (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.05 }}
                   className="bg-white border border-brand-border/30 rounded-2xl p-5 hover:shadow-premium transition-premium flex flex-col group hover:-translate-y-1 hover:border-secondary"
                 >
                   <div className="h-10 w-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
@@ -254,15 +265,15 @@ export default function ReraPage() {
                   </div>
                   <h3 className="text-sm font-bold text-primary font-display leading-snug mb-2">{rule.title}</h3>
                   <p className="text-xs text-brand-muted leading-relaxed font-light flex-1">{rule.desc}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* ── 4. STATEWISE RERA UPDATES TABS ── */}
-      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12 border-t border-brand-border/30">
+      {/* ── 5. STATEWISE RERA UPDATES TABS ── */}
+      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12 border-t border-brand-border/30">
         <div className="mx-auto max-w-4xl flex flex-col items-center gap-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Regional Regulations</span>
@@ -273,7 +284,7 @@ export default function ReraPage() {
           </div>
 
           {/* Custom Tabs */}
-          <div className="flex gap-2 p-1.5 bg-brand-light border border-brand-border/40 rounded-xl w-full max-w-md">
+          <div className="flex gap-2 p-1.5 bg-white border border-brand-border/45 rounded-xl w-full max-w-md">
             <button
               onClick={() => setActiveStateTab("maharashtra")}
               className={`flex-1 py-3 px-4 text-xs sm:text-sm font-bold rounded-lg transition-all duration-300 ${
@@ -297,7 +308,7 @@ export default function ReraPage() {
           </div>
 
           {/* Tab Content Display */}
-          <div className="w-full bg-brand-light border border-brand-border/30 rounded-2xl p-6 sm:p-8 min-h-[320px]">
+          <div className="w-full bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 min-h-[320px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeStateTab}
@@ -323,7 +334,7 @@ export default function ReraPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
                   {stateUpdates[activeStateTab].highlights.map((hl, i) => (
-                    <div key={i} className="bg-white border border-brand-border/30 rounded-xl p-5 shadow-sm hover:border-secondary transition-all duration-300">
+                    <div key={i} className="bg-brand-light border border-brand-border/30 rounded-xl p-5 shadow-sm hover:border-secondary transition-all duration-300">
                       <p className="text-xs font-extrabold text-secondary font-display mb-1">{`0${i + 1}.`}</p>
                       <h4 className="text-xs sm:text-sm font-bold text-primary font-display leading-snug mb-2">
                         {hl.title}
@@ -340,7 +351,7 @@ export default function ReraPage() {
         </div>
       </section>
 
-      {/* ── 5. PRE-POSSESSION CTA SECTION ── */}
+      {/* ── 6. PRE-POSSESSION CTA SECTION ── */}
       <section className="py-14 sm:py-20 bg-primary px-6 sm:px-8 lg:px-12 relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(227,0,22,0.2),transparent_60%)] pointer-events-none" />
         <div className="mx-auto max-w-7xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -361,10 +372,10 @@ export default function ReraPage() {
               Book Pre-Possession Scan
             </Link>
             <Link
-              href="/services#property"
+              href="/services"
               className="px-10 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full border border-white/30 transition-all duration-300 text-center"
             >
-              Property Audits
+              All Services
             </Link>
           </div>
         </div>

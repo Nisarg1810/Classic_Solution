@@ -8,10 +8,10 @@ export default function OurGratitude() {
   return (
     <div className="relative w-full">
       <PageHero
-        badge="Thank You"
+        badge="CSR Initiative"
         title="Our Sincere"
-        titleHighlight="Gratitude"
-        subtitle="Acknowledging the builders, developers, consultants, and thousands of homeowners who trusted us to help secure their real estate investments."
+        titleHighlight="Gratitude & Giving Back"
+        subtitle="To take care of the Health & Long life of Homes through Professional Home Inspection Services, with a humble mission to give back to the community."
         breadcrumbs={[{ label: "About Us", href: "/about" }, { label: "Our Gratitude" }]}
       />
 
@@ -23,21 +23,36 @@ export default function OurGratitude() {
           </div>
 
           <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-            Appreciating Our Early Believers
+            Caring for Homes, Caring for People
           </h2>
 
           <div className="bg-white p-6 sm:p-10 rounded-3xl border border-brand-border/30 shadow-premium text-left flex flex-col gap-6 text-brand-muted leading-relaxed font-light text-sm sm:text-base">
-            <p>
-              When MACJ Services LLP launched in 2016, "Home Inspection" was a completely new concept in India. Properties were bought based on trust, visual finishing, and builders' reputations. There were no standard tools or professional checklists to measure structural safety, dampness source routes, or electrical hazards.
-            </p>
-            <p>
-              We want to express our deepest appreciation to our **early adopter real estate developers** who welcomed our quality control audits on their construction sites. Their willingness to rectify hidden defects before posession handovers established a new benchmark for trust in Indian real estate.
-            </p>
-            <p>
-              We are equally grateful to our **banking partners and channel real estate advisors** who recommended our property checkups to their clients. Your recommendation helped buyers avoid high-risk transactions.
-            </p>
-            <p className="font-semibold text-primary">
-              Above all, we thank the thousands of individual homebuyers who trusted MACJ to inspect their dream homes. Your reviews, queries, and encouragement are the reasons why we have expanded to multiple cities across India.
+            <div>
+              <h3 className="text-lg font-bold text-primary font-display mb-3">Healthcare for Slum Elderly</h3>
+              <p>
+                As part of our commitment to society, the MACJ Team regularly distributes prescribed medicines to the underprivileged elderlies residing in a slum dwelling in Kolkata. Our goal is to make lives a bit easier for the elderly who lack support.
+              </p>
+            </div>
+
+            <div className="border-t border-brand-border/40 pt-6">
+              <h3 className="text-lg font-bold text-primary font-display mb-3">Supporting Dakshini Prayash</h3>
+              <p>
+                We are proud supporters of **Dakshini Prayash**, an NGO that strives to enable children of the lesser-privileged to overcome economic poverty. More than 400 children receive holistic education, free study materials, uniforms, wholesome midday meals, and complete healthcare facilities. Dakshini Prayash also creates self-reliance opportunities for adults in the community.
+              </p>
+              <div className="mt-4">
+                <a 
+                  href="http://www.dakshiniprayas.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs font-bold text-secondary hover:text-primary transition-colors uppercase tracking-wider inline-flex items-center gap-1"
+                >
+                  Visit dakshiniprayas.org →
+                </a>
+              </div>
+            </div>
+
+            <p className="font-semibold text-primary border-t border-brand-border/40 pt-6 italic">
+              "To know even one life has breathed easier because you have lived. This is to have succeeded."
             </p>
           </div>
 

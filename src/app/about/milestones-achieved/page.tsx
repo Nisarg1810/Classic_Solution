@@ -7,33 +7,28 @@ import PageHero from "@/components/PageHero";
 const timelineEvents = [
   {
     year: "2016",
-    title: "Master Franchise Launch",
-    desc: "MACJServices LLP signed a Master Franchise Agreement with ABCHI USA. This introduced professional third-party diagnostics to India's real estate industry."
+    title: "Master Franchise Launch & Debutant Award",
+    desc: "MACJ Services LLP signed a Master Franchise Agreement with ABCHI USA. This introduced professional third-party diagnostics to India's real estate industry. Recognized as the 'Debutant Franchise of the Year' at Franchise India 2016 in Delhi and selected as a 'Top 100 Franchise Business Opportunity' in Franchising World Magazine."
   },
   {
     year: "2017",
-    title: "East India Scaling",
-    desc: "Established the corporate training office and operations hub in Kolkata. Conducted initial quality checkups for prominent local developers."
+    title: "Launch & First Certified Inspector",
+    desc: "Services first launched in India from the city of Kolkata. The company's Lead Inspector became India's first InterNACHI Certified Home Inspector, establishing standard procedures tailored to Indian masonry."
   },
   {
     year: "2018",
-    title: "National Expansion & InterNACHI",
-    desc: "Launched franchise branches in Mumbai, Pune, Bangalore, and Gurgaon. Standardized quality checklists and secured international affiliation with InterNACHI USA."
+    title: "Pan India Presence & InterNACHI Affiliation",
+    desc: "Expanded offices across key cities: Kolkata, Mumbai, Pune, Gurgaon, Guwahati, Ahmedabad, Surat, Vapi, Rajkot, Jaipur, Ghaziabad, NCR, Vijayawada, Hyderabad, and Bangalore. Secured official affiliation with InterNACHI USA."
   },
   {
     year: "2020",
-    title: "Magicbricks & Pidilite Alliances",
-    desc: "Signed exclusive quality assessment partnerships with Magicbricks portal. Aligned with Pidilite Industries (Dr. Fixit) for thermal moisture detection audits."
+    title: "Magicbricks & Pidilite National Alliances",
+    desc: "Signed exclusive inspection partnership with Magicbricks.com to provide pre-purchase assessments. Formed alignment with Pidilite Industries (makers of Dr. Fixit) for thermal moisture seepage consulting."
   },
   {
-    year: "2023",
-    title: "8,000+ Inspections Milestone",
-    desc: "Completed over 8,000 residential and commercial visual inspections, helping buyers claim warranty repairs under state RERA liability windows."
-  },
-  {
-    year: "2026",
-    title: "Pioneering Automation Integration",
-    desc: "Integrating infrared inspection data directly with developers' pre-handover construction checklists to digitize defect logging."
+    year: "2023 - 2026",
+    title: "8,000+ Inspections Completed",
+    desc: "Successfully inspected over 8,000 properties nationwide. Launched value-added thermal damp, leak, and seepage assessment services using state-of-the-art diagnostic instruments."
   }
 ];
 

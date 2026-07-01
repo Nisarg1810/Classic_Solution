@@ -26,13 +26,13 @@ export default function AboutMacjAbchi() {
               Bridging American Systems with Indian Masonry Expertise
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              MACJServices LLP signed the Master Franchise Agreement with **A Buyer's Choice Home Inspections (ABCHI) USA** in 2016. The goal was to solve a major issue in the Indian housing market: the complete lack of third-party property diagnostics.
+              MACJ Services LLP signed the Master Franchise Agreement with **A Buyer's Choice Home Inspections (ABCHI) USA** in Fort Lauderdale, USA in October 2015, officially launching in 2016. The goal was to solve a major issue in the Indian housing market: the complete lack of third-party property diagnostics.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              While Indian home buyers make a lifetime commitment to purchase properties, they often inherit hidden leakages, compromised electrical loads, or hollow tiled layers. By aligning with ABCHI USA, MACJ imported structured inspection checklists and trained technical engineers under standard MNC guidelines.
+              As part of this strong strategic alliance, ABCHI USA invested **10% equity** in the legal entity owning the all-India master franchise. Under the global CEO Bill Redfern, MACJ imported structured MNC inspection checklists, advanced software-driven reports, and continuous engineer training to India.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Today, MACJ operates as a premier inspection service, bridging scientific diagnosis (like thermal imaging) with local structural builders, ensuring handover transparency.
+              Today, MACJ operates as a premier inspection service across India, bridging scientific diagnosis (like thermal imaging) with local structural builders, ensuring handover transparency and helping homebuyers buy with absolute peace of mind.
             </p>
 
             <div className="flex gap-4 mt-4">
