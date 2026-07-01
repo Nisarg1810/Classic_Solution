@@ -4,8 +4,8 @@
   --color-primary: #002c54;
   --color-primary-light: #003d73;
   --color-primary-dark: #001b33;
-  --color-secondary: #e30016;
-  --color-secondary-light: #ff3b4a;
+  --color-secondary: #d31145;
+  --color-secondary-light: #f3285c;
   --color-brand-bg: #FFFFFF;
   --color-brand-light: #f6f9fd;
   --color-brand-text: #33425c;
@@ -38,7 +38,7 @@
   --background: #ffffff;
   --foreground: #33425c;
   --primary: #002c54;
-  --secondary: #e30016;
+  --secondary: #d31145;
 }
 
 body {
@@ -91,7 +91,7 @@ html.lenis, html.lenis body {
 
 /* Custom Swiper pagination styles to match secondary red */
 .swiper-pagination-bullet-active {
-  background: #e30016 !important;
+  background: #d31145 !important;
 }
 
 /* Custom transitions and scrollbar */

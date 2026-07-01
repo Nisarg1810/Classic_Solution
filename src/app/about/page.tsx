@@ -1,304 +1,264 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import {
-  Camera, Zap, Droplets, Gauge, Activity, FileText,
-  ShieldCheck, Wrench, CheckSquare, ArrowRight,
-  Award, Users, MapPin, Clock,
+  ShieldCheck, Award, Users, MapPin, Clock,
+  Briefcase, Globe, Heart, Shield, CheckCircle2
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
-const whyChooseUs = [
-  "Professional Thermal Imaging Equipment",
-  "Certified Inspection Process",
-  "Accurate Digital Reports",
-  "Experienced Technical Team",
-  "Quick Turnaround — 24 to 48 Hours",
-  "Preventive Maintenance Expertise",
-  "Reliable Post-Inspection Support",
-  "Affordable, Transparent Pricing",
+const coreValues = [
+  {
+    icon: ShieldCheck,
+    title: "Uncompromising Integrity",
+    desc: "We deliver objective, unbiased assessments. We represent our clients' best interests by reporting true facts with scientific backing."
+  },
+  {
+    icon: Globe,
+    title: "Global Standards",
+    desc: "Through our ABCHI USA collaboration, we adopt the highest international inspection methodologies and continuous examiner certifications."
+  },
+  {
+    icon: Users,
+    title: "Customer Centricity",
+    desc: "We explain issues in simple terms, deliver detailed software-driven PDF reports, and provide post-inspection guidance to resolve problems."
+  }
 ];
 
-const inspectionTools = [
-  { name: "Thermal Imaging Camera", desc: "Advanced infrared cameras detecting heat variations with precision to reveal electrical hotspots and energy leaks.", icon: Camera },
-  { name: "Electrical Hotspot Detector", desc: "Specialized thermal sensors for detecting overloaded circuits, loose connections, and failing components in panels.", icon: Zap },
-  { name: "Pinless Moisture Meter", desc: "Radiofrequency scanning to chart exact moisture levels inside walls and structural elements without surface damage.", icon: Droplets },
-  { name: "Energy Analyzer", desc: "Power quality analyzers to measure energy consumption, load balancing, and inefficiencies across electrical systems.", icon: Gauge },
-  { name: "Ultrasonic Testing Device", desc: "Detects equipment faults, pressure leaks, and bearing failures through high-frequency acoustic emission analysis.", icon: Activity },
-  { name: "Digital Report Software", desc: "Professional reporting platform generating structured PDF reports with thermal images and risk matrices.", icon: FileText },
+const teamProfiles = [
+  {
+    name: "Ravindra Chamaria",
+    role: "Promoter & Strategic Advisor",
+    imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Ravindra-Chamaria.jpg",
+    desc: "A visionary entrepreneur and the Chairman of Infinity Group. He has been a pioneer in creating IT infrastructure in East India (Infinity Benchmark, Think Tank) and drives MACJ's strategic scaling across India."
+  },
+  {
+    name: "Bill Redfern",
+    role: "Founder, ABCHI USA",
+    imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/1.-Bill-Redfern-CEO-Founder-ABCHI.jpg",
+    desc: "An international franchise expert who founded A Buyer's Choice Home Inspections in North America. Under his leadership, the firm became a multinational powerhouse, expanding into the US, Canada, South America, Europe, and India."
+  },
+  {
+    name: "Mahendra Sureka",
+    role: "Director & CEO, MACJ India",
+    imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2025/04/MS.jpg",
+    desc: "A senior business leader with decades of executive experience in real estate and service sectors. He spearheads the Indian operations, engineering training, and quality management frameworks."
+  }
 ];
 
-const milestones = [
-  { icon: ShieldCheck, title: "Certified Process", desc: "All inspections follow certified non-invasive testing standards ensuring accurate, reliable findings." },
-  { icon: Award, title: "Trusted By Businesses", desc: "Hotels, hospitals, factories and commercial establishments across Gujarat trust Classic Solution." },
-  { icon: Users, title: "Expert Team", desc: "Our engineers bring specialized thermal imaging and preventive maintenance expertise to every site." },
-  { icon: MapPin, title: "PAN India Coverage", desc: "Serving clients across major cities with on-site professional inspection services." },
-  { icon: Clock, title: "Fast Report Delivery", desc: "Detailed PDF reports with thermal images and recommendations delivered within 24-48 hours." },
-  { icon: Wrench, title: "End-to-End Support", desc: "From inspection to implementing corrective actions, we guide you every step of the way." },
-];
-
-const propertyTypes = [
-  "Hotels & Hospitality",
-  "Hospitals & Healthcare",
-  "Industrial Plants",
-  "Commercial Buildings",
-  "Data Centers",
-  "Educational Institutions",
-  "Residential Complexes",
-  "Government Buildings",
-  "Warehouses & Logistics",
-  "Shopping Malls & Retail",
-  "Solar Farms",
-  "Manufacturing Units",
+const milestonesList = [
+  { year: "2016", title: "Inception & MNC Alignment", desc: "MACJ Services LLP partnered with A Buyer's Choice USA to launch professional inspections in India." },
+  { year: "2018", title: "InterNACHI Affiliation", desc: "Standardized all diagnostic processes and secured official affiliation with InterNACHI USA." },
+  { year: "2020", title: "National Alliances", desc: "Signed nationwide inspection alliances with Magicbricks and Dr. Fixit Pidilite." },
+  { year: "2023", title: "8,000+ Inspections", desc: "Successfully completed health & safety check-ups for over 8,000 properties across major Indian metros." }
 ];
 
 export default function AboutPage() {
   return (
     <div className="relative w-full">
       <PageHero
-        badge="About Classic Solution"
-        title="Technology-Driven Preventive"
-        titleHighlight="Maintenance Experts"
-        subtitle="Classic Solution is a technology-driven preventive maintenance company specialising in thermal imaging inspection, electrical hotspot detection, moisture detection, energy audits, and property inspection."
+        badge="About MACJ India"
+        title="Pioneers of Professional Home"
+        titleHighlight="Inspection in India"
+        subtitle="Formed in collaboration with ABCHI USA, MACJ brings world-class diagnostic inspections to the Indian property sector, helping buyers, developers, and corporate clients verify quality and safety."
         breadcrumbs={[{ label: "About Us" }]}
       />
 
-      {/* ── WHO WE ARE ── */}
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
-          <div className="relative hidden lg:flex items-center justify-center">
-            <div className="grid grid-cols-2 gap-4 w-full max-w-[480px]">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium">
-                <Image src="/images/thermal_camera_check.png" alt="Thermal imaging inspection in progress" fill className="object-cover" />
-              </div>
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium mt-8">
-                <Image src="/images/underground_leak_detector.png" alt="Advanced diagnostic equipment" fill className="object-cover" />
-              </div>
-            </div>
-            <div className="absolute -bottom-6 left-4 bg-secondary text-white p-5 rounded-xl shadow-lg">
-              <p className="text-2xl font-extrabold font-display">500+</p>
-              <p className="text-sm font-bold opacity-80">Inspections Completed</p>
-            </div>
-          </div>
-
+      {/* ── 1. MACJ & ABCHI INDIA PARTNERSHIP ── */}
+      <section id="macj-india" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col gap-5">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Who We Are</span>
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">The Partnership</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-              Gujarat&apos;s Leading Thermal Inspection Company
+              Indo-US Collaboration for Safer Properties
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              Classic Solution was founded with a single mission: to help businesses prevent costly equipment failures, fire hazards, and structural damage through proactive inspection using advanced thermal imaging technology.
+              MACJServices LLP entered into a master franchise agreement with **A Buyer's Choice Home Inspections (ABCHI)**, USA, to introduce the concept of professional, certified home check-ups to the Indian market.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Unlike traditional maintenance approaches that react after failure, we detect hidden problems — electrical hotspots, moisture intrusion, energy leaks, and mechanical faults — before they escalate. Our non-invasive methods mean zero damage to your property, and our comprehensive digital reports give you a clear actionable roadmap.
+              In India, real estate transactions are major investments, yet properties often suffer from concealed dampness, electrical hot spots, or hollow tile backings. Our visual, non-destructive home checkups replace guesswork with science, ensuring transparency between developers, buyers, and lenders.
             </p>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Based in Rajkot, Gujarat, we serve clients across India — from hotels and hospitals to industrial plants and solar farms. Every inspection is conducted by trained technical professionals using calibrated precision instruments.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 mt-2 px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 w-fit"
-            >
-              Book an Inspection
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── MISSION & VISION ── */}
-      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Purpose</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Mission & Vision</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="bg-primary text-white p-8 rounded-3xl shadow-premium"
-            >
-              <div className="h-12 w-12 rounded-2xl bg-secondary/20 flex items-center justify-center mb-4">
-                <ShieldCheck className="h-6 w-6 text-secondary" />
-              </div>
-              <h3 className="text-xl font-bold font-display mb-3">Our Mission</h3>
-              <p className="text-white/75 leading-relaxed text-sm font-light">
-                To deliver technology-driven, non-invasive inspection services that help businesses detect hidden risks early, reduce maintenance costs, prevent failures, and improve operational safety. We aim to make preventive maintenance accessible, accurate, and actionable for every facility.
+            <div className="bg-white p-5 rounded-2xl border border-brand-border/40 shadow-sm">
+              <p className="text-xs font-semibold text-secondary uppercase tracking-widest">Our Vision</p>
+              <p className="text-xs sm:text-sm text-primary font-medium mt-1 leading-relaxed">
+                "To make home inspections standard practice across India, promoting quality, durability, and safety in every home."
               </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-secondary text-white p-8 rounded-3xl shadow-premium"
-            >
-              <div className="h-12 w-12 rounded-2xl bg-white/20 flex items-center justify-center mb-4">
-                <Award className="h-6 w-6 text-white" />
-              </div>
-              <h3 className="text-xl font-bold font-display mb-3">Our Vision</h3>
-              <p className="text-white/85 leading-relaxed text-sm font-light">
-                To be India&apos;s most trusted thermal imaging and preventive maintenance company — known for precision, professionalism, and a genuine commitment to protecting our clients&apos; properties and equipment from preventable failures and losses.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── WHY CHOOSE US ── */}
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-center">
-          <div className="flex flex-col gap-6">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Why Choose Us</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-              What Sets Classic Solution Apart
-            </h2>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              We combine cutting-edge thermal imaging technology with certified engineering expertise to deliver unmatched preventive maintenance solutions.
-            </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {whyChooseUs.map((reason, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: idx * 0.06 }}
-                  className="flex items-center gap-3 text-brand-text text-sm font-medium"
-                >
-                  <div className="h-5 w-5 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold">✓</div>
-                  <span>{reason}</span>
-                </motion.div>
-              ))}
             </div>
           </div>
-          <div className="relative">
-            <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden border border-brand-border/30 shadow-premium">
-              <Image src="/images/metal_detector_drilling.png" alt="Classic Solution inspection team at work" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/20 to-transparent" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── MILESTONES / CREDENTIALS ── */}
-      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Credentials</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Why Clients Trust Us</h2>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {milestones.map((item, idx) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 15 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.07 }}
-                  className="bg-brand-light border border-brand-border/30 rounded-2xl p-6 hover:shadow-premium transition-premium hover:border-secondary group"
-                >
-                  <div className="h-11 w-11 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-4 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="text-base font-bold text-primary font-display mb-2">{item.title}</h3>
-                  <p className="text-sm text-brand-muted leading-relaxed font-light">{item.desc}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── TECHNOLOGY TOOLS ── */}
-      <section className="py-14 sm:py-20 bg-primary text-white px-6 sm:px-8 lg:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(15,43,70,0.8),#081B2E)] pointer-events-none" />
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-10 relative z-10">
-          <div className="text-center max-w-2xl">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Advanced Gear</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-white mt-2">Scientific Tools & Technology</h2>
-            <p className="text-white/60 mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              We replace guesswork with science. Our engineers use calibrated premium diagnostic instruments for precise, reliable results.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 w-full">
-            {inspectionTools.map((tool, idx) => {
-              const ToolIcon = tool.icon;
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: idx * 0.07 }}
-                  className="bg-white/5 border border-white/10 hover:border-secondary/40 p-5 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:bg-white/10 text-left group flex items-start gap-4"
-                >
-                  <div className="h-10 w-10 rounded-xl bg-secondary/15 text-secondary flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-white transition-all duration-300">
-                    <ToolIcon className="h-5 w-5" />
-                  </div>
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
+            <h3 className="text-lg font-bold font-display text-primary">Why We Brought ABCHI to India</h3>
+            <ul className="flex flex-col gap-4">
+              {[
+                { title: "Standardized Checklists", text: "Over 150+ predefined checkpoints covering walls, ceilings, switchboards, and plumbing traps." },
+                { title: "Expert Training", text: "Inspectors are trained directly by certified trainers under USA frameworks." },
+                { title: "Defect Tracking Software", text: "Detailed software-driven PDF reports containing visual proof and severity levels." }
+              ].map((item, idx) => (
+                <li key={idx} className="flex gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
                   <div>
-                    <h3 className="text-sm sm:text-base font-bold text-white font-display mb-1">{tool.name}</h3>
-                    <p className="text-xs text-white/60 leading-relaxed font-light">{tool.desc}</p>
+                    <h4 className="text-xs sm:text-sm font-bold text-primary">{item.title}</h4>
+                    <p className="text-[11px] sm:text-xs text-brand-muted mt-0.5 leading-relaxed font-light">{item.text}</p>
                   </div>
-                </motion.div>
-              );
-            })}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* ── PROPERTY TYPES ── */}
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Who We Serve</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Property Types We Inspect</h2>
-            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              From small offices to large industrial facilities, our thermal inspection services are designed for every type of property.
+      {/* ── 2. ABCHI USA CORPORATE PROFILE ── */}
+      <section id="abchi-usa" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="bg-gradient-to-br from-primary to-primary-dark text-white p-8 rounded-3xl shadow-premium lg:order-2">
+            <div className="h-12 w-12 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
+              <Globe className="h-6 w-6 text-secondary" />
+            </div>
+            <h3 className="text-xl font-bold font-display mb-3">About ABCHI, USA</h3>
+            <p className="text-white/70 leading-relaxed text-sm font-light mb-4">
+              Founded in North America, **A Buyer's Choice Home Inspections (ABCHI)** is one of the world's largest home inspection franchise networks. It has grown rapidly across the United States, Canada, Chile, Central Europe, New Zealand, and India.
+            </p>
+            <p className="text-white/70 leading-relaxed text-sm font-light">
+              ABCHI's mission is to offer a consistent, high-standard, professional property check-up experience to home buyers. Their inspectors are fully certified, insured, and equipped with the industry's best reporting softwares.
             </p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-            {propertyTypes.map((type, idx) => (
-              <motion.div
+          <div className="flex flex-col gap-5 lg:order-1">
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Global Footprint</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+              An International Brand of Trust
+            </h2>
+            <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
+              By aligning with ABCHI USA, MACJ brings global trust and certified quality checks to the domestic real estate industry. We adhere to the international code of standards, introducing systematic and digital inspections.
+            </p>
+            <div className="grid grid-cols-3 gap-4 mt-2">
+              <div className="text-center p-3 bg-brand-light rounded-2xl border border-brand-border/40">
+                <p className="text-xl font-extrabold text-secondary font-display">19+</p>
+                <p className="text-[9px] text-brand-muted uppercase font-bold tracking-wide mt-0.5">Years Global</p>
+              </div>
+              <div className="text-center p-3 bg-brand-light rounded-2xl border border-brand-border/40">
+                <p className="text-xl font-extrabold text-secondary font-display">4+</p>
+                <p className="text-[9px] text-brand-muted uppercase font-bold tracking-wide mt-0.5">Continents</p>
+              </div>
+              <div className="text-center p-3 bg-brand-light rounded-2xl border border-brand-border/40">
+                <p className="text-xl font-extrabold text-secondary font-display">200+</p>
+                <p className="text-[9px] text-brand-muted uppercase font-bold tracking-wide mt-0.5">Franchises</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. MANAGEMENT & PROMOTER PROFILES ── */}
+      <section id="management" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Leaders</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Management & Partners Profile</h2>
+            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
+              MACJ is led by experienced corporate leaders and real estate promoters dedicated to elevating housing safety and construction finishing quality in India.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {teamProfiles.map((person, idx) => (
+              <div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.97 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: idx * 0.04 }}
-                className="bg-white border border-brand-border/30 rounded-xl px-4 py-3 text-sm font-medium text-brand-text hover:border-secondary hover:text-secondary hover:shadow-sm transition-all duration-200 flex items-center gap-2"
+                className="bg-white border border-brand-border/30 rounded-3xl overflow-hidden hover:shadow-premium transition-premium group flex flex-col"
               >
-                <span className="h-1.5 w-1.5 rounded-full bg-secondary shrink-0" />
-                {type}
-              </motion.div>
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={person.imageUrl}
+                    alt={person.name}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    unoptimized
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <h3 className="text-base font-bold text-white font-display mb-0.5">{person.name}</h3>
+                    <p className="text-[10px] font-bold text-secondary uppercase tracking-widest">{person.role}</p>
+                  </div>
+                </div>
+                <div className="p-5 flex-grow">
+                  <p className="text-xs sm:text-sm text-brand-muted leading-relaxed font-light">{person.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA ── */}
-      <section className="py-14 bg-primary px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl text-center">
-          <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white mb-4">Ready to Schedule an Inspection?</h2>
-          <p className="text-white/65 text-sm sm:text-base mb-8 max-w-xl mx-auto font-light">
-            Contact us today to discuss your requirements and book a professional thermal imaging inspection for your property.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="px-10 py-4 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-              Book Inspection
-            </Link>
-            <Link href="/services" className="px-10 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full border border-white/30 transition-all duration-300">
-              Our Services
-            </Link>
+      {/* ── 4. MILESTONES ACHIEVED ── */}
+      <section id="milestones" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Journey</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Milestones Achieved</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+            {milestonesList.map((item, idx) => (
+              <div
+                key={idx}
+                className="bg-brand-light border border-brand-border/30 rounded-3xl p-6 relative hover:border-secondary transition-colors"
+              >
+                <span className="text-3xl font-extrabold text-secondary/35 font-display block mb-2">{item.year}</span>
+                <h3 className="text-sm sm:text-base font-bold text-primary font-display mb-2">{item.title}</h3>
+                <p className="text-xs text-brand-muted leading-relaxed font-light">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* ── 5. InterNACHI AFFILIATION ── */}
+      <section id="internachi" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="flex flex-col gap-5">
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Certified Excellence</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+              International Association of Certified Home Inspectors (InterNACHI)
+            </h2>
+            <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
+              MACJ is internationally affiliated with **InterNACHI, USA**, the world's largest association of property inspectors. 
+            </p>
+            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
+              InterNACHI provides core certifications, strict Codes of Ethics, and standard inspection procedures. This affiliation ensures that our diagnostic checklists, thermal scanning parameters, and reporting formats are globally validated and compliant.
+            </p>
+          </div>
+          <div className="bg-primary text-white p-8 rounded-3xl shadow-premium flex flex-col gap-4">
+            <h3 className="text-lg font-bold font-display text-secondary">Our InterNACHI Assurances</h3>
+            <ul className="flex flex-col gap-3">
+              {[
+                "Strict compliance with USA Code of Ethics",
+                "Non-invasive testing methodologies only",
+                "Rigorous regular training & examinations for engineers",
+                "Objective, transparent assessments for all stakeholders"
+              ].map((text, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+                  <span className="h-5 w-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">✓</span>
+                  <span>{text}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. GRATITUDE SECTION ── */}
+      <section id="gratitude" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl text-center max-w-2xl">
+          <div className="h-12 w-12 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 mx-auto">
+            <Heart className="h-6 w-6" />
+          </div>
+          <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Gratitude</span>
+          <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">A Sincere Thank You</h2>
+          <p className="text-brand-muted mt-4 text-xs sm:text-sm leading-relaxed font-light">
+            We express our deepest gratitude to our initial real estate developer clients, banking partners, real estate agents, and above all, the thousands of homeowners who trusted MACJ to inspect their dream homes. Your feedback inspires us to expand nationwide and continue delivering excellence.
+          </p>
+        </div>
+      </section>
+
     </div>
   );
 }

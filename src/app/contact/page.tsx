@@ -10,43 +10,42 @@ import ContactForm from "@/components/ContactForm";
 const contactDetails = [
   {
     icon: Phone,
-    label: "Phone",
-    value: "0281 2990030",
-    href: "tel:02812990030",
-    sub: "Mon-Sat, 9 AM – 7 PM",
+    label: "National Helpline",
+    value: "+91 85848 55470",
+    href: "tel:+918584855470",
+    sub: "Mon-Sat, 10 AM – 6 PM",
+  },
+  {
+    icon: Phone,
+    label: "Corporate Office",
+    value: "033 4068 7162",
+    href: "tel:03340687162",
+    sub: "Kolkata, West Bengal",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "classicsolution931@gmail.com",
-    href: "mailto:classicsolution931@gmail.com",
+    value: "info@macj.in",
+    href: "mailto:info@macj.in",
     sub: "We reply within 24 hours",
-  },
-  {
-    icon: MapPin,
-    label: "Address",
-    value: "Office 9, Ground Floor, Anmol Complex, Raj Palace Chowk, Sadhu Vaswani Road, Rajkot, Gujarat – 360005",
-    href: "https://maps.google.com",
-    sub: "Rajkot, Gujarat",
   },
   {
     icon: Clock,
     label: "Working Hours",
-    value: "Mon – Sat: 9:00 AM – 7:00 PM",
+    value: "Mon – Sat: 10:00 AM – 6:00 PM",
     href: null,
     sub: "Sunday: Closed",
   },
 ];
 
 const servicesOffered = [
-  "Thermal Imaging Inspection",
-  "Electrical Hotspot Detection",
-  "Moisture Detection",
-  "Energy Audit",
-  "Property Inspection",
-  "Industrial Inspection",
-  "Solar Thermal Inspection",
-  "Preventive Maintenance Consulting",
+  "Complete Home Inspection",
+  "Moisture & Seepage Diagnostics",
+  "Infrared Electrical Inspection",
+  "NRI Property Care checkup",
+  "Construction Finishing Audit",
+  "Pre-Handover Quality check",
+  "Waterproofing & Damp Consulting"
 ];
 
 export default function ContactPage() {
@@ -54,9 +53,9 @@ export default function ContactPage() {
     <div className="relative w-full">
       <PageHero
         badge="Get In Touch"
-        title="Book an Inspection or"
-        titleHighlight="Contact Our Team"
-        subtitle="Have a question or ready to schedule a thermal imaging inspection? Fill in the form below or reach us directly by phone or email."
+        title="Schedule an Inspection or"
+        titleHighlight="Contact MACJ Team"
+        subtitle="Have a question about home health check-ups or ready to book your property inspection? Fill out the form or reach our national helpline."
         breadcrumbs={[{ label: "Contact Us" }]}
       />
 
@@ -102,10 +101,10 @@ export default function ContactPage() {
             <div>
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Why Contact Us</span>
               <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2 leading-tight">
-                Book Your Inspection Today
+                Secure Your Property Value Today
               </h2>
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light mt-3">
-                Don&apos;t let hidden electrical faults, moisture issues, or energy losses put your facility at risk. Get a professional thermal inspection and preventive maintenance plan today.
+                Don't sign key-handover checklists without checking structural, electrical, and plumbing safety. We provide certified digital checkup reports within 24-48 hours.
               </p>
             </div>
 
@@ -128,22 +127,22 @@ export default function ContactPage() {
             <div>
               <h3 className="text-base font-bold text-primary font-display mb-4 flex items-center gap-2">
                 <MapPin className="h-5 w-5 text-secondary" />
-                Our Office Location
+                Corporate Head Office
               </h3>
               <div className="w-full rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.8028795764043!2d70.77484431541018!3d22.28549994974913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959ca18aa2f89f3%3A0x1a87b3281237e8bb!2sSadhu%20Vaswani%20Rd%2C%20Rajkot%2C%20Gujarat%20360005!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.5947765103444!2d88.3516599760773!3d22.55684697950269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277051df52b47%3A0xe9dfa5db0c6ffce2!2sJawaharlal%20Nehru%20Rd%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   width="100%"
                   height="280"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Classic Solution Office Location"
+                  title="MACJ Corporate Office Location"
                 />
               </div>
               <p className="text-xs text-brand-muted mt-2">
-                Office 9, Ground Floor, Anmol Complex, Raj Palace Chowk, Sadhu Vaswani Road, Rajkot, Gujarat – 360005
+                3rd Floor, 30D, Jawaharlal Nehru Road, Taltala, Kolkata, West Bengal 700016
               </p>
             </div>
           </div>
@@ -155,12 +154,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── PAN INDIA COVERAGE NOTE ── */}
-      <section className="py-10 sm:py-14 bg-primary px-6 sm:px-8 lg:px-12">
+      {/* ── PAN INDIA SERVICE GRID NOTE ── */}
+      <section className="py-12 bg-primary px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mb-3">PAN India Service Coverage</h2>
-          <p className="text-white/65 text-sm sm:text-base max-w-xl mx-auto font-light">
-            While we are based in Rajkot, Gujarat, Classic Solution provides inspection services across major cities in India. Contact us to confirm availability at your location.
+          <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mb-3">PAN India Franchise Presence</h2>
+          <p className="text-white/65 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
+            MACJ operates across major Indian metropolitan areas including Kolkata, Mumbai, Pune, Bengaluru, and Gurgaon. Get in touch to schedule a technician visit at your project site.
           </p>
         </div>
       </section>

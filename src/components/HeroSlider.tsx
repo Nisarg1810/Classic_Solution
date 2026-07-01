@@ -9,45 +9,45 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     id: 1,
-    image: "/images/hero_background.png",
-    badge: "Technology-Driven Inspection",
-    title: "Thermal Imaging &\nPreventive Maintenance",
-    titleColor: "text-primary",
-    desc: "Advanced infrared inspection to detect hidden electrical hotspots, moisture, and energy losses — before they become costly failures.",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-01.jpg",
+    badge: "MNC Collaboration",
+    title: "MACJ A Buyer's Choice\nHome Inspections",
+    titleColor: "text-white",
+    desc: "Complete health & safety check-up of properties. Inspected by an experienced team using advanced technology, in collaboration with ABCHI USA.",
     cta: { label: "Book an Inspection", href: "/contact" },
-    ctaSecondary: { label: "Our Services", href: "/services" },
-    textDark: true,
+    ctaSecondary: { label: "About Us", href: "/about" },
+    textDark: false,
   },
   {
     id: 2,
-    image: "/images/thermal_camera_check.png",
-    badge: "Electrical Safety",
-    title: "Electrical Hotspot\nDetection",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-02.jpg",
+    badge: "Infrared Inspection",
+    title: "Electrical Safety &\nHotspot Detection",
     titleColor: "text-white",
-    desc: "Pinpoint overloaded circuits, loose connections, and faulty components in switchboards and panels — prevent electrical fires.",
-    cta: { label: "Learn More", href: "/services#electrical" },
+    desc: "Detect overloaded circuits, loose connections, and thermal anomalies in distribution boards and panels using advanced thermal imaging.",
+    cta: { label: "Electrical Inspections", href: "/services/electrical" },
     ctaSecondary: { label: "Book Now", href: "/contact" },
     textDark: false,
   },
   {
     id: 3,
-    image: "/images/underground_leak_detector.png",
-    badge: "Moisture Detection",
-    title: "Damp & Seepage\nAssessment",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-03.jpg",
+    badge: "Moisture Assessment",
+    title: "Damp, Seepage &\nLeakage Solutions",
     titleColor: "text-white",
-    desc: "Non-invasive moisture scanning to locate hidden water leaks, damp walls, and seepage without any drilling or demolition.",
-    cta: { label: "Learn More", href: "/services#moisture" },
+    desc: "Non-destructive moisture mapping with thermal imaging to trace leakage routes in walls, terraces, and ceilings without breakage.",
+    cta: { label: "Moisture & Damp", href: "/services/moisture-damp" },
     ctaSecondary: { label: "Book Now", href: "/contact" },
     textDark: false,
   },
   {
     id: 4,
-    image: "/images/metal_detector_drilling.png",
-    badge: "Property Inspection",
-    title: "Complete Property\nHealth Check-Up",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-04.jpg",
+    badge: "For Real Estate Developers",
+    title: "Construction Finishing\nInspection",
     titleColor: "text-white",
-    desc: "Comprehensive inspection of walls, ceilings, floors, electrical systems, and plumbing — a complete health report for your property.",
-    cta: { label: "Learn More", href: "/services#property" },
+    desc: "A win-win for developers and buyers. Ensure quality control, defect-free handovers, and compliance with RERA defect liability guidelines.",
+    cta: { label: "Developer Services", href: "/services/construction-finishing" },
     ctaSecondary: { label: "Book Now", href: "/contact" },
     textDark: false,
   },
@@ -123,15 +123,12 @@ export default function HeroSlider() {
             alt={slide.title.replace("\n", " ")}
             fill
             priority
-            className="object-cover"
+            className="object-cover animate-scale-up"
+            unoptimized
           />
           {/* Overlay: gradient from left so text is legible */}
           <div
-            className={`absolute inset-0 ${
-              slide.textDark
-                ? "bg-gradient-to-r from-white/90 via-white/70 to-transparent"
-                : "bg-gradient-to-r from-primary/85 via-primary/60 to-transparent"
-            }`}
+            className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"
           />
         </motion.div>
       </AnimatePresence>

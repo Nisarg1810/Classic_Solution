@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
         hostname: "images.unsplash.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "macj-abuyerschoice.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.dmca.com",
+        pathname: "/**",
+      },
     ],
   },
 };

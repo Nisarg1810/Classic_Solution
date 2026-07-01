@@ -25,21 +25,18 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Classic Solution | Thermal Imaging & Preventive Maintenance Services",
-  description: "Classic Solution is a technology-driven preventive maintenance company specialising in thermal imaging inspection, electrical hotspot detection, moisture detection, energy audits, and building inspections. Prevent costly failures before they happen.",
+  title: "MACJ A Buyer's Choice | Professional Home Inspection Services India",
+  description: "MACJ – A Buyer's Choice Home Inspections is India's leading home inspection company. We provide complete visual, non-destructive health & safety checks of properties including walls, ceilings, floors, doors, windows, electrical, plumbing, damp, seepage, and moisture inspections.",
   keywords: [
-    "Thermal Imaging Inspection",
-    "Preventive Maintenance",
-    "Electrical Hotspot Detection",
-    "Infrared Inspection",
-    "Energy Audit",
-    "Moisture Detection",
-    "Industrial Inspection",
-    "Building Inspection",
-    "Solar Panel Inspection",
-    "Fire Hazard Prevention",
+    "Home Inspection India",
+    "Property Inspection Services",
+    "Moisture and Damp Inspection",
     "Electrical Safety Inspection",
-    "Property Inspection Rajkot"
+    "Thermal Imaging Inspection",
+    "Pre-Handover Audits",
+    "Construction Finishing Audits",
+    "NRI Property Care",
+    "RERA Defect Liability Audit"
   ]
 };
 

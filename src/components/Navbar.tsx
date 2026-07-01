@@ -9,21 +9,60 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
+  {
+    name: "About",
+    href: "/about",
+    dropdown: [
+      { name: "MACJ - ABCHI India", href: "/about/about-macj-abchi" },
+      { name: "ABCHI USA", href: "/about/about-abchi-usa" },
+      { name: "Management Profile", href: "/about/about-macj-india" },
+      { name: "Milestones", href: "/about/milestones-achieved" },
+      { name: "Gratitude", href: "/about/our-gratitude" },
+      { name: "InterNACHI Affiliation", href: "/about/internachi" },
+    ],
+  },
   {
     name: "Services",
     href: "/services",
     dropdown: [
-      { name: "All Services", href: "/services" },
-      { name: "Thermal Imaging", href: "/services#thermal" },
-      { name: "Moisture Detection", href: "/services#moisture" },
-      { name: "Electrical Inspection", href: "/services#electrical" },
-      { name: "Energy Audit", href: "/services#energy" },
+      { name: "Real Estate Value Chain", href: "/services/value-chain" },
+      { name: "Complete Home Inspection", href: "/services/home-inspection" },
+      { name: "Moisture & Seepage (Thermal)", href: "/services/moisture-damp" },
+      { name: "Electrical Inspections", href: "/services/electrical" },
+      { name: "NRI Property Care", href: "/services/nri-property-care" },
+      { name: "Construction Finishing", href: "/services/construction-finishing" },
+      { name: "Stakeholder Win-Win", href: "/services/stakeholder-benefits" },
     ],
   },
-  { name: "Process", href: "/process" },
-  { name: "RERA Act", href: "/rera" },
-  { name: "Gallery", href: "/gallery" },
+  {
+    name: "Resources",
+    href: "#",
+    dropdown: [
+      { name: "Blogs", href: "/resources#blogs" },
+      { name: "Case Studies", href: "/resources#case-studies" },
+      { name: "Knowledge Series", href: "/resources#knowledge" },
+      { name: "FAQs", href: "/resources#faqs" },
+    ],
+  },
+  {
+    name: "News",
+    href: "#",
+    dropdown: [
+      { name: "Home Inspection News", href: "/news#home-inspection" },
+      { name: "RERA Updates", href: "/rera" },
+      { name: "MACJ Gallery", href: "/gallery" },
+      { name: "Magicbricks Alliance", href: "/news#magicbricks" },
+      { name: "Pidilite Alliance", href: "/news#pidilite" },
+    ],
+  },
+  {
+    name: "Franchise",
+    href: "#",
+    dropdown: [
+      { name: "Franchise Opportunity", href: "/franchise#opportunity" },
+      { name: "Careers", href: "/franchise#careers" },
+    ],
+  },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -46,7 +85,7 @@ export default function Navbar() {
   }, [pathname]);
 
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
+    if (href === "/" || href === "#") return pathname === "/";
     return pathname.startsWith(href);
   };
 
@@ -54,19 +93,20 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled || isOpen ? "py-2 bg-white/95 backdrop-blur-md shadow-premium border-b border-brand-border/30" : "py-4 bg-transparent"
+          scrolled || isOpen ? "py-3 bg-white/95 backdrop-blur-md shadow-premium border-b border-brand-border/30" : "py-5 bg-transparent"
         }`}
       >
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative h-20 w-72">
+            <Link href="/" className="flex items-center gap-3 group py-1">
+              <div className="relative h-12 w-32 sm:h-14 sm:w-36">
                 <Image
-                  src="/logo.png"
-                  alt="Classic Solution Logo"
+                  src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/logo.png"
+                  alt="MACJ - A Buyer's Choice Logo"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain"
+                  unoptimized
                   priority
                 />
               </div>
@@ -84,7 +124,7 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className={`flex items-center gap-1 text-sm font-medium px-3 py-2 rounded-lg transition-colors relative group ${
+                      className={`flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group ${
                         isActive(link.href)
                           ? "text-secondary"
                           : "text-brand-text hover:text-secondary"
@@ -105,13 +145,13 @@ export default function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 8, scale: 0.97 }}
                           transition={{ duration: 0.18 }}
-                          className="absolute top-full left-0 mt-1 w-52 bg-white rounded-xl shadow-premium border border-brand-border/30 py-1.5 z-50"
+                          className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-premium border border-brand-border/30 py-1.5 z-50"
                         >
                           {link.dropdown.map((item) => (
                             <Link
                               key={item.name}
                               href={item.href}
-                              className="block px-4 py-2.5 text-sm text-brand-text hover:text-secondary hover:bg-brand-light transition-colors"
+                              className="block px-4 py-2.5 text-xs font-medium text-brand-text hover:text-secondary hover:bg-brand-light transition-colors"
                             >
                               {item.name}
                             </Link>
@@ -124,7 +164,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-sm font-medium px-3 py-2 rounded-lg transition-colors relative group ${
+                    className={`text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group ${
                       isActive(link.href)
                         ? "text-secondary"
                         : "text-brand-text hover:text-secondary"
@@ -142,17 +182,17 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-5">
               <a
-                href="tel:02812990030"
-                className="flex items-center gap-2 text-sm font-semibold text-primary hover:text-secondary transition-colors"
+                href="tel:+918584855470"
+                className="flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary transition-colors"
               >
                 <PhoneCall className="h-4 w-4 text-secondary" />
-                <span>0281 2990030</span>
+                <span>+91 85848 55470</span>
               </a>
               <Link
                 href="/contact"
-                className="rounded-xl bg-secondary px-6 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-secondary-light hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+                className="rounded-full bg-secondary px-6 py-2.5 text-sm font-bold text-white shadow-md hover:bg-secondary-light hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
               >
                 Book Inspection
               </Link>
@@ -196,7 +236,7 @@ export default function Navbar() {
                   <div key={link.name}>
                     <Link
                       href={link.href}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => !link.dropdown && setIsOpen(false)}
                       className={`block text-base font-semibold py-3 px-3 rounded-xl border-b border-black/5 transition-colors ${
                         isActive(link.href)
                           ? "text-secondary bg-secondary/5"
@@ -207,7 +247,7 @@ export default function Navbar() {
                     </Link>
                     {link.dropdown && (
                       <div className="pl-4 flex flex-col gap-0.5 mt-1 mb-2">
-                        {link.dropdown.slice(1).map((item) => (
+                        {link.dropdown.map((item) => (
                           <Link
                             key={item.name}
                             href={item.href}
@@ -224,11 +264,11 @@ export default function Navbar() {
               </nav>
               <div className="flex flex-col gap-3 mt-2">
                 <a
-                  href="tel:02812990030"
+                  href="tel:+918584855470"
                   className="flex items-center justify-center gap-2 text-base font-semibold text-primary py-3 rounded-xl border border-primary/20 hover:bg-primary/5 transition-all"
                 >
                   <PhoneCall className="h-4 w-4 text-secondary" />
-                  <span>0281 2990030</span>
+                  <span>+91 85848 55470</span>
                 </a>
                 <Link
                   href="/contact"
