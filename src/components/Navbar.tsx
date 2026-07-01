@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, PhoneCall, ChevronDown, Mail, Phone } from "lucide-react";
+import { Menu, X, PhoneCall, ChevronDown, Mail, Phone, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -70,6 +70,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -82,10 +83,12 @@ export default function Navbar() {
   useEffect(() => {
     setIsOpen(false);
     setOpenDropdown(null);
+    setExpandedMobileMenu(null);
   }, [pathname]);
 
   const isActive = (href: string) => {
-    if (href === "/" || href === "#") return pathname === "/";
+    if (href === "/") return pathname === "/";
+    if (href === "#") return false;
     return pathname.startsWith(href);
   };
 
@@ -157,6 +160,12 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
+                      onClick={(e) => {
+                        if (link.href === "#") {
+                          e.preventDefault();
+                          setOpenDropdown(openDropdown === link.name ? null : link.name);
+                        }
+                      }}
                       className={`flex items-center gap-1 text-xs font-semibold px-2.5 py-2 rounded-lg transition-colors relative group ${
                         isActive(link.href)
                           ? "text-secondary"
@@ -166,7 +175,7 @@ export default function Navbar() {
                       {link.name}
                       <ChevronDown className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
                       <span
-                        className={`absolute bottom-0 left-2 .right-2 h-0.5 bg-secondary transition-all duration-300 ${
+                        className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
                           isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                         }`}
                       />
@@ -262,39 +271,69 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed inset-x-0 top-[72px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-72px)] overflow-y-auto"
+              className="fixed inset-x-0 top-[64px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-64px)] overflow-y-auto"
             >
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
-                  <div key={link.name}>
-                    <Link
-                      href={link.href}
-                      onClick={() => !link.dropdown && setIsOpen(false)}
-                      className={`block text-base font-semibold py-3 px-3 rounded-xl border-b border-black/5 transition-colors ${
-                        isActive(link.href)
-                          ? "text-secondary bg-secondary/5"
-                          : "text-brand-text hover:text-secondary hover:bg-brand-light"
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
-                    {link.dropdown && (
-                      <div className="pl-4 flex flex-col gap-0.5 mt-1 mb-2">
-                        {link.dropdown.map((item) => (
-                          <Link
-                            key={item.name}
-                            href={item.href}
-                            onClick={() => setIsOpen(false)}
-                            className="text-sm text-brand-muted hover:text-secondary py-2 px-3 rounded-lg transition-colors"
-                          >
-                            → {item.name}
-                          </Link>
-                        ))}
-                      </div>
+                  <div key={link.name} className="border-b border-black/5 last:border-0 pb-1">
+                    {link.dropdown ? (
+                      <button
+                        onClick={() =>
+                          setExpandedMobileMenu(
+                            expandedMobileMenu === link.name ? null : link.name
+                          )
+                        }
+                        className="w-full flex items-center justify-between text-base font-semibold py-3 px-3 rounded-xl transition-colors text-brand-text hover:text-secondary"
+                      >
+                        <span>{link.name}</span>
+                        <ChevronRight
+                          className={`h-4 w-4 text-brand-muted transition-transform duration-300 ${
+                            expandedMobileMenu === link.name ? "rotate-90 text-secondary" : ""
+                          }`}
+                        />
+                      </button>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`block text-base font-semibold py-3 px-3 rounded-xl transition-colors ${
+                          isActive(link.href)
+                            ? "text-secondary bg-secondary/5"
+                            : "text-brand-text hover:text-secondary hover:bg-brand-light"
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
                     )}
+                    
+                    {/* Dropdown Items for Mobile */}
+                    <AnimatePresence initial={false}>
+                      {link.dropdown && expandedMobileMenu === link.name && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.25, ease: "easeInOut" }}
+                          className="overflow-hidden pl-4 flex flex-col gap-0.5 mt-1 mb-2 bg-brand-light/50 rounded-xl"
+                        >
+                          {link.dropdown.map((item) => (
+                            <Link
+                              key={item.name}
+                              href={item.href}
+                              onClick={() => setIsOpen(false)}
+                              className="text-sm text-brand-muted hover:text-secondary py-2.5 px-4 rounded-lg transition-colors flex items-center gap-1"
+                            >
+                              <span>•</span>
+                              <span>{item.name}</span>
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 ))}
               </nav>
+              
               <div className="flex flex-col gap-3 mt-2">
                 <a
                   href="tel:+918584855470"
