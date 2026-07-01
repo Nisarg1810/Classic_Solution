@@ -10,46 +10,34 @@ const slides = [
   {
     id: 1,
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-01.jpg",
-    badge: "MNC Collaboration",
-    title: "MACJ A Buyer's Choice\nHome Inspections",
-    titleColor: "text-white",
-    desc: "Complete health & safety check-up of properties. Inspected by an experienced team using advanced technology, in collaboration with ABCHI USA.",
-    cta: { label: "Book an Inspection", href: "/contact" },
-    ctaSecondary: { label: "About Us", href: "/about" },
-    textDark: false,
+    title: "Health & Safety Checkup of\nHomes / Offices alongwith Solutions",
+    titleColor: "text-white text-center sm:text-left",
+    cta: { label: "Learn More", href: "/services" },
+    mobileOnly: true,
   },
   {
     id: 2,
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-02.jpg",
-    badge: "Infrared Inspection",
-    title: "Electrical Safety &\nHotspot Detection",
+    title: "Damp / Seepage Assessment\nwith Solutions through\nThermal Imaging Technology",
     titleColor: "text-white",
-    desc: "Detect overloaded circuits, loose connections, and thermal anomalies in distribution boards and panels using advanced thermal imaging.",
-    cta: { label: "Electrical Inspections", href: "/services/electrical" },
-    ctaSecondary: { label: "Book Now", href: "/contact" },
-    textDark: false,
+    cta: { label: "Learn More", href: "/services/moisture-damp" },
+    mobileOnly: false,
   },
   {
     id: 3,
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-03.jpg",
-    badge: "Moisture Assessment",
-    title: "Damp, Seepage &\nLeakage Solutions",
-    titleColor: "text-white",
-    desc: "Non-destructive moisture mapping with thermal imaging to trace leakage routes in walls, terraces, and ceilings without breakage.",
-    cta: { label: "Moisture & Damp", href: "/services/moisture-damp" },
-    ctaSecondary: { label: "Book Now", href: "/contact" },
-    textDark: false,
+    title: "Electrical Inspections of a\nHome / Property",
+    titleColor: "text-[#00245d]",
+    cta: { label: "Learn More", href: "/services/electrical" },
+    mobileOnly: false,
   },
   {
     id: 4,
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-04.jpg",
-    badge: "For Real Estate Developers",
-    title: "Construction Finishing\nInspection",
+    title: "Construction Finishing Inspection\nfor Real Estate Developers",
     titleColor: "text-white",
-    desc: "A win-win for developers and buyers. Ensure quality control, defect-free handovers, and compliance with RERA defect liability guidelines.",
-    cta: { label: "Developer Services", href: "/services/construction-finishing" },
-    ctaSecondary: { label: "Book Now", href: "/contact" },
-    textDark: false,
+    cta: { label: "Learn More", href: "/services/construction-finishing" },
+    mobileOnly: false,
   },
 ];
 
@@ -130,13 +118,15 @@ export default function HeroSlider() {
             sizes="100vw"
             unoptimized
           />
-          {/* Gradient: stronger on mobile for readability, fades right on desktop */}
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30 sm:to-transparent" />
+          {/* Transparent gradient overlay to enhance readability on overlay text, if slide contains desktop text */}
+          {!slide.mobileOnly && (
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent" />
+          )}
         </motion.div>
       </AnimatePresence>
 
-      {/* Content */}
-      <div className="relative z-10 h-full mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 flex items-center">
+      {/* Content Overlay */}
+      <div className="relative z-10 h-full mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={`text-${current}`}
@@ -145,60 +135,34 @@ export default function HeroSlider() {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className="w-full max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-xl"
+            className={`w-full max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-xl ${
+              slide.mobileOnly ? "block md:hidden mx-auto text-center" : "block"
+            }`}
           >
-            {/* Badge */}
-            <span
-              className={`inline-block text-[10px] sm:text-xs font-bold uppercase tracking-widest px-3 sm:px-4 py-1 sm:py-1.5 rounded-full mb-3 sm:mb-4 ${
-                slide.textDark
-                  ? "bg-secondary/10 text-secondary border border-secondary/20"
-                  : "bg-white/15 text-white border border-white/25"
-              }`}
-            >
-              {slide.badge}
-            </span>
-
             {/* Title — fluid scale */}
             <h1
-              className={`font-extrabold font-display leading-[1.1] tracking-tight mb-3 sm:mb-4 whitespace-pre-line ${slide.titleColor}`}
-              style={{ fontSize: "clamp(1.5rem, 4vw, 3.75rem)" }}
+              className={`font-extrabold font-display leading-[1.1] tracking-tight mb-5 whitespace-pre-line ${slide.titleColor}`}
+              style={{ fontSize: "clamp(1.5rem, 3.5vw, 3.25rem)" }}
             >
               {slide.title}
             </h1>
 
-            {/* Description — show on sm+ */}
-            <p
-              className={`hidden sm:block text-xs sm:text-sm leading-relaxed font-light mb-5 sm:mb-8 max-w-sm ${
-                slide.textDark ? "text-brand-muted" : "text-white/80"
-              }`}
-            >
-              {slide.desc}
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-2 sm:gap-3">
-              <Link
-                href={slide.cta.href}
-                className="px-4 sm:px-7 py-2 sm:py-3.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 active:scale-95 text-xs sm:text-sm"
-              >
-                {slide.cta.label}
-              </Link>
-              <Link
-                href={slide.ctaSecondary.href}
-                className={`px-4 sm:px-7 py-2 sm:py-3.5 font-bold rounded-full border transition-all duration-300 active:scale-95 text-xs sm:text-sm ${
-                  slide.textDark
-                    ? "border-primary text-primary hover:bg-primary hover:text-white"
-                    : "border-white/40 text-white hover:bg-white/15"
-                }`}
-              >
-                {slide.ctaSecondary.label}
-              </Link>
-            </div>
+            {/* Learn More Button */}
+            {slide.cta && (
+              <div className={`flex gap-3 ${slide.mobileOnly ? "justify-center" : ""}`}>
+                <Link
+                  href={slide.cta.href}
+                  className="px-6 sm:px-8 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs sm:text-sm uppercase tracking-wider"
+                >
+                  {slide.cta.label}
+                </Link>
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Prev / Next Arrows + Dots */}
+      {/* Navigation Arrows + Dots */}
       <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-8 lg:left-12 z-20 flex items-center gap-2">
         <button
           onClick={prev}
@@ -215,7 +179,7 @@ export default function HeroSlider() {
           <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5" />
         </button>
 
-        {/* Slide dots */}
+        {/* Dots */}
         <div className="flex items-center gap-1.5 ml-2 sm:ml-3">
           {slides.map((_, i) => (
             <button
