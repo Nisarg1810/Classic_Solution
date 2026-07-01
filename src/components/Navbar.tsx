@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, PhoneCall, ChevronDown } from "lucide-react";
+import { Menu, X, PhoneCall, ChevronDown, Mail, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -55,6 +55,14 @@ const navLinks = [
       { name: "Pidilite Alliance", href: "/news#pidilite" },
     ],
   },
+  {
+    name: "Our Clients",
+    href: "#",
+    dropdown: [
+      { name: "Testimonials", href: "/#testimonials" },
+      { name: "Our Clients", href: "/news" },
+    ],
+  },
   { name: "Contact", href: "/contact" },
 ];
 
@@ -65,7 +73,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -84,15 +92,48 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled || isOpen ? "py-3 bg-white/95 backdrop-blur-md shadow-premium border-b border-brand-border/30" : "py-5 bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-premium border-b border-brand-border/30`}
       >
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12">
+        {/* Top Info Bar */}
+        <div
+          className={`hidden md:block bg-primary text-white/90 text-xs border-b border-white/10 transition-all duration-300 ${
+            scrolled ? "h-0 overflow-hidden opacity-0" : "h-10 opacity-100"
+          }`}
+        >
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 h-10 flex items-center justify-between">
+            <div className="flex items-center gap-6">
+              <a
+                href="tel:+918584855470"
+                className="hover:text-secondary flex items-center gap-1.5 transition-colors"
+              >
+                <Phone className="h-3.5 w-3.5 text-secondary" />
+                <span>+91 85848 55470 / 033 4068 7162</span>
+              </a>
+              <span className="text-white/30">|</span>
+              <a
+                href="mailto:info@macj.in"
+                className="hover:text-secondary flex items-center gap-1.5 transition-colors"
+              >
+                <Mail className="h-3.5 w-3.5 text-secondary" />
+                <span>info@macj.in</span>
+              </a>
+            </div>
+            <div className="flex items-center gap-4 text-white/70">
+              <a href="#" className="hover:text-secondary transition-colors">Facebook</a>
+              <a href="#" className="hover:text-secondary transition-colors">Twitter</a>
+              <a href="#" className="hover:text-secondary transition-colors">Instagram</a>
+              <a href="#" className="hover:text-secondary transition-colors">LinkedIn</a>
+              <a href="#" className="hover:text-secondary transition-colors">YouTube</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Navigation Row */}
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group py-1">
-              <div className="relative h-12 w-32 sm:h-14 sm:w-36">
+              <div className="relative h-10 w-28 sm:h-12 sm:w-32">
                 <Image
                   src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/logo.png"
                   alt="MACJ - A Buyer's Choice Logo"
@@ -105,7 +146,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-0.5">
               {navLinks.map((link) =>
                 link.dropdown ? (
                   <div
@@ -116,16 +157,16 @@ export default function Navbar() {
                   >
                     <Link
                       href={link.href}
-                      className={`flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group ${
+                      className={`flex items-center gap-1 text-xs font-semibold px-2.5 py-2 rounded-lg transition-colors relative group ${
                         isActive(link.href)
                           ? "text-secondary"
                           : "text-brand-text hover:text-secondary"
                       }`}
                     >
                       {link.name}
-                      <ChevronDown className="h-3.5 w-3.5 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
+                      <ChevronDown className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
                       <span
-                        className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
+                        className={`absolute bottom-0 left-2 .right-2 h-0.5 bg-secondary transition-all duration-300 ${
                           isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                         }`}
                       />
@@ -137,7 +178,7 @@ export default function Navbar() {
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 8, scale: 0.97 }}
                           transition={{ duration: 0.18 }}
-                          className="absolute top-full left-0 mt-1 w-64 bg-white rounded-xl shadow-premium border border-brand-border/30 py-1.5 z-50"
+                          className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-premium border border-brand-border/30 py-1.5 z-50"
                         >
                           {link.dropdown.map((item) => (
                             <Link
@@ -156,7 +197,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group ${
+                    className={`text-xs font-semibold px-2.5 py-2 rounded-lg transition-colors relative group ${
                       isActive(link.href)
                         ? "text-secondary"
                         : "text-brand-text hover:text-secondary"
@@ -174,17 +215,17 @@ export default function Navbar() {
             </nav>
 
             {/* Desktop CTA */}
-            <div className="hidden md:flex items-center gap-5">
+            <div className="hidden md:flex items-center gap-4">
               <a
                 href="tel:+918584855470"
-                className="flex items-center gap-2 text-sm font-bold text-primary hover:text-secondary transition-colors"
+                className="flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary transition-colors"
               >
-                <PhoneCall className="h-4 w-4 text-secondary" />
+                <PhoneCall className="h-3.5 w-3.5 text-secondary" />
                 <span>+91 85848 55470</span>
               </a>
               <Link
                 href="/contact"
-                className="rounded-full bg-secondary px-6 py-2.5 text-sm font-bold text-white shadow-md hover:bg-secondary-light hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
+                className="rounded-full bg-secondary px-5 py-2 text-xs font-bold text-white shadow-md hover:bg-secondary-light hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
               >
                 Book Inspection
               </Link>
@@ -221,7 +262,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed inset-x-0 top-[96px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-96px)] overflow-y-auto"
+              className="fixed inset-x-0 top-[72px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-72px)] overflow-y-auto"
             >
               <nav className="flex flex-col gap-1">
                 {navLinks.map((link) => (
