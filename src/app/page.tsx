@@ -224,8 +224,8 @@ export default function Home() {
 
 
       {/* ── 3. HOME HIGHLIGHTS ── */}
-      <section className="py-6 sm:py-10 bg-brand-light px-6 sm:px-12 lg:px-16">
-        <div className="mx-auto max-w-6xl">
+      <section className="py-6 sm:py-10 bg-brand-light px-8 sm:px-16 lg:px-28">
+        <div className="mx-auto max-w-5xl">
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
             {homeHighlights.map((item, idx) => (
