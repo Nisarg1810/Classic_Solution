@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, PhoneCall, ChevronDown, Mail, Phone, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -181,22 +181,6 @@ export default function Navbar() {
               )}
             </nav>
 
-            {/* Desktop CTA */}
-            <div className="hidden md:flex items-center gap-4">
-              <a
-                href="tel:+917600078862"
-                className="flex items-center gap-1.5 text-sm font-bold text-primary hover:text-secondary transition-colors"
-              >
-                <PhoneCall className="h-3.5 w-3.5 text-secondary" />
-                <span>76000 78862</span>
-              </a>
-              <Link
-                href="/contact"
-                className="rounded-full bg-secondary px-5 py-2 text-sm font-bold text-white shadow-md hover:bg-secondary-light hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0"
-              >
-                Book Inspection
-              </Link>
-            </div>
 
             {/* Mobile Hamburger */}
             <button
@@ -292,22 +276,7 @@ export default function Navbar() {
                 ))}
               </nav>
               
-              <div className="flex flex-col gap-3 mt-2">
-                <a
-                  href="tel:+917600078862"
-                  className="flex items-center justify-center gap-2 text-base font-semibold text-primary py-3 rounded-xl border border-primary/20 hover:bg-primary/5 transition-all"
-                >
-                  <PhoneCall className="h-4 w-4 text-secondary" />
-                  <span>76000 78862</span>
-                </a>
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="rounded-xl bg-secondary py-3 text-center text-base font-semibold text-white shadow-md hover:bg-secondary-light transition-all"
-                >
-                  Book Inspection
-                </Link>
-              </div>
+
             </motion.div>
           </>
         )}
