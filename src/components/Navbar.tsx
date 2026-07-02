@@ -108,82 +108,86 @@ export default function Navbar() {
 
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
-              {navLinks.map((link) =>
-                link.dropdown ? (
-                  <div
-                    key={link.name}
-                    className="relative"
-                    onMouseEnter={() => setOpenDropdown(link.name)}
-                    onMouseLeave={() => setOpenDropdown(null)}
-                  >
+              {navLinks.map((link, index) => (
+                <div key={link.name} className="flex items-center">
+                  {/* Vertical divider after Home icon */}
+                  {index === 1 && (
+                    <div className="h-6 w-px bg-gray-300 mr-2" />
+                  )}
+                  {link.dropdown ? (
+                    <div
+                      className="relative"
+                      onMouseEnter={() => setOpenDropdown(link.name)}
+                      onMouseLeave={() => setOpenDropdown(null)}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={(e) => {
+                          if (link.href === "#") {
+                            e.preventDefault();
+                            setOpenDropdown(openDropdown === link.name ? null : link.name);
+                          }
+                        }}
+                        className={`flex items-center gap-1 text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${
+                          isActive(link.href)
+                            ? "text-secondary"
+                            : "text-brand-text hover:text-secondary"
+                        }`}
+                      >
+                        {link.name}
+                        <ChevronDown className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
+                        <span
+                          className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
+                            isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+                          }`}
+                        />
+                      </Link>
+                      <AnimatePresence>
+                        {openDropdown === link.name && (
+                          <motion.div
+                            initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 8, scale: 0.97 }}
+                            transition={{ duration: 0.18 }}
+                            className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-premium border border-brand-border/30 py-1.5 z-50"
+                          >
+                            {link.dropdown.map((item) => (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                className="block px-4 py-2.5 text-sm font-medium text-brand-text hover:text-secondary hover:bg-brand-light transition-colors"
+                              >
+                                {item.name}
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ) : (
                     <Link
                       href={link.href}
-                      onClick={(e) => {
-                        if (link.href === "#") {
-                          e.preventDefault();
-                          setOpenDropdown(openDropdown === link.name ? null : link.name);
-                        }
-                      }}
-                      className={`flex items-center gap-1 text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${
+                      className={`text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${"icon" in link && link.icon ? "flex items-center" : ""} ${
                         isActive(link.href)
                           ? "text-secondary"
                           : "text-brand-text hover:text-secondary"
                       }`}
+                      aria-label={link.name}
                     >
-                      {link.name}
-                      <ChevronDown className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
+                      {"icon" in link && link.icon ? (
+                        <Home className="h-5 w-5" />
+                      ) : (
+                        link.name
+                      )}
                       <span
                         className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
                           isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                         }`}
                       />
                     </Link>
-                    <AnimatePresence>
-                      {openDropdown === link.name && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 8, scale: 0.97 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 8, scale: 0.97 }}
-                          transition={{ duration: 0.18 }}
-                          className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-premium border border-brand-border/30 py-1.5 z-50"
-                        >
-                          {link.dropdown.map((item) => (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              className="block px-4 py-2.5 text-sm font-medium text-brand-text hover:text-secondary hover:bg-brand-light transition-colors"
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                ) : (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className={`text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${"icon" in link && link.icon ? "flex items-center" : ""} ${
-                      isActive(link.href)
-                        ? "text-secondary"
-                        : "text-brand-text hover:text-secondary"
-                    }`}
-                    aria-label={link.name}
-                  >
-                    {"icon" in link && link.icon ? (
-                      <Home className="h-5 w-5" />
-                    ) : (
-                      link.name
-                    )}
-                    <span
-                      className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
-                        isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-                      }`}
-                    />
-                  </Link>
-                )
-              )}
+                  )}
+                </div>
+              ))}
             </nav>
 
 
