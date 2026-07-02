@@ -117,7 +117,7 @@ export default function RoomScope() {
   const ActiveIcon = activeArea.icon;
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 py-6 text-left">
+    <div className="w-full max-w-5xl mx-auto px-6 py-6 text-left">
       {/* Parameters Header Card Bar */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-3">

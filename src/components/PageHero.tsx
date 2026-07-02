@@ -41,7 +41,7 @@ export default function PageHero({
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl">
+      <div className="relative z-10 mx-auto max-w-5xl">
         {/* Breadcrumb */}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <motion.nav

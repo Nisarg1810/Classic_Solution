@@ -53,7 +53,7 @@ const processSteps: ProcessStep[] = [
 
 export default function ProcessTimeline() {
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 py-6">
+    <div className="w-full max-w-5xl mx-auto px-6 py-6">
       <div className="mb-10 max-w-2xl">
         <div className="flex items-center gap-3 mb-3">
           <span className="block w-8 h-0.5 bg-secondary" />

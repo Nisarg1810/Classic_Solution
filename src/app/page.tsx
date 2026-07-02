@@ -266,7 +266,7 @@ export default function Home() {
 
       {/* ── 5. HOME INSPECTION COVERAGE ── */}
       <section className="py-14 sm:py-20 bg-[#fbfbfb] px-4 sm:px-8 lg:px-12 border-t border-brand-border/20">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           {/* Centered Heading */}
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3.5xl font-bold font-display text-[#333333]">
@@ -411,7 +411,7 @@ export default function Home() {
       {/* ── 11. CTA SECTION ── */}
       <section className="py-14 sm:py-20 bg-primary px-6 sm:px-8 lg:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(211,17,69,0.15),transparent_60%)] pointer-events-none" />
-        <div className="mx-auto max-w-7xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="mx-auto max-w-5xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="text-white max-w-xl">
             <span className="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm">Get Started Today</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-tight mt-2">

@@ -68,7 +68,7 @@ const testimonials: Testimonial[] = [
 
 export default function Testimonials() {
   return (
-    <div className="w-full max-w-7xl px-4 sm:px-6 py-6 mx-auto">
+    <div className="w-full max-w-5xl px-4 sm:px-6 py-6 mx-auto">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={20}

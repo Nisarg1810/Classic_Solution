@@ -61,7 +61,7 @@ export default function ContactPage() {
 
       {/* ── CONTACT DETAILS STRIP ── */}
       <section className="py-12 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {contactDetails.map((item, idx) => {
               const Icon = item.icon;
@@ -95,7 +95,7 @@ export default function ContactPage() {
 
       {/* ── CONTACT FORM + INFO ── */}
       <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-start">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-16 items-start">
           {/* Left: Info */}
           <div className="flex flex-col gap-8">
             <div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
 
       {/* ── PAN INDIA SERVICE GRID NOTE ── */}
       <section className="py-12 bg-primary px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mb-3">PAN India Franchise Presence</h2>
           <p className="text-white/65 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
             MACJ operates across major Indian metropolitan areas including Kolkata, Mumbai, Pune, Bengaluru, and Gurgaon. Get in touch to schedule a technician visit at your project site.

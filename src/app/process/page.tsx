@@ -53,14 +53,14 @@ export default function ProcessPage() {
 
       {/* ── PROCESS TIMELINE ── */}
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <ProcessTimeline />
         </div>
       </section>
 
       {/* ── WHAT YOU RECEIVE ── */}
       <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">What You Receive</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Professional Digital Inspection Report</h2>
@@ -95,7 +95,7 @@ export default function ProcessPage() {
       {/* ── TECHNOLOGY USED ── */}
       <section className="py-14 sm:py-20 bg-primary text-white px-6 sm:px-8 lg:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(15,43,70,0.8),#081B2E)] pointer-events-none" />
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-10 relative z-10">
+        <div className="mx-auto max-w-5xl flex flex-col items-center gap-10 relative z-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Tools We Use</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-white mt-2">Scientific Tools & Technology</h2>
@@ -131,7 +131,7 @@ export default function ProcessPage() {
 
       {/* ── OUR ADVANTAGES ── */}
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Why Our Process</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Advantages of Our Approach</h2>
@@ -165,7 +165,7 @@ export default function ProcessPage() {
 
       {/* ── CTA ── */}
       <section className="py-14 bg-primary px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="mx-auto max-w-5xl flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="text-white max-w-xl">
             <h2 className="text-3xl sm:text-4xl font-extrabold font-display leading-tight mb-4">
               Ready to Get Started?

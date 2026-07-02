@@ -136,7 +136,7 @@ export default function GalleryMasonry() {
 
       <motion.div
         layout
-        className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 px-4 sm:px-6 max-w-7xl"
+        className="w-full grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 px-4 sm:px-6 max-w-5xl"
       >
         <AnimatePresence mode="popLayout">
           {filteredItems.map((item, idx) => (

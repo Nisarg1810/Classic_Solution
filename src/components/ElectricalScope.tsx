@@ -30,7 +30,7 @@ export default function ElectricalScope() {
   ];
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 py-6 text-left">
+    <div className="w-full max-w-5xl mx-auto px-6 py-6 text-left">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* Left Card: Hazards & Causes */}
         <div className="lg:col-span-5 bg-gradient-to-br from-[#fdf4f4] to-[#fffcfc] border border-[#f1d6d6] rounded-3xl p-6 sm:p-8 flex flex-col justify-between">

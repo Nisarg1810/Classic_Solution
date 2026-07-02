@@ -101,7 +101,7 @@ export default function AboutMacjIndia() {
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl flex flex-col gap-16">
+        <div className="mx-auto max-w-5xl flex flex-col gap-16">
           
           {/* Executive Section */}
           <div>

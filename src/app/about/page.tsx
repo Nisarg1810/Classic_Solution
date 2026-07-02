@@ -67,7 +67,7 @@ export default function AboutPage() {
 
       {/* ── 1. MACJ & ABCHI INDIA PARTNERSHIP ── */}
       <section id="macj-india" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col gap-5">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">The Partnership</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
@@ -109,7 +109,7 @@ export default function AboutPage() {
 
       {/* ── 2. ABCHI USA CORPORATE PROFILE ── */}
       <section id="abchi-usa" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="bg-gradient-to-br from-primary to-primary-dark text-white p-8 rounded-3xl shadow-premium lg:order-2">
             <div className="h-12 w-12 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
               <Globe className="h-6 w-6 text-secondary" />
@@ -150,7 +150,7 @@ export default function AboutPage() {
 
       {/* ── 3. MANAGEMENT & PROMOTER PROFILES ── */}
       <section id="management" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Leaders</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Management & Partners Profile</h2>
@@ -190,7 +190,7 @@ export default function AboutPage() {
 
       {/* ── 4. MILESTONES ACHIEVED ── */}
       <section id="milestones" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Our Journey</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Milestones Achieved</h2>
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
       {/* ── 5. InterNACHI AFFILIATION ── */}
       <section id="internachi" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col gap-5">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Certified Excellence</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
@@ -247,7 +247,7 @@ export default function AboutPage() {
 
       {/* ── 6. GRATITUDE SECTION ── */}
       <section id="gratitude" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl text-center max-w-2xl">
+        <div className="mx-auto max-w-5xl text-center max-w-2xl">
           <div className="h-12 w-12 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 mx-auto">
             <Heart className="h-6 w-6" />
           </div>

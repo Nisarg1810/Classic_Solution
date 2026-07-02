@@ -17,7 +17,7 @@ export default function ServicesNriCare() {
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
           {/* Left Block: Narrative */}
           <div className="flex flex-col gap-6 text-left">

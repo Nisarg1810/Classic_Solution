@@ -105,7 +105,7 @@ export default function ReraPage() {
 
       {/* ── 1. BACKGROUND & INTRODUCTION ── */}
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">RERA Act, 2016</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
@@ -243,7 +243,7 @@ export default function ReraPage() {
 
       {/* ── 4. RERA PROVISIONS GRID ── */}
       <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12 border-t border-brand-border/30">
-        <div className="mx-auto max-w-7xl flex flex-col items-center gap-10">
+        <div className="mx-auto max-w-5xl flex flex-col items-center gap-10">
           <div className="text-center max-w-2xl">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">RERA Protections</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Key Provisions for Property Buyers</h2>
@@ -354,7 +354,7 @@ export default function ReraPage() {
       {/* ── 6. PRE-POSSESSION CTA SECTION ── */}
       <section className="py-14 sm:py-20 bg-primary px-6 sm:px-8 lg:px-12 relative overflow-hidden border-t border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(227,0,22,0.2),transparent_60%)] pointer-events-none" />
-        <div className="mx-auto max-w-7xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="mx-auto max-w-5xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="text-white max-w-xl text-left">
             <span className="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm">Don&apos;t Handover Checklist Blindly</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-tight mt-2">

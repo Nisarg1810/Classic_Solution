@@ -89,7 +89,7 @@ export default function Navbar() {
       >
 
         {/* Main Navigation Row */}
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3">
+        <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12 py-3">
           <div className="flex items-center justify-between relative">
             {/* Logo Row */}
             <div className="flex items-center gap-1 sm:gap-2">

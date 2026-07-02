@@ -37,7 +37,7 @@ export default function ServicesHomeInspection() {
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl flex flex-col gap-16">
+        <div className="mx-auto max-w-5xl flex flex-col gap-16">
           
           {/* Main Narrative Block */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

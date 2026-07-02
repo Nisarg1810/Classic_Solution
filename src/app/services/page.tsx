@@ -134,7 +134,7 @@ export default function ServicesPage() {
 
       {/* ── CORE SERVICES GRID ── */}
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">What We Do</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Home & Property Inspections</h2>
@@ -192,7 +192,7 @@ export default function ServicesPage() {
 
       {/* ── STAKEHOLDERS WIN-WIN SECTION ── */}
       <section id="win-win" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12 scroll-mt-28">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Stakeholder Win-Win</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Win-Win for All Stakeholders</h2>
@@ -236,7 +236,7 @@ export default function ServicesPage() {
 
       {/* ── INSPECTION REPORT INCLUDED ── */}
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col gap-5">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Deliverables</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
@@ -273,7 +273,7 @@ export default function ServicesPage() {
 
       {/* ── CTA ── */}
       <section className="py-14 bg-primary px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mb-4">Book Your Professional Home Inspection Today</h2>
           <p className="text-white/65 text-sm sm:text-base mb-8 max-w-xl mx-auto font-light">
             Contact our certified technical engineers today to schedule a detailed visual and thermal quality assessment for your property.

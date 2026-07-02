@@ -53,7 +53,7 @@ export default function NewsPage() {
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl flex flex-col gap-12">
+        <div className="mx-auto max-w-5xl flex flex-col gap-12">
           
           <div className="text-center max-w-2xl mx-auto mb-4">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Partnerships</span>

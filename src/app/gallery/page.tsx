@@ -17,7 +17,7 @@ export default function GalleryPage() {
 
       {/* ── GALLERY ── */}
       <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-10">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Case Studies & Work</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">On-Site Inspection Photos</h2>
@@ -31,7 +31,7 @@ export default function GalleryPage() {
 
       {/* ── CTA ── */}
       <section className="py-14 bg-primary px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white mb-4">Seen Enough? Let&apos;s Inspect Your Facility.</h2>
           <p className="text-white/65 text-sm sm:text-base mb-8 max-w-xl mx-auto font-light">
             Our team is ready to conduct a professional thermal inspection of your property and deliver a detailed digital report.
