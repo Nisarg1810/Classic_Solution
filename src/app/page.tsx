@@ -21,25 +21,37 @@ const stats = [
   { value: "100%", label: "Non-Invasive Diagnostics" },
 ];
 
-const pillars = [
+const homeHighlights = [
   {
-    title: "Protect Your Investment",
-    desc: "A home is the most expensive purchase most people make. Our inspection reveals the true health of the property, helping you buy with absolute confidence.",
+    title: "Protect your most important investment",
+    desc: "A pre-purchase inspection helps uncover seepage, cracks, poor finishing, and hidden service issues before they become expensive surprises.",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/A.jpg",
     link: "/about#macj-india",
-    bg: "from-blue-50 to-indigo-50 border-blue-100"
   },
   {
-    title: "Professional Inspections",
-    desc: "We perform complete visual checkups of all structural, electrical, and plumbing elements using advanced thermal cameras, damp meters, and leakage trace tools.",
-    link: "/services#home-inspection",
-    bg: "from-red-50 to-orange-50 border-red-100"
+    title: "Professional Home Inspections Services",
+    desc: "We visually examine accessible areas, systems, and components with specialized tools and software-driven reporting.",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Home-Inspection-Coverage-1024x485.jpg",
+    link: "/services/home-inspection",
   },
   {
-    title: "Thriving Global Expertise",
-    desc: "Formed in collaboration with A Buyer's Choice USA, MACJ brings world-class American standards and certified methodologies to India's real estate sector.",
-    link: "/about#abchi-usa",
-    bg: "from-slate-50 to-blue-50 border-slate-100"
-  }
+    title: "Win – Win for all Stake Holders",
+    desc: "Buyers, sellers, builders, agents, and lenders all make better decisions when the property's real condition is known.",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/10/For-Home-Owner-Buyer.jpg",
+    link: "/services/stakeholder-benefits",
+  },
+  {
+    title: "Advantage RERA",
+    desc: "RERA improves transparency and accountability, and inspections support defect documentation and due diligence.",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/10/For-Real-Estate-Developer-1.jpg",
+    link: "/rera",
+  },
+  {
+    title: "Company Vision",
+    desc: "To make property buying safer and more transparent across India through trained inspectors and consistent quality standards.",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2026/02/MACJ-Future-Cities-02-968x1024.png",
+    link: "/about",
+  },
 ];
 
 const alliances = [
@@ -146,38 +158,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 3. INTRO PILLARS (Protect Investment, Professional, USA Alliance) ── */}
+      {/* ── 3. HOME HIGHLIGHTS ── */}
       <section className="py-10 sm:py-16 bg-brand-light px-4 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Welcome to MACJ</span>
+            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Why MACJ Matters</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">
-              India's Premier Home Inspection Company
+              Five ideas that shape the brand
             </h2>
             <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              We help developers, home buyers, and real estate consultants verify property health and safety through state-of-the-art diagnostic instruments.
+              A mobile-friendly view of the same core sections you see on the reference site, with photos and short supporting detail.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {pillars.map((pillar, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5 sm:gap-6">
+            {homeHighlights.map((item, idx) => (
               <div
                 key={idx}
-                className={`bg-gradient-to-br ${pillar.bg} border rounded-3xl p-6 sm:p-8 flex flex-col justify-between hover:shadow-premium transition-all duration-300 group hover:-translate-y-1`}
+                className="bg-white border border-brand-border/30 rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-300 group hover:-translate-y-1 flex flex-col"
               >
-                <div>
-                  <h3 className="text-lg font-bold font-display text-primary mb-3">{pillar.title}</h3>
-                  <p className="text-xs sm:text-sm text-brand-text leading-relaxed font-light mb-6">
-                    {pillar.desc}
-                  </p>
+                <div className="relative aspect-[4/3] overflow-hidden bg-brand-light">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 20vw"
+                    unoptimized
+                  />
                 </div>
+                <div className="p-5 sm:p-6 flex flex-col flex-1">
+                  <h3 className="text-base sm:text-lg font-bold font-display text-primary mb-3 leading-snug">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-brand-text leading-relaxed font-light mb-6 flex-1">
+                    {item.desc}
+                  </p>
                 <Link
-                  href={pillar.link}
+                  href={item.link}
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary uppercase tracking-wider group-hover:text-primary transition-colors mt-auto"
                 >
                   <span>Read Details</span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
+                </div>
               </div>
             ))}
           </div>
