@@ -25,7 +25,7 @@ export default function PageHero({
   breadcrumbs,
 }: PageHeroProps) {
   return (
-    <section className="relative bg-primary overflow-hidden py-10 sm:py-14 md:py-20 px-4 sm:px-8 lg:px-12">
+    <section className="relative bg-primary overflow-hidden py-8 sm:py-12 md:py-16 px-4 sm:px-8 lg:px-12">
       {/* Background pattern */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(227,0,22,0.15),transparent_60%)]" />
@@ -48,7 +48,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-white/50 mb-4 sm:mb-5 flex-wrap"
+            className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-white/50 mb-3 sm:mb-5 flex-wrap"
           >
             <Link href="/" className="hover:text-secondary transition-colors">
               Home
@@ -77,7 +77,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/25 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-secondary text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-3 sm:mb-4 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 bg-secondary/15 border border-secondary/25 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-secondary text-[10px] sm:text-xs font-bold tracking-wider uppercase mb-2 sm:mb-4 backdrop-blur-sm"
           >
             {badge}
           </motion.div>
@@ -102,7 +102,7 @@ export default function PageHero({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-white/65 leading-relaxed max-w-2xl font-light"
+            className="mt-2 sm:mt-4 text-xs sm:text-sm md:text-base text-white/65 leading-relaxed max-w-2xl font-light"
           >
             {subtitle}
           </motion.p>

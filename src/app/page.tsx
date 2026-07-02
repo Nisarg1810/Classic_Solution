@@ -147,9 +147,9 @@ export default function Home() {
       </section>
 
       {/* ── 3. INTRO PILLARS (Protect Investment, Professional, USA Alliance) ── */}
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
+      <section className="py-10 sm:py-16 bg-brand-light px-4 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Welcome to MACJ</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">
               India's Premier Home Inspection Company
@@ -185,8 +185,8 @@ export default function Home() {
       </section>
 
       {/* ── 4. ABOUT MACJ & MNC PARTNERSHIP ── */}
-      <section id="partnership" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <section id="partnership" className="py-10 sm:py-16 bg-white px-4 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden border border-brand-border/30 shadow-premium">
               <Image
@@ -241,9 +241,9 @@ export default function Home() {
       </section>
 
       {/* ── 5. INTERACTIVE COVERAGE TABS ── */}
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
+      <section className="py-10 sm:py-16 bg-brand-light px-4 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Inspection Scope</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">What We Inspect</h2>
             <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
@@ -503,7 +503,7 @@ export default function Home() {
               Protect your home from seepage, moisture damages, electrical failures, and building safety risks. Get in touch with our certified engineers today.
             </p>
             <a
-              href="tel:+918584855470"
+              href="tel:+917600078862"
               className="flex items-center gap-4 bg-white/10 hover:bg-white/15 border border-white/25 p-4 rounded-2xl w-fit transition-all duration-300 group mt-6"
             >
               <div className="h-12 w-12 rounded-xl bg-secondary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -511,7 +511,7 @@ export default function Home() {
               </div>
               <div>
                 <p className="text-[10px] text-white/60 uppercase font-bold tracking-wider">National Helpline</p>
-                <p className="text-lg sm:text-xl font-extrabold font-display text-white tracking-tight">+91 85848 55470</p>
+                <p className="text-lg sm:text-xl font-extrabold font-display text-white tracking-tight">76000 78862</p>
               </div>
             </a>
           </div>

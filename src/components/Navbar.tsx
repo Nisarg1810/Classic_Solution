@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, PhoneCall, ChevronDown, Mail, Phone, ChevronRight, Home } from "lucide-react";
+import { Menu, X, PhoneCall, ChevronDown, Mail, Phone, ChevronRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
@@ -32,16 +32,6 @@ const navLinks = [
       { name: "NRI Property Care", href: "/services/nri-property-care" },
       { name: "Construction Finishing", href: "/services/construction-finishing" },
       { name: "Stakeholder Win-Win", href: "/services/stakeholder-benefits" },
-    ],
-  },
-  {
-    name: "Resources",
-    href: "#",
-    dropdown: [
-      { name: "Blogs", href: "/resources#blogs" },
-      { name: "Case Studies", href: "/resources#case-studies" },
-      { name: "Knowledge Series", href: "/resources#knowledge" },
-      { name: "FAQs", href: "/resources#faqs" },
     ],
   },
   {
@@ -106,19 +96,19 @@ export default function Navbar() {
           <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 h-10 flex items-center justify-between">
             <div className="flex items-center gap-6">
               <a
-                href="tel:+918584855470"
+                href="tel:+917600078862"
                 className="hover:text-secondary flex items-center gap-1.5 transition-colors"
               >
                 <Phone className="h-3.5 w-3.5 text-secondary" />
-                <span>+91 85848 55470 / 033 4068 7162</span>
+                <span>76000 78862 / 0281 2990030</span>
               </a>
               <span className="text-white/30">|</span>
               <a
-                href="mailto:info@macj.in"
+                href="mailto:classicsolution931@gmail.com"
                 className="hover:text-secondary flex items-center gap-1.5 transition-colors"
               >
                 <Mail className="h-3.5 w-3.5 text-secondary" />
-                <span>info@macj.in</span>
+                <span>classicsolution931@gmail.com</span>
               </a>
             </div>
             <div className="flex items-center gap-4 text-white/70">
@@ -134,26 +124,18 @@ export default function Navbar() {
         {/* Main Navigation Row */}
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo & Home Icon Row */}
+            {/* Logo Row */}
             <div className="flex items-center gap-1.5 sm:gap-2.5">
               <Link href="/" className="flex items-center gap-3 group py-1">
-                <div className="relative h-10 w-28 sm:h-12 sm:w-32">
+                <div className="relative h-12 w-36 sm:h-14 sm:w-40">
                   <Image
-                    src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/logo.png"
-                    alt="MACJ - A Buyer's Choice Logo"
+                    src="/logo.svg"
+                    alt="Classic Solution Logo"
                     fill
                     className="object-contain"
-                    unoptimized
                     priority
                   />
                 </div>
-              </Link>
-              <Link
-                href="/"
-                className="hidden md:flex items-center justify-center p-2 text-brand-muted hover:text-secondary transition-colors"
-                aria-label="Home"
-              >
-                <Home className="h-5 w-5 fill-current text-gray-400 hover:text-secondary" />
               </Link>
             </div>
 
@@ -235,11 +217,11 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden md:flex items-center gap-4">
               <a
-                href="tel:+918584855470"
+                href="tel:+917600078862"
                 className="flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary transition-colors"
               >
                 <PhoneCall className="h-3.5 w-3.5 text-secondary" />
-                <span>+91 85848 55470</span>
+                <span>76000 78862</span>
               </a>
               <Link
                 href="/contact"
@@ -345,11 +327,11 @@ export default function Navbar() {
               
               <div className="flex flex-col gap-3 mt-2">
                 <a
-                  href="tel:+918584855470"
+                  href="tel:+917600078862"
                   className="flex items-center justify-center gap-2 text-base font-semibold text-primary py-3 rounded-xl border border-primary/20 hover:bg-primary/5 transition-all"
                 >
                   <PhoneCall className="h-4 w-4 text-secondary" />
-                  <span>+91 85848 55470</span>
+                  <span>76000 78862</span>
                 </a>
                 <Link
                   href="/contact"

@@ -95,7 +95,7 @@ export default function HeroSlider() {
   return (
     <section
       className="relative w-full overflow-hidden bg-brand-light"
-      style={{ height: "clamp(300px, 32vw, 480px)" }}
+      style={{ height: "clamp(240px, 56vw, 460px)" }}
     >
       {/* Background Images */}
       <AnimatePresence initial={false} custom={direction} mode="sync">
@@ -126,7 +126,7 @@ export default function HeroSlider() {
       </AnimatePresence>
 
       {/* Content Overlay */}
-      <div className="relative z-10 h-full mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex items-center pb-12">
+      <div className="relative z-10 h-full mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 flex items-center pb-8 sm:pb-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={`text-${current}`}
@@ -141,8 +141,8 @@ export default function HeroSlider() {
           >
             {/* Title — fluid scale */}
             <h1
-              className={`font-extrabold font-display leading-[1.1] tracking-tight mb-5 whitespace-pre-line ${slide.titleColor}`}
-              style={{ fontSize: "clamp(1.25rem, 2.8vw, 2.5rem)" }}
+              className={`font-extrabold font-display leading-[1.08] tracking-tight mb-3 sm:mb-5 whitespace-pre-line ${slide.titleColor}`}
+              style={{ fontSize: "clamp(1rem, 2.8vw, 2.5rem)" }}
             >
               {slide.title}
             </h1>
@@ -163,7 +163,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Navigation Arrows positioned above the bottom bar */}
-      <div className="absolute bottom-14 sm:bottom-16 left-6 sm:left-12 lg:left-16 z-20 flex items-center gap-1.5">
+      <div className="absolute bottom-12 sm:bottom-16 left-4 sm:left-12 lg:left-16 z-20 flex items-center gap-1.5">
         <button
           onClick={prev}
           aria-label="Previous slide"
@@ -184,31 +184,31 @@ export default function HeroSlider() {
       <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/90 to-black/50 text-white py-1.5 border-t border-white/5 hidden md:block">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex items-center justify-between text-[10px] sm:text-xs">
           <div className="flex items-center gap-6">
-            <a href="tel:+918584855470" className="hover:text-secondary flex items-center gap-2 transition-colors">
+            <a href="tel:+917600078862" className="hover:text-secondary flex items-center gap-2 transition-colors">
               <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
                 <Phone className="h-3 w-3 fill-current" />
               </span>
               <div>
                 <p className="text-[9px] text-white/55 leading-none">Phone number:</p>
-                <p className="font-bold mt-0.5">+91 85848 55470</p>
+                <p className="font-bold mt-0.5">76000 78862</p>
               </div>
             </a>
-            <a href="tel:03340687162" className="hover:text-secondary flex items-center gap-2 transition-colors">
+            <a href="tel:+912812990030" className="hover:text-secondary flex items-center gap-2 transition-colors">
               <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
                 <Phone className="h-3 w-3 fill-current" />
               </span>
               <div>
                 <p className="text-[9px] text-white/55 leading-none">Phone number:</p>
-                <p className="font-bold mt-0.5">033 4068 7162</p>
+                <p className="font-bold mt-0.5">0281 2990030</p>
               </div>
             </a>
-            <a href="mailto:info@macj.in" className="hover:text-secondary flex items-center gap-2 transition-colors">
+            <a href="mailto:classicsolution931@gmail.com" className="hover:text-secondary flex items-center gap-2 transition-colors">
               <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
                 <Mail className="h-3 w-3 fill-current" />
               </span>
               <div>
                 <p className="text-[9px] text-white/55 leading-none">E-mail address:</p>
-                <p className="font-bold mt-0.5">info@macj.in</p>
+                <p className="font-bold mt-0.5">classicsolution931@gmail.com</p>
               </div>
             </a>
           </div>

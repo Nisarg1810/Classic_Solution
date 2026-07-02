@@ -13,14 +13,13 @@ export default function Footer() {
           {/* Column 1: Company Info */}
           <div className="flex flex-col gap-4 lg:col-span-4">
             <Link href="/" className="flex items-center gap-3 group py-1">
-              <div className="relative h-12 w-32 bg-white/10 rounded px-2 py-1 flex items-center justify-center">
+              <div className="relative h-28 w-28 sm:h-32 sm:w-32 bg-white rounded-2xl p-2 shadow-lg flex items-center justify-center">
                 <Image
-                  src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/logo.png"
-                  alt="MACJ - A Buyer's Choice Logo"
-                  width={120}
-                  height={40}
-                  className="object-contain invert brightness-0"
-                  unoptimized
+                  src="/logo.svg"
+                  alt="Classic Solution Logo"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 112px, 128px"
                 />
               </div>
             </Link>
@@ -101,13 +100,13 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-secondary shrink-0" />
               <div className="flex flex-col">
-                <a href="tel:+918584855470" className="hover:text-secondary transition-colors font-light text-white/70">+91 85848 55470</a>
-                <a href="tel:03340687162" className="hover:text-secondary transition-colors font-light text-white/70">033 4068 7162</a>
+                <a href="tel:+917600078862" className="hover:text-secondary transition-colors font-light text-white/70">76000 78862</a>
+                <a href="tel:+912812990030" className="hover:text-secondary transition-colors font-light text-white/70">0281 2990030</a>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Mail className="h-5 w-5 text-secondary shrink-0" />
-              <a href="mailto:info@macj.in" className="hover:text-secondary transition-colors font-light text-white/70">info@macj.in</a>
+              <a href="mailto:classicsolution931@gmail.com" className="hover:text-secondary transition-colors font-light text-white/70">classicsolution931@gmail.com</a>
             </div>
             <div className="flex items-start gap-3 mt-2">
               <Clock className="h-5 w-5 text-secondary shrink-0 mt-0.5" />

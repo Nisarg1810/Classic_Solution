@@ -5,10 +5,16 @@ import Lenis from "lenis";
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    const isMobile = window.matchMedia("(max-width: 767px)").matches;
+
+    if (isMobile) {
+      return;
+    }
+
     // Initialize Lenis smooth scrolling
     const lenis = new Lenis({
-      duration: 0.9,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // premium easeOutExpo
+      duration: 0.7,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,

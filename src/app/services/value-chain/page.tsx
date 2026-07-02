@@ -76,7 +76,7 @@ export default function ServicesValueChain() {
               </div>
               <div>
                 <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Helpline</p>
-                <p className="text-sm font-bold text-primary">+91 85848 55470</p>
+                <p className="text-sm font-bold text-primary">76000 78862</p>
               </div>
             </div>
           </div>
