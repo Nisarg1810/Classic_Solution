@@ -90,7 +90,7 @@ export default function Navbar() {
 
         {/* Main Navigation Row */}
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between relative">
             {/* Logo Row */}
             <div className="flex items-center gap-1 sm:gap-2">
               <Link href="/" className="flex items-center gap-3 group py-1">
@@ -107,7 +107,7 @@ export default function Navbar() {
             </div>
 
             {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-0.5">
+            <nav className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
               {navLinks.map((link) =>
                 link.dropdown ? (
                   <div
@@ -124,7 +124,7 @@ export default function Navbar() {
                           setOpenDropdown(openDropdown === link.name ? null : link.name);
                         }
                       }}
-                      className={`flex items-center gap-1 text-sm font-semibold px-2.5 py-2 rounded-lg transition-colors relative group ${
+                      className={`flex items-center gap-1 text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${
                         isActive(link.href)
                           ? "text-secondary"
                           : "text-brand-text hover:text-secondary"
@@ -164,7 +164,7 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-sm font-semibold px-2.5 py-2 rounded-lg transition-colors relative group ${
+                    className={`text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${
                       isActive(link.href)
                         ? "text-secondary"
                         : "text-brand-text hover:text-secondary"
