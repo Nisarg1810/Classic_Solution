@@ -365,7 +365,7 @@ export default function Home() {
 
 
       {/* ── 9. InterNACHI BANNER ── */}
-      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12 border-t border-brand-border/20">
+      <section className="py-14 sm:py-20 bg-white px-8 sm:px-16 lg:px-28 border-t border-brand-border/20">
         <div className="mx-auto max-w-3xl text-center flex flex-col items-center gap-6">
           <div className="relative h-44 w-44 sm:h-48 sm:w-48">
             <Image
@@ -397,7 +397,7 @@ export default function Home() {
       </section>
 
       {/* ── 10. TESTIMONIALS ── */}
-      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
+      <section className="py-14 sm:py-20 bg-white px-8 sm:px-16 lg:px-28">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Client Reviews</span>
           <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">What Our Clients Say</h2>
