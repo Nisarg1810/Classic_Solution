@@ -22,9 +22,9 @@ export default function ClientLogos() {
               <Image
                 src="https://macj-abuyerschoice.com/wp-content/uploads/2018/10/macjclientlist.jpg"
                 alt="MACJ Corporate Clients List"
-                width={2000}
-                height={150}
-                className="object-contain h-16 sm:h-24 w-auto select-none"
+                width={2400}
+                height={200}
+                className="object-contain h-24 sm:h-36 w-auto select-none"
                 unoptimized
                 priority
               />
@@ -33,9 +33,9 @@ export default function ClientLogos() {
               <Image
                 src="https://macj-abuyerschoice.com/wp-content/uploads/2018/10/macjclientlist.jpg"
                 alt="MACJ Corporate Clients List Duplicate"
-                width={2000}
-                height={150}
-                className="object-contain h-16 sm:h-24 w-auto select-none"
+                width={2400}
+                height={200}
+                className="object-contain h-24 sm:h-36 w-auto select-none"
                 unoptimized
                 priority
               />
