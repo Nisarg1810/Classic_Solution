@@ -265,7 +265,7 @@ export default function Home() {
       </section>
 
       {/* ── 5. HOME INSPECTION COVERAGE ── */}
-      <section className="py-14 sm:py-20 bg-[#fbfbfb] px-4 sm:px-8 lg:px-12 border-t border-brand-border/20">
+      <section className="py-14 sm:py-20 bg-[#fbfbfb] px-8 sm:px-16 lg:px-28 border-t border-brand-border/20">
         <div className="mx-auto max-w-5xl">
           {/* Centered Heading */}
           <div className="text-center mb-8 sm:mb-12">
