@@ -11,7 +11,7 @@ const slides = [
     id: 1,
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-01.jpg",
     title: "Health & Safety Checkup of\nHomes / Offices alongwith Solutions",
-    titleColor: "text-white text-center sm:text-left",
+    titleColor: "text-white text-left",
     cta: { label: "Learn More", href: "/services" },
     mobileOnly: true,
   },
@@ -93,102 +93,102 @@ export default function HeroSlider() {
   };
 
   return (
-    <section
-      className="relative w-full overflow-hidden bg-brand-light"
-      style={{ height: "clamp(320px, 65vw, 580px)" }}
-    >
-      {/* Background Images */}
-      <AnimatePresence initial={false} custom={direction} mode="sync">
-        <motion.div
-          key={`img-${current}`}
-          custom={direction}
-          variants={imageVariants}
-          initial="enter"
-          animate="center"
-          exit="exit"
-          transition={{ duration: 0.65, ease: [0.4, 0, 0.2, 1] }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={slide.image}
-            alt={slide.title.replace("\n", " ")}
-            fill
-            priority
-            className="object-cover object-center"
-            sizes="100vw"
-            unoptimized
-          />
-          {/* Transparent gradient overlay to enhance readability on overlay text, if slide contains desktop text */}
-          {!slide.mobileOnly && (
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent" />
-          )}
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Content Overlay */}
-      <div className="relative z-10 h-full mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 flex items-center pb-8 sm:pb-12">
-        <AnimatePresence mode="wait">
+    <div className="relative w-full">
+      <section
+        className="relative w-full overflow-hidden bg-brand-light"
+        style={{ height: "clamp(320px, 65vw, 580px)" }}
+      >
+        {/* Background Images */}
+        <AnimatePresence initial={false} custom={direction} mode="sync">
           <motion.div
-            key={`text-${current}`}
-            variants={textVariants}
+            key={`img-${current}`}
+            custom={direction}
+            variants={imageVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className={`w-full max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-xl ${
-              slide.mobileOnly ? "block md:hidden mx-auto text-center" : "block"
-            }`}
+            transition={{ duration: 0.65, ease: [0.4, 0, 0.2, 1] }}
+            className="absolute inset-0"
           >
-            {/* Title — fluid scale */}
-            <h1
-              className={`font-extrabold font-display leading-[1.08] tracking-tight mb-3 sm:mb-5 whitespace-pre-line ${slide.titleColor}`}
-              style={{ fontSize: "clamp(1rem, 2.8vw, 2.5rem)" }}
-            >
-              {slide.title}
-            </h1>
-
-            {/* Learn More Button */}
-            {slide.cta && (
-              <div className={`flex gap-3 ${slide.mobileOnly ? "justify-center" : ""}`}>
-                <Link
-                  href={slide.cta.href}
-                  className="px-6 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs uppercase tracking-wider"
-                >
-                  {slide.cta.label}
-                </Link>
-              </div>
+            <Image
+              src={slide.image}
+              alt={slide.title.replace("\n", " ")}
+              fill
+              priority
+              className="object-cover object-right md:object-center"
+              sizes="100vw"
+              unoptimized
+            />
+            {/* Transparent gradient overlay to enhance readability on overlay text, if slide contains desktop text */}
+            {!slide.mobileOnly && (
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent" />
             )}
           </motion.div>
         </AnimatePresence>
-      </div>
 
-      {/* Navigation Arrows positioned above the bottom bar */}
-      <div className="absolute bottom-12 sm:bottom-16 left-4 sm:left-12 lg:left-16 z-20 flex items-center gap-1.5">
+        {/* Content Overlay */}
+        <div className="relative z-10 h-full mx-auto max-w-7xl px-8 sm:px-12 lg:px-16 flex items-center pb-8 sm:pb-12">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`text-${current}`}
+              variants={textVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className={`w-full max-w-[85%] sm:max-w-sm md:max-w-md lg:max-w-xl ${
+                slide.mobileOnly ? "block md:hidden text-left" : "block text-left"
+              }`}
+            >
+              {/* Title — fluid scale */}
+              <h1
+                className={`font-extrabold font-display leading-[1.08] tracking-tight mb-3 sm:mb-5 whitespace-pre-line ${slide.titleColor}`}
+                style={{ fontSize: "clamp(1.15rem, 4vw, 2.5rem)" }}
+              >
+                {slide.title}
+              </h1>
+
+              {/* Learn More Button */}
+              {slide.cta && (
+                <div className="flex gap-3 text-left">
+                  <Link
+                    href={slide.cta.href}
+                    className="px-6 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs uppercase tracking-wider"
+                  >
+                    {slide.cta.label}
+                  </Link>
+                </div>
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Navigation Arrows positioned on the edges */}
         <button
           onClick={prev}
           aria-label="Previous slide"
-          className="h-8 w-10 bg-white/70 hover:bg-white text-black flex items-center justify-center transition-all duration-200 shadow-sm"
+          className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 h-9 w-9 bg-white/70 hover:bg-white text-black flex items-center justify-center transition-all duration-200 shadow-sm rounded-full"
         >
-          <ChevronLeft className="h-4 w-4" />
+          <ChevronLeft className="h-4.5 w-4.5" />
         </button>
         <button
           onClick={next}
           aria-label="Next slide"
-          className="h-8 w-10 bg-white/70 hover:bg-white text-black flex items-center justify-center transition-all duration-200 shadow-sm"
+          className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 h-9 w-9 bg-white/70 hover:bg-white text-black flex items-center justify-center transition-all duration-200 shadow-sm rounded-full"
         >
-          <ChevronRight className="h-4 w-4" />
+          <ChevronRight className="h-4.5 w-4.5" />
         </button>
-      </div>
+      </section>
 
       {/* Bottom Info Bar — contact details + social icons */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 bg-black/75 backdrop-blur-sm text-white hidden md:block border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3 flex items-center justify-between">
+      <div className="relative md:absolute md:bottom-0 left-0 right-0 z-20 bg-[#111111] md:bg-black/75 backdrop-blur-sm text-white border-t border-white/10 md:border-none py-3">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
           {/* Contact Items */}
-          <div className="flex items-center gap-8">
+          <div className="flex flex-col sm:flex-row items-center gap-5 md:gap-8 w-full md:w-auto text-center sm:text-left justify-center md:justify-start">
             {/* Phone 1 */}
             <a href="tel:+918584855470" className="flex items-center gap-2.5 hover:text-secondary transition-colors group">
               <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
-              <div className="leading-tight">
+              <div className="leading-tight text-left">
                 <p className="text-[10px] text-white/60 uppercase tracking-wider font-light">Phone number:</p>
                 <p className="text-xs sm:text-sm font-extrabold text-white tracking-tight mt-0.5">+91 85848 55470</p>
               </div>
@@ -196,7 +196,7 @@ export default function HeroSlider() {
             {/* Phone 2 */}
             <a href="tel:+03340687162" className="flex items-center gap-2.5 hover:text-secondary transition-colors group">
               <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
-              <div className="leading-tight">
+              <div className="leading-tight text-left">
                 <p className="text-[10px] text-white/60 uppercase tracking-wider font-light">Phone number:</p>
                 <p className="text-xs sm:text-sm font-extrabold text-white tracking-tight mt-0.5">033 4068 7162</p>
               </div>
@@ -204,7 +204,7 @@ export default function HeroSlider() {
             {/* Email */}
             <a href="mailto:info@macj.in" className="flex items-center gap-2.5 hover:text-secondary transition-colors group">
               <Mail className="h-5 w-5 text-secondary shrink-0" />
-              <div className="leading-tight">
+              <div className="leading-tight text-left">
                 <p className="text-[10px] text-white/60 uppercase tracking-wider font-light">E-mail address:</p>
                 <p className="text-xs sm:text-sm font-extrabold text-white tracking-tight mt-0.5">info@macj.in</p>
               </div>
@@ -212,7 +212,7 @@ export default function HeroSlider() {
           </div>
 
           {/* Social Icons */}
-          <div className="flex items-center gap-4.5">
+          <div className="flex items-center gap-4.5 justify-center">
             {/* Facebook */}
             <a href="https://facebook.com" aria-label="Facebook" className="text-white hover:text-secondary transition-colors">
               <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -240,7 +240,7 @@ export default function HeroSlider() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
