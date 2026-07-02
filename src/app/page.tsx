@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,7 +8,9 @@ import {
   Droplets, Search, Zap, Thermometer,
   ArrowRight, PhoneCall, Shield,
   Award, CheckSquare, Eye, FileText,
-  Video, Play, ExternalLink, HelpCircle
+  Video, Play, ExternalLink, HelpCircle,
+  Home as HomeIcon, Layers, AlertTriangle,
+  ChevronLeft, ChevronRight
 } from "lucide-react";
 
 import HeroSlider from "@/components/HeroSlider";
@@ -52,6 +54,106 @@ const homeHighlights = [
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2026/02/MACJ-Future-Cities-02-968x1024.png",
     link: "/about",
   },
+  {
+    title: "NRI Property Care",
+    desc: "We help NRIs monitor, maintain, and protect their properties in India with periodic inspection reports, so you stay informed no matter where you are.",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/02/NRI-Property-Care-1.jpg",
+    link: "/services/nri-property-care",
+  },
+];
+
+const coverageCategories = [
+  {
+    id: "Home Inspection",
+    label: "Home Inspection",
+    items: [
+      { name: "Bedroom", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/bedroom01-360x240.jpg" },
+      { name: "Living Room", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/livingroom-360x240.jpg" },
+      { name: "Kitchen", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/kichen02-360x240.jpg" },
+      { name: "Bathroom", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/bathroom01-360x240.jpg" },
+      { name: "Lobby", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Lobby-Area-Site03-360x240.jpg" },
+      { name: "Balcony", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Balconies03-360x240.jpg" },
+      { name: "Terrace", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Terrace-360x240.jpg" },
+      { name: "Servants Room", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Servants-Room-360x240.jpg" }
+    ]
+  },
+  {
+    id: "Areas",
+    label: "Areas",
+    items: [
+      { name: "Bedroom", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/bedroom01-360x240.jpg" },
+      { name: "Living Room", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/livingroom-360x240.jpg" },
+      { name: "Kitchen", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/kichen02-360x240.jpg" },
+      { name: "Bathroom", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/bathroom01-360x240.jpg" },
+      { name: "Lobby", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Lobby-Area-Site03-360x240.jpg" },
+      { name: "Balcony", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Balconies03-360x240.jpg" },
+      { name: "Terrace", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Terrace-360x240.jpg" },
+      { name: "Servants Room", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Servants-Room-360x240.jpg" }
+    ]
+  },
+  {
+    id: "Elements",
+    label: "Elements",
+    items: [
+      { name: "Wall", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/wall-360x240.jpg" },
+      { name: "Ceiling", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/ciling-1-360x240.jpg" },
+      { name: "Floor", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/floor-360x240.jpg" },
+      { name: "Door", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/door-1-360x240.jpg" },
+      { name: "Window", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/window-360x240.jpg" },
+      { name: "Plumbing", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/plumbing-360x240.jpg" },
+      { name: "Electrical", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg" },
+      { name: "Stair Steps", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Stair-Steps-360x240.jpg" },
+      { name: "Exhaust Systems", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Exhaust-Systems01-360x240.jpg" },
+      { name: "Countertops", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Countertops01-360x240.jpg" },
+      { name: "Cabinets", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Cabinets02-360x240.jpg" },
+      { name: "Air Conditioning Systems", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Air-Conditioning-Systems02-360x240.jpg" }
+    ]
+  },
+  {
+    id: "Coverage",
+    label: "Coverage",
+    items: [
+      { name: "Material Types", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Coverage-04-1-360x240.jpg" },
+      { name: "Installation & Finishing", image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/Coverage-02-360x240.jpg" },
+      { name: "Operations & Functionality", image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/Coverage-03-360x240.jpg" },
+      { name: "General Safety", image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/general-360x240.jpg" }
+    ]
+  },
+  {
+    id: "3D of Issues",
+    label: "3D of Issues",
+    items: [
+      { name: "Detect the Issue", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/detect-1-360x240.jpg" },
+      { name: "Describe the Issue", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/describe-1-360x240.jpg" },
+      { name: "Direct the Solution", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Direct-360x240.jpg" },
+      { name: "Our Satisfied Customer", image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/customer-1-360x240.jpg" }
+    ]
+  },
+  {
+    id: "Common Issues",
+    label: "Common Issues",
+    items: [
+      { name: "Popping of Paint", image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/popping-360x240.jpg" },
+      { name: "Visual Image of Wall", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio09-360x240.jpg" },
+      { name: "Infrared Showing Moisture", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio10-360x240.jpg" },
+      { name: "Cracked Tiles", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio05-360x240.jpg" },
+      { name: "Damaged Lock", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio06-360x240.jpg" },
+      { name: "Improper Gasket Installation", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio08-360x240.jpg" },
+      { name: "No Grouting in Outlet", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio07-360x240.jpg" },
+      { name: "Poor Workmanship", image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio03-360x240.jpg" }
+    ]
+  },
+  {
+    id: "Scope of Services",
+    label: "Scope of Services",
+    items: [
+      { name: "Complete Home / Property Inspection", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/01/Scope-of-Services-01-360x240.jpg" },
+      { name: "Damp / Seepage Assessment through Thermal Imaging", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/outside-360x240.jpg" },
+      { name: "Electrical Inspections of a Home / Property", image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/Scope-of-Services-03-360x240.jpg" },
+      { name: "Complete Property Care for NRIs / CCCs", image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/Scope-of-Services-04-1-360x240.jpg" },
+      { name: "Construction Finishing Inspection for Developers", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/01/Scope-of-Services-02-360x240.jpg" }
+    ]
+  }
 ];
 
 const alliances = [
@@ -66,53 +168,6 @@ const alliances = [
     desc: "Aligned with Pidilite Industries (makers of Dr. Fixit) to offer professional thermal imaging-based seepage and dampness inspections with expert repair consulting.",
     logo: "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/1-2.png",
     link: "/news#pidilite"
-  }
-];
-
-const coverageTabs = [
-  {
-    id: "bedroom",
-    label: "Bedroom & Living Room",
-    items: [
-      "Check ceiling & walls for dampness, seepage, and paint peeling.",
-      "Inspect doors and windows for alignment, lock safety, and thermal leakage.",
-      "Scan electrical switchboards, sockets, and AC points with infrared cameras for hotspots.",
-      "Examine floor tiles or wooden flooring for cracks, hollow spaces, and levelling defects.",
-      "Audit balcony sliding doors, railings, and slope drainage."
-    ]
-  },
-  {
-    id: "bathroom",
-    label: "Bathroom Diagnostics",
-    items: [
-      "Check wall tiles for hollow backings or grouting gaps.",
-      "Inspect washbasins, counters, and sanitary fixtures for cracks & proper mounting.",
-      "Check all plumbing joints, stopcocks, and traps for active leakages using damp meters.",
-      "Audit shower slopes and floor drain grids to prevent stagnant water.",
-      "Verify geyser electrical grounding and functional exhaust ventilation."
-    ]
-  },
-  {
-    id: "kitchen",
-    label: "Kitchen Inspection",
-    items: [
-      "Test counter-top granite/slabs for hairline cracks and alignment.",
-      "Verify utility sink plumbing and trap drainage for blockage-free flows.",
-      "Check modular cabinets for smooth operation and moisture damage.",
-      "Verify microwave, chimney, and water purifier electrical outlets.",
-      "Inspect gas pipeline paths, ventilation slots, and safety compliance."
-    ]
-  },
-  {
-    id: "structural",
-    label: "Structure & Core Elements",
-    items: [
-      "Examine column joints, structural beams, and slab ceilings for hairline cracks.",
-      "Measure concrete cover and moisture levels inside plaster layers.",
-      "Identify thermal bridging and insulation gaps in exterior facades.",
-      "Verify safety railings, parapet walls, and terrace waterproofing barriers.",
-      "Map underground and overhead water storage tanks for seepages."
-    ]
   }
 ];
 
@@ -138,7 +193,27 @@ const videosList = [
 ];
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("bedroom");
+  const [activeTab, setActiveTab] = useState("Home Inspection");
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const handleTabChange = (tabId: string) => {
+    setActiveTab(tabId);
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+    }
+  };
+
+  const activeCategory = coverageCategories.find(c => c.id === activeTab) || coverageCategories[0];
+  const items = activeCategory.items;
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const { scrollLeft, clientWidth } = scrollRef.current;
+      const cardWidth = window.innerWidth < 768 ? clientWidth * 0.8 : 310;
+      const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
+      scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="relative w-full">
@@ -146,38 +221,19 @@ export default function Home() {
       {/* ── 1. HERO SLIDER ── */}
       <HeroSlider />
 
-      {/* ── 2. STATS BAR ── */}
-      <section className="relative z-30 bg-white py-6 sm:py-8 border border-brand-border/20 shadow-premium mt-[-24px] sm:mt-[-30px] mx-3 sm:mx-8 lg:mx-12 rounded-2xl max-w-7xl xl:mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 px-4 sm:px-6">
-          {stats.map((stat, idx) => (
-            <div key={idx} className="flex flex-col items-center gap-1 text-center md:border-r last:border-0 border-brand-border/30 px-1 sm:px-2">
-              <p className="text-lg sm:text-xl md:text-2xl font-extrabold font-display text-secondary leading-tight">{stat.value}</p>
-              <p className="text-[9px] sm:text-[10px] md:text-xs font-bold text-brand-muted uppercase tracking-wider mt-0.5 leading-tight">{stat.label}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+
 
       {/* ── 3. HOME HIGHLIGHTS ── */}
-      <section className="py-10 sm:py-16 bg-brand-light px-4 sm:px-8 lg:px-12">
+      <section className="py-6 sm:py-10 bg-brand-light px-4 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Why MACJ Matters</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">
-              Five ideas that shape the brand
-            </h2>
-            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              A mobile-friendly view of the same core sections you see on the reference site, with photos and short supporting detail.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-5 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6">
             {homeHighlights.map((item, idx) => (
               <div
                 key={idx}
                 className="bg-white border border-brand-border/30 rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-300 group hover:-translate-y-1 flex flex-col"
               >
-                <div className="relative aspect-[4/3] overflow-hidden bg-brand-light">
+                <div className="relative aspect-[16/9] overflow-hidden bg-brand-light">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -187,11 +243,11 @@ export default function Home() {
                     unoptimized
                   />
                 </div>
-                <div className="p-5 sm:p-6 flex flex-col flex-1">
-                  <h3 className="text-base sm:text-lg font-bold font-display text-primary mb-3 leading-snug">
+                <div className="p-3 sm:p-4 flex flex-col flex-1">
+                  <h3 className="text-sm font-bold font-display text-primary mb-2 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-brand-text leading-relaxed font-light mb-6 flex-1">
+                  <p className="text-xs text-brand-text leading-relaxed font-light mb-4 flex-1">
                     {item.desc}
                   </p>
                 <Link
@@ -208,84 +264,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 4. ABOUT MACJ & MNC PARTNERSHIP ── */}
-      <section id="partnership" className="py-10 sm:py-16 bg-white px-4 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-          <div className="relative">
-            <div className="relative aspect-[4/3] rounded-[24px] overflow-hidden border border-brand-border/30 shadow-premium">
-              <Image
-                src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/MACJ-ABCHI-Partnership.jpg"
-                alt="MACJ ABCHI USA Indo partnership"
-                fill
-                className="object-cover"
-                unoptimized
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent" />
-            </div>
-            <div className="absolute -bottom-5 -right-2 bg-primary text-white p-5 rounded-2xl shadow-lg border border-white/10 hidden sm:block max-w-xs">
-              <p className="text-lg font-bold font-display text-secondary">Global Standards</p>
-              <p className="text-xs text-white/70 mt-1 leading-relaxed font-light">
-                Applying USA standard home checkup methodologies adapted specifically to Indian weather conditions & masonry structures.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-5 text-left">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">MNC Collaboration</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-              MACJ Services LLP & A Buyer's Choice USA Partnership
-            </h2>
-            <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              MACJ was founded in 2016 to introduce professional home inspections to India. We signed a master franchise agreement with **A Buyer's Choice Home Inspections (ABCHI)**, USA, a global leader in home inspection services operating in multiple countries.
-            </p>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              This collaboration brings structured methodologies, advanced software-driven reports, and continuous engineer training to India, raising the bar for property health checks.
-            </p>
-            <div className="flex flex-col gap-2.5 mt-2">
-              {[
-                "Certified by InterNACHI USA inspectors",
-                "Thermal imaging infrared seepage diagnostic technology",
-                "Defect assessment compliant with RERA regulations",
-              ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-3 text-brand-text text-sm font-medium">
-                  <div className="h-5 w-5 rounded-full bg-secondary/10 text-secondary flex items-center justify-center text-[10px] shrink-0">✓</div>
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-            <Link
-              href="/about#macj-india"
-              className="inline-flex items-center gap-2 mt-2 px-6 py-3 bg-primary hover:bg-primary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 w-fit"
-            >
-              Learn More About Partnership
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ── 5. INTERACTIVE COVERAGE TABS ── */}
-      <section className="py-10 sm:py-16 bg-brand-light px-4 sm:px-8 lg:px-12">
+      {/* ── 5. HOME INSPECTION COVERAGE ── */}
+      <section className="py-14 sm:py-20 bg-[#fbfbfb] px-4 sm:px-8 lg:px-12 border-t border-brand-border/20">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Inspection Scope</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">What We Inspect</h2>
-            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              A brief list of checkpoints we examine during our comprehensive 150+ point property health scan.
-            </p>
+          {/* Centered Heading */}
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3.5xl font-bold font-display text-[#333333]">
+              Home Inspection Coverage
+            </h2>
           </div>
 
-          <div className="flex flex-col gap-8">
-            {/* Tabs Selector */}
-            <div className="flex flex-wrap items-center justify-center gap-2 border-b border-brand-border pb-4">
-              {coverageTabs.map((tab) => (
+          {/* Navigation Tab Bar + Carousel Buttons */}
+          <div className="flex items-center justify-between border-b border-neutral-200 mb-8 pb-0.5 relative">
+            {/* Tabs List */}
+            <div className="flex items-center gap-6 sm:gap-8 overflow-x-auto scrollbar-none pr-8">
+              {coverageCategories.map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
+                  onClick={() => handleTabChange(tab.id)}
+                  className={`py-3 px-0.5 text-xs sm:text-sm font-semibold tracking-wide transition-all border-b-2 relative whitespace-nowrap -mb-[2.5px] ${
                     activeTab === tab.id
-                      ? "bg-secondary text-white shadow-md scale-105"
-                      : "bg-white text-brand-text border border-brand-border/40 hover:border-secondary hover:text-secondary"
+                      ? "text-[#333333] border-secondary"
+                      : "text-[#999999] border-transparent hover:text-[#333333]"
                   }`}
                 >
                   {tab.label}
@@ -293,211 +293,105 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Tab Content */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium min-h-[220px]">
-              <AnimatePresence mode="wait">
+            {/* Slider Navigation Buttons */}
+            <div className="flex items-center gap-1.5 shrink-0 bg-white pl-4">
+              <button
+                onClick={() => scroll("left")}
+                aria-label="Previous items"
+                className="h-9 w-9 border border-neutral-200 flex items-center justify-center transition-colors text-neutral-600 hover:bg-neutral-50 hover:text-secondary"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                aria-label="Next items"
+                className="h-9 w-9 border border-neutral-200 flex items-center justify-center transition-colors text-neutral-600 hover:bg-neutral-50 hover:text-secondary"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+
+          {/* Scrollable Cards Container */}
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-none snap-x snap-mandatory pb-4"
+          >
+            <AnimatePresence mode="wait">
+              {items.map((item, idx) => (
                 <motion.div
-                  key={activeTab}
-                  initial={{ opacity: 0, y: 10 }}
+                  key={`${activeTab}-${item.name}-${idx}`}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.25 }}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="w-[280px] sm:w-[320px] md:w-[285px] shrink-0 snap-start bg-white border border-[#eaeaea] overflow-hidden shadow-sm hover:shadow-md transition-shadow relative flex flex-col group rounded-sm"
                 >
-                  <div className="flex flex-col gap-4 justify-center">
-                    <h3 className="text-lg sm:text-xl font-bold font-display text-primary">
-                      {coverageTabs.find((t) => t.id === activeTab)?.label}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-brand-muted leading-relaxed font-light">
-                      Our certified engineers pay close attention to structural, electrical, and plumbing elements in these areas to protect your safety and investment.
-                    </p>
-                    <Link
-                      href="/services#home-inspection"
-                      className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 border border-primary text-primary hover:bg-primary hover:text-white text-xs font-bold rounded-full transition-all duration-300 w-fit"
+                  {/* Aspect ratio 3:2 matching 360x240 exactly */}
+                  <div className="relative aspect-[3/2] w-full overflow-hidden bg-neutral-100">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-103"
+                      sizes="(max-width: 640px) 280px, 320px"
+                      unoptimized
+                    />
+                  </div>
+                  {/* Card Footer Block */}
+                  <div className="p-4 bg-white border-t border-[#f4f4f4] relative flex items-center justify-between">
+                    <span className="text-xs sm:text-sm font-bold text-[#333333] transition-colors group-hover:text-secondary">
+                      {item.name}
+                    </span>
+                    {/* Tiny gray corner triangle exactly in the bottom-right corner */}
+                    <svg
+                      className="absolute bottom-0 right-0 h-3.5 w-3.5 text-neutral-300 fill-current"
+                      viewBox="0 0 10 10"
                     >
-                      View Comprehensive Scope <ExternalLink className="h-3 w-3" />
-                    </Link>
+                      <polygon points="10,0 10,10 0,10" />
+                    </svg>
                   </div>
-                  <ul className="flex flex-col gap-3 justify-center">
-                    {coverageTabs.find((t) => t.id === activeTab)?.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-brand-text font-light leading-relaxed">
-                        <span className="h-5 w-5 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">✓</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </motion.div>
-              </AnimatePresence>
-            </div>
+              ))}
+            </AnimatePresence>
           </div>
         </div>
       </section>
 
-      {/* ── 6. VIDEO RESOURCES SECTION ── */}
-      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Video Guides</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">See How We Inspect</h2>
-            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              Watch our detailed visual guides explaining home checks, thermal scan technology, and defect detection.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {videosList.map((vid, idx) => (
-              <div
-                key={idx}
-                className="bg-brand-light border border-brand-border/30 rounded-3xl overflow-hidden hover:shadow-premium transition-premium flex flex-col group"
-              >
-                <div className="relative aspect-video w-full bg-slate-900 flex items-center justify-center group-hover:opacity-95 transition-opacity">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.1),rgba(0,0,0,0.5))]" />
-                  {/* Visual placeholder for player */}
-                  <div className="relative h-12 w-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                    <Play className="h-5 w-5 fill-current ml-0.5" />
-                  </div>
-                  <span className="absolute bottom-2.5 right-2.5 bg-black/75 px-2 py-0.5 rounded text-[10px] font-bold text-white tracking-wide">
-                    {vid.duration}
-                  </span>
-                </div>
-                <div className="p-5 flex-grow flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xs sm:text-sm font-bold text-primary font-display leading-snug mb-2 group-hover:text-secondary transition-colors">
-                      {vid.title}
-                    </h3>
-                    <p className="text-[11px] sm:text-xs text-brand-muted leading-relaxed font-light mb-4">
-                      {vid.desc}
-                    </p>
-                  </div>
-                  <a
-                    href="https://www.youtube.com/@macjabuyerschoice"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[10px] font-bold text-primary uppercase tracking-wider mt-auto hover:text-secondary transition-colors"
-                  >
-                    <span>Watch Video</span>
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ── 7. ADVANTAGE RERA & MILESTONES ── */}
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col gap-6 text-left order-2 lg:order-1">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">RERA Act Advantage</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-              Protect Your Rights Under RERA Defect Liability Clause
-            </h2>
-            <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              Under RERA (Section 14(3)), real estate developers are liable for structural defects and quality issues for **5 years** from the date of handing over possession. 
-            </p>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Our professional inspection report provides detailed documentation of seepage, plumbing leaks, hollow tiles, and electrical hot spots, giving you a legally backed proof to claim repairs from builders before the defect liability window closes.
-            </p>
-            <div className="flex flex-wrap gap-4 mt-2">
-              <Link
-                href="/rera"
-                className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-sm"
-              >
-                RERA Guidelines
-              </Link>
-              <Link
-                href="/about#milestones"
-                className="px-6 py-3 bg-white border border-brand-border hover:bg-brand-light text-primary font-bold rounded-full shadow-sm transition-all duration-300 text-sm"
-              >
-                Our Milestones
-              </Link>
-            </div>
-          </div>
 
-          <div className="relative order-1 lg:order-2">
-            <div className="grid grid-cols-2 gap-4 max-w-[480px] mx-auto">
-              <div className="bg-white rounded-3xl p-6 border border-brand-border/40 shadow-sm flex flex-col justify-center items-center text-center">
-                <Shield className="h-10 w-10 text-secondary mb-3 animate-float" />
-                <h3 className="text-xl sm:text-2xl font-extrabold font-display text-primary">5 Years</h3>
-                <p className="text-[10px] sm:text-xs text-brand-muted uppercase font-bold tracking-wider mt-1">RERA Liability Period</p>
-              </div>
-              <div className="bg-white rounded-3xl p-6 border border-brand-border/40 shadow-sm flex flex-col justify-center items-center text-center">
-                <Award className="h-10 w-10 text-secondary mb-3 animate-float-delayed" />
-                <h3 className="text-xl sm:text-2xl font-extrabold font-display text-primary">8,000+</h3>
-                <p className="text-[10px] sm:text-xs text-brand-muted uppercase font-bold tracking-wider mt-1">Inspections Done</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* ── 8. ALLIANCES SECTION (Magicbricks, Pidilite) ── */}
-      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Strategic Partnerships</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary mt-2">Trusted By National Brands</h2>
-            <p className="text-brand-muted mt-3 text-xs sm:text-sm leading-relaxed font-light">
-              We align with leading real estate portals and waterproofing brands to offer reliable testing nationwide.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {alliances.map((partner, idx) => (
-              <div
-                key={idx}
-                className="bg-brand-light border border-brand-border/30 rounded-3xl overflow-hidden hover:shadow-premium transition-premium group flex flex-col justify-between"
-              >
-                <div className="relative aspect-[16/7] overflow-hidden">
-                  <Image
-                    src={partner.logo}
-                    alt={partner.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    unoptimized
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <h3 className="absolute bottom-3 left-4 text-sm font-bold font-display text-white">
-                    {partner.name}
-                  </h3>
-                </div>
-                <div className="p-6">
-                  <p className="text-xs sm:text-sm text-brand-muted leading-relaxed font-light mb-6">
-                    {partner.desc}
-                  </p>
-                  <Link
-                    href={partner.link}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary uppercase tracking-wider group-hover:text-primary transition-colors"
-                  >
-                    <span>Alliance details</span>
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── 9. InterNACHI BANNER ── */}
-      <section className="py-12 bg-primary text-white px-6 sm:px-8 lg:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(211,17,69,0.15),transparent_60%)] pointer-events-none" />
-        <div className="mx-auto max-w-7xl relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="max-w-2xl">
-            <span className="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm">International Affiliation</span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold font-display leading-tight mt-1">
-              Affiliated with InterNACHI, USA
-            </h2>
-            <p className="text-xs sm:text-sm text-white/70 leading-relaxed font-light mt-2">
-              All MACJ inspectors undergo rigorous training and adhere strictly to the Standards of Practice and Code of Ethics of the **International Association of Certified Home Inspectors (InterNACHI) USA**.
+      <section className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12 border-t border-brand-border/20">
+        <div className="mx-auto max-w-3xl text-center flex flex-col items-center gap-6">
+          <div className="relative h-44 w-44 sm:h-48 sm:w-48">
+            <Image
+              src="https://macj-abuyerschoice.com/wp-content/uploads/2017/07/intr-nachi.jpg"
+              alt="InterNACHI Certified Badge"
+              fill
+              className="object-contain"
+              unoptimized
+            />
+          </div>
+          <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary leading-snug text-center">
+            International Affiliation with InterNACHI
+          </h2>
+          <div className="flex flex-col gap-4 text-sm sm:text-base md:text-lg text-brand-text leading-relaxed font-normal text-center max-w-lg mx-auto">
+            <p>
+              International Association of Certified Home Inspectors(InterNACHI), is the world’s largest inspection trade association. Based in the United States, InterNACHI is both non-profit and federally tax-exempt, and operates in 65 different countries and nine languages. InterNACHI is the inspection industry's largest provider of education and training.
+            </p>
+            <p className="font-semibold text-secondary text-base sm:text-lg md:text-xl">
+              We are the proud member of InterNACHI...
             </p>
           </div>
           <Link
-            href="/about#internachi"
-            className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 shrink-0 text-sm"
+            href="/about/internachi"
+            className="px-6 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs uppercase tracking-wider mt-2"
           >
-            Verify Credentials
+            Learn More
           </Link>
         </div>
       </section>

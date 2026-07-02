@@ -95,7 +95,7 @@ export default function HeroSlider() {
   return (
     <section
       className="relative w-full overflow-hidden bg-brand-light"
-      style={{ height: "clamp(240px, 56vw, 460px)" }}
+      style={{ height: "clamp(320px, 65vw, 580px)" }}
     >
       {/* Background Images */}
       <AnimatePresence initial={false} custom={direction} mode="sync">
@@ -180,53 +180,67 @@ export default function HeroSlider() {
         </button>
       </div>
 
-      {/* Bottom Info Bar Overlay (matching the screenshot exactly) */}
-      <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/90 to-black/50 text-white py-1.5 border-t border-white/5 hidden md:block">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 flex items-center justify-between text-[10px] sm:text-xs">
-          <div className="flex items-center gap-6">
-            <a href="tel:+917600078862" className="hover:text-secondary flex items-center gap-2 transition-colors">
-              <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
-                <Phone className="h-3 w-3 fill-current" />
-              </span>
-              <div>
-                <p className="text-[9px] text-white/55 leading-none">Phone number:</p>
-                <p className="font-bold mt-0.5">76000 78862</p>
+      {/* Bottom Info Bar — contact details + social icons */}
+      <div className="absolute bottom-0 left-0 right-0 z-20 bg-black/75 backdrop-blur-sm text-white hidden md:block border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3 flex items-center justify-between">
+          {/* Contact Items */}
+          <div className="flex items-center gap-8">
+            {/* Phone 1 */}
+            <a href="tel:+918584855470" className="flex items-center gap-2.5 hover:text-secondary transition-colors group">
+              <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
+              <div className="leading-tight">
+                <p className="text-[10px] text-white/60 uppercase tracking-wider font-light">Phone number:</p>
+                <p className="text-xs sm:text-sm font-extrabold text-white tracking-tight mt-0.5">+91 85848 55470</p>
               </div>
             </a>
-            <a href="tel:+912812990030" className="hover:text-secondary flex items-center gap-2 transition-colors">
-              <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
-                <Phone className="h-3 w-3 fill-current" />
-              </span>
-              <div>
-                <p className="text-[9px] text-white/55 leading-none">Phone number:</p>
-                <p className="font-bold mt-0.5">0281 2990030</p>
+            {/* Phone 2 */}
+            <a href="tel:+03340687162" className="flex items-center gap-2.5 hover:text-secondary transition-colors group">
+              <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
+              <div className="leading-tight">
+                <p className="text-[10px] text-white/60 uppercase tracking-wider font-light">Phone number:</p>
+                <p className="text-xs sm:text-sm font-extrabold text-white tracking-tight mt-0.5">033 4068 7162</p>
               </div>
             </a>
-            <a href="mailto:classicsolution931@gmail.com" className="hover:text-secondary flex items-center gap-2 transition-colors">
-              <span className="h-6 w-6 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
-                <Mail className="h-3 w-3 fill-current" />
-              </span>
-              <div>
-                <p className="text-[9px] text-white/55 leading-none">E-mail address:</p>
-                <p className="font-bold mt-0.5">classicsolution931@gmail.com</p>
+            {/* Email */}
+            <a href="mailto:info@macj.in" className="flex items-center gap-2.5 hover:text-secondary transition-colors group">
+              <Mail className="h-5 w-5 text-secondary shrink-0" />
+              <div className="leading-tight">
+                <p className="text-[10px] text-white/60 uppercase tracking-wider font-light">E-mail address:</p>
+                <p className="text-xs sm:text-sm font-extrabold text-white tracking-tight mt-0.5">info@macj.in</p>
               </div>
             </a>
           </div>
-          <div className="flex items-center gap-3 text-white/80">
-            <a href="#" className="hover:text-secondary transition-colors">Facebook</a>
-            <span>•</span>
-            <a href="#" className="hover:text-secondary transition-colors">X</a>
-            <span>•</span>
-            <a href="#" className="hover:text-secondary transition-colors">YouTube</a>
-            <span>•</span>
-            <a href="#" className="hover:text-secondary transition-colors">Instagram</a>
-            <span>•</span>
-            <a href="#" className="hover:text-secondary transition-colors">Pinterest</a>
-            <span>•</span>
-            <a href="#" className="hover:text-secondary transition-colors">LinkedIn</a>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-4.5">
+            {/* Facebook */}
+            <a href="https://facebook.com" aria-label="Facebook" className="text-white hover:text-secondary transition-colors">
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            {/* X */}
+            <a href="https://x.com" aria-label="X / Twitter" className="text-white hover:text-secondary transition-colors">
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            {/* YouTube */}
+            <a href="https://youtube.com" aria-label="YouTube" className="text-white hover:text-secondary transition-colors">
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z"/></svg>
+            </a>
+            {/* Instagram */}
+            <a href="https://instagram.com" aria-label="Instagram" className="text-white hover:text-secondary transition-colors">
+              <svg className="h-4 w-4 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            {/* Pinterest */}
+            <a href="https://pinterest.com" aria-label="Pinterest" className="text-white hover:text-secondary transition-colors">
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+            {/* LinkedIn */}
+            <a href="https://linkedin.com" aria-label="LinkedIn" className="text-white hover:text-secondary transition-colors">
+              <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
