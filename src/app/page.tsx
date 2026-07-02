@@ -15,6 +15,7 @@ import {
 
 import HeroSlider from "@/components/HeroSlider";
 import Testimonials from "@/components/Testimonials";
+import ClientLogos from "@/components/ClientLogos";
 
 const stats = [
   { value: "8,000+", label: "Inspections Completed" },
@@ -407,6 +408,9 @@ export default function Home() {
         </div>
         <Testimonials />
       </section>
+
+      {/* ── 10.5 CLIENT LOGOS ── */}
+      <ClientLogos />
 
       {/* ── 11. CTA SECTION ── */}
       <section className="py-14 sm:py-20 bg-primary px-6 sm:px-8 lg:px-12 relative overflow-hidden">
