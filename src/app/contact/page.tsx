@@ -130,8 +130,8 @@ export default function ContactPage() {
                 Corporate Head Office
               </h3>
               <div className="w-full rounded-2xl overflow-hidden border border-brand-border/30 shadow-premium">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.5947765103444!2d88.3516599760773!3d22.55684697950269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277051df52b47%3A0xe9dfa5db0c6ffce2!2sJawaharlal%20Nehru%20Rd%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  <iframe
+                    src="https://www.google.com/maps?q=Raj%20Palace,%20Hari%20Nagar,%20Rajkot,%20Gujarat%203600005,%20India&output=embed"
                   width="100%"
                   height="280"
                   style={{ border: 0 }}

@@ -125,9 +125,9 @@ export default function Navbar() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3">
           <div className="flex items-center justify-between">
             {/* Logo Row */}
-            <div className="flex items-center gap-1.5 sm:gap-2.5">
+            <div className="flex items-center gap-1 sm:gap-2">
               <Link href="/" className="flex items-center gap-3 group py-1">
-                <div className="relative h-12 w-36 sm:h-14 sm:w-40">
+                <div className="relative h-14 w-40 sm:h-16 sm:w-48">
                   <Image
                     src="/logo.svg"
                     alt="Classic Solution Logo"
