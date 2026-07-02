@@ -95,7 +95,7 @@ export default function Footer() {
             <h3 className="text-base font-semibold text-white tracking-wider uppercase mb-2 font-display">Corporate Office</h3>
             <div className="flex items-start gap-3">
               <MapPin className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-              <span className="font-light text-white/70">3rd Floor, 30D, Jawaharlal Nehru Road, Taltala, Kolkata, West Bengal 700016</span>
+              <span className="font-light text-white/70">Raj Palace, Hari Nagar, Rajkot, Gujarat 360005, India</span>
             </div>
             <div className="flex items-center gap-3">
               <Phone className="h-5 w-5 text-secondary shrink-0" />
@@ -121,7 +121,7 @@ export default function Footer() {
         {/* Map */}
         <div className="border-t border-white/10 pt-8 mt-8">
           <div className="w-full min-h-[240px] rounded-2xl overflow-hidden border border-white/10 shadow-lg relative bg-white/5">
-            <p className="text-xs font-bold text-white/60 mb-2 uppercase px-4 pt-2">Kolkata Office Location</p>
+            <p className="text-xs font-bold text-white/60 mb-2 uppercase px-4 pt-2">Rajkot Office Location</p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.5947765103444!2d88.3516599760773!3d22.55684697950269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277051df52b47%3A0xe9dfa5db0c6ffce2!2sJawaharlal%20Nehru%20Rd%2C%20Kolkata%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
               width="100%"
@@ -130,7 +130,7 @@ export default function Footer() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="MACJ Kolkata Corporate Office Map"
+              title="MACJ Rajkot Corporate Office Map"
             />
           </div>
         </div>

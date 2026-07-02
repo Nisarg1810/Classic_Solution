@@ -138,11 +138,11 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="MACJ Corporate Office Location"
+                  title="MACJ Rajkot Corporate Office Location"
                 />
               </div>
               <p className="text-xs text-brand-muted mt-2">
-                3rd Floor, 30D, Jawaharlal Nehru Road, Taltala, Kolkata, West Bengal 700016
+                Raj Palace, Hari Nagar, Rajkot, Gujarat 360005, India
               </p>
             </div>
           </div>
