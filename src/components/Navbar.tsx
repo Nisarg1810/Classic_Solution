@@ -88,26 +88,37 @@ export default function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-premium`}
       >
 
-        {/* Main Navigation Row */}
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-3">
-          <div className="flex items-center justify-between relative">
-            {/* Logo Row */}
-            <div className="flex items-center gap-1 sm:gap-2">
-              <Link href="/" className="flex items-center gap-3 group py-1">
-                <div className="relative h-14 w-40 sm:h-16 sm:w-48">
-                  <Image
-                    src="/logo.svg"
-                    alt="Classic Solution Logo"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </Link>
-            </div>
+        {/* Row 1 — Logo centered */}
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 pt-3 pb-1">
+          <div className="flex items-center justify-center relative">
+            {/* Logo — centered */}
+            <Link href="/" className="flex items-center group py-1">
+              <div className="relative h-16 w-52 sm:h-20 sm:w-64">
+                <Image
+                  src="/logo.svg"
+                  alt="Classic Solution Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </Link>
 
-            {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+            {/* Mobile Hamburger — absolute right */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="absolute right-0 flex items-center justify-center p-2 rounded-lg text-primary md:hidden hover:bg-black/5 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Row 2 — Desktop Nav centered */}
+        <div className="hidden md:block border-t border-brand-border/20">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 py-1.5">
+            <nav className="flex items-center justify-center gap-2">
               {navLinks.map((link, index) => (
                 <div key={link.name} className="flex items-center">
                   {/* Vertical divider after Home icon */}
@@ -189,18 +200,9 @@ export default function Navbar() {
                 </div>
               ))}
             </nav>
-
-
-            {/* Mobile Hamburger */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center justify-center p-2 rounded-lg text-primary md:hidden hover:bg-black/5 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
           </div>
         </div>
+
       </header>
 
       {/* Mobile Drawer */}
