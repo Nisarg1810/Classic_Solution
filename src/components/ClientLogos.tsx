@@ -7,8 +7,8 @@ export default function ClientLogos() {
     <section className="py-14 sm:py-20 bg-white border-t border-brand-border/20">
       <div className="mx-auto max-w-5xl px-8 sm:px-16 lg:px-28">
         
-        {/* Left-aligned Heading matching other page sections */}
-        <div className="mb-8">
+        {/* Centered Heading */}
+        <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-3.5xl font-bold font-display text-[#333333]">
             Clients
           </h2>
