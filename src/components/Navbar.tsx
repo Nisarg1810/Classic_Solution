@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Home } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "/", icon: true },
   {
     name: "About",
     href: "/about",
@@ -164,13 +164,18 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${
+                    className={`text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${"icon" in link && link.icon ? "flex items-center" : ""} ${
                       isActive(link.href)
                         ? "text-secondary"
                         : "text-brand-text hover:text-secondary"
                     }`}
+                    aria-label={link.name}
                   >
-                    {link.name}
+                    {"icon" in link && link.icon ? (
+                      <Home className="h-5 w-5" />
+                    ) : (
+                      link.name
+                    )}
                     <span
                       className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
                         isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
