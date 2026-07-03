@@ -13,25 +13,23 @@ const navLinks = [
     name: "About",
     href: "/about",
     dropdown: [
-      { name: "MACJ - ABCHI India", href: "/about/about-macj-abchi" },
-      { name: "ABCHI USA", href: "/about/about-abchi-usa" },
-      { name: "Management Profile", href: "/about/about-macj-india" },
-      { name: "Milestones", href: "/about/milestones-achieved" },
-      { name: "Gratitude", href: "/about/our-gratitude" },
-      { name: "InterNACHI Affiliation", href: "/about/internachi" },
+      { name: "Company Details", href: "/about" },
+      { name: "Company Vision", href: "/about#vision" },
     ],
   },
   {
-    name: "Services",
+    name: "Our Services",
     href: "/services",
     dropdown: [
-      { name: "Real Estate Value Chain", href: "/services/value-chain" },
-      { name: "Complete Home Inspection", href: "/services/home-inspection" },
-      { name: "Moisture & Seepage (Thermal)", href: "/services/moisture-damp" },
-      { name: "Electrical Inspections", href: "/services/electrical" },
-      { name: "NRI Property Care", href: "/services/nri-property-care" },
-      { name: "Construction Finishing", href: "/services/construction-finishing" },
-      { name: "Stakeholder Win-Win", href: "/services/stakeholder-benefits" },
+      { name: "Complete Home / Property Inspection", href: "/services/home-inspection" },
+      { name: "Moisture / Damp / Leakage / Seepage Inspections (Thermal)", href: "/services/moisture-damp" },
+      { name: "Electrical Inspections of a Home / Property", href: "/services/electrical" },
+      { name: "Complete Property Care for NRIs / CCCs", href: "/services/nri-property-care" },
+      { name: "Construction Finishing & Win–Win for Stake Holders", href: "/services/construction-finishing" },
+      { name: "Energy Audit – Solar Panel Inspection", href: "/services/energy-audit#solar" },
+      { name: "Energy Audit – Electrical Utilities", href: "/services/energy-audit#electrical" },
+      { name: "Energy Audit – HVAC Inspection", href: "/services/energy-audit#hvac" },
+      { name: "Ground Penetrating Radar (GPR) Services", href: "/services/gpr" },
     ],
   },
   {
@@ -40,7 +38,7 @@ const navLinks = [
     dropdown: [
       { name: "Home Inspection News", href: "/news#home-inspection" },
       { name: "RERA Updates", href: "/rera" },
-      { name: "MACJ Gallery", href: "/gallery" },
+      { name: "Gallery", href: "/gallery" },
     ],
   },
   {
@@ -150,7 +148,7 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 8, scale: 0.97 }}
                             transition={{ duration: 0.18 }}
-                            className="absolute top-full left-0 mt-2 w-60 bg-white rounded-xl shadow-xl border border-brand-border/30 py-2 z-50"
+                            className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-brand-border/30 py-2 z-50"
                           >
                             {link.dropdown.map((item) => (
                               <Link
