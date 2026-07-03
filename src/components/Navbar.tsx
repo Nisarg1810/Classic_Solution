@@ -91,11 +91,11 @@ export default function Navbar() {
       >
         {/* Main Navigation Row */}
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-          <div className="grid grid-cols-3 items-center h-[88px]">
+          <div className="grid grid-cols-3 items-center h-[100px]">
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center shrink-0 group py-1">
-              <div className="relative h-20 w-56 sm:h-22 sm:w-60">
+              <div className="relative h-[84px] w-60">
                 <Image
                   src="/logo.svg"
                   alt="Classic Solution Logo"
@@ -238,7 +238,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed inset-x-0 top-[91px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 flex flex-col max-h-[calc(100vh-91px)] overflow-y-auto"
+              className="fixed inset-x-0 top-[103px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 flex flex-col max-h-[calc(100vh-103px)] overflow-y-auto"
             >
               <nav className="flex flex-col px-4 py-4 gap-0.5">
                 {navLinks.map((link) => (
