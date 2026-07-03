@@ -91,7 +91,7 @@ export default function Navbar() {
       >
         {/* Main Navigation Row */}
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-          <div className="flex items-center h-[88px] gap-6">
+          <div className="grid grid-cols-3 items-center h-[88px]">
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center shrink-0 group py-1">
@@ -107,7 +107,7 @@ export default function Navbar() {
             </Link>
 
             {/* ── Desktop Nav ── */}
-            <nav className="hidden md:flex items-center flex-1 justify-end gap-1">
+            <nav className="hidden md:flex items-center justify-center gap-1">
               {navLinks.map((link, index) => (
                 <div key={link.name} className="flex items-center">
 
@@ -195,8 +195,13 @@ export default function Navbar() {
 
             </nav>
 
+            {/* ── Right spacer (keeps nav centered) ── */}
+            <div className="hidden md:flex justify-end">
+              {/* intentionally empty */}
+            </div>
+
             {/* ── Mobile Hamburger ── */}
-            <div className="ml-auto md:hidden">
+            <div className="flex justify-end md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center justify-center p-2 rounded-lg text-primary hover:bg-black/5 transition-colors"
