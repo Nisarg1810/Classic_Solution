@@ -91,11 +91,11 @@ export default function Navbar() {
       >
         {/* Main Navigation Row */}
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-          <div className="flex items-center h-[72px] gap-6">
+          <div className="flex items-center h-[88px] gap-6">
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center shrink-0 group py-1">
-              <div className="relative h-16 w-48 sm:h-18 sm:w-52">
+              <div className="relative h-20 w-56 sm:h-22 sm:w-60">
                 <Image
                   src="/logo.svg"
                   alt="Classic Solution Logo"
@@ -192,13 +192,7 @@ export default function Navbar() {
                 </div>
               ))}
 
-              {/* Book Inspection CTA */}
-              <Link
-                href="/contact"
-                className="ml-3 shrink-0 px-4 py-2 bg-secondary hover:bg-secondary-light text-white text-xs font-bold rounded-full shadow-sm hover:shadow-md transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
-              >
-                Book Now
-              </Link>
+
             </nav>
 
             {/* ── Mobile Hamburger ── */}
@@ -239,7 +233,7 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed inset-x-0 top-[75px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 flex flex-col max-h-[calc(100vh-75px)] overflow-y-auto"
+              className="fixed inset-x-0 top-[91px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 flex flex-col max-h-[calc(100vh-91px)] overflow-y-auto"
             >
               <nav className="flex flex-col px-4 py-4 gap-0.5">
                 {navLinks.map((link) => (
@@ -305,16 +299,7 @@ export default function Navbar() {
                 ))}
               </nav>
 
-              {/* Mobile CTA */}
-              <div className="px-4 pb-5 pt-2">
-                <Link
-                  href="/contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full text-center px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all duration-300 text-sm uppercase tracking-wide"
-                >
-                  Book Inspection
-                </Link>
-              </div>
+
             </motion.div>
           </>
         )}

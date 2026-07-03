@@ -53,7 +53,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col font-sans bg-white text-brand-text">
         <SmoothScroll>
           <Navbar />
-          <main className="flex-grow pt-[80px] sm:pt-[88px]">{children}</main>
+          <main className="flex-grow pt-[91px]">{children}</main>
           <Footer />
           <FloatButtons />
         </SmoothScroll>
