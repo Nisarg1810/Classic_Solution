@@ -155,7 +155,7 @@ button, a {
 }
 
 /* ── Prevent horizontal overflow on mobile ── */
-section, header, footer, main, div {
+section, header, footer, main {
   max-width: 100vw;
 }
 
