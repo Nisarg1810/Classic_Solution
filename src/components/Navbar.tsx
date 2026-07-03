@@ -41,8 +41,6 @@ const navLinks = [
       { name: "Home Inspection News", href: "/news#home-inspection" },
       { name: "RERA Updates", href: "/rera" },
       { name: "MACJ Gallery", href: "/gallery" },
-      { name: "Magicbricks Alliance", href: "/news#magicbricks" },
-      { name: "Pidilite Alliance", href: "/news#pidilite" },
     ],
   },
   {
