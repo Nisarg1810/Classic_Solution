@@ -122,7 +122,7 @@ export default function Navbar() {
                         onClick={() =>
                           setOpenDropdown(openDropdown === link.name ? null : link.name)
                         }
-                        className={`flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group whitespace-nowrap ${
+                        className={`flex items-center gap-1 text-base font-bold px-3 py-2 rounded-lg transition-colors relative group whitespace-nowrap ${
                           isActive(link.href)
                             ? "text-secondary"
                             : "text-brand-text hover:text-secondary"
@@ -130,7 +130,7 @@ export default function Navbar() {
                       >
                         {link.name}
                         <ChevronDown
-                          className={`h-3.5 w-3.5 opacity-60 transition-transform duration-200 ${
+                          className={`h-4 w-4 opacity-60 transition-transform duration-200 ${
                             openDropdown === link.name ? "rotate-180" : ""
                           }`}
                         />
@@ -166,7 +166,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`flex items-center gap-1.5 text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group whitespace-nowrap ${
+                      className={`flex items-center gap-1.5 text-base font-bold px-3 py-2 rounded-lg transition-colors relative group whitespace-nowrap ${
                         isActive(link.href)
                           ? "text-secondary"
                           : "text-brand-text hover:text-secondary"
@@ -174,7 +174,7 @@ export default function Navbar() {
                       aria-label={link.name}
                     >
                       {"icon" in link && link.icon ? (
-                        <Home className="h-[18px] w-[18px]" />
+                        <Home className="h-[22px] w-[22px]" />
                       ) : (
                         link.name
                       )}
