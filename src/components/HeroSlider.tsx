@@ -185,9 +185,9 @@ export default function HeroSlider() {
             </div>
 
             {/* Single phone on mobile */}
-            <a href="tel:+918584855470" className="flex items-center gap-2 hover:text-secondary transition-colors shrink-0">
+            <a href="tel:+917600078862" className="flex items-center gap-2 hover:text-secondary transition-colors shrink-0">
               <Phone className="h-4 w-4 text-secondary shrink-0" fill="currentColor" />
-              <span className="text-xs font-bold text-white tracking-tight">+91 85848 55470</span>
+              <span className="text-xs font-bold text-white tracking-tight">76000 78862</span>
             </a>
 
             {/* Social icons (compact) */}
@@ -223,25 +223,25 @@ export default function HeroSlider() {
 
             {/* Centered Contact Details */}
             <div className="flex flex-row items-center justify-center gap-6 lg:gap-12 flex-1">
-              <a href="tel:+918584855470" className="flex items-center gap-3 hover:text-secondary transition-colors group shrink-0">
+              <a href="tel:+917600078862" className="flex items-center gap-3 hover:text-secondary transition-colors group shrink-0">
                 <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
                 <div className="leading-tight">
-                  <p className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">Phone number:</p>
-                  <p className="text-sm font-extrabold text-white tracking-tight mt-0.5">+91 85848 55470</p>
+                  <p className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">Contact No:</p>
+                  <p className="text-sm font-extrabold text-white tracking-tight mt-0.5">76000 78862</p>
                 </div>
               </a>
-              <a href="tel:+03340687162" className="flex items-center gap-3 hover:text-secondary transition-colors group shrink-0">
+              <a href="tel:+912812990030" className="flex items-center gap-3 hover:text-secondary transition-colors group shrink-0">
                 <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
                 <div className="leading-tight">
-                  <p className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">Phone number:</p>
-                  <p className="text-sm font-extrabold text-white tracking-tight mt-0.5">033 4068 7162</p>
+                  <p className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">Telephone No:</p>
+                  <p className="text-sm font-extrabold text-white tracking-tight mt-0.5">0281 2990030</p>
                 </div>
               </a>
-              <a href="mailto:info@macj.in" className="flex items-center gap-3 hover:text-secondary transition-colors group shrink-0">
+              <a href="mailto:classicsolution931@gmail.com" className="flex items-center gap-3 hover:text-secondary transition-colors group shrink-0">
                 <Mail className="h-5 w-5 text-secondary shrink-0" />
                 <div className="leading-tight">
-                  <p className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">E-mail address:</p>
-                  <p className="text-sm font-extrabold text-white tracking-tight mt-0.5">info@macj.in</p>
+                  <p className="text-[10px] text-white/60 uppercase tracking-wider font-semibold">Email Id:</p>
+                  <p className="text-sm font-extrabold text-white tracking-tight mt-0.5">classicsolution931@gmail.com</p>
                 </div>
               </a>
             </div>
