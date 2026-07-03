@@ -89,7 +89,7 @@ export default function Navbar() {
       >
         {/* Main Navigation Row */}
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
-          <div className="grid grid-cols-3 items-center h-[100px]">
+          <div className="flex items-center justify-between md:grid md:grid-cols-3 h-[100px]">
 
             {/* ── Logo ── */}
             <Link href="/" className="flex items-center shrink-0 group py-1">
@@ -193,13 +193,8 @@ export default function Navbar() {
 
             </nav>
 
-            {/* ── Right spacer (keeps nav centered) ── */}
-            <div className="hidden md:flex justify-end">
-              {/* intentionally empty */}
-            </div>
-
             {/* ── Mobile Hamburger ── */}
-            <div className="flex justify-end md:hidden">
+            <div className="md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="flex items-center justify-center p-2 rounded-lg text-primary hover:bg-black/5 transition-colors"
