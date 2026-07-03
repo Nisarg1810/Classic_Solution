@@ -174,7 +174,7 @@ export default function Navbar() {
                       aria-label={link.name}
                     >
                       {"icon" in link && link.icon ? (
-                        <Home className="h-[22px] w-[22px]" />
+                        <Home className="h-7 w-7" />
                       ) : (
                         link.name
                       )}
