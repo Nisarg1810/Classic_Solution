@@ -85,63 +85,66 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-premium`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white ${
+          scrolled ? "shadow-md" : "shadow-premium"
+        }`}
       >
-
         {/* Main Navigation Row */}
-        <div className="mx-auto max-w-5xl px-6 sm:px-8 lg:px-12 py-3">
-          <div className="flex items-center justify-between relative">
-            {/* Logo Row */}
-            <div className="flex items-center gap-1 sm:gap-2">
-              <Link href="/" className="flex items-center gap-3 group py-1">
-                <div className="relative h-20 w-56 sm:h-24 sm:w-64">
-                  <Image
-                    src="/logo.svg"
-                    alt="Classic Solution Logo"
-                    fill
-                    className="object-contain"
-                    priority
-                  />
-                </div>
-              </Link>
-            </div>
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+          <div className="flex items-center h-[72px] gap-6">
 
-            {/* Desktop Nav */}
-            <nav className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2">
+            {/* ── Logo ── */}
+            <Link href="/" className="flex items-center shrink-0 group py-1">
+              <div className="relative h-16 w-48 sm:h-18 sm:w-52">
+                <Image
+                  src="/logo.svg"
+                  alt="Classic Solution Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </Link>
+
+            {/* ── Desktop Nav ── */}
+            <nav className="hidden md:flex items-center flex-1 justify-end gap-1">
               {navLinks.map((link, index) => (
                 <div key={link.name} className="flex items-center">
-                  {/* Vertical divider after Home icon */}
+
+                  {/* Divider after Home icon */}
                   {index === 1 && (
-                    <div className="h-6 w-px bg-gray-300 mr-2" />
+                    <span className="mx-3 h-5 w-px bg-gray-200 inline-block shrink-0" />
                   )}
+
                   {link.dropdown ? (
                     <div
                       className="relative"
                       onMouseEnter={() => setOpenDropdown(link.name)}
                       onMouseLeave={() => setOpenDropdown(null)}
                     >
-                      <Link
-                        href={link.href}
-                        onClick={(e) => {
-                          if (link.href === "#") {
-                            e.preventDefault();
-                            setOpenDropdown(openDropdown === link.name ? null : link.name);
-                          }
-                        }}
-                        className={`flex items-center gap-1 text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${
+                      <button
+                        onClick={() =>
+                          setOpenDropdown(openDropdown === link.name ? null : link.name)
+                        }
+                        className={`flex items-center gap-1 text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group whitespace-nowrap ${
                           isActive(link.href)
                             ? "text-secondary"
                             : "text-brand-text hover:text-secondary"
                         }`}
                       >
                         {link.name}
-                        <ChevronDown className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:rotate-180" />
+                        <ChevronDown
+                          className={`h-3.5 w-3.5 opacity-60 transition-transform duration-200 ${
+                            openDropdown === link.name ? "rotate-180" : ""
+                          }`}
+                        />
                         <span
-                          className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
+                          className={`absolute bottom-0.5 left-2 right-2 h-[2px] bg-secondary rounded-full transition-all duration-300 ${
                             isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                           }`}
                         />
-                      </Link>
+                      </button>
+
                       <AnimatePresence>
                         {openDropdown === link.name && (
                           <motion.div
@@ -149,7 +152,7 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 8, scale: 0.97 }}
                             transition={{ duration: 0.18 }}
-                            className="absolute top-full left-0 mt-1 w-60 bg-white rounded-xl shadow-premium border border-brand-border/30 py-1.5 z-50"
+                            className="absolute top-full left-0 mt-2 w-60 bg-white rounded-xl shadow-xl border border-brand-border/30 py-2 z-50"
                           >
                             {link.dropdown.map((item) => (
                               <Link
@@ -167,7 +170,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`text-base font-extrabold px-3.5 py-2 rounded-lg transition-colors relative group ${"icon" in link && link.icon ? "flex items-center" : ""} ${
+                      className={`flex items-center gap-1.5 text-sm font-semibold px-3 py-2 rounded-lg transition-colors relative group whitespace-nowrap ${
                         isActive(link.href)
                           ? "text-secondary"
                           : "text-brand-text hover:text-secondary"
@@ -175,12 +178,12 @@ export default function Navbar() {
                       aria-label={link.name}
                     >
                       {"icon" in link && link.icon ? (
-                        <Home className="h-5 w-5" />
+                        <Home className="h-[18px] w-[18px]" />
                       ) : (
                         link.name
                       )}
                       <span
-                        className={`absolute bottom-0 left-2 right-2 h-0.5 bg-secondary transition-all duration-300 ${
+                        className={`absolute bottom-0.5 left-2 right-2 h-[2px] bg-secondary rounded-full transition-all duration-300 ${
                           isActive(link.href) ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                         }`}
                       />
@@ -188,26 +191,39 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
+
+              {/* Book Inspection CTA */}
+              <Link
+                href="/contact"
+                className="ml-3 shrink-0 px-4 py-2 bg-secondary hover:bg-secondary-light text-white text-xs font-bold rounded-full shadow-sm hover:shadow-md transition-all duration-300 uppercase tracking-wide whitespace-nowrap"
+              >
+                Book Now
+              </Link>
             </nav>
 
+            {/* ── Mobile Hamburger ── */}
+            <div className="ml-auto md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="flex items-center justify-center p-2 rounded-lg text-primary hover:bg-black/5 transition-colors"
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </button>
+            </div>
 
-            {/* Mobile Hamburger */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center justify-center p-2 rounded-lg text-primary md:hidden hover:bg-black/5 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
           </div>
         </div>
+
+        {/* Bottom accent line */}
+        <div className="h-[3px] bg-gradient-to-r from-primary via-secondary to-primary opacity-90" />
       </header>
 
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop Overlay */}
+            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -216,17 +232,18 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               className="fixed inset-0 bg-black/50 backdrop-blur-[2px] z-40 md:hidden"
             />
-            {/* Drawer Container */}
+
+            {/* Drawer */}
             <motion.div
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.25, ease: "easeOut" }}
-              className="fixed inset-x-0 top-[64px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 p-6 flex flex-col gap-5 max-h-[calc(100vh-64px)] overflow-y-auto"
+              className="fixed inset-x-0 top-[75px] z-50 md:hidden bg-white shadow-xl border-b border-brand-border/60 flex flex-col max-h-[calc(100vh-75px)] overflow-y-auto"
             >
-              <nav className="flex flex-col gap-1">
+              <nav className="flex flex-col px-4 py-4 gap-0.5">
                 {navLinks.map((link) => (
-                  <div key={link.name} className="border-b border-black/5 last:border-0 pb-1">
+                  <div key={link.name} className="border-b border-black/5 last:border-0">
                     {link.dropdown ? (
                       <button
                         onClick={() =>
@@ -234,7 +251,7 @@ export default function Navbar() {
                             expandedMobileMenu === link.name ? null : link.name
                           )
                         }
-                        className="w-full flex items-center justify-between text-base font-semibold py-3 px-3 rounded-xl transition-colors text-brand-text hover:text-secondary"
+                        className="w-full flex items-center justify-between text-sm font-semibold py-3 px-3 rounded-xl transition-colors text-brand-text hover:text-secondary hover:bg-brand-light"
                       >
                         <span>{link.name}</span>
                         <ChevronRight
@@ -247,17 +264,20 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={() => setIsOpen(false)}
-                        className={`block text-base font-semibold py-3 px-3 rounded-xl transition-colors ${
+                        className={`flex items-center gap-2 text-sm font-semibold py-3 px-3 rounded-xl transition-colors ${
                           isActive(link.href)
                             ? "text-secondary bg-secondary/5"
                             : "text-brand-text hover:text-secondary hover:bg-brand-light"
                         }`}
                       >
+                        {"icon" in link && link.icon && (
+                          <Home className="h-4 w-4 shrink-0" />
+                        )}
                         {link.name}
                       </Link>
                     )}
-                    
-                    {/* Dropdown Items for Mobile */}
+
+                    {/* Mobile dropdown items */}
                     <AnimatePresence initial={false}>
                       {link.dropdown && expandedMobileMenu === link.name && (
                         <motion.div
@@ -265,16 +285,16 @@ export default function Navbar() {
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.25, ease: "easeInOut" }}
-                          className="overflow-hidden pl-4 flex flex-col gap-0.5 mt-1 mb-2 bg-brand-light/50 rounded-xl"
+                          className="overflow-hidden pl-4 flex flex-col gap-0.5 mb-2 bg-brand-light/50 rounded-xl mx-1"
                         >
                           {link.dropdown.map((item) => (
                             <Link
                               key={item.name}
                               href={item.href}
                               onClick={() => setIsOpen(false)}
-                              className="text-sm text-brand-muted hover:text-secondary py-2.5 px-4 rounded-lg transition-colors flex items-center gap-1"
+                              className="text-sm text-brand-muted hover:text-secondary py-2.5 px-4 rounded-lg transition-colors flex items-center gap-2"
                             >
-                              <span>•</span>
+                              <span className="text-secondary text-xs">›</span>
                               <span>{item.name}</span>
                             </Link>
                           ))}
@@ -284,8 +304,17 @@ export default function Navbar() {
                   </div>
                 ))}
               </nav>
-              
 
+              {/* Mobile CTA */}
+              <div className="px-4 pb-5 pt-2">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full text-center px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all duration-300 text-sm uppercase tracking-wide"
+                >
+                  Book Inspection
+                </Link>
+              </div>
             </motion.div>
           </>
         )}
