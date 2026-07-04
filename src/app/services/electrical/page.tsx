@@ -146,7 +146,7 @@ export default function ServicesElectrical() {
               <ul className="flex flex-col gap-3 mt-2 text-xs sm:text-sm text-brand-text">
                 {hazards.map((item, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <span className="text-secondary font-bold">•</span>
+                    <span className="text-secondary font-bold">�</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -164,7 +164,7 @@ export default function ServicesElectrical() {
               <ul className="flex flex-col gap-3 mt-2 text-xs sm:text-sm text-brand-text">
                 {warnings.map((item, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <span className="text-yellow-600 font-bold">•</span>
+                    <span className="text-yellow-600 font-bold">�</span>
                     <span>{item}</span>
                   </li>
                 ))}

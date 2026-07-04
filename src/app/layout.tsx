@@ -25,8 +25,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MACJ A Buyer's Choice | Professional Home Inspection Services India",
-  description: "MACJ – A Buyer's Choice Home Inspections is India's leading home inspection company. We provide complete visual, non-destructive health & safety checks of properties including walls, ceilings, floors, doors, windows, electrical, plumbing, damp, seepage, and moisture inspections.",
+  title: "Classic Solution | Professional Home Inspection Services",
+  description: "Classic Solution is a professional home and property inspection company in India. We provide complete visual, non-destructive health & safety checks including walls, ceilings, floors, electrical, plumbing, damp, seepage, and moisture inspections.",
   keywords: [
     "Home Inspection India",
     "Property Inspection Services",

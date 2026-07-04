@@ -41,14 +41,14 @@ const teamProfiles = [
   },
   {
     name: "Mahendra Sureka",
-    role: "Director & CEO, MACJ India",
+    role: "Director & CEO, MACJ",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2025/04/MS.jpg",
     desc: "A senior business leader with decades of executive experience in real estate and service sectors. He spearheads the Indian operations, engineering training, and quality management frameworks."
   }
 ];
 
 const milestonesList = [
-  { year: "2016", title: "Inception & MNC Alignment", desc: "MACJ Services LLP partnered with A Buyer's Choice USA to launch professional inspections in India." },
+  { year: "2016", title: "Inception & MNC Alignment", desc: "MACJ partnered with A Buyer's Choice USA to launch professional inspections in India." },
   { year: "2018", title: "InterNACHI Affiliation", desc: "Standardized all diagnostic processes and secured official affiliation with InterNACHI USA." },
   { year: "2020", title: "National Alliances", desc: "Signed nationwide inspection alliances with Magicbricks and Dr. Fixit Pidilite." },
   { year: "2023", title: "8,000+ Inspections", desc: "Successfully completed health & safety check-ups for over 8,000 properties across major Indian metros." }
@@ -58,15 +58,15 @@ export default function AboutPage() {
   return (
     <div className="relative w-full">
       <PageHero
-        badge="About MACJ India"
+        badge="About MACJ"
         title="Pioneers of Professional Home"
         titleHighlight="Inspection in India"
         subtitle="Formed in collaboration with ABCHI USA, MACJ brings world-class diagnostic inspections to the Indian property sector, helping buyers, developers, and corporate clients verify quality and safety."
         breadcrumbs={[{ label: "About Us" }]}
       />
 
-      {/* ── 1. MACJ & ABCHI INDIA PARTNERSHIP ── */}
-      <section id="macj-india" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
+      {/* -- 1. MACJ & ABCHI INDIA PARTNERSHIP -- */}
+      <section id="MACJ-india" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col gap-5">
             <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">The Partnership</span>
@@ -107,7 +107,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 2. ABCHI USA CORPORATE PROFILE ── */}
+      {/* -- 2. ABCHI USA CORPORATE PROFILE -- */}
       <section id="abchi-usa" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="bg-gradient-to-br from-primary to-primary-dark text-white p-8 rounded-3xl shadow-premium lg:order-2">
@@ -148,7 +148,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 3. MANAGEMENT & PROMOTER PROFILES ── */}
+      {/* -- 3. MANAGEMENT & PROMOTER PROFILES -- */}
       <section id="management" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -188,7 +188,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 4. MILESTONES ACHIEVED ── */}
+      {/* -- 4. MILESTONES ACHIEVED -- */}
       <section id="milestones" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-5xl">
           <div className="text-center max-w-2xl mx-auto mb-12">
@@ -211,7 +211,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 5. InterNACHI AFFILIATION ── */}
+      {/* -- 5. InterNACHI AFFILIATION -- */}
       <section id="internachi" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="flex flex-col gap-5">
@@ -236,7 +236,7 @@ export default function AboutPage() {
                 "Objective, transparent assessments for all stakeholders"
               ].map((text, i) => (
                 <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-white/80 font-light leading-relaxed">
-                  <span className="h-5 w-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">✓</span>
+                  <span className="h-5 w-5 rounded-full bg-secondary/20 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">?</span>
                   <span>{text}</span>
                 </li>
               ))}
@@ -245,7 +245,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── 6. GRATITUDE SECTION ── */}
+      {/* -- 6. GRATITUDE SECTION -- */}
       <section id="gratitude" className="py-14 sm:py-20 bg-white px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-5xl text-center max-w-2xl">
           <div className="h-12 w-12 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 mx-auto">

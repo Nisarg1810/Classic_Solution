@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
     role: "New Home Buyer",
     location: "New Flat, Hyderabad",
     rating: 5,
-    comment: "MACJ's pre-handover inspection was eye-opening. They identified over 40 defects with photographic evidence, categorized by severity. The builder had to fix everything before handover — worth every rupee.",
+    comment: "MACJ's pre-handover inspection was eye-opening. They identified over 40 defects with photographic evidence, categorized by severity. The builder had to fix everything before handover � worth every rupee.",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Vivek_Jaiswal.jpg",
   },
   {
@@ -111,7 +111,7 @@ export default function Testimonials() {
                 </div>
                 <div>
                   <h4 className="text-primary font-bold text-sm sm:text-base font-display">{test.name}</h4>
-                  <p className="text-[10px] sm:text-xs text-brand-muted leading-snug">{test.role} • {test.location}</p>
+                  <p className="text-[10px] sm:text-xs text-brand-muted leading-snug">{test.role} � {test.location}</p>
                 </div>
               </div>
             </div>

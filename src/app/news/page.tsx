@@ -81,7 +81,7 @@ export default function NewsPage() {
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                       {partner.points.map((pt, i) => (
                         <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-brand-text font-light leading-relaxed">
-                          <span className="h-5 w-5 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">✓</span>
+                          <span className="h-5 w-5 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">?</span>
                           <span>{pt}</span>
                         </li>
                       ))}

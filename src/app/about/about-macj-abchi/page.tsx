@@ -5,12 +5,12 @@ import Image from "next/image";
 import { ShieldCheck, Award, Users, CheckCircle2, PhoneCall, ArrowLeft } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
-export default function AboutMacjAbchi() {
+export default function AboutMACJAbchi() {
   return (
     <div className="relative w-full">
       <PageHero
         badge="Indo-US Collaboration"
-        title="MACJ Services LLP &"
+        title="MACJ &"
         titleHighlight="ABCHI USA Partnership"
         subtitle="Formed in 2016, this strategic alliance introduced the global standard of professional home and property inspections to the Indian real estate market."
         breadcrumbs={[{ label: "About Us", href: "/about" }, { label: "MACJ - ABCHI Partnership" }]}
@@ -26,7 +26,7 @@ export default function AboutMacjAbchi() {
               Bridging American Systems with Indian Masonry Expertise
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              MACJ Services LLP signed the Master Franchise Agreement with **A Buyer's Choice Home Inspections (ABCHI) USA** in Fort Lauderdale, USA in October 2015, officially launching in 2016. The goal was to solve a major issue in the Indian housing market: the complete lack of third-party property diagnostics.
+              MACJ signed the Master Franchise Agreement with **A Buyer's Choice Home Inspections (ABCHI) USA** in Fort Lauderdale, USA in October 2015, officially launching in 2016. The goal was to solve a major issue in the Indian housing market: the complete lack of third-party property diagnostics.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
               As part of this strong strategic alliance, ABCHI USA invested **10% equity** in the legal entity owning the all-India master franchise. Under the global CEO Bill Redfern, MACJ imported structured MNC inspection checklists, advanced software-driven reports, and continuous engineer training to India.

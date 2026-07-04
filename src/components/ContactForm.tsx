@@ -105,7 +105,7 @@ export default function ContactForm() {
             </div>
             <h3 className="text-2xl font-bold font-display text-primary">Inspection Booked Successfully!</h3>
             <p className="text-brand-muted mt-3 max-w-sm text-sm sm:text-base">
-              Thank you for choosing MACJ A Buyer's Choice. One of our inspection coordinators will contact you shortly to confirm your scheduled visit.
+              Thank you for choosing MACJ. One of our inspection coordinators will contact you shortly to confirm your scheduled visit.
             </p>
             <button
               onClick={() => setStatus("idle")}

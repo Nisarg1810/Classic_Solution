@@ -12,7 +12,7 @@ export default function ClientLogos() {
           </h2>
         </div>
 
-        {/* Marquee container — overflow-hidden clips the track */}
+        {/* Marquee container � overflow-hidden clips the track */}
         <div
           style={{
             position: "relative",
@@ -75,7 +75,7 @@ export default function ClientLogos() {
 
       </div>
 
-      {/* Inject keyframes inline — guarantees the animation always loads */}
+      {/* Inject keyframes inline � guarantees the animation always loads */}
       <style>{`
         @keyframes marquee-clients {
           0%   { transform: translateX(0); }

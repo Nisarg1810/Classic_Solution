@@ -94,7 +94,7 @@ export default function Navbar() {
               <div className="relative h-[84px] w-60">
                 <Image
                   src="/logo.svg"
-                  alt="Classic Solution Logo"
+                  alt="MACJ Logo"
                   fill
                   className="object-contain"
                   priority

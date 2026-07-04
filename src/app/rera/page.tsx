@@ -149,7 +149,7 @@ export default function ReraPage() {
                 </p>
               </div>
               <div className="border-t border-brand-border/40 pt-4 mt-6">
-                <p className="text-[11px] font-bold text-secondary uppercase tracking-wider">MACJ A Buyer's Choice Advantage</p>
+                <p className="text-[11px] font-bold text-secondary uppercase tracking-wider">MACJ Advantage</p>
                 <p className="text-xs text-brand-text font-medium mt-1">We identify defect lists before handover so you can claim free repairs under RERA Section 14(3).</p>
               </div>
             </div>

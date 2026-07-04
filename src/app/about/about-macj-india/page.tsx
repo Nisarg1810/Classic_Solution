@@ -8,7 +8,7 @@ import PageHero from "@/components/PageHero";
 const executives = [
   {
     name: "Mahendra Sureka",
-    role: "Director & CEO, MACJ India",
+    role: "Director & CEO, MACJ",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2025/04/MS.jpg",
     bio: "Chartered Accountant with 25+ years of Professional/ Entrepreneurial Experience. Pioneered Home/ Property Inspection Services Industry in India. Management Consulting Experience of over 20 years. Leadership role in largest developer of IT/ ITES Buildings in Eastern India."
   },
@@ -22,7 +22,7 @@ const executives = [
     name: "Rohit Drolia",
     role: "Partner & Operations Head",
     imageUrl: "https://macj-abuyerschoice.com/v2/wp-content/uploads/2015/10/blank-avatar.jpg",
-    bio: "With decades of experience in construction and construction materials, he has also been part of one of Kolkata’s leading real estate companies for procurements. He governs operations, field inspections, and report auditing."
+    bio: "With decades of experience in construction and construction materials, he has also been part of one of Kolkata�s leading real estate companies for procurements. He governs operations, field inspections, and report auditing."
   },
   {
     name: "Yash Sureka",
@@ -89,11 +89,11 @@ const regionalPartners = [
   }
 ];
 
-export default function AboutMacjIndia() {
+export default function AboutMACJIndia() {
   return (
     <div className="relative w-full">
       <PageHero
-        badge="MACJ India Corporate"
+        badge="MACJ Corporate"
         title="Promoters, Partners &"
         titleHighlight="Management Profiles"
         subtitle="Meet the seasoned corporate leaders, industrial mentors, and regional franchise partners driving professional home inspections across India."

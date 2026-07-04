@@ -15,13 +15,13 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: "Thermal Imaging — Electrical Panel Scan",
+    title: "Thermal Imaging � Electrical Panel Scan",
     category: "thermal",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg",
   },
   {
     id: 2,
-    title: "Electrical Hotspot Detection — Switchboard",
+    title: "Electrical Hotspot Detection � Switchboard",
     category: "electrical",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Direct-360x240.jpg",
   },
@@ -33,7 +33,7 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 4,
-    title: "Moisture Intrusion — Wall Dampness Scan",
+    title: "Moisture Intrusion � Wall Dampness Scan",
     category: "moisture",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/popping-360x240.jpg",
   },
@@ -57,31 +57,31 @@ const galleryItems: GalleryItem[] = [
   },
   {
     id: 8,
-    title: "Air Conditioning Systems — HVAC Scan",
+    title: "Air Conditioning Systems � HVAC Scan",
     category: "thermal",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Air-Conditioning-Systems02-360x240.jpg",
   },
   {
     id: 9,
-    title: "Property Health Audit — Building Exterior",
+    title: "Property Health Audit � Building Exterior",
     category: "property",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/outside-360x240.jpg",
   },
   {
     id: 10,
-    title: "Portfolio — Full Property Report",
+    title: "Portfolio � Full Property Report",
     category: "property",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio09-360x240.jpg",
   },
   {
     id: 11,
-    title: "Scope of Services — Pre-Purchase Assessment",
+    title: "Scope of Services � Pre-Purchase Assessment",
     category: "electrical",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/01/Scope-of-Services-01-360x240.jpg",
   },
   {
     id: 12,
-    title: "Moisture Coverage — Ceiling Leak Detection",
+    title: "Moisture Coverage � Ceiling Leak Detection",
     category: "moisture",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Coverage-04-1-360x240.jpg",
   },
@@ -117,7 +117,7 @@ export default function GalleryMasonry() {
 
   return (
     <div className="w-full flex flex-col items-center gap-6 sm:gap-8">
-      {/* Filter pills — scroll horizontally on mobile */}
+      {/* Filter pills � scroll horizontally on mobile */}
       <div className="flex flex-nowrap sm:flex-wrap justify-start sm:justify-center gap-2 max-w-full w-full overflow-x-auto px-4 sm:px-6 pb-1 sm:pb-0 scroll-smooth">
         {categories.map((cat) => (
           <button

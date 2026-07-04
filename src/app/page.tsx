@@ -16,6 +16,8 @@ import {
 import HeroSlider from "@/components/HeroSlider";
 import Testimonials from "@/components/Testimonials";
 import ClientLogos from "@/components/ClientLogos";
+import FeaturedVideos from "@/components/FeaturedVideos";
+import LatestUpdates from "@/components/LatestUpdates";
 
 const stats = [
   { value: "8,000+", label: "Inspections Completed" },
@@ -29,7 +31,7 @@ const homeHighlights = [
     title: "Protect your most important investment",
     desc: "A pre-purchase inspection helps uncover seepage, cracks, poor finishing, and hidden service issues before they become expensive surprises.",
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/A.jpg",
-    link: "/about#macj-india",
+    link: "/about#MACJ-india",
   },
   {
     title: "Professional Home Inspections Services",
@@ -38,7 +40,7 @@ const homeHighlights = [
     link: "/services/home-inspection",
   },
   {
-    title: "Win – Win for all Stake Holders",
+    title: "Win � Win for all Stake Holders",
     desc: "Buyers, sellers, builders, agents, and lenders all make better decisions when the property's real condition is known.",
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/10/For-Home-Owner-Buyer.jpg",
     link: "/services/stakeholder-benefits",
@@ -174,7 +176,7 @@ const alliances = [
 
 const videosList = [
   {
-    title: "MACJ A Buyer's Choice Corporate Overview",
+    title: "MACJ Corporate Overview",
     desc: "Learn about the USA-India franchise alignment and our vision to create a safer property market.",
     embedId: "example1", // standard layout
     duration: "2:45"
@@ -219,12 +221,12 @@ export default function Home() {
   return (
     <div className="relative w-full">
 
-      {/* ── 1. HERO SLIDER ── */}
+      {/* -- 1. HERO SLIDER -- */}
       <HeroSlider />
 
 
 
-      {/* ── 3. HOME HIGHLIGHTS ── */}
+      {/* -- 3. HOME HIGHLIGHTS -- */}
       <section className="py-6 sm:py-10 bg-brand-light px-8 sm:px-16 lg:px-28">
         <div className="mx-auto max-w-5xl">
 
@@ -265,7 +267,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. HOME INSPECTION COVERAGE ── */}
+      {/* -- 4.5. FEATURED VIDEOS -- */}
+      <FeaturedVideos />
+
+      {/* -- 5. HOME INSPECTION COVERAGE -- */}
       <section className="py-14 sm:py-20 bg-[#fbfbfb] px-8 sm:px-16 lg:px-28 border-t border-brand-border/20">
         <div className="mx-auto max-w-5xl">
           {/* Centered Heading */}
@@ -365,7 +370,7 @@ export default function Home() {
 
 
 
-      {/* ── 9. InterNACHI BANNER ── */}
+      {/* -- 9. InterNACHI BANNER -- */}
       <section className="py-14 sm:py-20 bg-white px-8 sm:px-16 lg:px-28 border-t border-brand-border/20">
         <div className="mx-auto max-w-3xl text-center flex flex-col items-center gap-6">
           <div className="relative h-44 w-44 sm:h-48 sm:w-48">
@@ -382,7 +387,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-col gap-4 text-sm sm:text-base md:text-lg text-brand-text leading-relaxed font-normal text-center max-w-lg mx-auto">
             <p>
-              International Association of Certified Home Inspectors(InterNACHI), is the world’s largest inspection trade association. Based in the United States, InterNACHI is both non-profit and federally tax-exempt, and operates in 65 different countries and nine languages. InterNACHI is the inspection industry's largest provider of education and training.
+              International Association of Certified Home Inspectors(InterNACHI), is the world�s largest inspection trade association. Based in the United States, InterNACHI is both non-profit and federally tax-exempt, and operates in 65 different countries and nine languages. InterNACHI is the inspection industry's largest provider of education and training.
             </p>
             <p className="font-semibold text-secondary text-base sm:text-lg md:text-xl">
               We are the proud member of InterNACHI...
@@ -397,7 +402,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 10. TESTIMONIALS ── */}
+      {/* -- 9.5. LATEST UPDATES -- */}
+      <LatestUpdates />
+
+      {/* -- 10. TESTIMONIALS -- */}
       <section className="py-14 sm:py-20 bg-white px-8 sm:px-16 lg:px-28">
         <div className="text-center max-w-2xl mx-auto mb-8">
           <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Client Reviews</span>
@@ -409,10 +417,10 @@ export default function Home() {
         <Testimonials />
       </section>
 
-      {/* ── 10.5 CLIENT LOGOS ── */}
+      {/* -- 10.5 CLIENT LOGOS -- */}
       <ClientLogos />
 
-      {/* ── 11. CTA SECTION ── */}
+      {/* -- 11. CTA SECTION -- */}
       <section className="py-14 sm:py-20 bg-primary px-6 sm:px-8 lg:px-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(211,17,69,0.15),transparent_60%)] pointer-events-none" />
         <div className="mx-auto max-w-5xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
