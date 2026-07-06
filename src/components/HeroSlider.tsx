@@ -2,42 +2,39 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Phone, Mail } from "lucide-react";
 
 const slides = [
   {
     id: 1,
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-01.jpg",
-    title: "Health & Safety Checkup of\nHomes / Offices alongwith Solutions",
-    titleColor: "text-white text-left",
-    cta: { label: "Learn More", href: "/services" },
-    mobileOnly: true,
+    image: "/images/hero-slide-1.png",
+    alt: "Health & Safety Checkup of Homes / Offices along with Solutions",
   },
   {
     id: 2,
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-02.jpg",
-    title: "Damp / Seepage Assessment\nwith Solutions through\nThermal Imaging Technology",
-    titleColor: "text-white",
-    cta: { label: "Learn More", href: "/services/moisture-damp" },
-    mobileOnly: false,
+    image: "/images/hero-slide-2.png",
+    alt: "Construction-Finishing Inspection for Real Estate Developers and Builders",
   },
   {
     id: 3,
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-03.jpg",
-    title: "Electrical Inspections of a\nHome / Property",
-    titleColor: "text-[#00245d]",
-    cta: { label: "Learn More", href: "/services/electrical" },
-    mobileOnly: false,
+    image: "/images/hero-slide-3.png",
+    alt: "Dampness / Seepage Assessment with Solutions through Thermal Imaging Technology",
   },
   {
     id: 4,
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2021/11/Macj-Web-Banner-2021-04.jpg",
-    title: "Construction Finishing Inspection\nfor Real Estate Developers",
-    titleColor: "text-white",
-    cta: { label: "Learn More", href: "/services/construction-finishing" },
-    mobileOnly: false,
+    image: "/images/hero-slide-4.png",
+    alt: "GPR Survey - Ground Penetrating Radar Survey",
+  },
+  {
+    id: 5,
+    image: "/images/hero-slide-5.png",
+    alt: "Solar Panel Inspection Services",
+  },
+  {
+    id: 6,
+    image: "/images/hero-slide-6.png",
+    alt: "Energy Audit Services - Solar panel inspection, Electrical utilities and HVAC",
   },
 ];
 
@@ -86,12 +83,6 @@ export default function HeroSlider() {
     }),
   };
 
-  const textVariants = {
-    enter: { opacity: 0, y: 24 },
-    center: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -16 },
-  };
-
   return (
     <div className="relative w-full">
       <section
@@ -112,60 +103,18 @@ export default function HeroSlider() {
           >
             <Image
               src={slide.image}
-              alt={slide.title.replace("\n", " ")}
+              alt={slide.alt}
               fill
               priority
-              className="object-cover object-right md:object-center"
+              className="object-cover object-center"
               sizes="100vw"
-              unoptimized
             />
-            {/* Gradient overlays */}
-            {!slide.mobileOnly && (
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-primary/30 to-transparent" />
-            )}
             {/* Bottom-to-top dark fade for the contact bar area */}
             <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
           </motion.div>
         </AnimatePresence>
 
-        {/* Content Overlay */}
-        <div className="relative z-10 h-full mx-auto max-w-5xl px-8 sm:px-12 lg:px-16 flex items-center pb-8 sm:pb-12">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`text-${current}`}
-              variants={textVariants}
-              initial="enter"
-              animate="center"
-              exit="exit"
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              className={`w-full max-w-[85%] sm:max-w-sm md:max-w-md lg:max-w-xl ${
-                slide.mobileOnly ? "block md:hidden text-left" : "block text-left"
-              }`}
-            >
-              {/* Title � fluid scale */}
-              <h1
-                className={`font-extrabold font-display leading-[1.08] tracking-tight mb-3 sm:mb-5 whitespace-pre-line ${slide.titleColor}`}
-                style={{ fontSize: "clamp(1.15rem, 4vw, 2.5rem)" }}
-              >
-                {slide.title}
-              </h1>
-
-              {/* Learn More Button */}
-              {slide.cta && (
-                <div className="flex gap-3 text-left">
-                  <Link
-                    href={slide.cta.href}
-                    className="px-6 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-xs uppercase tracking-wider"
-                  >
-                    {slide.cta.label}
-                  </Link>
-                </div>
-              )}
-            </motion.div>
-          </AnimatePresence>
-        </div>
-
-        {/* Navigation Arrows � moved to bottom bar */}
+        {/* Navigation Arrows – moved to bottom bar */}
       </section>
 
       {/* Bottom Info Bar � transparent, sits over the hero gradient */}
