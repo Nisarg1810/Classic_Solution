@@ -30,7 +30,7 @@ export default function OurGratitude() {
             <div>
               <h3 className="text-lg font-bold text-primary font-display mb-3">Healthcare for Slum Elderly</h3>
               <p>
-                As part of our commitment to society, the MACJ Team regularly distributes prescribed medicines to the underprivileged elderlies residing in a slum dwelling in Kolkata. Our goal is to make lives a bit easier for the elderly who lack support.
+                As part of our commitment to society, the Classic Solution Team regularly distributes prescribed medicines to the underprivileged elderlies residing in a slum dwelling in Kolkata. Our goal is to make lives a bit easier for the elderly who lack support.
               </p>
             </div>
 

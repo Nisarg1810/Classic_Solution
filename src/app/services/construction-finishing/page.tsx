@@ -29,7 +29,7 @@ export default function ServicesConstructionFinishing() {
               For real estate developers, handing over possession is a critical operational phase. Often, minor finishing defects (hollow wall tiles, paint stains, misaligned window panes, or sliding door gaps) cause friction with buyers during handover site walkthroughs.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              MACJ offers structured **Construction Finishing Audits**. Our engineers inspect every room unit before possession. We map finishing quality issues on a room-by-room, unit-by-unit basis using certified checklists.
+              Classic Solution offers structured **Construction Finishing Audits**. Our engineers inspect every room unit before possession. We map finishing quality issues on a room-by-room, unit-by-unit basis using certified checklists.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
               This gives developers an internal defect list to rectify beforehand. Correcting defects early is much cheaper and faster than handling disputes or warranty rectification calls during RERA's **5-year defect liability window**.

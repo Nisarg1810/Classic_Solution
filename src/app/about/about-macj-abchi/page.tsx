@@ -5,15 +5,15 @@ import Image from "next/image";
 import { ShieldCheck, Award, Users, CheckCircle2, PhoneCall, ArrowLeft } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
-export default function AboutMACJAbchi() {
+export default function AboutClassic SolutionAbchi() {
   return (
     <div className="relative w-full">
       <PageHero
         badge="Indo-US Collaboration"
-        title="MACJ &"
+        title="Classic Solution &"
         titleHighlight="ABCHI USA Partnership"
         subtitle="Formed in 2016, this strategic alliance introduced the global standard of professional home and property inspections to the Indian real estate market."
-        breadcrumbs={[{ label: "About Us", href: "/about" }, { label: "MACJ - ABCHI Partnership" }]}
+        breadcrumbs={[{ label: "About Us", href: "/about" }, { label: "Classic Solution - ABCHI Partnership" }]}
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
@@ -26,13 +26,13 @@ export default function AboutMACJAbchi() {
               Bridging American Systems with Indian Masonry Expertise
             </h2>
             <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              MACJ signed the Master Franchise Agreement with **A Buyer's Choice Home Inspections (ABCHI) USA** in Fort Lauderdale, USA in October 2015, officially launching in 2016. The goal was to solve a major issue in the Indian housing market: the complete lack of third-party property diagnostics.
+              Classic Solution signed the Master Franchise Agreement with **A Buyer's Choice Home Inspections (ABCHI) USA** in Fort Lauderdale, USA in October 2015, officially launching in 2016. The goal was to solve a major issue in the Indian housing market: the complete lack of third-party property diagnostics.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              As part of this strong strategic alliance, ABCHI USA invested **10% equity** in the legal entity owning the all-India master franchise. Under the global CEO Bill Redfern, MACJ imported structured MNC inspection checklists, advanced software-driven reports, and continuous engineer training to India.
+              As part of this strong strategic alliance, ABCHI USA invested **10% equity** in the legal entity owning the all-India master franchise. Under the global CEO Bill Redfern, Classic Solution imported structured MNC inspection checklists, advanced software-driven reports, and continuous engineer training to India.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Today, MACJ operates as a premier inspection service across India, bridging scientific diagnosis (like thermal imaging) with local structural builders, ensuring handover transparency and helping homebuyers buy with absolute peace of mind.
+              Today, Classic Solution operates as a premier inspection service across India, bridging scientific diagnosis (like thermal imaging) with local structural builders, ensuring handover transparency and helping homebuyers buy with absolute peace of mind.
             </p>
 
             <div className="flex gap-4 mt-4">

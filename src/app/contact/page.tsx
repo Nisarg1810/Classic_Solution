@@ -54,7 +54,7 @@ export default function ContactPage() {
       <PageHero
         badge="Get In Touch"
         title="Schedule an Inspection or"
-        titleHighlight="Contact MACJ Team"
+        titleHighlight="Contact Classic Solution Team"
         subtitle="Have a question about home health check-ups or ready to book your property inspection? Fill out the form or reach our national helpline."
         breadcrumbs={[{ label: "Contact Us" }]}
       />
@@ -138,7 +138,7 @@ export default function ContactPage() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="MACJ Rajkot Corporate Office Location"
+                  title="Classic Solution Rajkot Corporate Office Location"
                 />
               </div>
               <p className="text-xs text-brand-muted mt-2">
@@ -159,7 +159,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mb-3">PAN India Franchise Presence</h2>
           <p className="text-white/65 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
-            MACJ operates across major Indian metropolitan areas including Kolkata, Mumbai, Pune, Bengaluru, and Gurgaon. Get in touch to schedule a technician visit at your project site.
+            Classic Solution operates across major Indian metropolitan areas including Kolkata, Mumbai, Pune, Bengaluru, and Gurgaon. Get in touch to schedule a technician visit at your project site.
           </p>
         </div>
       </section>

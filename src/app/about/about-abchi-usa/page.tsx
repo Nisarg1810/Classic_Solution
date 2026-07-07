@@ -37,7 +37,7 @@ export default function AboutAbchiUsa() {
 
             <div className="flex gap-4 mt-4">
               <Link
-                href="/about/about-MACJ-abchi"
+                href="/about/about-Classic Solution-abchi"
                 className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider"
               >
                 India Partnership

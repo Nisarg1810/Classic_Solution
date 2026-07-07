@@ -48,7 +48,7 @@ export default function ClientLogos() {
           >
             <img
               src="https://macj-abuyerschoice.com/wp-content/uploads/2018/10/macjclientlist.jpg"
-              alt="MACJ Corporate Clients List"
+              alt="Classic Solution Corporate Clients List"
               style={{
                 height: "80px",
                 width: "auto",
@@ -60,7 +60,7 @@ export default function ClientLogos() {
             />
             <img
               src="https://macj-abuyerschoice.com/wp-content/uploads/2018/10/macjclientlist.jpg"
-              alt="MACJ Corporate Clients List Duplicate"
+              alt="Classic Solution Corporate Clients List Duplicate"
               style={{
                 height: "80px",
                 width: "auto",

@@ -31,7 +31,7 @@ const homeHighlights = [
     title: "Protect your most important investment",
     desc: "A pre-purchase inspection helps uncover seepage, cracks, poor finishing, and hidden service issues before they become expensive surprises.",
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/A.jpg",
-    link: "/about#MACJ-india",
+    link: "/about#Classic Solution-india",
   },
   {
     title: "Professional Home Inspections Services",
@@ -162,7 +162,7 @@ const coverageCategories = [
 const alliances = [
   {
     name: "Magicbricks Alliance",
-    desc: "MACJ has partnered with Magicbricks (India's leading property portal) to offer exclusive, trusted home inspection services to premium buyers and renters.",
+    desc: "Classic Solution has partnered with Magicbricks (India's leading property portal) to offer exclusive, trusted home inspection services to premium buyers and renters.",
     logo: "https://macj-abuyerschoice.com/wp-content/uploads/2021/03/magicbricks.jpg",
     link: "/news#magicbricks"
   },
@@ -176,7 +176,7 @@ const alliances = [
 
 const videosList = [
   {
-    title: "MACJ Corporate Overview",
+    title: "Classic Solution Corporate Overview",
     desc: "Learn about the USA-India franchise alignment and our vision to create a safer property market.",
     embedId: "example1", // standard layout
     duration: "2:45"

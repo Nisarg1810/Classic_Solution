@@ -29,7 +29,7 @@ export default function ServicesMoistureDamp() {
               Water seepage is one of the most frustrating problems for property owners. Often, the damp spot appears on a wall, but the actual leakage point is located meters away in a toilet joint or terrace boundary.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              MACJ replaces guesswork with scientific diagnostics. We scan surfaces using **infrared thermal imaging cameras**, which measure micro-temperature differences. Because wet plaster holds a lower temperature, the camera maps the exact seepage trail.
+              Classic Solution replaces guesswork with scientific diagnostics. We scan surfaces using **infrared thermal imaging cameras**, which measure micro-temperature differences. Because wet plaster holds a lower temperature, the camera maps the exact seepage trail.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
               We verify the thermal anomalies using **pinless electronic moisture meters**, mapping the moisture spread index inside ceilings, slabs, and tiles. This targets repairs only at the source point, saving high civil demolition costs.

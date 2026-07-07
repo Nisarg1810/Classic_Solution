@@ -5,11 +5,12 @@ import { Mail, Phone, MapPin } from "lucide-react";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About – Company Details", href: "/about" },
-  { label: "About – Company Vision", href: "/about#vision" },
+  { label: "About – Company Vision", href: "/about/vision" },
   { label: "News – Home Inspection News", href: "/news#home-inspection" },
   { label: "News – RERA Updates", href: "/rera" },
   { label: "News – Gallery", href: "/gallery" },
-  { label: "Our Clients – Testimonials", href: "/#testimonials" },
+  { label: "Our Clients – Testimonials", href: "/testimonials" },
+  { label: "Our Clients", href: "/our-clients" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -19,9 +20,9 @@ const services = [
   { label: "Electrical Inspections", href: "/services/electrical" },
   { label: "Complete Property Care for NRIs", href: "/services/nri-property-care" },
   { label: "Construction Finishing & Win–Win", href: "/services/construction-finishing" },
-  { label: "Energy Audit – Solar Panel", href: "/services/energy-audit#solar" },
-  { label: "Energy Audit – Electrical Utilities", href: "/services/energy-audit#electrical" },
-  { label: "Energy Audit – HVAC Inspection", href: "/services/energy-audit#hvac" },
+  { label: "Energy Audit – Solar Panel", href: "/services/energy-audit/solar" },
+  { label: "Energy Audit – Electrical Utilities", href: "/services/energy-audit/electrical" },
+  { label: "Energy Audit – HVAC Inspection", href: "/services/energy-audit/hvac" },
   { label: "Ground Penetrating Radar (GPR)", href: "/services/gpr" },
 ];
 
@@ -96,10 +97,7 @@ export default function Footer() {
           </div>
         </Link>
 
-        {/* Tagline */}
-        <p className="text-xs text-[#999] text-center max-w-xs leading-relaxed">
-          India&apos;s trusted professional home &amp; property inspection company
-        </p>
+
 
         {/* Social Buttons */}
         <div className="flex items-center gap-2">
@@ -122,14 +120,14 @@ export default function Footer() {
 
           {/* Col 1 – Quick Links */}
           <div>
-            <h3 className="text-[10px] font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Quick Links
             </h3>
             <ul className="space-y-1.5">
               {quickLinks.map((l) => (
                 <li key={l.label} className="flex items-center gap-1.5">
                   <span className="h-1 w-1 rounded-full bg-secondary shrink-0" />
-                  <Link href={l.href} className="text-[12px] text-[#666] hover:text-secondary transition-colors">
+                  <Link href={l.href} className="text-sm text-[#666] hover:text-secondary transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -139,14 +137,14 @@ export default function Footer() {
 
           {/* Col 2 – Services */}
           <div>
-            <h3 className="text-[10px] font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Our Services
             </h3>
             <ul className="space-y-1.5">
               {services.map((l) => (
                 <li key={l.label} className="flex items-center gap-1.5">
                   <span className="h-1 w-1 rounded-full bg-secondary shrink-0" />
-                  <Link href={l.href} className="text-[12px] text-[#666] hover:text-secondary transition-colors">
+                  <Link href={l.href} className="text-sm text-[#666] hover:text-secondary transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -156,10 +154,10 @@ export default function Footer() {
 
           {/* Col 3 – Contact */}
           <div>
-            <h3 className="text-[10px] font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Corporate Office
             </h3>
-            <div className="flex flex-col gap-2.5 text-[12px] text-[#666]">
+            <div className="flex flex-col gap-2.5 text-sm text-[#666]">
               <div className="flex items-start gap-2">
                 <div className="h-6 w-6 rounded-md bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin className="h-3 w-3 text-secondary" />
@@ -188,24 +186,24 @@ export default function Footer() {
 
           {/* Col 4 – Working Hours */}
           <div>
-            <h3 className="text-[10px] font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Working Hours
             </h3>
-            <div className="flex flex-col gap-2 text-[12px] text-[#666]">
+            <div className="flex flex-col gap-2 text-sm text-[#666]">
               {[
                 { day: "Monday – Friday", time: "9:00 AM – 6:00 PM" },
                 { day: "Saturday", time: "9:00 AM – 2:00 PM" },
                 { day: "Sunday", time: "Closed" },
               ].map((row) => (
                 <div key={row.day} className="flex justify-between items-center">
-                  <span className="font-semibold text-[#444] text-[11px]">{row.day}</span>
+                  <span className="font-semibold text-[#444] text-sm">{row.day}</span>
                   <span className={row.time === "Closed" ? "text-secondary font-semibold" : ""}>{row.time}</span>
                 </div>
               ))}
               <div className="mt-1 pt-2 border-t border-neutral-100">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-[11px] font-bold text-white bg-secondary hover:bg-secondary/90 transition-colors px-3 py-1.5 rounded-full"
+                   className="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-secondary hover:bg-secondary/90 transition-colors px-4 py-2 rounded-full"
                 >
                   Book Inspection
                 </Link>
@@ -218,7 +216,7 @@ export default function Footer() {
 
       {/* ── Bottom Bar ── */}
       <div className="border-t border-neutral-100 py-3 px-6">
-        <div className="mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-[#bbb]">
+        <div className="mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-[#bbb]">
           <p>© {currentYear} Classic Solution. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a>

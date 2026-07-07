@@ -8,7 +8,7 @@ const timelineEvents = [
   {
     year: "2016",
     title: "Master Franchise Launch & Debutant Award",
-    desc: "MACJ signed a Master Franchise Agreement with ABCHI USA. This introduced professional third-party diagnostics to India's real estate industry. Recognized as the 'Debutant Franchise of the Year' at Franchise India 2016 in Delhi and selected as a 'Top 100 Franchise Business Opportunity' in Franchising World Magazine."
+    desc: "Classic Solution signed a Master Franchise Agreement with ABCHI USA. This introduced professional third-party diagnostics to India's real estate industry. Recognized as the 'Debutant Franchise of the Year' at Franchise India 2016 in Delhi and selected as a 'Top 100 Franchise Business Opportunity' in Franchising World Magazine."
   },
   {
     year: "2017",

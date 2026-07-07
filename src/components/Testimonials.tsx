@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     role: "Home Buyer",
     location: "Residential Property, Kolkata",
     rating: 5,
-    comment: "MACJ's inspection before my flat purchase revealed several hidden seepage issues and electrical concerns. The professional report helped me negotiate better and fix issues before moving in. Best money spent!",
+    comment: "Classic Solution's inspection before my flat purchase revealed several hidden seepage issues and electrical concerns. The professional report helped me negotiate better and fix issues before moving in. Best money spent!",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Priyanka_Jalan.jpg",
   },
   {
@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
     role: "Property Investor",
     location: "Residential Complex, Mumbai",
     rating: 5,
-    comment: "We had seepage issues for years. MACJ used thermal imaging to locate the exact source without breaking any walls. Their detailed report and consulting made the repair targeted and affordable.",
+    comment: "We had seepage issues for years. Classic Solution used thermal imaging to locate the exact source without breaking any walls. Their detailed report and consulting made the repair targeted and affordable.",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/mayur_tebrewal.jpg",
   },
   {
@@ -43,7 +43,7 @@ const testimonials: Testimonial[] = [
     role: "Homeowner",
     location: "Apartment, Pune",
     rating: 5,
-    comment: "The MACJ team was extremely professional and thorough. They found hollow tiles, electrical anomalies, and moisture infiltration that the builder had never disclosed. The report saved us from a very costly mistake.",
+    comment: "The Classic Solution team was extremely professional and thorough. They found hollow tiles, electrical anomalies, and moisture infiltration that the builder had never disclosed. The report saved us from a very costly mistake.",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Swajan_Datta.jpg",
   },
   {
@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
     role: "New Home Buyer",
     location: "New Flat, Hyderabad",
     rating: 5,
-    comment: "MACJ's pre-handover inspection was eye-opening. They identified over 40 defects with photographic evidence, categorized by severity. The builder had to fix everything before handover � worth every rupee.",
+    comment: "Classic Solution's pre-handover inspection was eye-opening. They identified over 40 defects with photographic evidence, categorized by severity. The builder had to fix everything before handover � worth every rupee.",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Vivek_Jaiswal.jpg",
   },
   {

@@ -32,7 +32,7 @@ export default function ServicesNriCare() {
               During this time, a minor concealed plumbing joint leak or terrace waterproofing crack can cause extensive dampness damage. Over months, this dampness ruins paint, weakens ceiling concrete, and depreciates property value heavily.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              MACJ provides systematic **Property Care checks**. Our technical engineers visit the property periodically, run safety and moisture checks, verify key lines, and send a comprehensive visual digital log report directly to your inbox.
+              Classic Solution provides systematic **Property Care checks**. Our technical engineers visit the property periodically, run safety and moisture checks, verify key lines, and send a comprehensive visual digital log report directly to your inbox.
             </p>
 
             <div className="flex gap-4 mt-4">

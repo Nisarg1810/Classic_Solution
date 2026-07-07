@@ -12,7 +12,7 @@ export default function AboutInternachi() {
         badge="Accredited & Certified"
         title="International Affiliation with"
         titleHighlight="InterNACHI, USA"
-        subtitle="All MACJ inspectors undergo certified technical training and adhere strictly to InterNACHI's global Code of Ethics and Standards of Practice."
+        subtitle="All Classic Solution inspectors undergo certified technical training and adhere strictly to InterNACHI's global Code of Ethics and Standards of Practice."
         breadcrumbs={[{ label: "About Us", href: "/about" }, { label: "InterNACHI Affiliation" }]}
       />
 
@@ -29,10 +29,10 @@ export default function AboutInternachi() {
               The **International Association of Certified Home Inspectors (InterNACHI) USA** is the leading non-profit association of property inspectors worldwide. It offers educational courses, standard visual checklists, and certification parameters to maintain quality.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              By maintaining a strict alignment with InterNACHI USA, MACJ ensures that every engineer on site follows standardized checkup procedures. Our inspection checklists are updated yearly to reflect global guidelines adapted to local Indian building styles.
+              By maintaining a strict alignment with InterNACHI USA, Classic Solution ensures that every engineer on site follows standardized checkup procedures. Our inspection checklists are updated yearly to reflect global guidelines adapted to local Indian building styles.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              InterNACHI's **Code of Ethics** demands that inspectors remain independent third-party assessors. This means MACJ does not sell repair works or waterproofing chemicals, ensuring that our reports are completely objective and trustworthy.
+              InterNACHI's **Code of Ethics** demands that inspectors remain independent third-party assessors. This means Classic Solution does not sell repair works or waterproofing chemicals, ensuring that our reports are completely objective and trustworthy.
             </p>
 
             <div className="flex gap-4 mt-4">
@@ -67,7 +67,7 @@ export default function AboutInternachi() {
             <ul className="flex flex-col gap-4">
               {[
                 { title: "Standardized Diagnostics", text: "Inspections cover walls, ceiling finishes, electrical breakers, plumbing traps, and insulation parameters." },
-                { title: "Continuous Engineer Testing", text: "MACJ inspectors must pass regular online exams covering electrical calculations and seepage routes." },
+                { title: "Continuous Engineer Testing", text: "Classic Solution inspectors must pass regular online exams covering electrical calculations and seepage routes." },
                 { title: "No Repair Pitching", text: "We do not offer repair contractors, ensuring we maintain zero conflict of interest." },
                 { title: "Structured PDF Formats", text: "Deliver digital reports indicating severity levels (Critical, High, Medium, Low) for developer rectifications." }
               ].map((item, idx) => (

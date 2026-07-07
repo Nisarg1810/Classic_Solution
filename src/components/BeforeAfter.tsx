@@ -67,7 +67,7 @@ export default function BeforeAfter() {
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=1200&auto=format&fit=crop"
-            alt="Water Damaged Wall Before MACJ Inspection"
+            alt="Water Damaged Wall Before Classic Solution Inspection"
             fill
             sizes="(max-width: 1024px) 100vw, 1000px"
             priority
@@ -86,7 +86,7 @@ export default function BeforeAfter() {
           <div className="absolute inset-0 w-full max-w-4xl h-[300px] sm:h-[450px]" style={{ width: containerRef.current?.getBoundingClientRect().width || 800 }}>
             <Image
               src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1200&auto=format&fit=crop"
-              alt="Waterproofed Restored Wall After MACJ Inspection"
+              alt="Waterproofed Restored Wall After Classic Solution Inspection"
               fill
               sizes="(max-width: 1024px) 100vw, 1000px"
               priority

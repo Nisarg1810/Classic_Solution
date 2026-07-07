@@ -9,7 +9,7 @@ const allianceDetails = [
   {
     id: "magicbricks",
     name: "Strategic Alliance with Magicbricks Portal",
-    desc: "MACJ signed a memorandum of alliance with Magicbricks, India's leading online property search portal, to offer exclusive home testing services.",
+    desc: "Classic Solution signed a memorandum of alliance with Magicbricks, India's leading online property search portal, to offer exclusive home testing services.",
     points: [
       "Allows premium property buyers on Magicbricks to add visual inspections to their cart.",
       "Reassures buyers with certified, third-party structural and moisture scan reports.",
@@ -17,9 +17,9 @@ const allianceDetails = [
     ],
     color: "border-l-4 border-l-red-500 bg-red-50/10",
     images: [
-      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2021/03/Main-Banner.jpg", alt: "MACJ Magicbricks Alliance Launch" },
+      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2021/03/Main-Banner.jpg", alt: "Classic Solution Magicbricks Alliance Launch" },
       { src: "https://macj-abuyerschoice.com/wp-content/uploads/2021/03/MB-03.jpg", alt: "Magicbricks Property Portal Integration" },
-      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2021/03/MB-04.jpg", alt: "MACJ Magicbricks Partnership" },
+      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2021/03/MB-04.jpg", alt: "Classic Solution Magicbricks Partnership" },
     ]
   },
   {
@@ -28,15 +28,15 @@ const allianceDetails = [
     desc: "Aligned with Pidilite Industries (makers of Dr. Fixit waterproofing solutions) to provide high-resolution thermal imaging dampness assessments.",
     points: [
       "Fills the gap between seepage detection and chemical waterproofing remedies.",
-      "Allows MACJ engineers to pinpoint leaks, while Dr. Fixit certified applicators execute targeted remedies.",
+      "Allows Classic Solution engineers to pinpoint leaks, while Dr. Fixit certified applicators execute targeted remedies.",
       "Ensures the building envelope remains durable and moisture-free for years."
     ],
     color: "border-l-4 border-l-blue-500 bg-blue-50/10",
     images: [
-      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-1-250x188.jpeg", alt: "Pidilite MACJ Training Session 1" },
-      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-2-250x188.jpeg", alt: "Pidilite MACJ Training Session 2" },
-      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-3-250x188.jpeg", alt: "Pidilite MACJ Training Session 3" },
-      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-4-250x188.jpeg", alt: "Pidilite MACJ Training Session 4" },
+      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-1-250x188.jpeg", alt: "Pidilite Classic Solution Training Session 1" },
+      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-2-250x188.jpeg", alt: "Pidilite Classic Solution Training Session 2" },
+      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-3-250x188.jpeg", alt: "Pidilite Classic Solution Training Session 3" },
+      { src: "https://macj-abuyerschoice.com/wp-content/uploads/2023/07/Pidilite-Training-Session-4-250x188.jpeg", alt: "Pidilite Classic Solution Training Session 4" },
     ]
   }
 ];

@@ -14,7 +14,7 @@ const navLinks = [
     href: "/about",
     dropdown: [
       { name: "Company Details", href: "/about" },
-      { name: "Company Vision", href: "/about#vision" },
+      { name: "Company Vision", href: "/about/vision" },
     ],
   },
   {
@@ -26,9 +26,9 @@ const navLinks = [
       { name: "Electrical Inspections of a Home / Property", href: "/services/electrical" },
       { name: "Complete Property Care for NRIs / CCCs", href: "/services/nri-property-care" },
       { name: "Construction Finishing & Win–Win for Stake Holders", href: "/services/construction-finishing" },
-      { name: "Energy Audit – Solar Panel Inspection", href: "/services/energy-audit#solar" },
-      { name: "Energy Audit – Electrical Utilities", href: "/services/energy-audit#electrical" },
-      { name: "Energy Audit – HVAC Inspection", href: "/services/energy-audit#hvac" },
+      { name: "Energy Audit – Solar Panel Inspection", href: "/services/energy-audit/solar" },
+      { name: "Energy Audit – Electrical Utilities", href: "/services/energy-audit/electrical" },
+      { name: "Energy Audit – HVAC Inspection", href: "/services/energy-audit/hvac" },
       { name: "Ground Penetrating Radar (GPR) Services", href: "/services/gpr" },
     ],
   },
@@ -43,10 +43,10 @@ const navLinks = [
   },
   {
     name: "Our Clients",
-    href: "#",
+    href: "/our-clients",
     dropdown: [
-      { name: "Testimonials", href: "/#testimonials" },
-      { name: "Our Clients", href: "/news" },
+      { name: "Testimonials", href: "/testimonials" },
+      { name: "Our Clients", href: "/our-clients" },
     ],
   },
   { name: "Contact", href: "/contact" },
@@ -94,7 +94,7 @@ export default function Navbar() {
               <div className="relative h-[84px] w-60">
                 <Image
                   src="/logo.svg"
-                  alt="MACJ Logo"
+                  alt="Classic Solution Logo"
                   fill
                   className="object-contain"
                   priority
@@ -192,14 +192,27 @@ export default function Navbar() {
             </nav>
 
             {/* ── Mobile Hamburger ── */}
-            <div className="md:hidden">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-center p-2 rounded-lg text-primary hover:bg-black/5 transition-colors"
-                aria-label="Toggle menu"
+            <div className="flex items-center justify-end gap-3">
+
+              {/* Desktop Book Inspection button */}
+              <Link
+                href="/contact"
+                className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-200 text-xs uppercase tracking-wider whitespace-nowrap"
               >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
+                Book Inspection
+              </Link>
+
+              {/* Mobile hamburger */}
+              <div className="md:hidden">
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="flex items-center justify-center p-2 rounded-lg text-primary hover:bg-black/5 transition-colors"
+                  aria-label="Toggle menu"
+                >
+                  {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                </button>
+              </div>
+
             </div>
 
           </div>
@@ -295,6 +308,16 @@ export default function Navbar() {
                 ))}
               </nav>
 
+              {/* Mobile CTA */}
+              <div className="px-4 pt-4 pb-2 border-t border-brand-border/30">
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-center w-full px-6 py-3.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-sm uppercase tracking-wider"
+                >
+                  Book Inspection
+                </Link>
+              </div>
 
             </motion.div>
           </>

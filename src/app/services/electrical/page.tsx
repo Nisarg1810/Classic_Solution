@@ -67,7 +67,7 @@ export default function ServicesElectrical() {
                 Over 80% of accidental building fires originate from electrical faults like loose contacts, circuit overloading, or sub-standard wiring insulation. Because these faults occur behind switchboard panels, they are invisible until they spark.
               </p>
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                MACJ conducts visual and thermal scans of your distribution boards (MDBs, SDBs) and major appliance circuits under normal working loads. Our thermal cameras identify localized hot spots caused by high electrical resistance.
+                Classic Solution conducts visual and thermal scans of your distribution boards (MDBs, SDBs) and major appliance circuits under normal working loads. Our thermal cameras identify localized hot spots caused by high electrical resistance.
               </p>
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
                 We verify the socket wiring polarity (checking for inverted phase/neutrals), inspect grounding earthing resistance values, and test Earth Leakage Circuit Breakers (ELCBs) to ensure they trip immediately in case of leakage.

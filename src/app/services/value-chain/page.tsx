@@ -28,7 +28,7 @@ export default function ServicesValueChain() {
               Real estate transaction structures are complex, involving multiple parties. Without standardized, objective property diagnostics, miscommunication regarding finishes, seepage source paths, and wiring defects are common.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              MACJ serves as an independent, certified third-party reviewer. We assess properties using standard scientific parameters, creating a win-win scenario for buyers, developers, channel partners, and lenders.
+              Classic Solution serves as an independent, certified third-party reviewer. We assess properties using standard scientific parameters, creating a win-win scenario for buyers, developers, channel partners, and lenders.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
               By introducing structured property checkups, we establish transparent handovers, helping developers verify quality control guidelines and enabling buyers to invest with absolute clarity.

@@ -8,7 +8,7 @@ import PageHero from "@/components/PageHero";
 const executives = [
   {
     name: "Mahendra Sureka",
-    role: "Director & CEO, MACJ",
+    role: "Director & CEO, Classic Solution",
     imageUrl: "https://macj-abuyerschoice.com/wp-content/uploads/2025/04/MS.jpg",
     bio: "Chartered Accountant with 25+ years of Professional/ Entrepreneurial Experience. Pioneered Home/ Property Inspection Services Industry in India. Management Consulting Experience of over 20 years. Leadership role in largest developer of IT/ ITES Buildings in Eastern India."
   },
@@ -89,11 +89,11 @@ const regionalPartners = [
   }
 ];
 
-export default function AboutMACJIndia() {
+export default function AboutClassic SolutionIndia() {
   return (
     <div className="relative w-full">
       <PageHero
-        badge="MACJ Corporate"
+        badge="Classic Solution Corporate"
         title="Promoters, Partners &"
         titleHighlight="Management Profiles"
         subtitle="Meet the seasoned corporate leaders, industrial mentors, and regional franchise partners driving professional home inspections across India."

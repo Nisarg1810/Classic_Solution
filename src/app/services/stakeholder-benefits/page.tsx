@@ -28,7 +28,7 @@ export default function ServicesStakeholders() {
               Historically, property deals in India often resulted in disputes over dampness seepage, hollow tiles, or electrical switchboard safety during handover inspections. Real estate transactions require trust.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              By introducing standardized, independent diagnostics, MACJ creates a neutral, fact-based dialogue. We do not sell repairs or chemical products, ensuring our diagnostic outputs are objective.
+              By introducing standardized, independent diagnostics, Classic Solution creates a neutral, fact-based dialogue. We do not sell repairs or chemical products, ensuring our diagnostic outputs are objective.
             </p>
             <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
               Whether you are a buyer seeking safety assurance, a developer protecting against RERA warranty claims, or an agent building trust, a home inspection report is a vital tool.
