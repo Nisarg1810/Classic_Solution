@@ -89,7 +89,7 @@ const regionalPartners = [
   }
 ];
 
-export default function AboutClassic SolutionIndia() {
+export default function AboutClassicSolutionIndia() {
   return (
     <div className="relative w-full">
       <PageHero

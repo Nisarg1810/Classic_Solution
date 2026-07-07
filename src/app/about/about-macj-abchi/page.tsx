@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ShieldCheck, Award, Users, CheckCircle2, PhoneCall, ArrowLeft } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
-export default function AboutClassic SolutionAbchi() {
+export default function AboutClassicSolutionAbchi() {
   return (
     <div className="relative w-full">
       <PageHero
