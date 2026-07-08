@@ -6,15 +6,30 @@ import { Search, CheckCircle2, FileText, PhoneCall, ArrowLeft, Building2, HelpCi
 import PageHero from "@/components/PageHero";
 
 const areasInspected = [
-  "Bedrooms", "Bathrooms", "Living Area", "Dining Area", "Alleys", "Kitchens",
-  "Balconies", "Lofts", "Servants' Quarters", "Lobby Area", "Attached Structure",
-  "Exterior (Stairs, Steps, Ramps, Walkways, Railings, Hand rails, Driveways, etc)"
+  { name: "Bedroom", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/bedroom01-360x240.jpg" },
+  { name: "Bathroom", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/bathroom01-360x240.jpg" },
+  { name: "Living Room", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/livingroom-360x240.jpg" },
+  { name: "Dining Area", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/livingroom-360x240.jpg" },
+  { name: "Kitchen", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/kichen02-360x240.jpg" },
+  { name: "Balconies", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Balconies03-360x240.jpg" },
+  { name: "Loft Area", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Lobby-Area-Site03-360x240.jpg" },
+  { name: "Servants' Quarters", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Servants-Room-360x240.jpg" },
+  { name: "Lobby & Alleys", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Lobby-Area-Site03-360x240.jpg" },
+  { name: "Exterior Stairs & Walkways", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Stair-Steps-360x240.jpg" }
 ];
 
 const componentsInspected = [
-  "Walls", "Ceilings", "Floors", "Doors", "Windows", "Plumbing System",
-  "Electrical System", "Stair steps", "Stair railing", "Cabinets & Countertops",
-  "Applicable Installed Appliances", "Water Supply Line", "Exhaust Systems", "Air Conditioning Systems"
+  { name: "Walls", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/wall-360x240.jpg" },
+  { name: "Ceilings", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/ciling-1-360x240.jpg" },
+  { name: "Floors", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/floor-360x240.jpg" },
+  { name: "Doors", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/door-1-360x240.jpg" },
+  { name: "Windows", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/window-360x240.jpg" },
+  { name: "Plumbing System", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/plumbing-360x240.jpg" },
+  { name: "Electrical System", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg" },
+  { name: "Stair steps & railings", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Stair-Steps-360x240.jpg" },
+  { name: "Cabinets & Countertops", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Countertops01-360x240.jpg" },
+  { name: "Exhaust Systems", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Exhaust-Systems01-360x240.jpg" },
+  { name: "Air Conditioning Systems", image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Air-Conditioning-Systems02-360x240.jpg" }
 ];
 
 const reportingParameters = [
@@ -25,14 +40,14 @@ const reportingParameters = [
 ];
 
 const propertyTypes = [
-  "Newly Completed Properties (Pre-Handover)",
-  "Older & Re-sale Properties",
-  "Ancient / Historic & Heritage Properties",
-  "Ongoing Construction Phase Audits",
-  "Residential Apartment Complexes & Bungalows",
-  "Offices, Retails, Schools & Warehouses",
-  "Shopping Malls, Factories & Residential Projects",
-  "Banks, Bus Stands, Buildings & Attached Structures"
+  "New / Existing / Old / Heritage Properties",
+  "Homes & Apartments",
+  "Offices & Retail Spaces",
+  "Schools & Institutions",
+  "Warehouses & Factories",
+  "Shopping Malls",
+  "Residential Projects",
+  "Banks & Bus Stands"
 ];
 
 const whoCanAvail = [
@@ -92,13 +107,8 @@ export default function ServicesHomeInspection() {
 
             {/* Right Block: Photo & Scope Summary */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg" alt="Electrical Panel Inspection" fill className="object-cover" unoptimized />
-                </div>
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Stair-Steps-360x240.jpg" alt="Stair Steps Inspection" fill className="object-cover" unoptimized />
-                </div>
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-md">
+                <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Home-Inspection-Coverage-1024x485.jpg" alt="Home Inspection Coverage Overview" fill className="object-cover" unoptimized />
               </div>
 
               <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Reporting Parameters</h3>
@@ -132,11 +142,17 @@ export default function ServicesHomeInspection() {
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Inspection Scope</span>
               <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Areas We Inspect</h2>
+              <p className="text-brand-muted mt-2 text-xs sm:text-sm font-light">Comprehensive check of both internal room layouts and structural outer perimeters.</p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
               {areasInspected.map((area, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-2xl shadow-sm text-center flex flex-col justify-center items-center min-h-[80px]">
-                  <p className="text-xs sm:text-sm font-semibold text-primary">{area}</p>
+                <div key={idx} className="bg-white border border-brand-border/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-secondary transition-all flex flex-col">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image src={area.image} alt={area.name} fill className="object-cover" unoptimized />
+                  </div>
+                  <div className="p-3 text-center flex-grow flex items-center justify-center">
+                    <p className="text-xs sm:text-sm font-bold text-primary">{area.name}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -147,11 +163,17 @@ export default function ServicesHomeInspection() {
             <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Detailed Checkpoints</span>
               <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Systems & Components Inspected</h2>
+              <p className="text-brand-muted mt-2 text-xs sm:text-sm font-light">Every engineering aspect, material finish, and utility line audited with advanced tools.</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {componentsInspected.map((comp, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-2xl shadow-sm text-center flex flex-col justify-center items-center min-h-[80px]">
-                  <p className="text-xs sm:text-sm font-semibold text-primary">{comp}</p>
+                <div key={idx} className="bg-white border border-brand-border/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-secondary transition-all flex flex-col">
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image src={comp.image} alt={comp.name} fill className="object-cover" unoptimized />
+                  </div>
+                  <div className="p-3 text-center flex-grow flex items-center justify-center">
+                    <p className="text-xs sm:text-sm font-bold text-primary">{comp.name}</p>
+                  </div>
                 </div>
               ))}
             </div>

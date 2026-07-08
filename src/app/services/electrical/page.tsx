@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, CheckCircle2, ShieldCheck, PhoneCall, ArrowLeft, AlertOctagon, AlertTriangle, Eye, Activity, Heart } from "lucide-react";
+import { Zap, CheckCircle2, ShieldCheck, PhoneCall, ArrowLeft, AlertOctagon, AlertTriangle, Eye, Activity, Heart, Camera } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const hazards = [
@@ -73,6 +73,21 @@ const scopeOfWork = [
   "DB Charting (in case required)."
 ];
 
+const comparisonCases = [
+  {
+    title: "Overheating M.C.B in Electrical Panel",
+    visualImg: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg",
+    thermalImg: "https://macj-abuyerschoice.com/wp-content/uploads/2017/01/Scope-of-Services-01-360x240.jpg",
+    desc: "To the naked eye, the circuit breakers look perfectly normal. The thermal camera reveals a dangerous heat buildup (hot spot) indicating a loose terminal connection or overload."
+  },
+  {
+    title: "Overheating Wire in Distribution Box",
+    visualImg: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Direct-360x240.jpg",
+    thermalImg: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Coverage-04-1-360x240.jpg",
+    desc: "Concealed or bundled wires run hot due to under-gauge wire installation. The thermal scan isolates the single hot wire from the bunch to prevent localized insulation melt and short-circuit fires."
+  }
+];
+
 export default function ServicesElectrical() {
   return (
     <div className="relative w-full">
@@ -125,10 +140,10 @@ export default function ServicesElectrical() {
             {/* Right Block: Photos & Diagnostics */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
               <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
                   <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg" alt="Electrical Panel Thermal Scan" fill className="object-cover" unoptimized />
                 </div>
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
                   <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Direct-360x240.jpg" alt="Direct Electrical Inspection" fill className="object-cover" unoptimized />
                 </div>
               </div>
@@ -149,6 +164,43 @@ export default function ServicesElectrical() {
               </div>
             </div>
 
+          </div>
+
+          {/* Visual vs Infrared Comparison Showcase */}
+          <div className="border-t border-brand-border/40 pt-14">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Comparative Diagnostics</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Visual vs. Infrared Thermal Scan Comparison</h2>
+              <p className="text-brand-muted mt-2 text-xs sm:text-sm font-light">See how thermal scans pinpoint safety risks invisible to the naked eye.</p>
+            </div>
+            
+            <div className="flex flex-col gap-10">
+              {comparisonCases.map((c, idx) => (
+                <div key={idx} className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                  <div className="md:col-span-4 flex flex-col gap-3 text-left">
+                    <h3 className="text-base sm:text-lg font-bold text-primary font-display flex items-center gap-2">
+                      <Camera className="h-5 w-5 text-secondary" /> {c.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-brand-muted leading-relaxed font-light">{c.desc}</p>
+                  </div>
+                  
+                  <div className="md:col-span-8 grid grid-cols-2 gap-4">
+                    <div className="flex flex-col gap-2">
+                      <span className="text-[10px] font-bold text-brand-muted uppercase tracking-widest text-center">Visual View</span>
+                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
+                        <Image src={c.visualImg} alt={`${c.title} Visual`} fill className="object-cover" unoptimized />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <span className="text-[10px] font-bold text-secondary uppercase tracking-widest text-center">Infrared Thermal View</span>
+                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-secondary shadow-sm">
+                        <Image src={c.thermalImg} alt={`${c.title} Thermal`} fill className="object-cover" unoptimized />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Dangers & Warning Signs */}
