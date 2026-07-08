@@ -73,7 +73,7 @@ export default function ElectricalAuditPage() {
                   <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg" alt="Electrical Panel Inspection" fill className="object-cover" unoptimized />
                 </div>
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&q=80" alt="Electrical Thermal Scan" fill className="object-cover" unoptimized />
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Direct-360x240.jpg" alt="Electrical Thermal Scan" fill className="object-cover" unoptimized />
                 </div>
               </div>
               <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Audit Scope</h3>

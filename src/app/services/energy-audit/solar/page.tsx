@@ -69,10 +69,10 @@ export default function SolarAuditPage() {
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=80" alt="Solar Panel Inspection" fill className="object-cover" unoptimized />
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Coverage-04-1-360x240.jpg" alt="Solar Panel Thermal Scan" fill className="object-cover" unoptimized />
                 </div>
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Solar Thermal Scan" fill className="object-cover" unoptimized />
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/01/Scope-of-Services-01-360x240.jpg" alt="Solar Inverter Scan" fill className="object-cover" unoptimized />
                 </div>
               </div>
               <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">What We Inspect</h3>

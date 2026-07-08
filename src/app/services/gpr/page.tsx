@@ -68,10 +68,10 @@ export default function GPRPage() {
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=400&q=80" alt="GPR Scan in Action" fill className="object-cover" unoptimized />
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2022/02/How-Home-Inspection-solves-the-problems-of-Waterproofing-Companies-600x400-1.jpg" alt="GPR Structural Scanning" fill className="object-cover" unoptimized />
                 </div>
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80" alt="Concrete Structure Scan" fill className="object-cover" unoptimized />
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2019/02/Damp-Seepage-Case-Study-MACJ.jpg" alt="Concrete Slab Analysis" fill className="object-cover" unoptimized />
                 </div>
               </div>
               <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">GPR System Capabilities</h3>

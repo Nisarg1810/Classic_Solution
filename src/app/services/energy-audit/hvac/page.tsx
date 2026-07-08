@@ -70,10 +70,10 @@ export default function HVACAuditPage() {
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1527359443443-84a48aec73d2?w=400&q=80" alt="HVAC Inspection" fill className="object-cover" unoptimized />
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Air-Conditioning-Systems02-360x240.jpg" alt="HVAC AC Unit Inspection" fill className="object-cover" unoptimized />
                 </div>
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&q=80" alt="AC Unit Audit" fill className="object-cover" unoptimized />
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Exhaust-Systems01-360x240.jpg" alt="Exhaust Duct Audit" fill className="object-cover" unoptimized />
                 </div>
               </div>
               <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Audit Scope</h3>
