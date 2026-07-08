@@ -96,7 +96,7 @@ export default function Navbar() {
                   src="/logo.svg"
                   alt="Classic Solution Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain object-left"
                   priority
                 />
               </div>
