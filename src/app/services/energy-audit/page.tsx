@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Sun, Zap, Wind, CheckCircle2, ArrowLeft, PhoneCall } from "lucide-react";
+import { Sun, Zap, Wind, CheckCircle2, ArrowLeft, PhoneCall, HelpCircle, BarChart2, ShieldCheck, Leaf } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const auditTypes = [
@@ -22,6 +22,7 @@ const auditTypes = [
       { title: "Cleaning & Maintenance Report", text: "Delivers a prioritised action plan to restore full system yield." },
     ],
     cta: "Book Solar Audit",
+    href: "/services/energy-audit/solar"
   },
   {
     id: "electrical",
@@ -40,6 +41,7 @@ const auditTypes = [
       { title: "Energy Saving Report", text: "Quantifies savings potential with recommended retrofit actions and ROI estimates." },
     ],
     cta: "Book Electrical Audit",
+    href: "/services/energy-audit/electrical"
   },
   {
     id: "hvac",
@@ -58,7 +60,34 @@ const auditTypes = [
       { title: "Controls & Scheduling Audit", text: "Reviews BMS/thermostat programming to eliminate unnecessary runtime." },
     ],
     cta: "Book HVAC Audit",
+    href: "/services/energy-audit/hvac"
   },
+];
+
+const auditObjectives = [
+  { title: "Identify Energy Wastage", desc: "Pinpoint where power leaks, heat radiation, or load imbalances are inflating bills." },
+  { title: "Reduce Consumption & Cost", desc: "Develop concrete load management and power factor adjustments to save money." },
+  { title: "Improve System Efficiency", desc: "Optimize motors, coils, wiring gauge, and inverter configurations for maximum efficiency." },
+  { title: "Recommend Conservation Actions", desc: "Suggest prioritized retrofitting plans with clear ROI and payback timeline estimations." },
+  { title: "Lower Environmental Impact", desc: "Help buildings and factories lower their carbon emissions and meet green building standards." }
+];
+
+const auditTypesClassification = [
+  {
+    type: "1. Preliminary (Walk-through) Audit",
+    desc: "A basic visual inspection of energy-consuming utilities to identify obvious energy-saving and conservation opportunities."
+  },
+  {
+    type: "2. Detailed Energy Audit",
+    desc: "A comprehensive analysis involving real-time measurements, diagnostic data collection, and CA-verified cost-benefit evaluation of saving measures."
+  }
+];
+
+const auditBenefits = [
+  { icon: Zap, label: "Lower Utility Bills", desc: "Reduces electricity and fuel bills by identifying and plugging leakages." },
+  { icon: ShieldCheck, label: "Increased Equipment Life", desc: "Reduces electrical heating and overloading, ensuring longer life for assets." },
+  { icon: BarChart2, label: "Operational Efficiency", desc: "Optimises phase distribution and power factor for smoother plant operations." },
+  { icon: Leaf, label: "Eco Performance & Compliance", desc: "Lowers carbon footprint and complies with national energy management regulations." }
 ];
 
 export default function EnergyAuditPage() {
@@ -68,7 +97,7 @@ export default function EnergyAuditPage() {
         badge="Energy Audit"
         title="Energy Audit &"
         titleHighlight="Inspection Services"
-        subtitle="Scientific energy diagnostics for Solar, Electrical Utilities, and HVAC systems — reducing waste, cutting bills, and extending asset life."
+        subtitle="An Energy Audit is a systematic inspection, analysis, and evaluation of how energy is used in a building, industry, or facility."
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "Energy Audit" }]}
       />
 
@@ -79,6 +108,7 @@ export default function EnergyAuditPage() {
             { label: "Solar Panel", href: "#solar" },
             { label: "Electrical Utilities", href: "#electrical" },
             { label: "HVAC", href: "#hvac" },
+            { label: "What is an Energy Audit?", href: "#about-audit" }
           ].map((tab) => (
             <a
               key={tab.href}
@@ -110,10 +140,10 @@ export default function EnergyAuditPage() {
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">{audit.desc2}</p>
               <div className="flex gap-4 mt-2">
                 <Link
-                  href="/contact"
+                  href={audit.href}
                   className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider"
                 >
-                  {audit.cta}
+                  View Full Details
                 </Link>
                 <Link
                   href="/services"
@@ -145,20 +175,75 @@ export default function EnergyAuditPage() {
                   </li>
                 ))}
               </ul>
-
-              <div className="bg-brand-light border border-brand-border/40 p-4 rounded-xl flex items-center gap-4 mt-2">
-                <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
-                  <PhoneCall className="h-4 w-4" />
-                </div>
-                <div>
-                  <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Helpline</p>
-                  <p className="text-sm font-bold text-primary">76000 78862</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
       ))}
+
+      {/* -- WHAT IS ENERGY AUDIT DEFINITION, TYPES & OBJECTIVES -- */}
+      <section id="about-audit" className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12 border-t border-brand-border/40">
+        <div className="mx-auto max-w-5xl flex flex-col gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="flex flex-col gap-6 text-left">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Health Checkup for Buildings</span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+                What is an Energy Audit?
+              </h2>
+              <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
+                An Energy Audit is a detailed study of energy consumption in a facility to identify opportunities for energy conservation and improve overall energy efficiency without affecting productivity or comfort.
+              </p>
+              <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light font-medium text-secondary">
+                In simple terms, an energy audit is like a health check-up for a building or industry, helping determine where energy is being wasted and how it can be used more efficiently.
+              </p>
+
+              <h3 className="text-lg font-bold font-display text-primary border-b pb-2 mt-4">Types of Energy Audits</h3>
+              <div className="flex flex-col gap-4">
+                {auditTypesClassification.map((item, idx) => (
+                  <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-xl shadow-sm">
+                    <h4 className="text-sm font-bold text-primary">{item.type}</h4>
+                    <p className="text-xs text-brand-muted mt-1 font-light leading-relaxed">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Objectives */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
+              <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Objectives of an Energy Audit</h3>
+              <ul className="flex flex-col gap-4">
+                {auditObjectives.map((item, idx) => (
+                  <li key={idx} className="flex gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-primary">{item.title}</h4>
+                      <p className="text-[11px] sm:text-xs text-brand-muted mt-0.5 leading-relaxed font-light">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Benefits Grid */}
+          <div className="border-t border-brand-border/40 pt-14">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Benefits</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Why Conduct an Energy Audit?</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {auditBenefits.map((item, idx) => (
+                <div key={idx} className="bg-white border border-brand-border/30 p-5 rounded-2xl shadow-sm hover:border-secondary transition-all flex flex-col items-center text-center gap-3">
+                  <div className="h-10 w-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center">
+                    <item.icon className="h-5 w-5" />
+                  </div>
+                  <h4 className="text-sm font-bold text-primary">{item.label}</h4>
+                  <p className="text-xs text-brand-muted font-light leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

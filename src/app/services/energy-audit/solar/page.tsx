@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Sun, CheckCircle2, Zap, ArrowLeft, PhoneCall } from "lucide-react";
+import { Sun, CheckCircle2, Zap, ArrowLeft, PhoneCall, Award, Info } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const whatWeInspect = [
@@ -29,7 +29,7 @@ export default function SolarAuditPage() {
         badge="Energy Audit"
         title="Solar Panel"
         titleHighlight="Inspection & Audit"
-        subtitle="Thermal imaging-based performance assessment of rooftop and ground-mounted solar PV systems — pinpointing every panel losing you money."
+        subtitle="Our Solar Panel Inspection Service ensures that your photovoltaic (PV) system operates safely, efficiently, and at its maximum energy-generating capacity."
         breadcrumbs={[
           { label: "Services", href: "/services" },
           { label: "Energy Audit", href: "/services/energy-audit" },
@@ -43,18 +43,18 @@ export default function SolarAuditPage() {
           {/* Main block */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="flex flex-col gap-6 text-left">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Infrared PV Diagnostics</span>
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">PV Performance Diagnostics</span>
               <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-                Solar Panels Degrade Silently — We Find What's Costing You
+                Maximize Return on Your Solar Investment
               </h2>
               <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-                After installation, most solar systems are never independently audited. Dust accumulation, micro-cracks from hailstorms, degraded bypass diodes, and shading from newly built structures silently reduce output by 15–30% over time — without triggering any visible alarm.
+                We perform a comprehensive inspection of solar panels, mounting structures, electrical connections, inverters, combiner boxes, cables, and protection systems to identify any defects, performance issues, or safety concerns.
               </p>
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                Classic Solution's solar audit uses FLIR infrared thermal cameras to scan each panel under load. Defective cells appear as temperature anomalies — hot cells, warm strings, and cool open-circuit panels are each a distinct signature our engineers interpret on-site.
+                The inspection includes visual assessment, electrical testing, thermal imaging (where applicable), performance evaluation, and verification of system components to detect problems such as damaged modules, loose connections, hot spots, shading, corrosion, soiling, insulation faults, and inverter malfunctions. We also assess system compliance with relevant safety and industry standards.
               </p>
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                The audit concludes with a prioritised panel-level defect register, yield loss estimate in kWh and ₹, and a corrective action plan to restore full system performance.
+                After the inspection, we provide a detailed report outlining the condition of the solar PV system, identified issues, recommended corrective actions, and maintenance requirements. This helps maximize energy production, extend system lifespan, improve safety, reduce unexpected downtime, and ensure optimal return on your solar investment.
               </p>
               <div className="flex gap-4 mt-2">
                 <Link href="/contact" className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider">

@@ -2,18 +2,37 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Search, CheckCircle2, FileText, PhoneCall, ArrowLeft, Home, Building2, HelpCircle } from "lucide-react";
+import { Search, CheckCircle2, FileText, PhoneCall, ArrowLeft, Building2, HelpCircle } from "lucide-react";
 import PageHero from "@/components/PageHero";
+
+const areasInspected = [
+  "Bedrooms", "Bathrooms", "Living Area", "Dining Area", "Alleys", "Kitchens",
+  "Balconies", "Lofts", "Servants' Quarters", "Lobby Area", "Attached Structure",
+  "Exterior (Stairs, Steps, Ramps, Walkways, Railings, Hand rails, Driveways, etc)"
+];
+
+const componentsInspected = [
+  "Walls", "Ceilings", "Floors", "Doors", "Windows", "Plumbing System",
+  "Electrical System", "Stair steps", "Stair railing", "Cabinets & Countertops",
+  "Applicable Installed Appliances", "Water Supply Line", "Exhaust Systems", "Air Conditioning Systems"
+];
+
+const reportingParameters = [
+  { title: "Material Types", desc: "Identification and review of raw materials and surface substances used in construction." },
+  { title: "Installation & Finishing", desc: "Detailed audit of construction workmanship, joints, grout, alignment, and paint finishes." },
+  { title: "Operations & Functionality", desc: "Operational testing of water lines, drainage traps, power sockets, and window alignments." },
+  { title: "General Safety", desc: "Audits for electrocution hazards, structural micro-cracks, fire safety clearances, and balustrade safety heights." }
+];
 
 const propertyTypes = [
   "Newly Completed Properties (Pre-Handover)",
   "Older & Re-sale Properties",
-  "Ancient / Historic Properties",
+  "Ancient / Historic & Heritage Properties",
   "Ongoing Construction Phase Audits",
-  "Residential Apartment Complexes",
-  "Bungalows & Independent Villas",
-  "Commercial Offices & Corporate Spaces",
-  "Retail Shops, Malls, Schools & Warehouses"
+  "Residential Apartment Complexes & Bungalows",
+  "Offices, Retails, Schools & Warehouses",
+  "Shopping Malls, Factories & Residential Projects",
+  "Banks, Bus Stands, Buildings & Attached Structures"
 ];
 
 const whoCanAvail = [
@@ -33,7 +52,7 @@ export default function ServicesHomeInspection() {
         title="Complete Home &"
         titleHighlight="Property Inspection"
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "Home Inspection" }]}
-        subtitle="A thorough 150+ point visual, non-destructive checkup of your property's ceilings, walls, flooring, electrical sockets, and plumbing traps."
+        subtitle="A thorough point-by-point visual, non-destructive checkup of your property's structure, finishes, and systems to know the health of your home."
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
@@ -44,18 +63,15 @@ export default function ServicesHomeInspection() {
             
             {/* Left Block: Narrative */}
             <div className="flex flex-col gap-6 text-left">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Technical Diagnostics</span>
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">What is Home Inspection?</span>
               <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-                150+ Checkpoints Covering Structural, Electrical, and Plumbing core elements
+                Know the Health of Your Home — Get It Inspected
               </h2>
               <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-                A Complete Home Inspection is an objective visual review of the physical structure and utility components of a property. Our inspectors examine everything from visual slab crack indicators to switchboard load imbalances.
+                Home Inspection is a non-invasive, visual examination of all accessible areas (systems & components) of a property using modern technology and specialized tools. It uses normal operating controls, is designed to describe the condition of the systems and components, identifies and reports issues, and generates software-driven reports.
               </p>
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                Unlike quick handovers, we systematically run diagnostic tests. We measure slopes of floors to ensure water flows into bathroom drain traps, scan wall boundaries for thermal moisture differences, and test power outlet polarities.
-              </p>
-              <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                All findings are logged into our proprietary software, generating a detailed digital PDF report with color photographs, highlighting issues according to risk levels (Critical, High, Medium, Low).
+                Our inspectors examine observed issues (with relevant pictures) that are deemed critical, helping you understand the real quality of finishes, structures, and lines before you commit your hard-earned savings.
               </p>
 
               <div className="flex gap-4 mt-4">
@@ -74,9 +90,8 @@ export default function ServicesHomeInspection() {
               </div>
             </div>
 
-            {/* Right Block: Checkpoints */}
+            {/* Right Block: Photo & Scope Summary */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
-              {/* Inspection Photo Grid */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
                   <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg" alt="Electrical Panel Inspection" fill className="object-cover" unoptimized />
@@ -84,27 +99,16 @@ export default function ServicesHomeInspection() {
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
                   <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Stair-Steps-360x240.jpg" alt="Stair Steps Inspection" fill className="object-cover" unoptimized />
                 </div>
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Countertops01-360x240.jpg" alt="Countertop Quality Check" fill className="object-cover" unoptimized />
-                </div>
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/outside-360x240.jpg" alt="Property Exterior Check" fill className="object-cover" unoptimized />
-                </div>
               </div>
 
-              <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Inspection Checklist Scope</h3>
+              <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Reporting Parameters</h3>
               <ul className="flex flex-col gap-4">
-                {[
-                  { title: "Wall & Ceiling Finishings", text: "Maps paint peeling, plaster hairline cracks, ceiling slopes, and window frame sealings." },
-                  { title: "Plumbing & Sanitaries", text: "Checks washbasin drainage traps, tile hollows, plumbing joint leakages, and water slope lines." },
-                  { title: "Electrical Circuits", text: "Checks socket polarity configurations, grounding lines, wiring safety, and switch panel heat loads." },
-                  { title: "Balconies & Open Spaces", text: "Audits railing safety heights, terrace slope waterproofing, and sliding door locks." }
-                ].map((item, idx) => (
+                {reportingParameters.map((item, idx) => (
                   <li key={idx} className="flex gap-3">
                     <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
                     <div>
                       <h4 className="text-sm font-bold text-primary">{item.title}</h4>
-                      <p className="text-[11px] sm:text-xs text-brand-muted mt-0.5 leading-relaxed font-light">{item.text}</p>
+                      <p className="text-[11px] sm:text-xs text-brand-muted mt-0.5 leading-relaxed font-light">{item.desc}</p>
                     </div>
                   </li>
                 ))}
@@ -116,18 +120,48 @@ export default function ServicesHomeInspection() {
                 </div>
                 <div>
                   <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Report Format</p>
-                  <p className="text-sm font-bold text-primary">PDF digital report with photos in 24-48 Hours</p>
+                  <p className="text-sm font-bold text-primary">Software-driven PDF Report with Photos</p>
                 </div>
               </div>
             </div>
 
           </div>
 
-          {/* Properties Inspected */}
+          {/* Areas Inspected */}
           <div className="border-t border-brand-border/40 pt-14">
             <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Types of Properties</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Any Kind of Property Can Be Inspected</h2>
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Inspection Scope</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Areas We Inspect</h2>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {areasInspected.map((area, idx) => (
+                <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-2xl shadow-sm text-center flex flex-col justify-center items-center min-h-[80px]">
+                  <p className="text-xs sm:text-sm font-semibold text-primary">{area}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Systems & Components */}
+          <div className="border-t border-brand-border/40 pt-14">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Detailed Checkpoints</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Systems & Components Inspected</h2>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {componentsInspected.map((comp, idx) => (
+                <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-2xl shadow-sm text-center flex flex-col justify-center items-center min-h-[80px]">
+                  <p className="text-xs sm:text-sm font-semibold text-primary">{comp}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* All Properties Inspected */}
+          <div className="border-t border-brand-border/40 pt-14">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Property Scope</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">We Inspect All Properties</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {propertyTypes.map((type, idx) => (

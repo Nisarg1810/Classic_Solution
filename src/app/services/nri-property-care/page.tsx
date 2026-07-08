@@ -2,93 +2,144 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Wrench, CheckCircle2, MapPin, PhoneCall, ArrowLeft, FileText } from "lucide-react";
+import { Wrench, CheckCircle2, PhoneCall, ArrowLeft, FileText, Shield, FileCheck, Info } from "lucide-react";
 import PageHero from "@/components/PageHero";
+
+const reraRules = [
+  "Depositing 70% of funds collected from buyers in a separate bank account (Escrow) & used strictly for the project.",
+  "Mandatory for all project builders to register with RERA before launching their projects.",
+  "Developers must upload all project details on the RERA website, including approved layout plans, timelines, costs, and sale agreement formats.",
+  "No advance (>10% of property cost) can be taken by the promoter without entering into a formal agreement for sale.",
+  "The proposed project must be developed and completed by the promoter in accordance with the sanctioned plans. Any alterations or additions require the prior consent of the allottees.",
+  "5 years free-of-cost guarantee from structural / workmanship defect or quality issue from the date of handing over possession. The promoter must rectify such defects without further charge within 30 days, or pay appropriate compensation.",
+  "Stringent penalties & penal provisions for developers, agents, and buyers for any violation of orders of Appellate Tribunals and Regulatory Authorities."
+];
+
+const nriServices = [
+  { title: "Periodic Visual Inspections", text: "Regular site visits to inspect ceiling, windows, and outer walls for structural defects or dampness signs." },
+  { title: "Plumbing Pressure & Leak Audits", text: "Verifies water supply and checks bathroom traps, drain pipes, and utility valves." },
+  { title: "Electrical Safety Inspections", text: "Checks distribution boxes and switches to verify no short circuit anomalies have occurred." },
+  { title: "Digital Progress Logs", text: "Provides complete visual progress maps with high-quality color photos sent directly via email." }
+];
 
 export default function ServicesNriCare() {
   return (
     <div className="relative w-full">
       <PageHero
         badge="Property Management"
-        title="Complete Property Care for"
-        titleHighlight="NRIs & Corporate Clients"
-        subtitle="Keep your vacant or rented properties in optimal health with our periodic visual audits and diagnostic reports."
+        title="Complete Property Care"
+        titleHighlight="for NRIs & CCCs"
+        subtitle="Providing complete Property Care and Management Services, while you are far away from it. A Single platform for your Home / Property Inspection & Management."
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "NRI Property Care" }]}
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="mx-auto max-w-5xl flex flex-col gap-16">
           
-          {/* Left Block: Narrative */}
-          <div className="flex flex-col gap-6 text-left">
-            <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Long Distance Peace of Mind</span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-              Protecting Your Asset Value While You Are Away
-            </h2>
-            <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-              Non-Resident Indians (NRIs) and corporate institutions own valuable real estate assets in Indian cities that often remain locked, vacant, or leased out for long durations without technical checkups.
-            </p>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              During this time, a minor concealed plumbing joint leak or terrace waterproofing crack can cause extensive dampness damage. Over months, this dampness ruins paint, weakens ceiling concrete, and depreciates property value heavily.
-            </p>
-            <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-              Classic Solution provides systematic **Property Care checks**. Our technical engineers visit the property periodically, run safety and moisture checks, verify key lines, and send a comprehensive visual digital log report directly to your inbox.
-            </p>
+          {/* Main Narrative Block */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            {/* Left Block: Narrative */}
+            <div className="flex flex-col gap-6 text-left">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Long Distance Peace of Mind</span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+                Protecting Your Asset Value While You Are Away
+              </h2>
+              <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
+                Non-Resident Indians (NRIs) and corporate institutions own valuable real estate assets in Indian cities that often remain locked, vacant, or leased out for long durations without technical checkups.
+              </p>
+              <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
+                During this time, a minor concealed plumbing joint leak or terrace waterproofing crack can cause extensive dampness damage. Over months, this dampness ruins paint, weakens ceiling concrete, and depreciates property value heavily.
+              </p>
+              <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
+                Classic Solution provides systematic <strong>Property Care checks</strong>. Our technical engineers visit the property periodically, run safety and moisture checks, verify key lines, and send a comprehensive visual digital log report directly to your inbox.
+              </p>
 
-            <div className="flex gap-4 mt-4">
-              <Link
-                href="/contact"
-                className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider"
-              >
-                Inquire NRI Services
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm"
-              >
-                <ArrowLeft className="h-4 w-4" /> All Services
-              </Link>
+              <div className="flex gap-4 mt-4">
+                <Link
+                  href="/contact"
+                  className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider"
+                >
+                  Contact Us for NRI Services
+                </Link>
+                <Link
+                  href="/services"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm"
+                >
+                  <ArrowLeft className="h-4 w-4" /> All Services
+                </Link>
+              </div>
             </div>
+
+            {/* Right Block: Points */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
+              {/* Property Care Photos */}
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/outside-360x240.jpg" alt="Property Exterior Care" fill className="object-cover" unoptimized />
+                </div>
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
+                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio09-360x240.jpg" alt="NRI Property Report" fill className="object-cover" unoptimized />
+                </div>
+              </div>
+
+              <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">What Services are Covered?</h3>
+              <ul className="flex flex-col gap-4">
+                {nriServices.map((item, idx) => (
+                  <li key={idx} className="flex gap-3">
+                    <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                    <div>
+                      <h4 className="text-sm font-bold text-primary">{item.title}</h4>
+                      <p className="text-[11px] sm:text-xs text-brand-muted mt-0.5 leading-relaxed font-light">{item.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="bg-brand-light border border-brand-border/40 p-4 rounded-xl flex items-center gap-4 mt-2">
+                <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
+                  <FileText className="h-4 w-4" />
+                </div>
+                <div>
+                  <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Report Format</p>
+                  <p className="text-sm font-bold text-primary">Direct digital visual emails & logs</p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          {/* Right Block: Points */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
-            {/* Property Care Photos */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/outside-360x240.jpg" alt="Property Exterior Care" fill className="object-cover" unoptimized />
-              </div>
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden">
-                <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Portfolio09-360x240.jpg" alt="NRI Property Report" fill className="object-cover" unoptimized />
+          {/* RERA Guidelines Section */}
+          <div className="border-t border-brand-border/40 pt-14 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            <div className="lg:col-span-5 flex flex-col gap-4">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">RERA Protection</span>
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary leading-tight">
+                Advantage Home Buyers: RERA, 2016
+              </h2>
+              <p className="text-xs sm:text-sm text-brand-muted leading-relaxed font-light">
+                The Real Estate (Regulation and Development) Act, 2016 gives buyers immense leverage. For NRIs investing remotely, understanding these rules ensures they can hold developers accountable for the quality of their projects.
+              </p>
+              <div className="bg-white border border-brand-border/30 rounded-2xl p-5 shadow-sm mt-2 flex items-center gap-3">
+                <Shield className="h-10 w-10 text-secondary shrink-0" />
+                <div>
+                  <h4 className="text-sm font-bold text-primary">RERA Registered Logo</h4>
+                  <p className="text-[11px] text-brand-muted mt-0.5">Always verify project registration status with state RERA boards.</p>
+                </div>
               </div>
             </div>
 
-            <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">What Services are Covered?</h3>
-            <ul className="flex flex-col gap-4">
-              {[
-                { title: "Periodic Visual Inspections", text: "Regular site visits to inspect ceiling, windows, and outer walls for structural defects or dampness signs." },
-                { title: "Plumbing Pressure & Leak Audits", text: "Verifies water supply and checks bathroom traps, drain pipes, and utility valves." },
-                { title: "Electrical Safety Inspections", text: "Checks distribution boxes and switches to verify no short circuit anomalies have occurred." },
-                { title: "Digital Progress Logs", text: "Provides complete visual progress maps with high-quality color photos sent directly via email." }
-              ].map((item, idx) => (
-                <li key={idx} className="flex gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="text-sm font-bold text-primary">{item.title}</h4>
-                    <p className="text-[11px] sm:text-xs text-brand-muted mt-0.5 leading-relaxed font-light">{item.text}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <div className="bg-brand-light border border-brand-border/40 p-4 rounded-xl flex items-center gap-4 mt-2">
-              <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
-                <FileText className="h-4 w-4" />
-              </div>
-              <div>
-                <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Report Format</p>
-                <p className="text-sm font-bold text-primary">Direct digital visual emails & logs</p>
-              </div>
+            <div className="lg:col-span-7 bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col gap-5">
+              <h3 className="text-base sm:text-lg font-bold font-display text-primary border-b pb-2 flex items-center gap-2">
+                <FileCheck className="h-5 w-5 text-secondary" /> Key Safeguards Under the RERA Act
+              </h3>
+              <ul className="flex flex-col gap-4 text-xs sm:text-sm text-brand-text">
+                {reraRules.map((rule, idx) => (
+                  <li key={idx} className="flex gap-3">
+                    <div className="h-5 w-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 text-[10px] font-bold mt-0.5">{idx + 1}</div>
+                    <p className="font-light leading-relaxed">{rule}</p>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
