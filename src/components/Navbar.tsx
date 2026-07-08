@@ -90,13 +90,13 @@ export default function Navbar() {
           <div className="flex items-center justify-between md:grid md:grid-cols-3 h-[100px]">
 
             {/* ── Logo ── */}
-            <Link href="/" className="flex items-center shrink-0 group py-1">
-              <div className="relative h-[84px] w-60">
+            <Link href="/" className="flex items-center shrink-0 group py-1 -ml-3 min-[375px]:-ml-4 md:ml-0">
+              <div className="relative h-[84px] w-48 min-[360px]:w-52 min-[400px]:w-60">
                 <Image
                   src="/logo.svg"
                   alt="Classic Solution Logo"
                   fill
-                  className="object-contain"
+                  className="object-contain object-left"
                   priority
                 />
               </div>
