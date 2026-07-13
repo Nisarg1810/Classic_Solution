@@ -11,14 +11,16 @@ import PageHero from "@/components/PageHero";
 
 const servicesList = [
   {
-    id: "value-chain",
-    title: "Serving the Real Estate Value Chain",
+    id: "serving-the-entire-real-estate-value-chain",
+    title: "Serving the Entire Real Estate Value Chain",
     icon: Building2,
-    desc: "We provide property quality and safety checks that add value to every player in the industry.",
+    desc: "Addressing the Key Pain Points of All stakeholders in the Real Estate Value Chain.",
     points: [
-      "For Buyers: Ensures transparency, pricing sanity, and safety compliance before purchase.",
-      "For Developers: Identifies quality control gaps and ensures defect-free handover audits.",
-      "For Consultants: Increases transaction speed by providing trusted, certified third-party reports."
+      "Pioneered Professional Home / Property Inspection Services into Saurashtra & Kutchh.",
+      "Inspected all types of properties: New, Existing, Old, and Heritage.",
+      "Inspected homes, offices, retail, schools, warehouses, shopping malls, factories, temples, and residential projects.",
+      "Market Validation: Over 2,000 properties inspected.",
+      "Multiple Home / Property Inspections Done for Individuals."
     ],
     color: "bg-indigo-50 text-indigo-600"
   },

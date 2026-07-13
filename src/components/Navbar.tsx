@@ -21,6 +21,7 @@ const navLinks = [
     name: "Our Services",
     href: "/services",
     dropdown: [
+      { name: "Serving the Entire Real Estate Value Chain", href: "/services/serving-the-entire-real-estate-value-chain" },
       { name: "Complete Home / Property Inspection", href: "/services/home-inspection" },
       { name: "Moisture / Damp / Leakage / Seepage Inspections (Thermal)", href: "/services/moisture-damp" },
       { name: "Electrical Inspections of a Home / Property", href: "/services/electrical" },
