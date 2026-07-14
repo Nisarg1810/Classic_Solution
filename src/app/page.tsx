@@ -30,25 +30,25 @@ const homeHighlights = [
   {
     title: "Protect your most important investment",
     desc: "A pre-purchase inspection helps uncover seepage, cracks, poor finishing, and hidden service issues before they become expensive surprises.",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/A.jpg",
+    image: "/images/home_highlights/1.jpeg",
     link: "/about#Classic Solution-india",
   },
   {
     title: "Professional Home Inspections Services",
     desc: "We visually examine accessible areas, systems, and components with specialized tools and software-driven reporting.",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Home-Inspection-Coverage-1024x485.jpg",
+    image: "/images/home_highlights/2.png",
     link: "/services/home-inspection",
   },
   {
-    title: "Win � Win for all Stake Holders",
+    title: "Win - Win for all Stake Holders",
     desc: "Buyers, sellers, builders, agents, and lenders all make better decisions when the property's real condition is known.",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/10/For-Home-Owner-Buyer.jpg",
+    image: "/images/home_highlights/3.png",
     link: "/services/stakeholder-benefits",
   },
   {
     title: "Advantage RERA",
     desc: "RERA improves transparency and accountability, and inspections support defect documentation and due diligence.",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/10/For-Real-Estate-Developer-1.jpg",
+    image: "/images/home_highlights/istockphoto-682015296-612x612 1.png",
     link: "/rera",
   },
   {
@@ -60,7 +60,7 @@ const homeHighlights = [
   {
     title: "NRI Property Care",
     desc: "We help NRIs monitor, maintain, and protect their properties in India with periodic inspection reports, so you stay informed no matter where you are.",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/02/NRI-Property-Care-1.jpg",
+    image: "/images/home_highlights/istockphoto-1190949625-612x612 1.png",
     link: "/services/nri-property-care",
   },
 ];
