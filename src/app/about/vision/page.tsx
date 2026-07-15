@@ -58,8 +58,7 @@ export default function CompanyVisionPage() {
   return (
     <div className="relative w-full">
       <PageHero
-        title="Our Vision &"
-        titleHighlight="Core Values"
+        title="Our Vision"
         subtitle="At Classic Solution, our vision is to become India's most trusted and technologically advanced home and property inspection company, setting new standards for quality, safety, and innovation."
         breadcrumbs={[{ label: "About", href: "/about" }, { label: "Company Vision" }]}
       />
