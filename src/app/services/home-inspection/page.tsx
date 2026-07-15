@@ -31,12 +31,7 @@ export default function ServicesHomeInspection() {
       {/* Main Content Area */}
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-10">
         
-        {/* Section 1 Title styled as in the PDF */}
-        <div className="mb-6 text-left">
-          <h2 className="text-xl sm:text-2xl font-bold text-primary font-display flex items-center gap-2">
-            <span className="text-secondary font-extrabold">1.</span> Complete Home/Property Inspection:
-          </h2>
-        </div>
+
 
         {/* Hero Banner Image */}
         <div className="relative w-full rounded-2xl overflow-hidden shadow-premium mb-8 border border-brand-border/20">
@@ -123,7 +118,7 @@ export default function ServicesHomeInspection() {
                     src={src}
                     alt={`Inspection Tool ${idx + 1}`}
                     fill
-                    className="object-cover p-1"
+                    className="object-cover"
                     unoptimized
                   />
                 </div>

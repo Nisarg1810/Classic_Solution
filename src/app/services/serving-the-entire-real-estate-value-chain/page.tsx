@@ -32,15 +32,7 @@ export default function ServingRealEstateValueChain() {
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-10">
         
-        {/* Title Header */}
-        <div className="mb-8 text-left">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary font-display leading-tight">
-            Serving the Entire Real Estate Value Chain
-          </h2>
-          <p className="text-sm font-semibold text-brand-muted tracking-wide mt-2">
-            Professional Home / Property Inspection Services
-          </p>
-        </div>
+
 
         {/* 1. First Banner Image (Saurashtra & Kutchh First Time) */}
         <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-10 bg-white">

@@ -71,15 +71,7 @@ export default function ServicesMoistureDamp() {
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-10">
         
-        {/* Title and Subtitle matching the reference page header */}
-        <div className="mb-8 text-left">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary font-display leading-tight">
-            Moisture/ Damp / Seepage / Leakage Inspections with Solutions through Thermal Imaging Technology
-          </h2>
-          <p className="text-sm sm:text-base font-semibold text-brand-muted tracking-wide mt-2">
-            For Moisture / Dampness / Leakage / Seepage Assessment
-          </p>
-        </div>
+
 
         {/* 1. Hero Banner Image */}
         <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
