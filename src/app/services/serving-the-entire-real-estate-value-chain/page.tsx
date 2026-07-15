@@ -43,24 +43,26 @@ export default function ServingRealEstateValueChain() {
         </div>
 
         {/* 1. First Banner Image (Saurashtra & Kutchh First Time) */}
-        <div className="relative w-full aspect-[22/9] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-10 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-10 bg-white">
           <Image
             src="/images/value_chain_1.png"
             alt="Pioneered Professional Home / Property Inspection Services into Saurashtra & Kutchh"
-            fill
-            className="object-contain"
+            width={5687}
+            height={1506}
+            className="w-full h-auto"
             priority
             unoptimized
           />
         </div>
 
         {/* 2. Second Banner Image (Full Integration in Real Estate Value Chain) */}
-        <div className="relative w-full aspect-[22/11] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-10 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-10 bg-white">
           <Image
             src="/images/value_chain_2.png"
             alt="Full Integration in Real Estate Value Chain Flowchart"
-            fill
-            className="object-contain"
+            width={4372}
+            height={2248}
+            className="w-full h-auto"
             unoptimized
           />
         </div>

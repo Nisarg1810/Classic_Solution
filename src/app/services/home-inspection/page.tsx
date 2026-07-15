@@ -97,13 +97,13 @@ export default function ServicesHomeInspection() {
 
         {/* Cutaway House Image */}
         <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm mb-12 text-center">
-          <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
+          <div className="w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
             <Image
               src="/images/services/2/Group 272 (1).png"
               alt="Home Inspection Cutaway Diagram"
-              width={1600}
-              height={1200}
-              className="w-full h-auto object-contain"
+              width={5364}
+              height={3936}
+              className="w-full h-auto"
               unoptimized
             />
           </div>
@@ -176,13 +176,13 @@ export default function ServicesHomeInspection() {
 
         {/* 3D Issues Pyramid Image */}
         <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm mb-12 text-center">
-          <div className="relative w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
+          <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
             <Image
               src="/images/services/2/Group 289.png"
               alt="3D of Issues Methodology"
-              width={500}
-              height={370}
-              className="w-full h-auto object-contain"
+              width={1332}
+              height={916}
+              className="w-full h-auto"
               unoptimized
             />
           </div>

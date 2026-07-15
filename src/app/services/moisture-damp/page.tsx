@@ -82,12 +82,13 @@ export default function ServicesMoistureDamp() {
         </div>
 
         {/* 1. Hero Banner Image */}
-        <div className="relative w-full aspect-[22/9] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
           <Image
             src="/images/moisture_1.png"
             alt="Moisture damp banner"
-            fill
-            className="object-contain"
+            width={4052}
+            height={1565}
+            className="w-full h-auto"
             priority
             unoptimized
           />
@@ -105,12 +106,13 @@ export default function ServicesMoistureDamp() {
         </div>
 
         {/* 2. Damage Graphic Banner */}
-        <div className="relative w-full aspect-[22/9] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
           <Image
             src="/images/moisture_2.png"
             alt="Causes severe damage to property diagram"
-            fill
-            className="object-contain"
+            width={3566}
+            height={1655}
+            className="w-full h-auto"
             unoptimized
           />
         </div>
@@ -123,12 +125,13 @@ export default function ServicesMoistureDamp() {
         </div>
 
         {/* 3. Demon/Health Graphic Banner */}
-        <div className="relative w-full aspect-[22/9] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
           <Image
             src="/images/moisture_3.png"
             alt="Moisture a silent demon"
-            fill
-            className="object-contain"
+            width={4124}
+            height={1136}
+            className="w-full h-auto"
             unoptimized
           />
         </div>
@@ -162,12 +165,13 @@ export default function ServicesMoistureDamp() {
         </div>
 
         {/* 5. Stethoscope Banner Image */}
-        <div className="relative w-full aspect-[22/9] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
           <Image
             src="/images/moisture_4.png"
             alt="Property doctor stethoscope diagram"
-            fill
-            className="object-contain"
+            width={4062}
+            height={1627}
+            className="w-full h-auto"
             unoptimized
           />
         </div>
@@ -217,12 +221,13 @@ export default function ServicesMoistureDamp() {
         </section>
 
         {/* 6. Skyline Skyline Banner Image */}
-        <div className="relative w-full aspect-[22/9] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-6 bg-white">
           <Image
             src="/images/moisture_5.png"
             alt="Skyline property coverage diagram"
-            fill
-            className="object-contain"
+            width={4516}
+            height={1410}
+            className="w-full h-auto"
             unoptimized
           />
         </div>
@@ -315,12 +320,13 @@ export default function ServicesMoistureDamp() {
         </section>
 
         {/* 7. Footer Blog/Family Banner Image (Replaced with Group 270 logo) */}
-        <div className="relative w-full aspect-[22/9] rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-12 bg-white">
+        <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-12 bg-white">
           <Image
             src="/images/moisture_group_270.png"
             alt="Dream to make each home safe and healthy family banner logo"
-            fill
-            className="object-contain"
+            width={4153}
+            height={1671}
+            className="w-full h-auto"
             unoptimized
           />
         </div>
