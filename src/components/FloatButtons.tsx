@@ -70,19 +70,14 @@ export default function FloatButtons() {
         </AnimatePresence>
 
         {/* Inquire Now Button */}
-        <motion.a
+        <a
           href="/contact"
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.5, type: "spring", stiffness: 260, damping: 20 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
           className="flex items-center gap-2 bg-secondary hover:bg-secondary-light text-white font-bold px-4 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border border-white/10"
           aria-label="Inquire Now"
         >
           <Mail className="h-4 w-4" />
           <span className="text-xs uppercase tracking-wider">Inquire Now</span>
-        </motion.a>
+        </a>
       </div>
     </>
   );
