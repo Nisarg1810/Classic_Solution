@@ -191,8 +191,7 @@ export default function Footer() {
             </h3>
             <div className="flex flex-col gap-2 text-sm text-[#666]">
               {[
-                { day: "Monday – Friday", time: "9:00 AM – 6:00 PM" },
-                { day: "Saturday", time: "9:00 AM – 2:00 PM" },
+                { day: "Monday – Saturday", time: "9:30 AM – 7:30 PM" },
                 { day: "Sunday", time: "Closed" },
               ].map((row) => (
                 <div key={row.day} className="flex justify-between items-center">
