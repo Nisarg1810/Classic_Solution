@@ -13,8 +13,8 @@ const navLinks = [
     name: "About",
     href: "/about",
     dropdown: [
-      { name: "Company Details", href: "/about" },
       { name: "Company Vision", href: "/about/vision" },
+      { name: "Company Details", href: "/about" },
     ],
   },
   {
@@ -87,7 +87,7 @@ export default function Navbar() {
         }`}
       >
         {/* Main Navigation Row */}
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between md:grid md:grid-cols-3 h-[100px]">
 
             {/* ── Logo ── */}
