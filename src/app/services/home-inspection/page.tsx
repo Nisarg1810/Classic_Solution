@@ -132,58 +132,60 @@ export default function ServicesHomeInspection() {
           </div>
         </section>
 
-        {/* Parameters & Scope */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-left">
-          {/* Condition Details parameters */}
-          <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm">
-            <h3 className="text-lg sm:text-xl font-bold text-primary font-display mb-4 border-b border-brand-border pb-3">
-              Reporting Parameters - Condition Details:
-            </h3>
-            <ul className="space-y-3">
-              {["Material types", "Installation & Finishing", "Operations & Functionality", "General safe"].map((param, idx) => (
-                <li key={idx} className="flex items-center gap-2.5 text-sm sm:text-base text-brand-text font-light">
-                  <CheckCircle className="h-5 w-5 text-secondary shrink-0" />
-                  <span>{param}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Properties scope */}
-          <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm">
-            <h3 className="text-lg sm:text-xl font-bold text-primary font-display mb-4 border-b border-brand-border pb-3">
-              All Properties Inspected
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-2.5 text-sm sm:text-base text-brand-text font-light">
-                <CheckCircle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-semibold text-primary">Categories: </span>
-                  New/ Existing/ Old/ Heritage
-                </div>
+        {/* Reporting Parameters */}
+        <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm mb-8 text-left">
+          <h3 className="text-lg sm:text-xl font-bold text-primary font-display mb-4 border-b border-brand-border pb-3">
+            Reporting Parameters - Condition Details:
+          </h3>
+          <ul className="space-y-3">
+            {["Material types", "Installation & Finishing", "Operations & Functionality", "General safe"].map((param, idx) => (
+              <li key={idx} className="flex items-center gap-2.5 text-sm sm:text-base text-brand-text font-light">
+                <CheckCircle className="h-5 w-5 text-secondary shrink-0" />
+                <span>{param}</span>
               </li>
-              <li className="flex items-start gap-2.5 text-sm sm:text-base text-brand-text font-light">
-                <CheckCircle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-semibold text-primary">Types: </span>
-                  Homes, Office, Retails, Schools, Warehouse, Shopping Mall, Retail, Factories, Residential projects, Bank, Bust stand, Building, Bungalow etc.
-                </div>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
 
-        {/* 3D Issues Pyramid Image */}
-        <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm mb-12 text-center">
-          <div className="w-full max-w-md mx-auto rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
-            <Image
-              src="/images/services/2/Group 289.png"
-              alt="3D of Issues Methodology"
-              width={1332}
-              height={916}
-              className="w-full h-auto"
-              unoptimized
-            />
+        {/* Scope and Image Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-stretch">
+          {/* Properties scope */}
+          <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col justify-between text-left">
+            <div>
+              <h3 className="text-lg sm:text-xl font-bold text-primary font-display mb-4 border-b border-brand-border pb-3">
+                All Properties Inspected
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-2.5 text-sm sm:text-base text-brand-text font-light">
+                  <CheckCircle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-primary">Categories: </span>
+                    New/ Existing/ Old/ Heritage
+                  </div>
+                </li>
+                <li className="flex items-start gap-2.5 text-sm sm:text-base text-brand-text font-light">
+                  <CheckCircle className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-semibold text-primary">Types: </span>
+                    Homes, Office, Retails, Schools, Warehouse, Shopping Mall, Retail, Factories, Residential projects, Bank, Bust stand, Building, Bungalow etc.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 3D Issues Pyramid Image */}
+          <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm flex items-center justify-center">
+            <div className="w-full max-w-md rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
+              <Image
+                src="/images/services/2/Group 289.png"
+                alt="3D of Issues Methodology"
+                width={1332}
+                height={916}
+                className="w-full h-auto"
+                unoptimized
+              />
+            </div>
           </div>
         </div>
 
