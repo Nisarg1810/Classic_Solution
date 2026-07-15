@@ -48,19 +48,19 @@ const homeHighlights = [
   {
     title: "Advantage RERA",
     desc: "RERA improves transparency and accountability, and inspections support defect documentation and due diligence.",
-    image: "/images/home_highlights/istockphoto-682015296-612x612 1.png",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/01/07-540x378.jpg",
     link: "/rera",
   },
   {
     title: "Company Vision",
     desc: "To make property buying safer and more transparent across India through trained inspectors and consistent quality standards.",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2026/02/MACJ-Future-Cities-02-968x1024.png",
+    image: "/images/home_highlights/istockphoto-1190949625-612x612 1.png",
     link: "/about",
   },
   {
     title: "NRI Property Care",
     desc: "We help NRIs monitor, maintain, and protect their properties in India with periodic inspection reports, so you stay informed no matter where you are.",
-    image: "/images/home_highlights/istockphoto-1190949625-612x612 1.png",
+    image: "/images/home_highlights/istockphoto-682015296-612x612 1.png",
     link: "/services/nri-property-care",
   },
 ];
@@ -246,7 +246,7 @@ export default function Home() {
                     unoptimized
                   />
                 </div>
-                <div className="p-3 sm:p-4 flex flex-col flex-1">
+                <div className="p-3 sm:p-4 flex flex-col flex-1 items-center text-center">
                   <h3 className="text-sm font-bold font-display text-primary mb-2 leading-snug">
                     {item.title}
                   </h3>
@@ -255,7 +255,7 @@ export default function Home() {
                   </p>
                 <Link
                   href={item.link}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary uppercase tracking-wider group-hover:text-primary transition-colors mt-auto"
+                  className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-secondary uppercase tracking-wider group-hover:text-primary transition-colors mt-auto"
                 >
                   <span>Read Details</span>
                   <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
@@ -387,7 +387,7 @@ export default function Home() {
           </h2>
           <div className="flex flex-col gap-4 text-sm sm:text-base md:text-lg text-brand-text leading-relaxed font-normal text-center max-w-lg mx-auto">
             <p>
-              International Association of Certified Home Inspectors(InterNACHI), is the world�s largest inspection trade association. Based in the United States, InterNACHI is both non-profit and federally tax-exempt, and operates in 65 different countries and nine languages. InterNACHI is the inspection industry's largest provider of education and training.
+              International Association of Certified Home Inspectors(InterNACHI), is the world's largest inspection trade association. Based in the United States, InterNACHI is both non-profit and federally tax-exempt, and operates in 65 different countries and nine languages. InterNACHI is the inspection industry's largest provider of education and training.
             </p>
             <p className="font-semibold text-secondary text-base sm:text-lg md:text-xl">
               We are the proud member of InterNACHI...
