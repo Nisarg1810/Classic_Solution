@@ -13,7 +13,7 @@ const contactDetails = [
     label: "National Helpline",
     value: "76000 78862",
     href: "tel:+917600078862",
-    sub: "Mon-Sat, 10 AM – 6 PM",
+    sub: "Mon-Sat, 9:30 AM – 7:30 PM",
   },
   {
     icon: Phone,
@@ -32,7 +32,7 @@ const contactDetails = [
   {
     icon: Clock,
     label: "Working Hours",
-    value: "Mon – Sat: 10:00 AM – 6:00 PM",
+    value: "Mon – Sat: 9:30 AM – 7:30 PM",
     href: null,
     sub: "Sunday: Closed",
   },
@@ -154,15 +154,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* ── PAN INDIA SERVICE GRID NOTE ── */}
-      <section className="py-12 bg-primary px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-5xl text-center">
-          <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white mb-3">PAN India Franchise Presence</h2>
-          <p className="text-white/65 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
-            Classic Solution operates across major Indian metropolitan areas including Kolkata, Mumbai, Pune, Bengaluru, and Gurgaon. Get in touch to schedule a technician visit at your project site.
-          </p>
-        </div>
-      </section>
+
     </div>
   );
 }
