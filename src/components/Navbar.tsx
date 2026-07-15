@@ -21,17 +21,17 @@ const navLinks = [
     name: "Our Services",
     href: "/services",
     dropdown: [
-      { name: "1. Serving the Entire Real Estate Value Chain", href: "/services/serving-the-entire-real-estate-value-chain" },
-      { name: "2. Complete Home / Property Inspection", href: "/services/home-inspection" },
-      { name: "3. Moisture/ Damp / Leakage / Seepage Inspections with Solutions through Thermal Imaging Technology", href: "/services/moisture-damp" },
-      { name: "4. Electrical Inspections of a Home / Property", href: "/services/electrical" },
-      { name: "5. Complete Property Care for NRIs / CCCs", href: "/services/nri-property-care" },
-      { name: "6. Home Inspection: Win – Win for all the Stake Holders", href: "/services/stakeholder-benefits" },
-      { name: "7. Construction Finishing Inspection for Real Estate Developers", href: "/services/construction-finishing" },
-      { name: "8. HVAC Inspection", href: "/services/energy-audit/hvac" },
-      { name: "9. Ground Penetrating Radar (GPR) Services", href: "/services/gpr" },
-      { name: "10. Energy audit: Solar Panel Inspection", href: "/services/energy-audit/solar" },
-      { name: "11. Energy audit: Electrical Utilities", href: "/services/energy-audit/electrical" },
+      { name: "Serving the Entire Real Estate Value Chain", href: "/services/serving-the-entire-real-estate-value-chain" },
+      { name: "Complete Home / Property Inspection", href: "/services/home-inspection" },
+      { name: "Moisture/ Damp / Leakage / Seepage Inspections with Solutions through Thermal Imaging Technology", href: "/services/moisture-damp" },
+      { name: "Electrical Inspections of a Home / Property", href: "/services/electrical" },
+      { name: "Complete Property Care for NRIs / CCCs", href: "/services/nri-property-care" },
+      { name: "Home Inspection: Win – Win for all the Stake Holders", href: "/services/stakeholder-benefits" },
+      { name: "Construction Finishing Inspection for Real Estate Developers", href: "/services/construction-finishing" },
+      { name: "HVAC Inspection", href: "/services/energy-audit/hvac" },
+      { name: "Ground Penetrating Radar (GPR) Services", href: "/services/gpr" },
+      { name: "Energy audit: Solar Panel Inspection", href: "/services/energy-audit/solar" },
+      { name: "Energy audit: Electrical Utilities", href: "/services/energy-audit/electrical" },
     ],
   },
   {
@@ -150,13 +150,15 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 8, scale: 0.97 }}
                             transition={{ duration: 0.18 }}
-                            className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-brand-border/30 py-2 z-50"
+                            className={`absolute top-full z-50 bg-white rounded-xl shadow-xl border border-brand-border/30 py-1.5 ${
+                              link.name === "Our Services" ? "left-1/2 -translate-x-1/2 mt-2 w-[420px]" : "left-0 mt-2 w-80"
+                            }`}
                           >
                             {link.dropdown.map((item) => (
                               <Link
                                 key={item.name}
                                 href={item.href}
-                                className="block px-4 py-2.5 text-sm font-medium text-brand-text hover:text-secondary hover:bg-brand-light transition-colors"
+                                className="block px-4 py-1.5 text-xs font-semibold text-brand-text hover:text-secondary hover:bg-brand-light transition-colors leading-relaxed"
                               >
                                 {item.name}
                               </Link>
