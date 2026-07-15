@@ -11,7 +11,6 @@ const toolImages = [
   "/images/services/2/1/Group 281.png",
   "/images/services/2/1/Group 282.png",
   "/images/services/2/1/Group 283.png",
-  "/images/services/2/1/Group 284.png",
   "/images/services/2/1/Group 285.png",
   "/images/services/2/1/Group 287.png",
   "/images/services/2/1/Group 288.png",
@@ -115,8 +114,8 @@ export default function ServicesHomeInspection() {
             Speciality Home Inspection Tools & Technologies
           </h3>
 
-          {/* 3x3 Circular Tools Grid */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-xl mx-auto mb-4">
+          {/* 2x4 Circular Tools Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-lg md:max-w-2xl mx-auto mb-4">
             {toolImages.map((src, idx) => (
               <div key={idx} className="flex justify-center">
                 <div className="relative w-20 h-20 sm:w-28 sm:h-28 rounded-full overflow-hidden border-2 border-brand-border/40 bg-brand-light shadow-sm hover:scale-105 hover:border-secondary transition-all duration-300">
