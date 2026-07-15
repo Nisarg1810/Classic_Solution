@@ -421,44 +421,17 @@ export default function Home() {
       <ClientLogos />
 
       {/* -- 11. CTA SECTION -- */}
-      <section className="py-14 sm:py-20 bg-primary px-6 sm:px-8 lg:px-12 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(211,17,69,0.15),transparent_60%)] pointer-events-none" />
-        <div className="mx-auto max-w-5xl relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
-          <div className="text-white max-w-xl">
-            <span className="text-secondary font-bold tracking-widest uppercase text-xs sm:text-sm">Get Started Today</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold font-display leading-tight mt-2">
-              Book Your Property Health Inspection
-            </h2>
-            <p className="text-sm sm:text-base text-white/65 leading-relaxed font-light mt-4 max-w-md">
-              Protect your home from seepage, moisture damages, electrical failures, and building safety risks. Get in touch with our certified engineers today.
-            </p>
-            <a
-              href="tel:+917600078862"
-              className="flex items-center gap-4 bg-white/10 hover:bg-white/15 border border-white/25 p-4 rounded-2xl w-fit transition-all duration-300 group mt-6"
-            >
-              <div className="h-12 w-12 rounded-xl bg-secondary flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                <PhoneCall className="h-5 w-5 text-white" />
-              </div>
-              <div>
-                <p className="text-[10px] text-white/60 uppercase font-bold tracking-wider">National Helpline</p>
-                <p className="text-lg sm:text-xl font-extrabold font-display text-white tracking-tight">76000 78862</p>
-              </div>
-            </a>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="px-10 py-4 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-center"
-            >
-              Book Inspection
-            </Link>
-            <Link
-              href="/services"
-              className="px-10 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-full border border-white/30 transition-all duration-300 text-center"
-            >
-              View Services
-            </Link>
-          </div>
+      <section className="py-12 sm:py-16 bg-primary px-6 relative overflow-hidden">
+        <div className="mx-auto max-w-3xl text-center relative z-10 flex flex-col items-center gap-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display text-white leading-tight">
+            Book Your Property Health Inspection
+          </h2>
+          <Link
+            href="/contact"
+            className="mt-2 px-8 py-3.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-center text-xs uppercase tracking-wider"
+          >
+            Book Inspection
+          </Link>
         </div>
       </section>
 
