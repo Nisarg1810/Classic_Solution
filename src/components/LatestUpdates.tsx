@@ -2,25 +2,11 @@
 
 const categories = [
   {
-    label: "Knowledge Series",
-    date: "August 11, 2020",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2022/08/KS-Sealant-Around-Sink-Installation.jpg",
-    title: "Check the sealant around sink installation",
-    href: "/resources#knowledge-series",
-  },
-  {
     label: "Blogs",
     date: "February 12, 2022",
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2022/02/How-Home-Inspection-solves-the-problems-of-Waterproofing-Companies-600x400-1.jpg",
     title: "How Home Inspection solves the problems of Waterproofing Companies?",
     href: "/resources#blogs",
-  },
-  {
-    label: "News",
-    date: "November 25, 2020",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2020/11/Certificate-of-Recognition-Startup-India.jpg",
-    title: "Certificate of Recognition - Startup India",
-    href: "/news",
   },
   {
     label: "Case Studies",
@@ -30,17 +16,10 @@ const categories = [
     href: "/resources#case-studies",
   },
   {
-    label: "RERA Updates",
-    date: "September 13, 2025",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/RERA01-360x240.jpg",
-    title: "About Real Estate (Regulation and Development) Act, 2016 [RERA]",
-    href: "/rera",
-  },
-  {
-    label: "Home Inspection News",
-    date: "January 24, 2018",
-    image: "https://macj-abuyerschoice.com/wp-content/uploads/2018/01/First-Board-Meeting-Home-Inspection-Association-of-India.jpg",
-    title: 'First Board Meeting of "HOME INSPECTION ASSOCIATION OF INDIA"',
+    label: "News",
+    date: "November 25, 2020",
+    image: "https://macj-abuyerschoice.com/wp-content/uploads/2020/11/Certificate-of-Recognition-Startup-India.jpg",
+    title: "Certificate of Recognition - Startup India",
     href: "/news",
   },
 ];
