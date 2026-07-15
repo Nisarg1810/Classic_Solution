@@ -28,7 +28,7 @@ export default function ServicesNriCare() {
       <PageHero
         badge="Property Management"
         title="Complete Property Care"
-        titleHighlight="for NRIs & CCCs"
+        titleHighlight="for NRIs / CCCs"
         subtitle="Providing complete Property Care and Management Services, while you are far away from it. A Single platform for your Home / Property Inspection & Management."
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "NRI Property Care" }]}
       />

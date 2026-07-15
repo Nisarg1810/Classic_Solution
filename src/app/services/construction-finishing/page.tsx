@@ -78,8 +78,8 @@ export default function ServicesConstructionFinishing() {
     <div className="relative w-full">
       <PageHero
         badge="Developer Quality Checks"
-        title="Construction Finishing &"
-        titleHighlight="Win-Win Stakeholders Page"
+        title="Construction Finishing Inspection"
+        titleHighlight="for Real Estate Developers"
         subtitle="Third-party quality audits for real estate developers and independent property inspections that create a win-win scenario across the entire real estate value chain."
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "Construction Finishing" }]}
       />

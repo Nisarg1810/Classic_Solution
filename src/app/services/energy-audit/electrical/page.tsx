@@ -28,8 +28,8 @@ export default function ElectricalAuditPage() {
     <div className="relative w-full">
       <PageHero
         badge="Energy Audit"
-        title="Electrical Utilities"
-        titleHighlight="Energy Audit"
+        title="Energy audit:"
+        titleHighlight="Electrical Utilities"
         subtitle="Scientific load analysis and power quality assessment — identifying waste, reducing bills, and ensuring electrical safety across residential, commercial, and industrial properties."
         breadcrumbs={[
           { label: "Services", href: "/services" },

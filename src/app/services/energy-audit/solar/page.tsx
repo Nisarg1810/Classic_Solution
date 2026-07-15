@@ -27,8 +27,8 @@ export default function SolarAuditPage() {
     <div className="relative w-full">
       <PageHero
         badge="Energy Audit"
-        title="Solar Panel"
-        titleHighlight="Inspection & Audit"
+        title="Energy audit:"
+        titleHighlight="Solar Panel Inspection"
         subtitle="Our Solar Panel Inspection Service ensures that your photovoltaic (PV) system operates safely, efficiently, and at its maximum energy-generating capacity."
         breadcrumbs={[
           { label: "Services", href: "/services" },

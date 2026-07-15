@@ -49,7 +49,7 @@ export default function GPRPage() {
       <PageHero
         badge="Non-Destructive Testing"
         title="Ground Penetrating Radar"
-        titleHighlight="(GPR) Service"
+        titleHighlight="(GPR) Services"
         subtitle="Accurate Subsurface Imaging to Protect Your Project, Budget, and Team."
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "GPR Services" }]}
       />

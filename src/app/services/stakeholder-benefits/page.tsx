@@ -9,8 +9,8 @@ export default function ServicesStakeholders() {
     <div className="relative w-full">
       <PageHero
         badge="Property Synergy"
-        title="Home Inspection: Win-Win"
-        titleHighlight="for all Stakeholders"
+        title="Home Inspection: Win – Win"
+        titleHighlight="for all the Stake Holders"
         subtitle="Learn how independent property checkups add value, create trust, and protect investments for buyers, developers, and realtors."
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "Stakeholder Benefits" }]}
       />

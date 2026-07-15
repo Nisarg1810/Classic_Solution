@@ -53,8 +53,8 @@ export default function ServicesMoistureDamp() {
       {/* Page Hero */}
       <PageHero
         badge="Seepage Diagnostics"
-        title="Moisture, Dampness & Seepage"
-        titleHighlight="Diagnostics via Infrared"
+        title="Moisture/ Damp / Leakage / Seepage Inspections with Solutions through"
+        titleHighlight="Thermal Imaging Technology"
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "Moisture & Damp" }]}
         subtitle="Flir infrared thermography and pinless moisture mapping to find the root source of dampness."
       />

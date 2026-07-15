@@ -28,8 +28,7 @@ export default function HVACAuditPage() {
     <div className="relative w-full">
       <PageHero
         badge="Energy Audit"
-        title="HVAC System"
-        titleHighlight="Inspection & Audit"
+        title="HVAC Inspection"
         subtitle="Comprehensive inspection of air conditioning and ventilation systems — improving cooling efficiency, reducing energy bills, and extending equipment lifespan."
         breadcrumbs={[
           { label: "Services", href: "/services" },

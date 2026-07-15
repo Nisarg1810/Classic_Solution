@@ -22,7 +22,7 @@ export default function ServicesHomeInspection() {
       {/* Page Hero */}
       <PageHero
         badge="Service Details"
-        title="Complete Home &"
+        title="Complete Home /"
         titleHighlight="Property Inspection"
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "Home Inspection" }]}
         subtitle="A thorough point-by-point visual and non-destructive quality checkup of your property's structure, systems, and finishes."
