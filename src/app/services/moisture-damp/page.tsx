@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Home } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const methodology = {
@@ -34,10 +34,10 @@ const symptoms = [
 ];
 
 const circularSymptoms = [
-  { name: "Mold", img: "https://macj-abuyerschoice.com/wp-content/uploads/2017/12/symptoms01.png" },
-  { name: "Woodwork Deterioration", img: "https://macj-abuyerschoice.com/wp-content/uploads/2017/12/symptoms02.png" },
-  { name: "Dark Patches in Walls", img: "https://macj-abuyerschoice.com/wp-content/uploads/2017/12/symptoms03.png" },
-  { name: "Collapsed False Ceiling", img: "https://macj-abuyerschoice.com/wp-content/uploads/2017/12/symptoms04.png" }
+  { name: "Mold", img: "/images/moisture_symptom_1.png" },
+  { name: "Woodwork Deterioration", img: "/images/moisture_symptom_2.png" },
+  { name: "Dark Patches in Walls", img: "/images/moisture_symptom_3.png" },
+  { name: "Collapsed False Ceiling", img: "/images/moisture_symptom_4.png" }
 ];
 
 const deliverables = [
@@ -240,30 +240,46 @@ export default function ServicesMoistureDamp() {
             Common Symptoms
           </h3>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Checklist */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {symptoms.map((sym, idx) => (
-                <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-brand-text font-light">
-                  <span className="text-red-500 font-bold">•</span>
+          {/* Checklist in 3 columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-y-3 gap-x-8 mb-8">
+            <div className="flex flex-col gap-3">
+              {symptoms.slice(0, 3).map((sym, idx) => (
+                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-brand-text font-light">
+                  <Home className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
                   <span>{sym}</span>
-                </li>
-              ))}
-            </ul>
-
-            {/* Circular previews */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 justify-center">
-              {circularSymptoms.map((item, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-1.5">
-                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border border-brand-border/40 shadow-sm bg-white">
-                    <Image src={item.img} alt={item.name} fill className="object-cover" unoptimized />
-                  </div>
-                  <span className="text-[10px] sm:text-xs font-semibold text-primary text-center leading-tight">
-                    {item.name}
-                  </span>
                 </div>
               ))}
             </div>
+            <div className="flex flex-col gap-3">
+              {symptoms.slice(3, 6).map((sym, idx) => (
+                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-brand-text font-light">
+                  <Home className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                  <span>{sym}</span>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3">
+              {symptoms.slice(6, 9).map((sym, idx) => (
+                <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-brand-text font-light">
+                  <Home className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                  <span>{sym}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Circular previews below checklist */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-brand-border/20 justify-center">
+            {circularSymptoms.map((item, idx) => (
+              <div key={idx} className="flex flex-col items-center gap-3">
+                <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border border-brand-border/40 shadow-sm bg-white">
+                  <Image src={item.img} alt={item.name} fill className="object-cover" unoptimized />
+                </div>
+                <span className="text-xs sm:text-sm font-semibold text-primary text-center leading-tight">
+                  {item.name}
+                </span>
+              </div>
+            ))}
           </div>
         </section>
 
