@@ -173,7 +173,7 @@ export default function ServicesMoistureDamp() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* 3 Ts */}
             <div className="p-4 bg-brand-light rounded-xl border border-brand-border/20">
-              <h4 className="text-sm font-bold text-primary mb-3">We use our <b>3 T</b>s</h4>
+              <h4 className="text-sm font-bold text-red-600 mb-3">We use our <b>3 T</b>s</h4>
               <ul className="space-y-2 text-xs sm:text-sm text-brand-muted font-light">
                 {methodology.ts.map((t, i) => (
                   <li key={i} className="flex items-center gap-1.5">
@@ -186,7 +186,7 @@ export default function ServicesMoistureDamp() {
 
             {/* 3 Ds */}
             <div className="p-4 bg-brand-light rounded-xl border border-brand-border/20">
-              <h4 className="text-sm font-bold text-primary mb-3">To do the <b>3 D</b>s</h4>
+              <h4 className="text-sm font-bold text-red-600 mb-3">To do the <b>3 D</b>s</h4>
               <ul className="space-y-2 text-xs sm:text-sm text-brand-muted font-light">
                 {methodology.ds.map((d, i) => (
                   <li key={i} className="flex items-center gap-1.5">
@@ -199,7 +199,7 @@ export default function ServicesMoistureDamp() {
 
             {/* 3 Ls */}
             <div className="p-4 bg-brand-light rounded-xl border border-brand-border/20">
-              <h4 className="text-sm font-bold text-primary mb-3">Resulting in <b>3 L</b>s</h4>
+              <h4 className="text-sm font-bold text-red-600 mb-3">Resulting in <b>3 L</b>s</h4>
               <ul className="space-y-2 text-xs sm:text-sm text-brand-muted font-light">
                 {methodology.ls.map((l, i) => (
                   <li key={i} className="flex items-center gap-1.5">
