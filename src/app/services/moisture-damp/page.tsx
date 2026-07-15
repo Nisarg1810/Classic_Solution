@@ -19,17 +19,7 @@ const portfolioList = [
   "to Properties of India’s top Businessmen & Celebrities."
 ];
 
-const causesImages = [
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/1.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/2.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/3.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/4.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/5.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/6.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/7.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/10/Macj-Blog-Images-02.jpg",
-  "https://macj-abuyerschoice.com/wp-content/uploads/2023/08/9.jpg"
-];
+
 
 const symptoms = [
   "Visual Leak",
@@ -242,26 +232,7 @@ export default function ServicesMoistureDamp() {
           </div>
         </section>
 
-        {/* Causes of Damp & Seepage Title & Grid */}
-        <section className="bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm mb-10 text-left">
-          <h3 className="text-lg sm:text-xl font-bold text-primary font-display mb-6 border-b border-brand-border pb-3">
-            Causes of Damp & Seepage
-          </h3>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {causesImages.map((src, idx) => (
-              <div key={idx} className="relative aspect-[7/8] w-full rounded-xl overflow-hidden border border-brand-border/40 shadow-sm bg-white">
-                <Image
-                  src={src}
-                  alt={`Damp cause example ${idx + 1}`}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                  unoptimized
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+
 
         {/* Common Symptoms checklist and Circular image preview grid */}
         <section className="bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm mb-10 text-left">
