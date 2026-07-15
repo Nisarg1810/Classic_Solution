@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Home } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const propertyTypes = [
@@ -67,7 +67,7 @@ export default function ServingRealEstateValueChain() {
           <ul className="space-y-3.5">
             {propertyTypes.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-brand-text font-light leading-relaxed">
-                <span className="text-secondary font-bold mt-0.5">•</span>
+                <Home className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}

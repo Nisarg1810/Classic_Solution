@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import {
   ShieldCheck, Droplets, Search, Zap, Thermometer,
   Wrench, ArrowRight, Shield, Award, Users,
-  Building2, Users2, FileText, CheckCircle2, ClipboardCheck
+  Building2, Users2, FileText, CheckCircle2, ClipboardCheck,
+  Home
 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
@@ -223,7 +224,7 @@ export default function ServicesPage() {
                     <ul className="flex flex-col gap-3">
                       {benefit.points.map((pt, i) => (
                         <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-brand-muted font-light leading-relaxed">
-                          <span className="text-secondary font-bold mr-1.5 shrink-0 mt-0.5">•</span>
+                          <Home className="h-4 w-4 text-secondary mr-1.5 shrink-0 mt-0.5" />
                           <span>{pt}</span>
                         </li>
                       ))}

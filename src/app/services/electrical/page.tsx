@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, CheckCircle2, ShieldCheck, PhoneCall, ArrowLeft, AlertOctagon, AlertTriangle, Eye, Activity, Heart, Camera } from "lucide-react";
+import { Zap, CheckCircle2, ShieldCheck, PhoneCall, ArrowLeft, AlertOctagon, AlertTriangle, Eye, Activity, Heart, Camera, Home } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const hazards = [
@@ -250,7 +250,7 @@ export default function ServicesElectrical() {
               <ul className="flex flex-col gap-3 text-xs sm:text-sm text-brand-text">
                 {scopeOfWork.map((item, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <span className="text-secondary font-bold">•</span>
+                    <Home className="h-4 w-4 text-secondary shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}
@@ -263,7 +263,7 @@ export default function ServicesElectrical() {
               <ul className="flex flex-col gap-3 text-xs sm:text-sm text-brand-text">
                 {keyParameters.map((item, i) => (
                   <li key={i} className="flex items-start gap-2.5">
-                    <span className="text-secondary font-bold">•</span>
+                    <Home className="h-4 w-4 text-secondary shrink-0" />
                     <span>{item}</span>
                   </li>
                 ))}

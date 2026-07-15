@@ -167,7 +167,7 @@ export default function ServicesMoistureDamp() {
               <ul className="space-y-2 text-xs sm:text-sm text-brand-muted font-light">
                 {methodology.ts.map((t, i) => (
                   <li key={i} className="flex items-center gap-1.5">
-                    <span className="text-secondary font-bold">•</span>
+                    <Home className="h-4 w-4 text-secondary shrink-0" />
                     <span>{t}</span>
                   </li>
                 ))}
@@ -180,7 +180,7 @@ export default function ServicesMoistureDamp() {
               <ul className="space-y-2 text-xs sm:text-sm text-brand-muted font-light">
                 {methodology.ds.map((d, i) => (
                   <li key={i} className="flex items-center gap-1.5">
-                    <span className="text-secondary font-bold">•</span>
+                    <Home className="h-4 w-4 text-secondary shrink-0" />
                     <span>{d}</span>
                   </li>
                 ))}
@@ -193,7 +193,7 @@ export default function ServicesMoistureDamp() {
               <ul className="space-y-2 text-xs sm:text-sm text-brand-muted font-light">
                 {methodology.ls.map((l, i) => (
                   <li key={i} className="flex items-center gap-1.5">
-                    <span className="text-secondary font-bold">•</span>
+                    <Home className="h-4 w-4 text-secondary shrink-0" />
                     <span>{l}</span>
                   </li>
                 ))}
@@ -222,7 +222,7 @@ export default function ServicesMoistureDamp() {
           <ul className="space-y-2 mb-6">
             {portfolioList.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-brand-text font-light">
-                <span className="text-secondary font-bold mt-0.5">•</span>
+                <Home className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
                 <span>{item}</span>
               </li>
             ))}
