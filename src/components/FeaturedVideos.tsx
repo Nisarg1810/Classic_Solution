@@ -26,7 +26,7 @@ export default function FeaturedVideos() {
       {/* Background image with dark overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Home-Inspection-Coverage-1024x485.jpg"
+          src="/images/home_highlights/image_108.png"
           alt=""
           className="w-full h-full object-cover"
         />

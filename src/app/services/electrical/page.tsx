@@ -2,7 +2,19 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, CheckCircle2, ShieldCheck, PhoneCall, ArrowLeft, AlertOctagon, AlertTriangle, Eye, Activity, Heart, Camera, Home } from "lucide-react";
+import { 
+  Zap, 
+  CheckCircle2, 
+  ShieldCheck, 
+  ArrowLeft, 
+  AlertOctagon, 
+  AlertTriangle, 
+  Camera, 
+  Lightbulb, 
+  Flame, 
+  FileText,
+  Workflow
+} from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const hazards = [
@@ -28,10 +40,28 @@ const causes = [
   "Under rated wire Gauge",
   "Overheating wires and electrical components",
   "Unbalanced and over load distribution at phases",
-  "Improper position and installation of switch / socket boards",
-  "Safety Issue: Double phase power used in single phase switch board.",
-  "Naked wire used for switch to switch parallel connections (increases current loss and decreases efficiency).",
-  "Switch socket board close to sink (affected due to water splashing during sink use)."
+  "Improper position and installation of switch / socket boards"
+];
+
+const typicalFaults = [
+  {
+    title: "Safety Issue",
+    caption: "Safety Issue: Double phase power used in single phase switch board.",
+    imgSrc: "/images/services/4/Electrical-Safety01 1.png",
+    aspect: "aspect-[4/3]"
+  },
+  {
+    title: "Improper Connection",
+    caption: "Naked wire used for switch to switch parallel connections, will increase current loss and decrease efficiency.",
+    imgSrc: "/images/services/4/Electrical-Safety02 1.png",
+    aspect: "aspect-[4/3]"
+  },
+  {
+    title: "Proximity Hazard",
+    caption: "Switch socket board close to sink, will get affected due to water splashing during sink use.",
+    imgSrc: "/images/services/4/image 110.png",
+    aspect: "aspect-[4/3]"
+  }
 ];
 
 const highRiskAreas = [
@@ -45,7 +75,7 @@ const highRiskAreas = [
 const whenToSchedule = [
   "When buying a home / property",
   "If You Have Sudden or Reoccurring Problems",
-  "Common Symptoms of Home Electrical Problems – Warning Signals show up",
+  "Common Symptoms of Home Electrical Problems – Warning Signals show up as given above",
   "Before Major Home Upgrades / Home Renovations",
   "If You Live in an Older Home",
   "After DIY Electrical Work / Electric Repairs",
@@ -73,249 +103,344 @@ const scopeOfWork = [
   "DB Charting (in case required)."
 ];
 
-const comparisonCases = [
-  {
-    title: "Overheating M.C.B in Electrical Panel",
-    visualImg: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg",
-    thermalImg: "https://macj-abuyerschoice.com/wp-content/uploads/2017/01/Scope-of-Services-01-360x240.jpg",
-    desc: "To the naked eye, the circuit breakers look perfectly normal. The thermal camera reveals a dangerous heat buildup (hot spot) indicating a loose terminal connection or overload."
-  },
-  {
-    title: "Overheating Wire in Distribution Box",
-    visualImg: "https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Direct-360x240.jpg",
-    thermalImg: "https://macj-abuyerschoice.com/wp-content/uploads/2018/12/Coverage-04-1-360x240.jpg",
-    desc: "Concealed or bundled wires run hot due to under-gauge wire installation. The thermal scan isolates the single hot wire from the bunch to prevent localized insulation melt and short-circuit fires."
-  }
-];
-
 export default function ServicesElectrical() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-brand-light min-h-screen pb-20 text-brand-text">
+      {/* 1. Header & Hero */}
       <PageHero
         badge="Safety Audit"
         title="Electrical Inspections of a"
         titleHighlight="Home / Property"
-        subtitle="Put Home & Family Safety First when stringing up the lights. Verify the health of your distribution panels and wiring systems."
+        subtitle="Put Home / Family Safety First when stringing up the lights"
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "Electrical Inspections" }]}
       />
 
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-5xl flex flex-col gap-16">
-          
-          {/* Main Narrative Block */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            
-            {/* Left Block: Narrative */}
-            <div className="flex flex-col gap-6 text-left">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Put Safety First</span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-                Electricity is Part of Our Lives But Comes with Hazards
-              </h2>
-              <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
-                We use electricity from the moment we wake up, throughout the day, and even when we are asleep. Although we feel intolerable without it, the fact is that numerous accidents, mostly fire related, are caused due to electric hazards. 
-              </p>
-              <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                We sometimes forget how powerful and dangerous electric faults can be. Negligence — whether laying an electrical layout, jointing wires, choosing incorrect wire gauges, or poor supervision — is the main cause. Hence, ensuring that the electrical system at your property is safe should be one of your prime concerns.
-              </p>
-              <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                Our experience speaks for itself: We have inspected <strong>more than 800 properties</strong> (apartments, standalone units, bungalows, office space, and heritage buildings), detecting and providing remedies for numerous electrical problems to keep families safe.
-              </p>
-
-              <div className="flex gap-4 mt-4">
-                <Link
-                  href="/contact"
-                  className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider"
-                >
-                  Book Electrical Scan
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm"
-                >
-                  <ArrowLeft className="h-4 w-4" /> All Services
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Block: Photos & Diagnostics */}
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/electrical-1-360x240.jpg" alt="Electrical Panel Thermal Scan" fill className="object-cover" unoptimized />
-                </div>
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2017/04/Direct-360x240.jpg" alt="Direct Electrical Inspection" fill className="object-cover" unoptimized />
-                </div>
-              </div>
-
-              <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Thermal Imaging Diagnostics</h3>
-              <p className="text-xs text-brand-muted leading-relaxed font-light">
-                Since modern properties use concealed wiring systems, tracing an overheated wire or component visually is exhausting. By using thermal imaging technology, we detect anomalies, overloaded breakers, and loose contacts behind walls and distribution panels.
-              </p>
-
-              <div className="bg-brand-light border border-brand-border/40 p-4 rounded-xl flex items-center gap-4 mt-2">
-                <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
-                  <Activity className="h-4 w-4" />
-                </div>
-                <div>
-                  <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Motto & Customer Satisfaction</p>
-                  <p className="text-sm font-bold text-primary">Least Damage | Low Cost Repair | Long Term Solution</p>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Visual vs Infrared Comparison Showcase */}
-          <div className="border-t border-brand-border/40 pt-14">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Comparative Diagnostics</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Visual vs. Infrared Thermal Scan Comparison</h2>
-              <p className="text-brand-muted mt-2 text-xs sm:text-sm font-light">See how thermal scans pinpoint safety risks invisible to the naked eye.</p>
-            </div>
-            
-            <div className="flex flex-col gap-10">
-              {comparisonCases.map((c, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 shadow-sm grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-                  <div className="md:col-span-4 flex flex-col gap-3 text-left">
-                    <h3 className="text-base sm:text-lg font-bold text-primary font-display flex items-center gap-2">
-                      <Camera className="h-5 w-5 text-secondary" /> {c.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-brand-muted leading-relaxed font-light">{c.desc}</p>
-                  </div>
-                  
-                  <div className="md:col-span-8 grid grid-cols-2 gap-4">
-                    <div className="flex flex-col gap-2">
-                      <span className="text-[10px] font-bold text-brand-muted uppercase tracking-widest text-center">Visual View</span>
-                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-brand-border/40 shadow-sm">
-                        <Image src={c.visualImg} alt={`${c.title} Visual`} fill className="object-cover" unoptimized />
-                      </div>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="text-[10px] font-bold text-secondary uppercase tracking-widest text-center">Infrared Thermal View</span>
-                      <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border-2 border-secondary shadow-sm">
-                        <Image src={c.thermalImg} alt={`${c.title} Thermal`} fill className="object-cover" unoptimized />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Dangers & Warning Signs */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-brand-border/40 pt-14">
-            {/* Hazards */}
-            <div className="bg-red-50/20 border border-red-100 rounded-3xl p-6 sm:p-8 flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-red-100 text-secondary flex items-center justify-center shrink-0">
-                  <AlertOctagon className="h-5 w-5" />
-                </div>
-                <h3 className="text-lg font-bold text-primary font-display">Electrical Hazards & Damages</h3>
-              </div>
-              <ul className="flex flex-col gap-3 mt-2 text-xs sm:text-sm text-brand-text">
-                {hazards.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-secondary shrink-0 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Warning Signals */}
-            <div className="bg-yellow-50/20 border border-yellow-100 rounded-3xl p-6 sm:p-8 flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center shrink-0">
-                  <AlertTriangle className="h-5 w-5" />
-                </div>
-                <h3 className="text-lg font-bold text-primary font-display">Common Warning Signals</h3>
-              </div>
-              <ul className="flex flex-col gap-3 mt-2 text-xs sm:text-sm text-brand-text">
-                {warnings.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <CheckCircle2 className="h-4 w-4 text-yellow-600 shrink-0 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Scope of Work & Key Parameters */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-brand-border/40 pt-14">
-            {/* Scope */}
-            <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 flex flex-col gap-4">
-              <h3 className="text-lg font-bold text-primary font-display border-b pb-2">Scope of Inspection Work</h3>
-              <ul className="flex flex-col gap-3 text-xs sm:text-sm text-brand-text">
-                {scopeOfWork.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <Home className="h-4 w-4 text-secondary shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Parameters */}
-            <div className="bg-white border border-brand-border/30 rounded-3xl p-6 sm:p-8 flex flex-col gap-4">
-              <h3 className="text-lg font-bold text-primary font-display border-b pb-2">Key Inspection Parameters</h3>
-              <ul className="flex flex-col gap-3 text-xs sm:text-sm text-brand-text">
-                {keyParameters.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2.5">
-                    <Home className="h-4 w-4 text-secondary shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Common Causes & High Risk Areas */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-brand-border/40 pt-14">
-            {/* Causes */}
-            <div>
-              <h3 className="text-lg font-bold text-primary font-display mb-4">Causes of Electrical Faults</h3>
-              <div className="flex flex-col gap-3">
-                {causes.map((cause, idx) => (
-                  <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-xl shadow-sm">
-                    <p className="text-xs sm:text-sm text-brand-text leading-relaxed font-light">{cause}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* High Risk Areas */}
-            <div>
-              <h3 className="text-lg font-bold text-primary font-display mb-4">High Risk Areas & Components</h3>
-              <div className="flex flex-col gap-3">
-                {highRiskAreas.map((area, idx) => (
-                  <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-xl shadow-sm flex items-center gap-3">
-                    <AlertTriangle className="h-5 w-5 text-secondary shrink-0" />
-                    <p className="text-xs sm:text-sm font-semibold text-primary">{area}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* When to Schedule */}
-          <div className="border-t border-brand-border/40 pt-14">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">Scheduling</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">When to Schedule an Electrical Inspection?</h2>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {whenToSchedule.map((time, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 p-4 rounded-xl shadow-sm text-center flex items-center justify-center min-h-[70px]">
-                  <p className="text-xs sm:text-sm font-semibold text-primary">{time}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-10">
+        
+        {/* Navigation Actions */}
+        <div className="flex gap-4 mb-10">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm"
+          >
+            <ArrowLeft className="h-4 w-4" /> All Services
+          </Link>
+          <Link
+            href="/contact"
+            className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider"
+          >
+            Book Electrical Scan
+          </Link>
         </div>
-      </section>
+
+        {/* Hero Banner Image */}
+        <div className="relative w-full rounded-3xl overflow-hidden shadow-premium mb-10 border border-brand-border/20 max-h-[380px] flex items-center justify-center bg-white">
+          <Image
+            src="/images/services/4/thermography-for-electrical-panel 1.png"
+            alt="Thermography Scan of an Electrical Panel"
+            width={1240}
+            height={485}
+            className="w-full h-auto object-cover max-h-[380px]"
+            priority
+            unoptimized
+          />
+        </div>
+
+        {/* 2. Introduction */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary leading-tight mb-4">
+            Electricity is part of our lives but comes with its own hazards:
+          </h2>
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light mb-4">
+            We use it from the moment we wake up and throughout the day and when we are asleep as well. Although we feel intolerable without electricity, the fact is that numerous accidents, mostly fire related, are caused due to electric hazards.
+          </p>
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light mb-4">
+            We sometimes forget how powerful and dangerous electric faults can be, and so though not always but at maximum times we are the ones to be blamed for the electrocution or fire caused by electricity. The simple reason is negligence from our side be it while laying an electrical layout, while supervision of work or during usage e.g. wire connections, wire jointing or wire gauge.
+          </p>
+          <p className="text-sm sm:text-base text-primary font-semibold leading-relaxed">
+            Hence, ensuring that the electrical system at your home or property is upto the mark and safe should be one of your prime concerns.
+          </p>
+        </section>
+
+        {/* 3. Hazards */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6 flex items-center gap-2">
+            <AlertOctagon className="text-secondary h-6 w-6" /> Electrical damages / hazards
+          </h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-light">
+            {hazards.map((item, i) => (
+              <li key={i} className="flex items-start gap-2.5 bg-red-50/20 border border-red-100/50 p-3 rounded-xl">
+                <CheckCircle2 className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 4. Symptoms & Warning Signals */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6">
+            Common Symptoms of Home Electrical Problems – Warning Signals
+          </h3>
+          
+          {/* Centered Burnt Socket Image */}
+          <div className="relative w-full aspect-[16/10] max-w-lg mx-auto rounded-3xl overflow-hidden shadow-premium mb-6">
+            <Image 
+              src="/images/services/4/01-3 1.png" 
+              alt="Common Warning Signal - Burnt Switch socket outlet" 
+              fill 
+              className="object-cover" 
+              unoptimized 
+            />
+          </div>
+
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light mb-6">
+            Majority of the times general accidents occur due to electrical issues from the symptoms that are in front of us but we generally overlook those things. Some key signs that you need an electrical inspection / repair include:
+          </p>
+
+          <ul className="flex flex-col gap-3">
+            {warnings.map((warn, i) => (
+              <li key={i} className="flex gap-3 bg-brand-light p-4 rounded-xl border border-brand-border/40 text-sm font-light">
+                <span className="flex-shrink-0 h-5 w-5 rounded-full bg-secondary text-white flex items-center justify-center font-bold text-xs">
+                  {i + 1}
+                </span>
+                <span className="leading-relaxed">{warn}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 5. Causes & Typical Faults Grid */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6">
+            Some Causes of Electrical Fault and Hazards:
+          </h3>
+          
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-sm font-light">
+            {causes.map((cause, i) => (
+              <li key={i} className="flex items-start gap-2.5 bg-brand-light p-3 rounded-xl border border-brand-border/30">
+                <Zap className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                <span>{cause}</span>
+              </li>
+            ))}
+          </ul>
+
+          {/* 3-Column Image Grid showing Typical Faults */}
+          <h4 className="text-lg font-bold font-display text-primary mb-6 text-center">Typical Electrical Issues Documented on Site</h4>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {typicalFaults.map((fault, index) => (
+              <div 
+                key={index} 
+                className="bg-white border border-brand-border/60 rounded-2xl overflow-hidden shadow-sm flex flex-col group"
+              >
+                <div className={`relative w-full ${fault.aspect} bg-brand-light overflow-hidden`}>
+                  <Image 
+                    src={fault.imgSrc} 
+                    alt={fault.title} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-103" 
+                    unoptimized 
+                  />
+                </div>
+                <div className="p-4 bg-brand-light/30 border-t border-brand-border/40 flex-grow">
+                  <p className="text-xs text-brand-text font-light leading-relaxed italic text-center">
+                    {fault.caption}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 6. High Risk Areas */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6">
+            High Risk Areas & Components are:
+          </h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-light">
+            {highRiskAreas.map((area, i) => (
+              <li key={i} className="flex items-center gap-2.5 bg-yellow-50/20 border border-yellow-100/50 p-3 rounded-xl">
+                <AlertTriangle className="h-4 w-4 text-yellow-600 shrink-0" />
+                <span className="font-semibold text-primary">{area}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 7. When to schedule */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-4">
+            When to schedule an Electrical Inspection?
+          </h3>
+          <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light italic mb-6 border-l-4 border-secondary/40 pl-4 py-1">
+            &ldquo;If it ain&apos;t broke, don&apos;t fix it&rdquo; is good advice… sometimes. But when it comes to your home&apos;s electrical system, there are certain circumstances in which it makes sense to schedule a thorough electrical inspection:
+          </p>
+          <ul className="flex flex-col gap-3">
+            {whenToSchedule.map((time, i) => (
+              <li key={i} className="flex items-start gap-2.5 text-sm font-light">
+                <CheckCircle2 className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                <span>{time}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 8. Key Parameters */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6 flex items-center gap-2">
+            <FileText className="text-secondary h-5 w-5" /> Key Parameters of Our Inspection:
+          </h3>
+          <ul className="flex flex-col gap-3.5 text-sm font-light">
+            {keyParameters.map((param, i) => (
+              <li key={i} className="flex items-start gap-2.5">
+                <CheckCircle2 className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                <span>{param}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 8b. Scope of work */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6 flex items-center gap-2">
+            <Workflow className="text-secondary h-5 w-5" /> Scope of Electrical Inspection work
+          </h3>
+          <ul className="flex flex-col gap-3.5 text-sm font-light">
+            {scopeOfWork.map((scope, i) => (
+              <li key={i} className="flex items-start gap-2.5">
+                <CheckCircle2 className="h-4 w-4 text-secondary shrink-0 mt-0.5" />
+                <span>{scope}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        {/* 9. Thermal Imaging Technology */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6">
+            Detection of overheated wiring / electrical components through Thermal Imaging technology
+          </h3>
+          <ul className="flex flex-col gap-4 text-sm font-light mb-8">
+            <li className="flex gap-2.5">
+              <Flame className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+              <span>Since in the present times, concealed wiring system is used, tracing an overheated wire is difficult that are concealed as well as tracing an overheated wire from a bunch of wires is exhausting but the detection of such wires is possible with Thermal Imaging Technology.</span>
+            </li>
+            <li className="flex gap-2.5">
+              <Flame className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+              <span>Electrical components and equipment generally get heated, but it is hard to trace visually that whether the heating is normal or the equipment is getting overheated. This can also be detected by using thermal imaging technology.</span>
+            </li>
+          </ul>
+
+          {/* Thermal Hot Wiring Banner */}
+          <div className="relative w-full rounded-2xl overflow-hidden border border-brand-border/30 bg-white shadow-premium mb-8 max-h-[360px] flex items-center justify-center">
+            <Image
+              src="/images/services/4/thermal-hot-wiring.png"
+              alt="Thermal image of hot wiring showing high temperatures"
+              width={800}
+              height={600}
+              className="w-full h-auto object-cover max-h-[360px]"
+              unoptimized
+            />
+          </div>
+
+          {/* 2-Column Image Comparison Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Case 1 */}
+            <div className="flex flex-col gap-3 bg-white border border-brand-border/30 rounded-3xl overflow-hidden p-4 sm:p-5 shadow-premium group">
+              <div className="relative w-full aspect-[4/3] bg-brand-light rounded-2xl overflow-hidden">
+                <Image 
+                  src="/images/services/4/electrical-01 1.png" 
+                  alt="Visual Image & Infrared Image of overheating M.C.B in Electrical Panel" 
+                  fill 
+                  className="object-cover" 
+                  unoptimized 
+                />
+              </div>
+              <p className="text-xs text-brand-text font-light leading-relaxed text-center italic">
+                Visual Image & Infrared Image of overheating M.C.B in Electrical Panel
+              </p>
+            </div>
+
+            {/* Case 2 */}
+            <div className="flex flex-col gap-3 bg-white border border-brand-border/30 rounded-3xl overflow-hidden p-4 sm:p-5 shadow-premium group">
+              <div className="relative w-full aspect-[4/3] bg-brand-light rounded-2xl overflow-hidden">
+                <Image 
+                  src="/images/services/4/electrical-02 1.png" 
+                  alt="Visual Image & Infrared Image of overheating wire in Distribution Box" 
+                  fill 
+                  className="object-cover" 
+                  unoptimized 
+                />
+              </div>
+              <p className="text-xs text-brand-text font-light leading-relaxed text-center italic">
+                Visual Image & Infrared Image of overheating wire in Distribution Box
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 10. Experience */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-4">
+            Our experience and expertise – Classic Solution Home Inspections
+          </h3>
+          <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light mb-4">
+            We being a professional home inspection company comprise of experienced technical personnel and we have inspected more than 800 properties at apartments, standalone units, bungalows, Office space and even heritage type buildings where we have been able to detect and provide remedy for numerous electrical problems / issues which have benefitted our customers.
+          </p>
+          <p className="text-sm sm:text-base text-primary font-semibold leading-relaxed">
+            Infact, most of them have rectified there problems / issues as per our advice and are happy and satisfied that they got their home inspection done at the right time.
+          </p>
+        </section>
+
+        {/* 11. Motto */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-2">
+            We inspect your home as our own. Your Safety is our first priority and a proper home inspection is our commitment.
+          </h3>
+          <h4 className="text-lg font-bold font-display text-secondary mb-6">Our Motto – Customer Satisfaction</h4>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-semibold text-primary">
+            <li className="flex items-center gap-2.5 bg-brand-light p-3 rounded-xl border border-brand-border/30">
+              <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
+              <span>Least Damage</span>
+            </li>
+            <li className="flex items-center gap-2.5 bg-brand-light p-3 rounded-xl border border-brand-border/30">
+              <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
+              <span>Low Cost Repair</span>
+            </li>
+            <li className="flex items-center gap-2.5 bg-brand-light p-3 rounded-xl border border-brand-border/30">
+              <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
+              <span>Long term solution</span>
+            </li>
+            <li className="flex items-center gap-2.5 bg-brand-light p-3 rounded-xl border border-brand-border/30">
+              <CheckCircle2 className="h-4 w-4 text-secondary shrink-0" />
+              <span>Resulting in Long & Healthy Life of your Properties</span>
+            </li>
+          </ul>
+        </section>
+
+        {/* Call to action panel */}
+        <div className="bg-primary rounded-3xl p-8 sm:p-10 text-center text-white relative overflow-hidden mt-12 shadow-premium">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/15 rounded-full filter blur-2xl transform translate-x-1/3 -translate-y-1/3 pointer-events-none"></div>
+          <div className="max-w-xl mx-auto flex flex-col gap-4 relative z-10">
+            <h3 className="text-xl sm:text-2xl font-extrabold font-display leading-tight">
+              Schedule Your Certified Electrical Audit
+            </h3>
+            <p className="text-xs sm:text-sm text-white/80 font-light leading-relaxed">
+              Contact Classic Solution Home Inspections today. Protect your assets and ensure the absolute safety of your property with thermal imaging diagnostics.
+            </p>
+            <div className="mt-3">
+              <Link
+                href="/contact"
+                className="inline-block px-8 py-3.5 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-lg transition-all text-xs uppercase tracking-wider"
+              >
+                Request Free Call
+              </Link>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   );
 }

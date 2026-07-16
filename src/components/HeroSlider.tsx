@@ -104,33 +104,33 @@ export default function HeroSlider() {
         {/* Phone 1 */}
         <a href="tel:+917600078862" className="flex items-center gap-4 group">
           <div className="h-10 w-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-            <Phone className="h-5 w-5 fill-current" />
+            <Phone className="h-5.5 w-5.5 fill-current" />
           </div>
           <div className="leading-tight">
-            <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Phone number:</p>
-            <p className="text-sm font-extrabold text-primary group-hover:text-secondary transition-colors">+91 76000 78862</p>
+            <p className="text-xs text-brand-muted uppercase font-bold tracking-wider mb-0.5">Phone number:</p>
+            <p className="text-base font-extrabold text-primary group-hover:text-secondary transition-colors">+91 76000 78862</p>
           </div>
         </a>
 
         {/* Phone 2 */}
         <a href="tel:02812990030" className="flex items-center gap-4 group">
           <div className="h-10 w-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-            <Phone className="h-5 w-5 fill-current" />
+            <Phone className="h-5.5 w-5.5 fill-current" />
           </div>
           <div className="leading-tight">
-            <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Phone number:</p>
-            <p className="text-sm font-extrabold text-primary group-hover:text-secondary transition-colors">0281 2990030</p>
+            <p className="text-xs text-brand-muted uppercase font-bold tracking-wider mb-0.5">Phone number:</p>
+            <p className="text-base font-extrabold text-primary group-hover:text-secondary transition-colors">0281 2990030</p>
           </div>
         </a>
 
         {/* Email */}
         <a href="mailto:classicsolution931@gmail.com" className="flex items-center gap-4 group">
           <div className="h-10 w-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-            <Mail className="h-5 w-5" />
+            <Mail className="h-5.5 w-5.5" />
           </div>
           <div className="leading-tight">
-            <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">E-mail address:</p>
-            <p className="text-sm font-extrabold text-primary group-hover:text-secondary transition-colors break-all">classicsolution931@gmail.com</p>
+            <p className="text-xs text-brand-muted uppercase font-bold tracking-wider mb-0.5">E-mail address:</p>
+            <p className="text-base font-extrabold text-primary group-hover:text-secondary transition-colors break-all">classicsolution931@gmail.com</p>
           </div>
         </a>
 
@@ -145,13 +145,13 @@ export default function HeroSlider() {
           ].map((item, idx) => (
             <a key={idx} href={item.href} aria-label={item.name} className="text-brand-muted hover:text-secondary transition-colors">
               {item.svg ? (
-                <svg className="h-5 w-5 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
+                <svg className="h-6 w-6 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
                   <circle cx="12" cy="12" r="4"/>
                   <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
                 </svg>
               ) : (
-                <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
                   <path d={item.path} />
                 </svg>
               )}
@@ -187,7 +187,7 @@ export default function HeroSlider() {
                 sizes="100vw"
               />
               {/* Bottom gradient fade for desktop to ensure text readability */}
-              <div className="hidden md:block absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+              <div className="hidden md:block absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
             </motion.div>
           </AnimatePresence>
 
@@ -228,46 +228,46 @@ export default function HeroSlider() {
             {/* Desktop Contact Details */}
             <div className="flex items-stretch flex-1">
               <a href="tel:+917600078862" className="flex items-center gap-3 px-5 border-r border-white/25 hover:bg-white/5 transition-colors group shrink-0">
-                <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
+                <Phone className="h-5.5 w-5.5 text-secondary shrink-0" fill="currentColor" />
                 <div className="leading-none text-left">
-                  <p className="text-[10px] text-white/60 font-semibold tracking-wide mb-1">Phone number:</p>
+                  <p className="text-xs text-white/70 font-semibold tracking-wide mb-1">Phone number:</p>
                   <p className="text-base font-extrabold text-white tracking-tight group-hover:text-secondary transition-colors">+91 76000 78862</p>
                 </div>
               </a>
 
               <a href="tel:02812990030" className="flex items-center gap-3 px-5 border-r border-white/25 hover:bg-white/5 transition-colors group shrink-0">
-                <Phone className="h-5 w-5 text-secondary shrink-0" fill="currentColor" />
+                <Phone className="h-5.5 w-5.5 text-secondary shrink-0" fill="currentColor" />
                 <div className="leading-none text-left">
-                  <p className="text-[10px] text-white/60 font-semibold tracking-wide mb-1">Phone number:</p>
+                  <p className="text-xs text-white/70 font-semibold tracking-wide mb-1">Phone number:</p>
                   <p className="text-base font-extrabold text-white tracking-tight group-hover:text-secondary transition-colors">0281 2990030</p>
                 </div>
               </a>
 
               <a href="mailto:classicsolution931@gmail.com" className="flex items-center gap-3 px-5 border-r border-white/25 hover:bg-white/5 transition-colors group shrink-0">
-                <Mail className="h-5 w-5 text-secondary shrink-0" />
+                <Mail className="h-5.5 w-5.5 text-secondary shrink-0" />
                 <div className="leading-none text-left">
-                  <p className="text-[10px] text-white/60 font-semibold tracking-wide mb-1">E-mail address:</p>
-                  <p className="text-sm font-extrabold text-white tracking-tight group-hover:text-secondary transition-colors">classicsolution931@gmail.com</p>
+                  <p className="text-xs text-white/70 font-semibold tracking-wide mb-1">E-mail address:</p>
+                  <p className="text-base font-extrabold text-white tracking-tight group-hover:text-secondary transition-colors">classicsolution931@gmail.com</p>
                 </div>
               </a>
             </div>
 
             {/* Desktop Socials */}
-            <div className="flex items-center gap-3 pl-4 shrink-0">
+            <div className="flex items-center gap-3.5 pl-4 shrink-0">
               <a href="https://facebook.com" aria-label="Facebook" className="text-white/80 hover:text-secondary transition-colors">
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
               <a href="https://x.com" aria-label="X / Twitter" className="text-white/80 hover:text-secondary transition-colors">
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
               <a href="https://youtube.com" aria-label="YouTube" className="text-white/80 hover:text-secondary transition-colors">
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z"/></svg>
+                <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z"/></svg>
               </a>
               <a href="https://instagram.com" aria-label="Instagram" className="text-white/80 hover:text-secondary transition-colors">
-                <svg className="h-4 w-4 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+                <svg className="h-5.5 w-5.5 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
               </a>
               <a href="https://linkedin.com" aria-label="LinkedIn" className="text-white/80 hover:text-secondary transition-colors">
-                <svg className="h-4 w-4 fill-current" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
             </div>
           </div>
