@@ -38,7 +38,8 @@ const navLinks = [
     name: "News",
     href: "#",
     dropdown: [
-      { name: "Home Inspection News", href: "/news#home-inspection" },
+      { name: "Blogs", href: "/blogs" },
+      { name: "Case Studies", href: "/case-studies" },
       { name: "RERA Updates", href: "/rera" },
       { name: "Gallery", href: "/gallery" },
     ],

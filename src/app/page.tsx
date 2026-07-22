@@ -236,7 +236,7 @@ export default function Home() {
                 key={idx}
                 className="bg-white border border-brand-border/30 rounded-3xl overflow-hidden shadow-premium hover:shadow-premium-hover transition-all duration-300 group hover:-translate-y-1 flex flex-col"
               >
-                <div className="relative aspect-[16/9] overflow-hidden bg-brand-light">
+                <div className="relative aspect-[4/3] overflow-hidden bg-brand-light">
                   <Image
                     src={item.image}
                     alt={item.title}

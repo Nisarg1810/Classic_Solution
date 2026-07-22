@@ -1,19 +1,21 @@
 
 
+import Link from "next/link";
+
 const categories = [
   {
     label: "Blogs",
     date: "February 12, 2022",
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2022/02/How-Home-Inspection-solves-the-problems-of-Waterproofing-Companies-600x400-1.jpg",
     title: "How Home Inspection solves the problems of Waterproofing Companies?",
-    href: "/resources#blogs",
+    href: "/blogs",
   },
   {
     label: "Case Studies",
     date: "February 9, 2019",
     image: "https://macj-abuyerschoice.com/wp-content/uploads/2019/02/Damp-Seepage-Case-Study-MACJ.jpg",
     title: "Complex Damp / Seepage Problem - Simple, Long Term, Least Destructive & Low Cost Solution",
-    href: "/resources#case-studies",
+    href: "/case-studies",
   },
   {
     label: "News",
@@ -37,7 +39,7 @@ export default function LatestUpdates() {
               </h3>
 
               {/* Card */}
-              <div className="flex flex-col bg-white border border-neutral-200 overflow-hidden shadow-sm">
+              <Link href={cat.href} className="flex flex-col bg-white border border-neutral-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
                 {/* Image + Date Badge */}
                 <div className="relative overflow-hidden">
                   <img
@@ -53,11 +55,11 @@ export default function LatestUpdates() {
 
                 {/* Title */}
                 <div className="p-4">
-                  <p className="text-[13px] font-semibold text-[#333333] leading-snug">
+                  <p className="text-[13px] font-semibold text-[#333333] leading-snug group-hover:text-secondary transition-colors">
                     {cat.title}
                   </p>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

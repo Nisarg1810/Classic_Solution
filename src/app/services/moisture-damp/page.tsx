@@ -34,10 +34,10 @@ const symptoms = [
 ];
 
 const circularSymptoms = [
-  { name: "Mold", img: "/images/moisture_symptom_1.png" },
+  { name: "Water Leakage", img: "/images/moisture_symptom_1.png" },
   { name: "Woodwork Deterioration", img: "/images/moisture_symptom_2.png" },
-  { name: "Dark Patches in Walls", img: "/images/moisture_symptom_3.png" },
-  { name: "Collapsed False Ceiling", img: "/images/moisture_symptom_4.png" }
+  { name: "Dark Patches on Ceiling", img: "/images/moisture_symptom_3.png" },
+  { name: "Mold", img: "/images/moisture_symptom_4.png" }
 ];
 
 const deliverables = [
