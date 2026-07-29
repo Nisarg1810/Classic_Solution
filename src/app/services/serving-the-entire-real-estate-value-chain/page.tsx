@@ -50,12 +50,11 @@ export default function ServingRealEstateValueChain() {
         {/* 2. Second Banner Image (Full Integration in Real Estate Value Chain) */}
         <div className="w-full rounded-2xl overflow-hidden shadow-sm border border-brand-border/40 mb-10 bg-white">
           <Image
-            src="/images/value_chain_2.png"
+            src="/images/value_chain_2_v2.jpg"
             alt="Full Integration in Real Estate Value Chain Flowchart"
-            width={4372}
-            height={2248}
+            width={2000}
+            height={1166}
             className="w-full h-auto"
-            unoptimized
           />
         </div>
 

@@ -2,77 +2,136 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Radar, CheckCircle2, Layers, ArrowLeft, PhoneCall, Building2, ShieldCheck, Zap, HelpCircle } from "lucide-react";
+import { Radar, Check, ArrowLeft, PhoneCall, ShieldCheck, HelpCircle, Layers, CheckCircle2 } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
-const whatWeDetect = [
+const gprSteps = [
   {
-    title: "Public & Private Utilities",
-    text: "Water lines, gas mains, electrical conduits, fiber optics, and PVC/clay pipes.",
+    step: "1",
+    title: "DATA COLLECTION (TRANSMIT)",
+    image: "/images/services/gpr/gpr_step1.jpg",
+    desc: "The GPR antenna transmits high-frequency electromagnetic waves into the ground.",
   },
   {
-    title: "Concrete Embedded Elements",
-    text: "Rebar layouts, post-tension cables, conduits, and structural beams.",
+    step: "2",
+    title: "REFLECTION (RETURN SIGNALS)",
+    image: "/images/services/gpr/gpr_step2.jpg",
+    desc: "Waves reflect back when they hit objects or boundaries with different material properties.",
   },
   {
-    title: "Subsurface Anomalies",
-    text: "Hidden structural voids, sinkholes, soil washouts, and old foundations.",
+    step: "3",
+    title: "DATA COLLECTION (RECEIVE)",
+    image: "/images/services/gpr/gpr_step3.jpg",
+    desc: "Reflected signals are received by the antenna and recorded by the GPR system.",
   },
   {
-    title: "Environmental Hazards",
-    text: "Buried storage tanks (USTs) and forgotten septic systems.",
+    step: "4",
+    title: "DATA PROCESSING",
+    image: "/images/services/gpr/gpr_step4.jpg",
+    desc: "Raw data is processed to remove noise, improve clarity and enhance reflections.",
+  },
+  {
+    step: "5",
+    title: "DATA INTERPRETATION",
+    image: "/images/services/gpr/gpr_step5.jpg",
+    desc: "Interpreters analyze the processed data to identify and mark possible subsurface features.",
+  },
+  {
+    step: "6",
+    title: "RESULTS & REPORTING",
+    image: "/images/services/gpr/gpr_step6.jpg",
+    desc: "Results are compiled into reports with images, depth information, maps and interpretations.",
   },
 ];
 
-const ndtBenefits = [
-  {
-    title: "Zero Destruction",
-    desc: "Eliminate the need for exploratory digging or concrete test scores.",
-  },
-  {
-    title: "Real-Time Data",
-    desc: "Receive immediate on-site visual markings and comprehensive digital mapping reports.",
-  },
-  {
-    title: "Cost & Time Savings",
-    desc: "Prevent catastrophic utility strikes and keep your project moving on schedule.",
-  },
-  {
-    title: "Versatility",
-    desc: "Proven accuracy across commercial construction sites, industrial facilities, and residential properties.",
-  },
+const applications = [
+  "Residential Buildings",
+  "Commercial Buildings",
+  "Industrial Facilities",
+  "Hospitals",
+  "Schools & Universities",
+  "Bridges & Flyovers",
+  "Highways & Roads",
+  "Airports",
+  "Metro & Railway Projects",
+  "Warehouses",
+  "Shopping Malls",
+  "Solar Plants",
+  "Infrastructure Projects",
+];
+
+const whyChooseGpr = [
+  "100% Non-Destructive Inspection",
+  "No Digging Required",
+  "Fast & Accurate Results",
+  "Safe for Existing Structures",
+  "Reduces Construction Risks",
+  "Prevents Damage to Hidden Utilities",
+  "Saves Time & Cost",
+  "High Accuracy Mapping",
+  "Digital Reports with Images",
+  "Suitable for New & Existing Buildings",
+];
+
+const benefits = [
+  "Prevent accidental damage during drilling or excavation.",
+  "Locate hidden pipes, cables, and reinforcement before construction.",
+  "Improve project safety and planning.",
+  "Reduce repair costs and delays.",
+  "Support informed engineering and maintenance decisions.",
 ];
 
 export default function GPRPage() {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-white">
       <PageHero
         badge="Non-Destructive Testing"
-        title="Ground Penetrating Radar"
-        titleHighlight="(GPR) Services"
+        title="Energy audit:"
+        titleHighlight="GPR Survey Services"
         subtitle="Accurate Subsurface Imaging to Protect Your Project, Budget, and Team."
-        breadcrumbs={[{ label: "Services", href: "/services" }, { label: "GPR Services" }]}
+        breadcrumbs={[
+          { label: "Services", href: "/services" },
+          { label: "Non-Destructive Testing", href: "/services" },
+          { label: "GPR Services" },
+        ]}
       />
 
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-5xl flex flex-col gap-16">
+        <div className="mx-auto max-w-6xl flex flex-col gap-16 sm:gap-24">
 
-          {/* Main block */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div className="flex flex-col gap-6 text-left">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">NDT Concrete Scanning</span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
-                Scan Concrete Slabs, Asphalt & Soil Without Structural Damage
+          {/* PDF Page 1 Banner Image */}
+          <div className="w-full relative aspect-[12/4.7] rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium">
+            <Image
+              src="/images/services/gpr/gpr_banner.jpg"
+              alt="GPR Survey Banner"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1200px"
+              className="object-cover"
+              priority
+            />
+          </div>
+
+          {/* Section 1: Overview */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
+                Advanced Radar Diagnostics
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+                Ground Penetrating Radar (GPR) Survey Services
               </h2>
-              <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light font-medium text-secondary">
-                Striking a hidden utility line, rebar grid, or structural cable can instantly derail your project timeline, trigger massive financial liabilities, and put your field crew at severe safety risk.
+              <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
+                Ground Penetrating Radar (GPR) is a non-destructive testing (NDT) technology that uses
+                high-frequency electromagnetic waves to detect and map objects, utilities, and structural
+                elements hidden beneath the ground or inside concrete without causing any damage.
               </p>
               <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
-                Our state-of-the-art Ground Penetrating Radar (GPR) service provides a fast, precise, and completely non-destructive window into what lies beneath the surface. Using advanced electromagnetic radar pulses, our certified technicians scan concrete slabs, asphalt, and soil to map out subsurface obstacles in real time — all without any digging, drilling, or structural damage.
+                It provides fast, accurate, and reliable subsurface information, making it ideal for
+                construction, infrastructure, property inspections, and engineering projects.
               </p>
-              <div className="flex gap-4 mt-2">
+              <div className="flex flex-wrap gap-4 mt-2">
                 <Link href="/contact" className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider">
-                  Book GPR Scan
+                  Book GPR Survey
                 </Link>
                 <Link href="/services" className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm">
                   <ArrowLeft className="h-4 w-4" /> All Services
@@ -80,18 +139,18 @@ export default function GPRPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-brand-border/30 shadow-premium flex flex-col gap-6">
-              <div className="grid grid-cols-2 gap-3">
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2022/02/How-Home-Inspection-solves-the-problems-of-Waterproofing-Companies-600x400-1.jpg" alt="GPR Concrete Scan Action" fill className="object-cover" unoptimized />
+            <div className="lg:col-span-5 bg-white rounded-3xl p-6 border border-brand-border/30 shadow-premium flex flex-col gap-6">
+              <div className="flex items-center gap-4 border-b border-brand-border pb-4">
+                <div className="h-10 w-10 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+                  <Radar className="h-5 w-5" />
                 </div>
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-sm">
-                  <Image src="https://macj-abuyerschoice.com/wp-content/uploads/2019/02/Damp-Seepage-Case-Study-MACJ.jpg" alt="Subsurface Slab Analysis" fill className="object-cover" unoptimized />
+                <div>
+                  <h3 className="text-base font-bold text-primary">Subsurface Safety</h3>
+                  <p className="text-xs text-brand-muted font-light mt-0.5">Locate features up to 30+ feet deep.</p>
                 </div>
               </div>
-              <h3 className="text-lg font-bold font-display text-primary border-b border-brand-border pb-3">Why Choose NDT?</h3>
               <p className="text-xs text-brand-muted leading-relaxed font-light">
-                Ground Penetrating Radar is fully non-destructive and safe for occupied workspaces. It needs access from one side only, making it clean, quick, and highly precise.
+                GPR provides a safe window into slabs, soils, and concrete in real-time, eliminating the risk of cutting live cables or active utility pipes.
               </p>
               <div className="bg-brand-light border border-brand-border/40 p-4 rounded-xl flex items-center gap-4">
                 <div className="h-10 w-10 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
@@ -105,61 +164,163 @@ export default function GPRPage() {
             </div>
           </div>
 
-          {/* What we detect */}
-          <div className="border-t border-brand-border/40 pt-14">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">What We Scan</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">What We Detect &amp; Locate</h2>
-              <p className="text-brand-muted mt-2 text-xs sm:text-sm font-light">High-resolution subsurface mapping for both metallic and non-metallic objects.</p>
+          {/* Section 3: How GPR Works (6-Step Infographic) */}
+          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
+            <div className="text-center max-w-2xl mx-auto mb-12 flex flex-col gap-2">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
+                NDT Workflow
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary">
+                How Ground Penetrating Radar Works
+              </h2>
+              <p className="text-sm sm:text-base text-brand-muted font-light leading-relaxed">
+                The complete lifecycle of GPR data acquisition, processing, interpretation, and reporting.
+              </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-              {whatWeDetect.map((item, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 p-6 rounded-3xl shadow-sm hover:border-secondary transition-all flex flex-col gap-3">
-                  <div className="h-10 w-10 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
-                    <Radar className="h-5 w-5" />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {gprSteps.map((step, idx) => (
+                <div key={idx} className="bg-white border-2 border-brand-border/40 rounded-2xl overflow-hidden shadow-md flex flex-col group hover:border-secondary transition-all">
+                  {/* Step Header */}
+                  <div className="bg-primary text-white p-3 text-center flex items-center justify-center gap-2 font-bold font-display uppercase tracking-wider text-xs">
+                    <span className="h-5 w-5 bg-secondary text-white rounded-full flex items-center justify-center text-[10px]">
+                      {step.step}
+                    </span>
+                    {step.title}
                   </div>
-                  <div>
-                    <h3 className="text-sm font-bold text-primary font-display mb-1">{item.title}</h3>
-                    <p className="text-xs text-brand-muted font-light leading-relaxed">{item.text}</p>
+                  {/* Step Image */}
+                  <div className="relative aspect-[3/4] w-full bg-brand-light">
+                    <Image
+                      src={step.image}
+                      alt={step.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 350px"
+                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  </div>
+                  {/* Step Body */}
+                  <div className="p-4 border-t border-brand-border/20 text-center flex-grow flex items-center justify-center bg-brand-light/30">
+                    <p className="text-xs text-brand-muted leading-relaxed font-light font-medium">
+                      {step.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* NDT Benefits Grid */}
-          <div className="border-t border-brand-border/40 pt-14">
-            <div className="text-center max-w-2xl mx-auto mb-10">
-              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">NDT Approach</span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-primary mt-2">Why Choose Our NDT Approach?</h2>
+          {/* Section 4: Applications */}
+          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              
+              {/* Left Column: Applications List */}
+              <div className="lg:col-span-6 flex flex-col gap-6">
+                <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
+                  Field Usages
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+                  Applications
+                </h2>
+                
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  {applications.map((app, idx) => (
+                    <li key={idx} className="flex items-center gap-3">
+                      <span className="h-2 w-2 rounded-full bg-secondary shrink-0" />
+                      <span className="text-xs sm:text-sm font-semibold text-brand-text">{app}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Right Column: Applications Image */}
+              <div className="lg:col-span-6 flex flex-col gap-4 items-center justify-center">
+                <div className="relative aspect-square w-full max-w-[460px] rounded-3xl overflow-hidden border border-brand-border/30 shadow-premium group">
+                  <Image
+                    src="/images/services/gpr/gpr_applications.jpg"
+                    alt="Technician using GPR cart on asphalt"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 460px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-sm font-bold text-primary">On-site Utility Mapping</p>
+                  <p className="text-xs text-brand-muted mt-0.5 leading-relaxed font-light">
+                    Real-time mapping of structural conduits and pipes on structural sites.
+                  </p>
+                </div>
+              </div>
+
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5">
-              {ndtBenefits.map((benefit, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 p-5 rounded-2xl shadow-sm hover:border-secondary transition-all flex flex-col gap-2">
-                  <div className="h-10 w-10 rounded-2xl bg-primary/10 text-secondary flex items-center justify-center shrink-0 mb-2">
+          </div>
+
+          {/* Section 5: Why Choose GPR? */}
+          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
+            <div className="text-center max-w-2xl mx-auto mb-10 flex flex-col gap-2">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
+                Safety &amp; Precision
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary">
+                Why Choose GPR?
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+              {whyChooseGpr.map((item, idx) => (
+                <div key={idx} className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-border/20 shadow-sm hover:border-secondary transition-all">
+                  <span className="h-6 w-6 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="text-xs sm:text-sm font-semibold text-primary">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Section 6: Benefits */}
+          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
+            <div className="text-center max-w-2xl mx-auto mb-12 flex flex-col gap-2">
+              <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
+                Value Added
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary">
+                Key Benefits of GPR
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+              {benefits.map((benefit, idx) => (
+                <div key={idx} className="bg-white border border-brand-border/30 p-5 rounded-2xl shadow-sm hover:border-secondary transition-all flex flex-col gap-3 md:col-span-1">
+                  <div className="h-10 w-10 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 mb-1">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-primary font-display">{benefit.title}</h3>
-                  <p className="text-xs text-brand-muted leading-relaxed font-light">{benefit.desc}</p>
+                  <p className="text-xs text-brand-muted font-light leading-relaxed">
+                    {benefit}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* CTA Block */}
-          <div className="border-t border-brand-border/40 pt-14 bg-primary text-white p-8 sm:p-12 rounded-[32px] text-center flex flex-col items-center gap-6 shadow-premium">
-            <div className="h-12 w-12 rounded-2xl bg-white/10 flex items-center justify-center">
-              <Layers className="h-6 w-6 text-secondary" />
+          {/* CTA & Booking Block */}
+          <div className="border-t border-brand-border/40 pt-12 flex flex-col sm:flex-row gap-6 items-center justify-between bg-white p-6 sm:p-8 rounded-3xl border border-brand-border/20 shadow-premium">
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
+                <PhoneCall className="h-5 w-5 animate-pulse" />
+              </div>
+              <div>
+                <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Need a scanner team on-site?</p>
+                <p className="text-base sm:text-lg font-bold text-primary">Call Helpline: 76000 78862</p>
+              </div>
             </div>
-            <h3 className="text-xl sm:text-3xl font-extrabold font-display max-w-xl leading-tight">
-              Don&apos;t Leave Your Project to Guesswork
-            </h3>
-            <p className="text-white/70 text-xs sm:text-sm max-w-lg leading-relaxed font-light">
-              Contact our team today to schedule an expert on-site GPR scan before you cut, core, or excavate.
-            </p>
-            <Link href="/contact" className="px-8 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full text-xs uppercase tracking-wider transition-all shadow-md">
-              Schedule GPR Scan
-            </Link>
+            <div className="flex flex-wrap gap-4 w-full sm:w-auto">
+              <Link href="/contact" className="flex-1 sm:flex-initial text-center px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider">
+                Book GPR Scan
+              </Link>
+              <Link href="/services" className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm">
+                <ArrowLeft className="h-4 w-4" /> All Services
+              </Link>
+            </div>
           </div>
 
         </div>

@@ -335,46 +335,27 @@ export default function ServicesElectrical() {
           {/* Thermal Hot Wiring Banner */}
           <div className="relative w-full rounded-2xl overflow-hidden border border-brand-border/30 bg-white shadow-premium mb-8 max-h-[360px] flex items-center justify-center">
             <Image
-              src="/images/services/4/thermal-hot-wiring.png"
-              alt="Thermal image of hot wiring showing high temperatures"
-              width={800}
-              height={600}
+              src="/images/services/4/group_304_optimized.jpg"
+              alt="Infrared Thermography Scan comparison of an electrical panel showing hot spots"
+              width={1900}
+              height={550}
               className="w-full h-auto object-cover max-h-[360px]"
-              unoptimized
             />
           </div>
 
-          {/* 2-Column Image Comparison Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Case 1 */}
-            <div className="flex flex-col gap-3 bg-white border border-brand-border/30 rounded-3xl overflow-hidden p-4 sm:p-5 shadow-premium group">
-              <div className="relative w-full aspect-[4/3] bg-brand-light rounded-2xl overflow-hidden">
-                <Image 
-                  src="/images/services/4/electrical-01 1.png" 
-                  alt="Visual Image & Infrared Image of overheating M.C.B in Electrical Panel" 
-                  fill 
-                  className="object-cover" 
-                  unoptimized 
-                />
-              </div>
-              <p className="text-xs text-brand-text font-light leading-relaxed text-center italic">
-                Visual Image & Infrared Image of overheating M.C.B in Electrical Panel
-              </p>
+          {/* Horizontal Image Comparison Banner */}
+          <div className="flex flex-col gap-4 bg-white border border-brand-border/30 rounded-3xl overflow-hidden p-4 sm:p-5 shadow-premium group">
+            <div className="relative w-full aspect-[3330/1725] bg-brand-light rounded-2xl overflow-hidden">
+              <Image 
+                src="/images/services/4/group_290_optimized.jpg" 
+                alt="Visual vs. Infrared comparison of overheating breakers and wires" 
+                fill 
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.01]" 
+              />
             </div>
-
-            {/* Case 2 */}
-            <div className="flex flex-col gap-3 bg-white border border-brand-border/30 rounded-3xl overflow-hidden p-4 sm:p-5 shadow-premium group">
-              <div className="relative w-full aspect-[4/3] bg-brand-light rounded-2xl overflow-hidden">
-                <Image 
-                  src="/images/services/4/electrical-02 1.png" 
-                  alt="Visual Image & Infrared Image of overheating wire in Distribution Box" 
-                  fill 
-                  className="object-cover" 
-                  unoptimized 
-                />
-              </div>
-              <p className="text-xs text-brand-text font-light leading-relaxed text-center italic">
-                Visual Image & Infrared Image of overheating wire in Distribution Box
+            <div className="text-center bg-brand-light/30 p-3 rounded-xl border border-brand-border/20">
+              <p className="text-xs sm:text-sm text-brand-text font-light leading-relaxed italic">
+                Visual vs. Infrared Thermography comparison showing overheating Miniature Circuit Breakers (M.C.B) in an electrical panel (left) and hot wiring in a distribution box (right).
               </p>
             </div>
           </div>

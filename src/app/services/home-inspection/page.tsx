@@ -92,12 +92,11 @@ export default function ServicesHomeInspection() {
         {/* Cutaway House Image */}
         <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden border border-brand-border/30 bg-white shadow-premium p-4 sm:p-6 mb-12">
           <Image
-            src="/images/services/2/Group 272 (1).png"
+            src="/images/services/2/group_313_optimized.jpg"
             alt="Home Inspection Cutaway Diagram"
-            width={5364}
-            height={3936}
+            width={2000}
+            height={1331}
             className="w-full h-auto object-contain"
-            unoptimized
           />
         </div>
 
