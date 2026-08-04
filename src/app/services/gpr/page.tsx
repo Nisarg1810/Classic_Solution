@@ -9,37 +9,37 @@ const gprSteps = [
   {
     step: "1",
     title: "DATA COLLECTION (TRANSMIT)",
-    image: "/images/services/gpr/gpr_step1.jpg",
+    image: "/images/services/gpr/gpr_step1.png",
     desc: "The GPR antenna transmits high-frequency electromagnetic waves into the ground.",
   },
   {
     step: "2",
     title: "REFLECTION (RETURN SIGNALS)",
-    image: "/images/services/gpr/gpr_step2.jpg",
+    image: "/images/services/gpr/gpr_step2.png",
     desc: "Waves reflect back when they hit objects or boundaries with different material properties.",
   },
   {
     step: "3",
     title: "DATA COLLECTION (RECEIVE)",
-    image: "/images/services/gpr/gpr_step3.jpg",
+    image: "/images/services/gpr/gpr_step3.png",
     desc: "Reflected signals are received by the antenna and recorded by the GPR system.",
   },
   {
     step: "4",
     title: "DATA PROCESSING",
-    image: "/images/services/gpr/gpr_step4.jpg",
+    image: "/images/services/gpr/gpr_step4.png",
     desc: "Raw data is processed to remove noise, improve clarity and enhance reflections.",
   },
   {
     step: "5",
     title: "DATA INTERPRETATION",
-    image: "/images/services/gpr/gpr_step5.jpg",
+    image: "/images/services/gpr/gpr_step5.png",
     desc: "Interpreters analyze the processed data to identify and mark possible subsurface features.",
   },
   {
     step: "6",
     title: "RESULTS & REPORTING",
-    image: "/images/services/gpr/gpr_step6.jpg",
+    image: "/images/services/gpr/gpr_step6.png",
     desc: "Results are compiled into reports with images, depth information, maps and interpretations.",
   },
 ];
@@ -100,13 +100,13 @@ export default function GPRPage() {
         <div className="mx-auto max-w-6xl flex flex-col gap-16 sm:gap-24">
 
           {/* PDF Page 1 Banner Image */}
-          <div className="w-full relative aspect-[12/4.7] rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium">
+          <div className="w-full relative aspect-[1886/1414] rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium bg-white">
             <Image
-              src="/images/services/gpr/gpr_banner.jpg"
+              src="/images/services/gpr/gpr_banner.png"
               alt="GPR Survey Banner"
               fill
               sizes="(max-width: 1200px) 100vw, 1200px"
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
@@ -178,31 +178,19 @@ export default function GPRPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-5xl mx-auto">
               {gprSteps.map((step, idx) => (
-                <div key={idx} className="bg-white border-2 border-brand-border/40 rounded-2xl overflow-hidden shadow-md flex flex-col group hover:border-secondary transition-all">
-                  {/* Step Header */}
-                  <div className="bg-primary text-white p-3 text-center flex items-center justify-center gap-2 font-bold font-display uppercase tracking-wider text-xs">
-                    <span className="h-5 w-5 bg-secondary text-white rounded-full flex items-center justify-center text-[10px]">
-                      {step.step}
-                    </span>
-                    {step.title}
-                  </div>
+                <div key={idx} className="bg-white border border-brand-border/30 rounded-3xl overflow-hidden shadow-premium flex flex-col group hover:border-secondary transition-all duration-300">
                   {/* Step Image */}
-                  <div className="relative aspect-[3/4] w-full bg-brand-light">
+                  <div className="relative aspect-[528/706] w-full bg-white">
                     <Image
                       src={step.image}
                       alt={step.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 350px"
-                      className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]"
+                      sizes="(max-width: 768px) 100vw, 600px"
+                      className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                      priority={idx < 2}
                     />
-                  </div>
-                  {/* Step Body */}
-                  <div className="p-4 border-t border-brand-border/20 text-center flex-grow flex items-center justify-center bg-brand-light/30">
-                    <p className="text-xs text-brand-muted leading-relaxed font-light font-medium">
-                      {step.desc}
-                    </p>
                   </div>
                 </div>
               ))}

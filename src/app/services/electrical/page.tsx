@@ -59,7 +59,7 @@ const typicalFaults = [
   {
     title: "Proximity Hazard",
     caption: "Switch socket board close to sink, will get affected due to water splashing during sink use.",
-    imgSrc: "/images/services/4/image 110.png",
+    imgSrc: "/images/services/4/Electrical-Safety03.jpeg",
     aspect: "aspect-[4/3]"
   }
 ];

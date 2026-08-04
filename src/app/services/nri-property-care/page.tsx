@@ -135,22 +135,24 @@ export default function ServicesNriCare() {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {nriMatrix.map((item, idx) => (
-            <div key={idx} className="bg-white border border-brand-border/30 rounded-3xl p-5 shadow-premium flex flex-col justify-between text-left h-full">
-              <div>
-                {/* Header */}
-                <h4 className="text-sm sm:text-base font-extrabold text-secondary font-display mb-4 border-b border-brand-border pb-2.5 min-h-[50px] flex items-center leading-snug">
-                  {item.phase}
-                </h4>
+            <div key={idx} className="bg-white border border-brand-border/30 rounded-3xl p-5 shadow-premium flex flex-col justify-between text-left h-full hover:border-secondary/30 transition-all duration-300">
+              <div className="flex flex-col">
+                {/* 1. Card Header - Aligned height & divider */}
+                <div className="min-h-[72px] lg:min-h-[76px] flex items-center border-b border-brand-border/40 pb-3 mb-4">
+                  <h4 className="text-sm font-extrabold text-secondary font-display leading-snug">
+                    {item.phase}
+                  </h4>
+                </div>
                 
-                {/* Core Inspection */}
-                <div className="mb-5">
-                  <h5 className="text-[11px] uppercase tracking-wider font-extrabold text-primary mb-2 flex items-center gap-1.5">
-                    <FileCheck className="h-3.5 w-3.5 text-secondary" /> Core Inspection
+                {/* 2. Core Inspection - Aligned height & start position */}
+                <div className="flex-1 min-h-[190px] lg:min-h-[200px] flex flex-col mb-4 justify-start">
+                  <h5 className="text-[11px] uppercase tracking-wider font-extrabold text-primary mb-2.5 flex items-center gap-1.5 shrink-0">
+                    <FileCheck className="h-3.5 w-3.5 text-secondary shrink-0" /> Core Inspection
                   </h5>
                   <ul className="space-y-2">
                     {item.core.map((pt, i) => (
-                      <li key={i} className="flex gap-2 text-xs text-brand-text font-light leading-relaxed">
-                        <span className="text-secondary shrink-0">•</span>
+                      <li key={i} className="flex gap-2 text-[12px] text-brand-text font-light leading-snug">
+                        <span className="text-secondary shrink-0 font-bold">•</span>
                         <span>{pt}</span>
                       </li>
                     ))}
@@ -158,15 +160,15 @@ export default function ServicesNriCare() {
                 </div>
               </div>
 
-              {/* Support Services */}
-              <div className="border-t border-brand-border/30 pt-4 mt-auto">
-                <h5 className="text-[11px] uppercase tracking-wider font-extrabold text-primary mb-2 flex items-center gap-1.5">
-                  <Wrench className="h-3.5 w-3.5 text-secondary" /> Support Services
+              {/* 3. Support Services - Aligned start position & card bottom */}
+              <div className="border-t border-brand-border/40 pt-4 mt-auto min-h-[190px] lg:min-h-[200px] flex flex-col justify-start">
+                <h5 className="text-[11px] uppercase tracking-wider font-extrabold text-primary mb-2.5 flex items-center gap-1.5 shrink-0">
+                  <Wrench className="h-3.5 w-3.5 text-secondary shrink-0" /> Support Services
                 </h5>
                 <ul className="space-y-2">
                   {item.support.map((pt, i) => (
-                    <li key={i} className="flex gap-2 text-xs text-brand-muted font-light leading-relaxed">
-                      <span className="text-secondary shrink-0">•</span>
+                    <li key={i} className="flex gap-2 text-[12px] text-brand-muted font-light leading-snug">
+                      <span className="text-secondary shrink-0 font-bold">•</span>
                       <span>{pt}</span>
                     </li>
                   ))}

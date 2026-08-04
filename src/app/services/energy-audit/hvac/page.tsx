@@ -48,7 +48,7 @@ export default function HVACAuditPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Column: Text Content */}
-            <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+            <div className="lg:col-span-6 flex flex-col gap-6 text-left">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
                 HVAC Performance Diagnostics
               </span>
@@ -80,60 +80,60 @@ export default function HVACAuditPage() {
             </div>
 
             {/* Right Column: "What Does HVAC Stand For" visual box */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="border-2 border-red-600 rounded-2xl bg-white p-5 sm:p-6 shadow-premium max-w-[420px] w-full">
-                <h3 className="text-xl sm:text-2xl font-black text-red-600 text-center uppercase tracking-wide border-b-2 border-red-100 pb-4 mb-5">
+            <div className="lg:col-span-6 flex justify-center w-full">
+              <div className="border-2 border-red-600 rounded-3xl bg-white p-7 sm:p-9 shadow-premium max-w-[540px] w-full group hover:border-red-500 transition-all duration-300">
+                <h3 className="text-2xl sm:text-3xl font-black text-red-600 text-center uppercase tracking-wide border-b-2 border-red-100 pb-5 mb-7">
                   What Does HVAC Stand For
                 </h3>
                 
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-6 sm:gap-7">
                   {/* Heating Row */}
-                  <div className="flex items-center gap-4 border-b border-blue-100 pb-4">
-                    <div className="w-14 h-14 bg-red-50 text-red-600 font-extrabold text-4xl flex items-center justify-center rounded-xl border border-red-200 shrink-0">
+                  <div className="flex items-center gap-4 sm:gap-5 border-b border-blue-100 pb-5 sm:pb-6">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-50 text-red-600 font-extrabold text-4xl sm:text-5xl flex items-center justify-center rounded-2xl border-2 border-red-200 shrink-0 shadow-sm">
                       H
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-base font-bold text-blue-600">Heating</h4>
-                      <p className="text-xs text-brand-muted mt-0.5 leading-snug">
+                      <h4 className="text-lg sm:text-xl font-bold text-blue-600">Heating</h4>
+                      <p className="text-xs sm:text-sm text-brand-muted mt-1 leading-snug font-light">
                         Refers to systems used to generate and distribute heat
                       </p>
                     </div>
-                    <div className="text-blue-600 bg-blue-50 p-2 rounded-lg shrink-0">
-                      <Flame className="w-6 h-6" />
+                    <div className="text-blue-600 bg-blue-50 p-3 sm:p-3.5 rounded-xl shrink-0 border border-blue-100">
+                      <Flame className="w-7 h-7 sm:w-8 sm:h-8" />
                     </div>
                   </div>
 
                   {/* Ventilation Row */}
-                  <div className="flex items-center gap-4 border-b border-blue-100 pb-4">
-                    <div className="w-14 h-14 bg-red-50 text-red-600 font-extrabold text-4xl flex items-center justify-center rounded-xl border border-red-200 shrink-0">
+                  <div className="flex items-center gap-4 sm:gap-5 border-b border-blue-100 pb-5 sm:pb-6">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-50 text-red-600 font-extrabold text-4xl sm:text-5xl flex items-center justify-center rounded-2xl border-2 border-red-200 shrink-0 shadow-sm">
                       V
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-base font-bold text-blue-600">Ventilation</h4>
-                      <p className="text-xs text-brand-muted mt-0.5 leading-snug">
+                      <h4 className="text-lg sm:text-xl font-bold text-blue-600">Ventilation</h4>
+                      <p className="text-xs sm:text-sm text-brand-muted mt-1 leading-snug font-light">
                         Associated with systems for circulating and cleaning air
                       </p>
                     </div>
-                    <div className="text-blue-600 bg-blue-50 p-2 rounded-lg shrink-0">
-                      <Wind className="w-6 h-6" />
+                    <div className="text-blue-600 bg-blue-50 p-3 sm:p-3.5 rounded-xl shrink-0 border border-blue-100">
+                      <Wind className="w-7 h-7 sm:w-8 sm:h-8" />
                     </div>
                   </div>
 
                   {/* Air Conditioning Row */}
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-red-50 text-red-600 font-extrabold text-2xl flex flex-col items-center justify-center rounded-xl border border-red-200 leading-none shrink-0">
+                  <div className="flex items-center gap-4 sm:gap-5">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-red-50 text-red-600 font-extrabold text-2xl sm:text-3xl flex flex-col items-center justify-center rounded-2xl border-2 border-red-200 leading-none shrink-0 shadow-sm">
                       <span>A</span>
-                      <div className="w-8 border-t border-red-300 my-0.5" />
+                      <div className="w-9 border-t-2 border-red-300 my-1" />
                       <span>C</span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="text-base font-bold text-blue-600">Air Conditioning</h4>
-                      <p className="text-xs text-brand-muted mt-0.5 leading-snug">
+                      <h4 className="text-lg sm:text-xl font-bold text-blue-600">Air Conditioning</h4>
+                      <p className="text-xs sm:text-sm text-brand-muted mt-1 leading-snug font-light">
                         Applies to systems used for cooling and dehumidifying air
                       </p>
                     </div>
-                    <div className="text-blue-600 bg-blue-50 p-2 rounded-lg shrink-0">
-                      <Snowflake className="w-6 h-6" />
+                    <div className="text-blue-600 bg-blue-50 p-3 sm:p-3.5 rounded-xl shrink-0 border border-blue-100">
+                      <Snowflake className="w-7 h-7 sm:w-8 sm:h-8" />
                     </div>
                   </div>
                 </div>
