@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle2, Home } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Home, Flame } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const methodology = {
@@ -281,6 +281,36 @@ export default function ServicesMoistureDamp() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Detection of overheated wiring / electrical components through Thermal Imaging technology */}
+        <section className="mb-10 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6">
+            Detection of overheated wiring / electrical components through Thermal Imaging technology
+          </h3>
+          <ul className="flex flex-col gap-4 text-sm font-light mb-8">
+            <li className="flex gap-2.5">
+              <Flame className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+              <span>Since in the present times, concealed wiring system is used, tracing an overheated wire is difficult that are concealed as well as tracing an overheated wire from a bunch of wires is exhausting but the detection of such wires is possible with Thermal Imaging Technology.</span>
+            </li>
+            <li className="flex gap-2.5">
+              <Flame className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+              <span>Electrical components and equipment generally get heated, but it is hard to trace visually that whether the heating is normal or the equipment is getting overheated. This can also be detected by using thermal imaging technology.</span>
+            </li>
+          </ul>
+
+          {/* Thermal Hot Wiring Banner */}
+          <div className="relative w-full rounded-2xl overflow-hidden border border-brand-border/30 bg-white shadow-premium mb-8 max-h-[360px] flex items-center justify-center">
+            <Image
+              src="/images/services/4/group_304_optimized.jpg"
+              alt="Infrared Thermography Scan comparison of an electrical panel showing hot spots"
+              width={1900}
+              height={550}
+              className="w-full h-auto object-cover max-h-[360px]"
+            />
+          </div>
+
+
         </section>
 
         {/* One Stop Solution Key List */}
