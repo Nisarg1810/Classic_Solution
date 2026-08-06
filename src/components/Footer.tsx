@@ -118,19 +118,19 @@ export default function Footer() {
       </div>
 
       {/* ── Main Columns ── */}
-      <div className="mx-auto max-w-5xl px-6 sm:px-10 lg:px-12 py-8">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-12 py-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* Col 1 – Quick Links */}
           <div>
-            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-xs sm:text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Quick Links
             </h3>
             <ul className="space-y-1.5">
               {quickLinks.map((l) => (
                 <li key={l.label} className="flex items-center gap-1.5">
                   <span className="h-1 w-1 rounded-full bg-secondary shrink-0" />
-                  <Link href={l.href} className="text-sm text-[#666] hover:text-secondary transition-colors">
+                  <Link href={l.href} className="text-xs text-[#666] hover:text-secondary transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -140,14 +140,14 @@ export default function Footer() {
 
           {/* Col 2 – Services */}
           <div>
-            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-xs sm:text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Our Services
             </h3>
             <ul className="space-y-1.5">
               {services.map((l) => (
-                <li key={l.label} className="flex items-center gap-1.5">
-                  <span className="h-1 w-1 rounded-full bg-secondary shrink-0" />
-                  <Link href={l.href} className="text-sm text-[#666] hover:text-secondary transition-colors">
+                <li key={l.label} className="flex items-start gap-1.5">
+                  <span className="h-1 w-1 rounded-full bg-secondary shrink-0 mt-1.5" />
+                  <Link href={l.href} className="text-xs text-[#666] hover:text-secondary transition-colors leading-normal">
                     {l.label}
                   </Link>
                 </li>
@@ -157,10 +157,10 @@ export default function Footer() {
 
           {/* Col 3 – Contact */}
           <div>
-            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-xs sm:text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Corporate Office
             </h3>
-            <div className="flex flex-col gap-2.5 text-sm text-[#666]">
+            <div className="flex flex-col gap-2.5 text-xs text-[#666]">
               <div className="flex items-start gap-2">
                 <div className="h-6 w-6 rounded-md bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin className="h-3 w-3 text-secondary" />
@@ -180,7 +180,7 @@ export default function Footer() {
                 <div className="h-6 w-6 rounded-md bg-secondary/10 flex items-center justify-center shrink-0 mt-0.5">
                   <Mail className="h-3 w-3 text-secondary" />
                 </div>
-                <a href="mailto:classicsolution931@gmail.com" className="hover:text-secondary transition-colors break-all">
+                <a href="mailto:classicsolution931@gmail.com" className="hover:text-secondary transition-colors whitespace-nowrap">
                   classicsolution931@gmail.com
                 </a>
               </div>
@@ -189,23 +189,23 @@ export default function Footer() {
 
           {/* Col 4 – Working Hours */}
           <div>
-            <h3 className="text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
+            <h3 className="text-xs sm:text-sm font-bold text-[#222] tracking-widest uppercase mb-3 pb-1.5 border-b border-neutral-100">
               Working Hours
             </h3>
-            <div className="flex flex-col gap-2 text-sm text-[#666]">
+            <div className="flex flex-col gap-2 text-xs text-[#666]">
               {[
                 { day: "Monday – Saturday", time: "9:30 AM – 7:30 PM" },
                 { day: "Sunday", time: "Closed" },
               ].map((row) => (
                 <div key={row.day} className="flex justify-between items-center">
-                  <span className="font-semibold text-[#444] text-sm">{row.day}</span>
+                  <span className="font-semibold text-[#444] text-xs">{row.day}</span>
                   <span className={row.time === "Closed" ? "text-secondary font-semibold" : ""}>{row.time}</span>
                 </div>
               ))}
               <div className="mt-1 pt-2 border-t border-neutral-100">
                 <Link
                   href="/contact"
-                   className="inline-flex items-center gap-1.5 text-sm font-bold text-white bg-secondary hover:bg-secondary/90 transition-colors px-4 py-2 rounded-full"
+                   className="inline-flex items-center gap-1.5 text-xs font-bold text-white bg-secondary hover:bg-secondary/90 transition-colors px-4 py-2 rounded-full"
                 >
                   Book Inspection
                 </Link>
@@ -218,7 +218,7 @@ export default function Footer() {
 
       {/* ── Bottom Bar ── */}
       <div className="border-t border-neutral-100 py-3 px-6">
-        <div className="mx-auto max-w-5xl flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-[#bbb]">
+        <div className="mx-auto max-w-6xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#bbb]">
           <p>© {currentYear} Classic Solution. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-secondary transition-colors">Privacy Policy</a>
