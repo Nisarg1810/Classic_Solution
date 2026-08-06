@@ -11,6 +11,7 @@ import {
   AlertTriangle, 
   Camera, 
   Lightbulb, 
+  Flame, 
   FileText,
   Workflow
 } from "lucide-react";
@@ -313,6 +314,51 @@ export default function ServicesElectrical() {
               </li>
             ))}
           </ul>
+        </section>
+
+        {/* 9. Thermal Imaging Technology */}
+        <section className="mb-8 bg-white border border-brand-border/30 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+          <h3 className="text-xl sm:text-2xl font-bold font-display text-primary mb-6">
+            Detection of overheated wiring / electrical components through Thermal Imaging technology
+          </h3>
+          <ul className="flex flex-col gap-4 text-sm font-light mb-8">
+            <li className="flex gap-2.5">
+              <Flame className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+              <span>Since in the present times, concealed wiring system is used, tracing an overheated wire is difficult that are concealed as well as tracing an overheated wire from a bunch of wires is exhausting but the detection of such wires is possible with Thermal Imaging Technology.</span>
+            </li>
+            <li className="flex gap-2.5">
+              <Flame className="h-5 w-5 text-secondary shrink-0 mt-0.5" />
+              <span>Electrical components and equipment generally get heated, but it is hard to trace visually that whether the heating is normal or the equipment is getting overheated. This can also be detected by using thermal imaging technology.</span>
+            </li>
+          </ul>
+
+          {/* Thermal Hot Wiring Banner */}
+          <div className="relative w-full rounded-2xl overflow-hidden border border-brand-border/30 bg-white shadow-premium mb-8 max-h-[360px] flex items-center justify-center">
+            <Image
+              src="/images/services/4/group_304_optimized.jpg"
+              alt="Infrared Thermography Scan comparison of an electrical panel showing hot spots"
+              width={1900}
+              height={550}
+              className="w-full h-auto object-cover max-h-[360px]"
+            />
+          </div>
+
+          {/* Horizontal Image Comparison Banner */}
+          <div className="flex flex-col gap-4 bg-white border border-brand-border/30 rounded-3xl overflow-hidden p-4 sm:p-5 shadow-premium group">
+            <div className="relative w-full aspect-[3330/1725] bg-brand-light rounded-2xl overflow-hidden">
+              <Image 
+                src="/images/services/4/group_290_optimized.jpg" 
+                alt="Visual vs. Infrared comparison of overheating breakers and wires" 
+                fill 
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.01]" 
+              />
+            </div>
+            <div className="text-center bg-brand-light/30 p-3 rounded-xl border border-brand-border/20">
+              <p className="text-xs sm:text-sm text-brand-text font-light leading-relaxed italic">
+                Visual vs. Infrared Thermography comparison showing overheating Miniature Circuit Breakers (M.C.B) in an electrical panel (left) and hot wiring in a distribution box (right).
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* 10. Experience */}
