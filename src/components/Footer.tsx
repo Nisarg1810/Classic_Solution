@@ -16,15 +16,17 @@ const quickLinks = [
 ];
 
 const services = [
+  { label: "Serving the Entire Real Estate Value Chain", href: "/services/serving-the-entire-real-estate-value-chain" },
   { label: "Complete Home / Property Inspection", href: "/services/home-inspection" },
-  { label: "Moisture / Damp / Seepage Inspections", href: "/services/moisture-damp" },
-  { label: "Electrical Inspections", href: "/services/electrical" },
-  { label: "Complete Property Care for NRIs", href: "/services/nri-property-care" },
-  { label: "Construction Finishing & Win–Win", href: "/services/construction-finishing" },
-  { label: "Energy Audit – Solar Panel", href: "/services/energy-audit/solar" },
-  { label: "Energy Audit – Electrical Utilities", href: "/services/energy-audit/electrical" },
-  { label: "Energy Audit – HVAC Inspection", href: "/services/energy-audit/hvac" },
-  { label: "Ground Penetrating Radar (GPR)", href: "/services/gpr" },
+  { label: "Moisture/ Damp / Leakage / Seepage Inspections with Solutions through Thermal Imaging Technology", href: "/services/moisture-damp" },
+  { label: "Electrical Inspections of a Home / Property", href: "/services/electrical" },
+  { label: "Complete Property Care for NRIs / CCCs", href: "/services/nri-property-care" },
+  { label: "Home Inspection: Win – Win for all the Stake Holders", href: "/services/stakeholder-benefits" },
+  { label: "Construction Finishing Inspection for Real Estate Developers", href: "/services/construction-finishing" },
+  { label: "HVAC Inspection", href: "/services/energy-audit/hvac" },
+  { label: "Ground Penetrating Radar (GPR) Services", href: "/services/gpr" },
+  { label: "Energy audit: Solar Panel Inspection", href: "/services/energy-audit/solar" },
+  { label: "Energy audit: Electrical Utilities", href: "/services/energy-audit/electrical" },
 ];
 
 const socials = [
