@@ -145,7 +145,7 @@ export default function HVACAuditPage() {
           {/* Section 2: Thermal Imaging Inspection */}
           <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
             
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               
               {/* Left Column: Heading, List, and Bottom Left Image */}
               <div className="lg:col-span-6 flex flex-col gap-6">
@@ -170,16 +170,7 @@ export default function HVACAuditPage() {
                   ))}
                 </ul>
 
-                {/* Bottom Left Image (Optimized Part 1 - Engineers inspecting unit) */}
-                <div className="mt-6 relative aspect-[4/3] w-full max-w-[460px] rounded-2xl overflow-hidden border border-brand-border/30 shadow-md group">
-                  <Image
-                    src="/images/services/group_317_part1_optimized.jpg"
-                    alt="Thermal Imaging On-site Assessment"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 460px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
+
               </div>
 
               {/* Right Column: Airflow Measurement Image */}
@@ -219,50 +210,15 @@ export default function HVACAuditPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Visual Card */}
-              <div className="bg-white border border-brand-border/30 rounded-2xl overflow-hidden shadow-md group">
-                <div className="relative aspect-[16/9] w-full">
-                  <Image
-                    src="/images/services/group_317_part2_optimized.jpg"
-                    alt="Visual Split AC Unit"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 450px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  />
-                </div>
-                <div className="p-4 sm:p-5 border-t border-brand-border/20">
-                  <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-primary bg-brand-light border border-brand-border/40 px-2 py-1 rounded mb-2">
-                    Visual view
-                  </span>
-                  <h4 className="text-base font-bold text-primary">Standard Inspection</h4>
-                  <p className="text-xs text-brand-muted mt-1 leading-relaxed font-light">
-                    Indoor split AC unit appears normal under visual check, masking internal anomalies.
-                  </p>
-                </div>
-              </div>
-
-              {/* Thermal Card */}
-              <div className="bg-white border border-brand-border/30 rounded-2xl overflow-hidden shadow-md group">
-                <div className="relative aspect-[16/9] w-full">
-                  <Image
-                    src="/images/services/group_317_part3_optimized.jpg"
-                    alt="Thermal Scan Split AC Unit"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 450px"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  />
-                </div>
-                <div className="p-4 sm:p-5 border-t border-brand-border/20">
-                  <span className="inline-block text-[10px] uppercase font-bold tracking-wider text-rose-600 bg-rose-50 border border-rose-100 px-2 py-1 rounded mb-2">
-                    Thermal view
-                  </span>
-                  <h4 className="text-base font-bold text-primary">Infrared Thermography Scan</h4>
-                  <p className="text-xs text-brand-muted mt-1 leading-relaxed font-light">
-                    Thermal scanning identifies heat signatures, temperature variations, and airflow issues.
-                  </p>
-                </div>
-              </div>
+            <div className="w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-premium border border-brand-border/30 bg-white">
+              <Image
+                src="/images/services/group_317.png"
+                alt="Visual vs. Thermal Diagnostic Comparison"
+                width={5424}
+                height={1026}
+                className="w-full h-auto"
+                unoptimized
+              />
             </div>
           </div>
 
