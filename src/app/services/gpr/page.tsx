@@ -178,9 +178,9 @@ export default function GPRPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
               {gprSteps.map((step, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 rounded-3xl overflow-hidden shadow-premium flex flex-col group hover:border-secondary transition-all duration-300">
+                <div key={idx} className="bg-white border border-brand-border/30 overflow-hidden shadow-premium flex flex-col group hover:border-secondary transition-all duration-300">
                   {/* Step Image */}
                   <div className="relative aspect-[528/706] w-full bg-white">
                     <Image
