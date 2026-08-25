@@ -13,8 +13,8 @@ const navLinks = [
     name: "About",
     href: "/about",
     dropdown: [
-      { name: "Company Vision", href: "/about/vision" },
       { name: "Company Details", href: "/about" },
+      { name: "Company Vision", href: "/about/vision" },
     ],
   },
   {

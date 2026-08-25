@@ -21,19 +21,19 @@ const gprSteps = [
   {
     step: "3",
     title: "DATA COLLECTION (RECEIVE)",
-    image: "/images/services/gpr/gpr_step3.png",
+    image: "/images/services/gpr/gpr_step5.png",
     desc: "Reflected signals are received by the antenna and recorded by the GPR system.",
   },
   {
     step: "4",
     title: "DATA PROCESSING",
-    image: "/images/services/gpr/gpr_step4.png",
+    image: "/images/services/gpr/gpr_step3.png",
     desc: "Raw data is processed to remove noise, improve clarity and enhance reflections.",
   },
   {
     step: "5",
     title: "DATA INTERPRETATION",
-    image: "/images/services/gpr/gpr_step5.png",
+    image: "/images/services/gpr/gpr_step4.png",
     desc: "Interpreters analyze the processed data to identify and mark possible subsurface features.",
   },
   {
@@ -99,10 +99,10 @@ export default function GPRPage() {
       <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-6xl flex flex-col gap-16 sm:gap-24">
 
-          {/* PDF Page 1 Banner Image */}
-          <div className="w-full relative aspect-[1886/1414] rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium bg-white">
+          {/* Main GPR Survey Banner Image */}
+          <div className="w-full relative aspect-[1200/469] rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium bg-white">
             <Image
-              src="/images/services/gpr/gpr_banner.png"
+              src="/images/services/gpr/gpr_banner.jpg"
               alt="GPR Survey Banner"
               fill
               sizes="(max-width: 1200px) 100vw, 1200px"
@@ -178,7 +178,7 @@ export default function GPRPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               {gprSteps.map((step, idx) => (
                 <div key={idx} className="bg-white border border-brand-border/30 overflow-hidden shadow-premium flex flex-col group hover:border-secondary transition-all duration-300">
                   {/* Step Image */}
