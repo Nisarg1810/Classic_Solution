@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Radar, Check, ArrowLeft, PhoneCall, ShieldCheck, HelpCircle, Layers, CheckCircle2 } from "lucide-react";
+import { Radar, Check, ArrowLeft, PhoneCall, ShieldCheck } from "lucide-react";
 import PageHero from "@/components/PageHero";
 
 const gprSteps = [
@@ -83,7 +83,7 @@ const benefits = [
 
 export default function GPRPage() {
   return (
-    <div className="relative w-full bg-white">
+    <div className="relative w-full bg-white overflow-x-hidden">
       <PageHero
         badge="Non-Destructive Testing"
         title="Energy audit:"
@@ -96,11 +96,11 @@ export default function GPRPage() {
         ]}
       />
 
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-6xl flex flex-col gap-16 sm:gap-24">
+      <section className="py-10 sm:py-20 bg-brand-light px-4 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-6xl flex flex-col gap-12 sm:gap-24">
 
           {/* Main GPR Survey Banner Image */}
-          <div className="w-full relative aspect-[1200/469] rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium bg-white">
+          <div className="w-full relative aspect-[1200/550] sm:aspect-[1200/469] rounded-2xl sm:rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium bg-white">
             <Image
               src="/images/services/gpr/gpr_banner.jpg"
               alt="GPR Survey Banner"
@@ -112,41 +112,41 @@ export default function GPRPage() {
           </div>
 
           {/* Section 1: Overview */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-7 flex flex-col gap-6 text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            <div className="lg:col-span-7 flex flex-col gap-4 sm:gap-6 text-left">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
                 Advanced Radar Diagnostics
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
                 Ground Penetrating Radar (GPR) Survey Services
               </h2>
-              <p className="text-sm sm:text-base text-brand-text leading-relaxed font-light">
+              <p className="text-xs sm:text-base text-brand-text leading-relaxed font-light">
                 Ground Penetrating Radar (GPR) is a non-destructive testing (NDT) technology that uses
                 high-frequency electromagnetic waves to detect and map objects, utilities, and structural
                 elements hidden beneath the ground or inside concrete without causing any damage.
               </p>
-              <p className="text-sm sm:text-base text-brand-muted leading-relaxed font-light">
+              <p className="text-xs sm:text-base text-brand-muted leading-relaxed font-light">
                 It provides fast, accurate, and reliable subsurface information, making it ideal for
                 construction, infrastructure, property inspections, and engineering projects.
               </p>
-              <div className="flex flex-wrap gap-4 mt-2">
-                <Link href="/contact" className="px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 w-full sm:w-auto">
+                <Link href="/contact" className="text-center px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider">
                   Book GPR Survey
                 </Link>
-                <Link href="/services" className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm">
+                <Link href="/services" className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-primary hover:text-secondary uppercase tracking-wider border border-primary/20 hover:border-secondary px-5 py-3 rounded-full bg-white shadow-sm">
                   <ArrowLeft className="h-4 w-4" /> All Services
                 </Link>
               </div>
             </div>
 
-            <div className="lg:col-span-5 bg-white rounded-3xl p-6 border border-brand-border/30 shadow-premium flex flex-col gap-6">
+            <div className="lg:col-span-5 bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-6 border border-brand-border/30 shadow-premium flex flex-col gap-5 sm:gap-6">
               <div className="flex items-center gap-4 border-b border-brand-border pb-4">
                 <div className="h-10 w-10 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
                   <Radar className="h-5 w-5" />
                 </div>
                 <div>
-                  <h3 className="text-base font-bold text-primary">Subsurface Safety</h3>
-                  <p className="text-xs text-brand-muted font-light mt-0.5">Locate features up to 30+ feet deep.</p>
+                  <h3 className="text-sm sm:text-base font-bold text-primary">Subsurface Safety</h3>
+                  <p className="text-[11px] sm:text-xs text-brand-muted font-light mt-0.5">Locate features up to 30+ feet deep.</p>
                 </div>
               </div>
               <p className="text-xs text-brand-muted leading-relaxed font-light">
@@ -158,27 +158,27 @@ export default function GPRPage() {
                 </div>
                 <div>
                   <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Helpline</p>
-                  <p className="text-sm font-bold text-primary">76000 78862</p>
+                  <p className="text-xs sm:text-sm font-bold text-primary">76000 78862</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Section 3: How GPR Works (6-Step Infographic) */}
-          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
-            <div className="text-center max-w-2xl mx-auto mb-12 flex flex-col gap-2">
+          <div className="border-t border-brand-border/40 pt-12 sm:pt-24">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 flex flex-col gap-2">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
                 NDT Workflow
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary">
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary">
                 How Ground Penetrating Radar Works
               </h2>
-              <p className="text-sm sm:text-base text-brand-muted font-light leading-relaxed">
+              <p className="text-xs sm:text-base text-brand-muted font-light leading-relaxed">
                 The complete lifecycle of GPR data acquisition, processing, interpretation, and reporting.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8 max-w-6xl mx-auto">
               {gprSteps.map((step, idx) => (
                 <div key={idx} className="bg-white border border-brand-border/30 overflow-hidden shadow-premium flex flex-col group hover:border-secondary transition-all duration-300">
                   {/* Step Image */}
@@ -187,7 +187,7 @@ export default function GPRPage() {
                       src={step.image}
                       alt={step.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 600px"
+                      sizes="(max-width: 768px) 100vw, 400px"
                       className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                       priority={idx < 2}
                     />
@@ -198,19 +198,19 @@ export default function GPRPage() {
           </div>
 
           {/* Section 4: Applications */}
-          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="border-t border-brand-border/40 pt-12 sm:pt-24">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               
               {/* Left Column: Applications List */}
-              <div className="lg:col-span-6 flex flex-col gap-6">
+              <div className="lg:col-span-6 flex flex-col gap-5 sm:gap-6">
                 <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
                   Field Usages
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
+                <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary leading-tight">
                   Applications
                 </h2>
                 
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {applications.map((app, idx) => (
                     <li key={idx} className="flex items-center gap-3">
                       <span className="h-2 w-2 rounded-full bg-secondary shrink-0" />
@@ -222,7 +222,7 @@ export default function GPRPage() {
 
               {/* Right Column: Applications Image */}
               <div className="lg:col-span-6 flex flex-col gap-4 items-center justify-center">
-                <div className="relative aspect-square w-full max-w-[460px] rounded-3xl overflow-hidden border border-brand-border/30 shadow-premium group">
+                <div className="relative aspect-square w-full max-w-[460px] rounded-2xl sm:rounded-3xl overflow-hidden border border-brand-border/30 shadow-premium group">
                   <Image
                     src="/images/services/gpr/gpr_applications.jpg"
                     alt="Technician using GPR cart on asphalt"
@@ -232,8 +232,8 @@ export default function GPRPage() {
                   />
                 </div>
                 <div className="text-center">
-                  <p className="text-sm font-bold text-primary">On-site Utility Mapping</p>
-                  <p className="text-xs text-brand-muted mt-0.5 leading-relaxed font-light">
+                  <p className="text-xs sm:text-sm font-bold text-primary">On-site Utility Mapping</p>
+                  <p className="text-[11px] sm:text-xs text-brand-muted mt-0.5 leading-relaxed font-light">
                     Real-time mapping of structural conduits and pipes on structural sites.
                   </p>
                 </div>
@@ -243,19 +243,19 @@ export default function GPRPage() {
           </div>
 
           {/* Section 5: Why Choose GPR? */}
-          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
-            <div className="text-center max-w-2xl mx-auto mb-10 flex flex-col gap-2">
+          <div className="border-t border-brand-border/40 pt-12 sm:pt-24">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 flex flex-col gap-2">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
                 Safety &amp; Precision
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary">
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary">
                 Why Choose GPR?
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-4xl mx-auto">
               {whyChooseGpr.map((item, idx) => (
-                <div key={idx} className="flex items-center gap-4 bg-white p-4 rounded-xl border border-brand-border/20 shadow-sm hover:border-secondary transition-all">
+                <div key={idx} className="flex items-center gap-3.5 bg-white p-3.5 sm:p-4 rounded-xl border border-brand-border/20 shadow-sm hover:border-secondary transition-all">
                   <span className="h-6 w-6 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
                     <Check className="h-3.5 w-3.5" />
                   </span>
@@ -266,19 +266,19 @@ export default function GPRPage() {
           </div>
 
           {/* Section 6: Benefits */}
-          <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
-            <div className="text-center max-w-2xl mx-auto mb-12 flex flex-col gap-2">
+          <div className="border-t border-brand-border/40 pt-12 sm:pt-24">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12 flex flex-col gap-2">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
                 Value Added
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary">
+              <h2 className="text-2xl sm:text-4xl font-extrabold font-display text-primary">
                 Key Benefits of GPR
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 p-5 rounded-2xl shadow-sm hover:border-secondary transition-all flex flex-col gap-3 md:col-span-1">
+                <div key={idx} className="bg-white border border-brand-border/30 p-4 sm:p-5 rounded-2xl shadow-sm hover:border-secondary transition-all flex flex-col gap-3">
                   <div className="h-10 w-10 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 mb-1">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
@@ -291,17 +291,17 @@ export default function GPRPage() {
           </div>
 
           {/* CTA & Booking Block */}
-          <div className="border-t border-brand-border/40 pt-12 flex flex-col sm:flex-row gap-6 items-center justify-between bg-white p-6 sm:p-8 rounded-3xl border border-brand-border/20 shadow-premium">
-            <div className="flex items-center gap-4">
+          <div className="border-t border-brand-border/40 pt-10 flex flex-col sm:flex-row gap-6 items-center justify-between bg-white p-5 sm:p-8 rounded-2xl sm:rounded-3xl border border-brand-border/20 shadow-premium">
+            <div className="flex items-center gap-4 text-center sm:text-left">
               <div className="h-12 w-12 rounded-full bg-secondary flex items-center justify-center text-white shrink-0">
                 <PhoneCall className="h-5 w-5 animate-pulse" />
               </div>
               <div>
                 <p className="text-[10px] text-brand-muted uppercase font-bold tracking-wider">Need a scanner team on-site?</p>
-                <p className="text-base sm:text-lg font-bold text-primary">Call Helpline: 76000 78862</p>
+                <p className="text-sm sm:text-lg font-bold text-primary">Call Helpline: 76000 78862</p>
               </div>
             </div>
-            <div className="flex flex-wrap gap-4 w-full sm:w-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
               <Link href="/contact" className="flex-1 sm:flex-initial text-center px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold rounded-full shadow-md transition-all text-xs uppercase tracking-wider">
                 Book GPR Scan
               </Link>
