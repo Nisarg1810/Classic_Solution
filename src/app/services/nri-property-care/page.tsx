@@ -88,7 +88,7 @@ export default function ServicesNriCare() {
         breadcrumbs={[{ label: "Services", href: "/services" }, { label: "NRI Property Care" }]}
       />
 
-      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 mt-10">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 mt-10">
         
         {/* Navigation Actions */}
         <div className="flex gap-4 mb-10">
@@ -129,35 +129,35 @@ export default function ServicesNriCare() {
           </p>
         </div>
 
-        {/* 2. Responsive Service Matrix Grid */}
+        {/* 2. Responsive 4-Column Inline Service Matrix Grid */}
         <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-display text-primary mb-6 text-left">
           Our Service Matrix
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-12">
           {nriMatrix.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white border border-brand-border/50 rounded-3xl p-6 sm:p-7 shadow-premium flex flex-col text-left h-full hover:border-secondary/40 hover:shadow-premium-hover transition-all duration-300"
+              className="bg-white border border-brand-border/50 rounded-3xl p-5 sm:p-5.5 shadow-premium flex flex-col text-left h-full hover:border-secondary/40 hover:shadow-premium-hover transition-all duration-300"
             >
-              {/* 1. Card Header - Uniform height so dividers align */}
-              <div className="border-b border-brand-border/60 pb-3.5 mb-5 flex items-start justify-between gap-3 min-h-[60px] sm:min-h-[72px]">
-                <h4 className="text-base sm:text-lg md:text-xl font-extrabold text-secondary font-display leading-snug">
+              {/* 1. Card Header - Aligned height & divider */}
+              <div className="border-b border-brand-border/60 pb-3 mb-4 flex items-start justify-between gap-2 min-h-[70px] sm:min-h-[82px] lg:min-h-[88px]">
+                <h4 className="text-[15px] sm:text-base font-extrabold text-secondary font-display leading-snug">
                   {item.phase}
                 </h4>
-                <span className="text-xs font-bold text-primary/40 font-mono shrink-0 mt-0.5">
+                <span className="text-xs sm:text-[13px] font-bold text-primary/40 font-mono shrink-0 mt-0.5">
                   0{idx + 1}
                 </span>
               </div>
               
-              {/* 2. Core Inspection - Uniform min-height so support services dividers align */}
-              <div className="min-h-[220px] sm:min-h-[240px] flex flex-col justify-start mb-6">
-                <h5 className="text-xs sm:text-sm uppercase tracking-wider font-extrabold text-primary mb-3 flex items-center gap-2 shrink-0">
+              {/* 2. Core Inspection - Aligned height across all 4 boxes */}
+              <div className="min-h-[250px] sm:min-h-[280px] lg:min-h-[300px] flex flex-col justify-start mb-4">
+                <h5 className="text-xs sm:text-[13px] uppercase tracking-wider font-extrabold text-primary mb-3 flex items-center gap-1.5 shrink-0">
                   <FileCheck className="h-4 w-4 text-secondary shrink-0" />
                   <span>Core Inspection</span>
                 </h5>
                 <ul className="space-y-2.5">
                   {item.core.map((pt, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm sm:text-[15px] text-brand-text font-normal leading-relaxed">
+                    <li key={i} className="flex items-start gap-2 text-[13px] sm:text-sm text-brand-text font-normal leading-relaxed">
                       <span className="text-secondary shrink-0 font-bold mt-0.5">•</span>
                       <span>{pt}</span>
                     </li>
@@ -166,14 +166,14 @@ export default function ServicesNriCare() {
               </div>
 
               {/* 3. Support Services - Aligned start position right below Core Inspection */}
-              <div className="border-t border-brand-border/60 pt-5 flex-1 flex flex-col justify-start">
-                <h5 className="text-xs sm:text-sm uppercase tracking-wider font-extrabold text-primary mb-3 flex items-center gap-2 shrink-0">
+              <div className="border-t border-brand-border/60 pt-4 flex-1 flex flex-col justify-start">
+                <h5 className="text-xs sm:text-[13px] uppercase tracking-wider font-extrabold text-primary mb-3 flex items-center gap-1.5 shrink-0">
                   <Wrench className="h-4 w-4 text-secondary shrink-0" />
                   <span>Support Services</span>
                 </h5>
                 <ul className="space-y-2.5">
                   {item.support.map((pt, i) => (
-                    <li key={i} className="flex items-start gap-2.5 text-sm sm:text-[15px] text-brand-muted font-normal leading-relaxed">
+                    <li key={i} className="flex items-start gap-2 text-[13px] sm:text-sm text-brand-muted font-normal leading-relaxed">
                       <span className="text-secondary shrink-0 font-bold mt-0.5">•</span>
                       <span>{pt}</span>
                     </li>

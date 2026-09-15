@@ -291,24 +291,24 @@ export default function GPRPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3.5 sm:gap-4 lg:gap-5 max-w-6xl mx-auto">
               {benefits.map((benefit, idx) => (
                 <div
                   key={idx}
-                  className="bg-white border border-brand-border/40 p-6 sm:p-7 rounded-3xl shadow-sm hover:shadow-premium hover:border-secondary/40 transition-all duration-300 flex flex-col gap-3 text-left group"
+                  className="bg-white border border-brand-border/40 p-4.5 sm:p-5.5 rounded-2xl sm:rounded-3xl shadow-sm hover:shadow-premium hover:border-secondary/40 transition-all duration-300 flex flex-col gap-3 text-left group h-full"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="h-11 w-11 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
-                      <ShieldCheck className="h-5 w-5" />
+                    <div className="h-10 w-10 sm:h-11 sm:w-11 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                      <ShieldCheck className="h-5 w-5 sm:h-5.5 sm:w-5.5" />
                     </div>
-                    <span className="text-xs font-mono font-bold text-primary/35">
+                    <span className="text-xs sm:text-[13px] font-mono font-bold text-primary/40">
                       0{idx + 1}
                     </span>
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold font-display text-primary leading-snug">
+                  <h3 className="text-[15px] sm:text-base font-bold font-display text-primary leading-snug min-h-[42px] flex items-center">
                     {benefit.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-brand-text font-normal leading-relaxed">
+                  <p className="text-[13px] sm:text-sm text-brand-text font-normal leading-relaxed">
                     {benefit.desc}
                   </p>
                 </div>
