@@ -303,18 +303,17 @@ export default function ReraPage() {
             </p>
           </div>
 
-          {/* Full Width HD Banner Image */}
-          <div className="relative w-full rounded-2xl overflow-hidden shadow-premium border border-brand-border/60 bg-white my-6 group">
-            <div className="relative aspect-[16/6] sm:aspect-[16/5.5] md:aspect-[16/5] w-full">
-              <Image
-                src="/images/rera-advantage-banner.jpg"
-                alt="Advantage Home Buyers RERA 2016 City Skyline and Shield Banner"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-                className="object-cover object-center"
-              />
-            </div>
+          {/* Full Width HD Banner Image - Full Size, Zero Crop */}
+          <div className="w-full rounded-2xl overflow-hidden shadow-premium border border-brand-border/60 bg-white my-6">
+            <Image
+              src="/images/rera-advantage-banner.jpg"
+              alt="Advantage Home Buyers RERA 2016 City Skyline and Shield Banner"
+              width={1920}
+              height={1080}
+              priority
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+              className="w-full h-auto block"
+            />
           </div>
 
           {/* Core Highlights Bullet Points directly below banner matching Image 2 */}
