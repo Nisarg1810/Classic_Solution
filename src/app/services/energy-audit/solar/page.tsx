@@ -33,19 +33,35 @@ export default function SolarAuditPage() {
   return (
     <div className="relative w-full bg-white overflow-x-hidden">
       <PageHero
-        badge="Energy Audit & NDT Services"
-        title="Energy audit:"
-        titleHighlight="Solar Panel Thermal Inspection"
+        badge="Coming Soon"
+        title="Coming Soon:"
+        titleHighlight="Energy Audit: Solar Panel Thermal Inspection"
         subtitle="Maximize Solar Performance with Advanced Infrared Thermography — Identify Hidden Defects, Prevent Outages, and Secure High Yields."
         breadcrumbs={[
           { label: "Services", href: "/services" },
           { label: "Energy Audit", href: "/services/energy-audit" },
-          { label: "Solar Panel Thermal Inspection" },
+          { label: "Solar Panel Thermal Inspection (Coming Soon)" },
         ]}
       />
 
       <section className="py-10 sm:py-20 bg-brand-light px-4 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-5xl flex flex-col gap-10 sm:gap-16">
+        <div className="mx-auto max-w-5xl flex flex-col gap-8 sm:gap-14">
+
+          {/* Coming Soon Alert Banner */}
+          <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-3 w-3 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+              </span>
+              <p className="text-xs sm:text-sm font-bold text-amber-900">
+                Coming Soon: Energy Audit – Solar Panel Thermal Inspection is currently preparing for launch.
+              </p>
+            </div>
+            <span className="text-[10px] sm:text-xs uppercase font-extrabold tracking-wider text-amber-800 bg-amber-200/70 px-3 py-1 rounded-full shrink-0">
+              Launching Soon
+            </span>
+          </div>
 
           {/* Banner Image */}
           <div className="w-full relative aspect-[1377/600] sm:aspect-[1377/539] rounded-2xl sm:rounded-3xl overflow-hidden border border-brand-border/40 shadow-premium bg-white">
@@ -92,9 +108,6 @@ export default function SolarAuditPage() {
               <h2 className="text-2xl sm:text-3xl font-bold font-display text-primary mb-2">
                 Why Thermal Inspection is Important
               </h2>
-              <p className="text-xs sm:text-base text-brand-text leading-relaxed font-light max-w-4xl">
-                Solar panels are exposed to sunlight, rain, dust, wind, humidity, and extreme temperatures throughout the year. Over time, these conditions can cause electrical and mechanical defects that reduce efficiency.
-              </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
@@ -140,9 +153,6 @@ export default function SolarAuditPage() {
               <h2 className="text-2xl sm:text-3xl font-bold font-display text-primary mb-2">
                 Our Inspection Services
               </h2>
-              <p className="text-xs sm:text-base text-brand-text leading-relaxed font-light">
-                We provide thermal inspections for:
-              </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">

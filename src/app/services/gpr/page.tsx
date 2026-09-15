@@ -74,11 +74,26 @@ const whyChooseGpr = [
 ];
 
 const benefits = [
-  "Prevent accidental damage during drilling or excavation.",
-  "Locate hidden pipes, cables, and reinforcement before construction.",
-  "Improve project safety and planning.",
-  "Reduce repair costs and delays.",
-  "Support informed engineering and maintenance decisions.",
+  {
+    title: "Prevent Damage",
+    desc: "Prevent accidental damage during drilling or excavation.",
+  },
+  {
+    title: "Locate Utilities",
+    desc: "Locate hidden pipes, cables, and reinforcement before construction.",
+  },
+  {
+    title: "Project Safety",
+    desc: "Improve project safety and planning.",
+  },
+  {
+    title: "Cost Efficiency",
+    desc: "Reduce repair costs and delays.",
+  },
+  {
+    title: "Informed Engineering",
+    desc: "Support informed engineering and maintenance decisions.",
+  },
 ];
 
 export default function GPRPage() {
@@ -276,14 +291,25 @@ export default function GPRPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {benefits.map((benefit, idx) => (
-                <div key={idx} className="bg-white border border-brand-border/30 p-4 sm:p-5 rounded-2xl shadow-sm hover:border-secondary transition-all flex flex-col gap-3">
-                  <div className="h-10 w-10 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 mb-1">
-                    <ShieldCheck className="h-5 w-5" />
+                <div
+                  key={idx}
+                  className="bg-white border border-brand-border/40 p-6 sm:p-7 rounded-3xl shadow-sm hover:shadow-premium hover:border-secondary/40 transition-all duration-300 flex flex-col gap-3 text-left group"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="h-11 w-11 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
+                      <ShieldCheck className="h-5 w-5" />
+                    </div>
+                    <span className="text-xs font-mono font-bold text-primary/35">
+                      0{idx + 1}
+                    </span>
                   </div>
-                  <p className="text-xs text-brand-muted font-light leading-relaxed">
-                    {benefit}
+                  <h3 className="text-base sm:text-lg font-bold font-display text-primary leading-snug">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-brand-text font-normal leading-relaxed">
+                    {benefit.desc}
                   </p>
                 </div>
               ))}

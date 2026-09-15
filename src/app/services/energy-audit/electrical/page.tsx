@@ -27,19 +27,35 @@ export default function ElectricalAuditPage() {
   return (
     <div className="relative w-full">
       <PageHero
-        badge="Energy Audit"
-        title="Energy audit:"
-        titleHighlight="Electrical Utilities"
+        badge="Coming Soon"
+        title="Coming Soon:"
+        titleHighlight="Electrical Utilities Inspection"
         subtitle="Scientific load analysis and power quality assessment — identifying waste, reducing bills, and ensuring electrical safety across residential, commercial, and industrial properties."
         breadcrumbs={[
           { label: "Services", href: "/services" },
           { label: "Energy Audit", href: "/services/energy-audit" },
-          { label: "Electrical Utilities" },
+          { label: "Electrical Utilities (Coming Soon)" },
         ]}
       />
 
-      <section className="py-14 sm:py-20 bg-brand-light px-6 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-5xl flex flex-col gap-16">
+      <section className="py-10 sm:py-16 bg-brand-light px-6 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-5xl flex flex-col gap-10 sm:gap-14">
+
+          {/* Coming Soon Alert Banner */}
+          <div className="bg-amber-500/10 border border-amber-500/30 rounded-2xl p-4 sm:p-5 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <span className="relative flex h-3 w-3 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-amber-500"></span>
+              </span>
+              <p className="text-xs sm:text-sm font-bold text-amber-900">
+                Coming Soon: Electrical Utilities Inspection service is currently preparing for launch.
+              </p>
+            </div>
+            <span className="text-[10px] sm:text-xs uppercase font-extrabold tracking-wider text-amber-800 bg-amber-200/70 px-3 py-1 rounded-full shrink-0">
+              Launching Soon
+            </span>
+          </div>
 
           {/* Main block */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

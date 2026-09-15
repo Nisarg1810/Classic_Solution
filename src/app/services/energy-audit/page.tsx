@@ -8,8 +8,8 @@ const auditTypes = [
   {
     id: "solar",
     icon: Sun,
-    badge: "Solar Panel Inspection",
-    title: "Solar Panel Energy Audit",
+    badge: "Coming Soon • Solar Panel Inspection",
+    title: "Energy Audit: Solar Panel Thermal Inspection (Coming Soon)",
     heading: "Maximise Returns from Your Solar Investment",
     desc1:
       "Solar panels degrade silently. Dust accumulation, micro-cracks, hotspots, and shading losses reduce output without triggering any visible alarm. Classic Solution's solar inspection uses infrared thermal imaging and I-V curve tracing to identify underperforming panels.",
@@ -27,8 +27,8 @@ const auditTypes = [
   {
     id: "electrical",
     icon: Zap,
-    badge: "Electrical Utilities Audit",
-    title: "Electrical Energy Audit",
+    badge: "Coming Soon • Electrical Utilities",
+    title: "Electrical Utilities Inspection (Coming Soon)",
     heading: "Cut Energy Waste with Scientific Load Analysis",
     desc1:
       "Most homes and commercial properties waste 15–30% of electrical energy due to poor load distribution, outdated wiring, power factor issues, and inefficient appliances. Classic Solution auditors analyse your entire electrical infrastructure.",

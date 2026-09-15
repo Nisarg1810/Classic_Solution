@@ -46,7 +46,7 @@ export default function HVACAuditPage() {
 
           {/* Section 1: Overview and Scope */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Column: Text Content */}
             <div className="lg:col-span-6 flex flex-col gap-6 text-left">
               <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
@@ -85,7 +85,7 @@ export default function HVACAuditPage() {
                 <h3 className="text-2xl sm:text-3xl font-black text-red-600 text-center uppercase tracking-wide border-b-2 border-red-100 pb-5 mb-7">
                   What Does HVAC Stand For
                 </h3>
-                
+
                 <div className="flex flex-col gap-6 sm:gap-7">
                   {/* Heating Row */}
                   <div className="flex items-center gap-4 sm:gap-5 border-b border-blue-100 pb-5 sm:pb-6">
@@ -144,9 +144,9 @@ export default function HVACAuditPage() {
 
           {/* Section 2: Thermal Imaging Inspection */}
           <div className="border-t border-brand-border/40 pt-16 sm:pt-24">
-            
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-              
+
               {/* Left Column: Heading, List, and Bottom Left Image */}
               <div className="lg:col-span-6 flex flex-col gap-6">
                 <span className="text-secondary font-bold tracking-wider uppercase text-xs sm:text-sm">
@@ -203,7 +203,7 @@ export default function HVACAuditPage() {
                 Before / After Thermography
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-primary">
-                Visual vs. Thermal Diagnostic Comparison
+                Visual vs Thermal Diagnostic Comparison
               </h2>
               <p className="text-sm sm:text-base text-brand-muted font-light leading-relaxed">
                 See how thermal imaging reveals issues like blocked air, temperature anomalies, and leakage that are completely invisible to the naked eye.
@@ -213,7 +213,7 @@ export default function HVACAuditPage() {
             <div className="w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-premium border border-brand-border/30 bg-white">
               <Image
                 src="/images/services/group_317.png"
-                alt="Visual vs. Thermal Diagnostic Comparison"
+                alt="Visual vs Thermal Diagnostic Comparison"
                 width={5424}
                 height={1026}
                 className="w-full h-auto"
