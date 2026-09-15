@@ -32,7 +32,7 @@ const services = [
 const socials = [
   {
     label: "Facebook",
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/share/14q1eq6T6Sp/",
     icon: (
       <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
         <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.8c4.56-.93 8-4.96 8-9.8z" />
@@ -40,17 +40,8 @@ const socials = [
     ),
   },
   {
-    label: "Twitter / X",
-    href: "https://x.com",
-    icon: (
-      <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
-        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-      </svg>
-    ),
-  },
-  {
     label: "Instagram",
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/macj_abuyerschoice_saurashtra?stkn=MWE5M3Q0M2tqY3hm",
     icon: (
       <svg className="h-5 w-5 fill-none stroke-current stroke-[1.8]" viewBox="0 0 24 24">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -61,7 +52,7 @@ const socials = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/classic-solution-7b5967244?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     icon: (
       <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -70,7 +61,7 @@ const socials = [
   },
   {
     label: "YouTube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/channel/UC0FWHSbqTD-cbHEHOGlwI7A",
     icon: (
       <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
         <path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.6 5 12 5 12 5s-4.6 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.2.9C6.6 19 12 19 12 19s4.6 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM10 14.5v-5l5.5 2.5-5.5 2.5z" />
@@ -108,6 +99,8 @@ export default function Footer() {
             <a
               key={s.label}
               href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label={s.label}
               className="h-8 w-8 rounded-full border border-neutral-200 flex items-center justify-center text-[#bbb] hover:text-secondary hover:border-secondary transition-all duration-200"
             >

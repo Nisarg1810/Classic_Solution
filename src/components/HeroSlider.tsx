@@ -134,16 +134,22 @@ export default function HeroSlider() {
           </div>
         </a>
 
-        {/* Social media icons (matches grey color scheme in screenshot) */}
+        {/* Social media icons */}
         <div className="flex items-center gap-3 pt-2 pl-1 border-t border-brand-border/30">
           {[
-            { name: "Facebook", href: "https://facebook.com", path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
-            { name: "X", href: "https://x.com", path: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" },
-            { name: "YouTube", href: "https://youtube.com", path: "M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z" },
-            { name: "Instagram", href: "https://instagram.com", svg: true },
-            { name: "LinkedIn", href: "https://linkedin.com", path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" }
+            { name: "Facebook", href: "https://www.facebook.com/share/14q1eq6T6Sp/", path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" },
+            { name: "Instagram", href: "https://www.instagram.com/macj_abuyerschoice_saurashtra?stkn=MWE5M3Q0M2tqY3hm", svg: true },
+            { name: "YouTube", href: "https://www.youtube.com/channel/UC0FWHSbqTD-cbHEHOGlwI7A", path: "M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z" },
+            { name: "LinkedIn", href: "https://www.linkedin.com/in/classic-solution-7b5967244?utm_source=share_via&utm_content=profile&utm_medium=member_android", path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" }
           ].map((item, idx) => (
-            <a key={idx} href={item.href} aria-label={item.name} className="text-brand-muted hover:text-secondary transition-colors">
+            <a
+              key={idx}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={item.name}
+              className="text-brand-muted hover:text-secondary transition-colors"
+            >
               {item.svg ? (
                 <svg className="h-6 w-6 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
@@ -254,19 +260,16 @@ export default function HeroSlider() {
 
             {/* Desktop Socials */}
             <div className="flex items-center gap-3.5 pl-4 shrink-0">
-              <a href="https://facebook.com" aria-label="Facebook" className="text-white/80 hover:text-secondary transition-colors">
+              <a href="https://www.facebook.com/share/14q1eq6T6Sp/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/80 hover:text-secondary transition-colors">
                 <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
-              <a href="https://x.com" aria-label="X / Twitter" className="text-white/80 hover:text-secondary transition-colors">
-                <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </a>
-              <a href="https://youtube.com" aria-label="YouTube" className="text-white/80 hover:text-secondary transition-colors">
-                <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z"/></svg>
-              </a>
-              <a href="https://instagram.com" aria-label="Instagram" className="text-white/80 hover:text-secondary transition-colors">
+              <a href="https://www.instagram.com/macj_abuyerschoice_saurashtra?stkn=MWE5M3Q0M2tqY3hm" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-white/80 hover:text-secondary transition-colors">
                 <svg className="h-5.5 w-5.5 fill-none stroke-current stroke-[2]" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
               </a>
-              <a href="https://linkedin.com" aria-label="LinkedIn" className="text-white/80 hover:text-secondary transition-colors">
+              <a href="https://www.youtube.com/channel/UC0FWHSbqTD-cbHEHOGlwI7A" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-white/80 hover:text-secondary transition-colors">
+                <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58zM9.75 15.02V8.98L15.5 12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/classic-solution-7b5967244?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white/80 hover:text-secondary transition-colors">
                 <svg className="h-5.5 w-5.5 fill-current" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
             </div>
