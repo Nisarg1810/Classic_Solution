@@ -253,13 +253,12 @@ export default function Home() {
                   <p className="text-xs text-brand-text leading-relaxed font-light mb-4 flex-1">
                     {item.desc}
                   </p>
-                <Link
-                  href={item.link}
-                  className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-secondary uppercase tracking-wider group-hover:text-primary transition-colors mt-auto"
+                <div
+                  className="inline-flex items-center justify-center gap-1.5 text-xs font-bold text-secondary uppercase tracking-wider cursor-default select-none mt-auto"
                 >
                   <span>Read Details</span>
-                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                </Link>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </div>
                 </div>
               </div>
             ))}
